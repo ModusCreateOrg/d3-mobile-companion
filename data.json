@@ -1,0 +1,55 @@
+{
+    "account": "Straton#1",
+    "artisan": [
+        {
+            "level": 3,
+            "slug": "Blacksmith",
+            "step": {
+                "current": 4,
+                "max": 5
+            }
+        },
+        {
+            "level": 1,
+            "slug": "Jeweler",
+            "step": {
+                "current": 0,
+                "max": 1
+            }
+        }
+    ],
+    "heroes": [
+       182
+    ],
+    "kills": {
+        "elites": 241,
+        "hardcore_monsters": 0,
+        "monsters": 4280
+    },
+    "last_modified": 1666805944000,
+    "progression": [
+        {
+            "act": 1,
+            "difficulty": 0
+        },
+        {
+            "act": 2,
+            "difficulty": -1
+        },
+        {
+            "act": 3,
+            "difficulty": -1
+        },
+        {
+            "act": 4,
+            "difficulty": -1
+        }
+    ],
+    "time-played": {
+        "barbarian": 1.0,
+        "demon-hunter": 0.59999999999999998,
+        "monk": 0.29999999999999999,
+        "witch-doctor": 0.10000000000000001,
+        "wizard": 0.0
+    }
+}

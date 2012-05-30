@@ -1,0 +1,50 @@
+[{
+    "id": 182,
+    "name": "Yharr",
+    "hardcore": false,
+    "hero_class": 1,
+    "level": 21,
+    "gender": 0,
+    "create_time": 1351949944,
+    "update_time": 1666805944,
+    "hireling": [{
+        "hireling_class": 1,
+        "level": 18
+    }, {
+        "hireling_class": 2,
+        "level": 20,
+        "active": true
+    }],
+    "skills": {
+        "active": [{
+            "slug": "barbarian-overpower",
+            "name": "Overpower",
+            "icon": "http://us.media.blizzard.com/d3/icons/skills/64/barbarian_overpower.png",
+            "rune": { "type": 5, "name": "Revel" }
+        }],
+        "passive": [{
+            "slug": "barbarian-brawler",
+            "name": "Brawler",
+            "icon": " http://us.media.blizzard.com/d3/icons/skills/64/barbarian_passive_brawler.png"
+        }]
+    },
+    "elites_killed": 241,
+    "attributes": {
+        "life": 1510,
+        "dps": 58.8255,
+        "armor": 345,    
+        "strength": 129,
+        "dexterity": 43,
+        "intelligence": 50,
+        "vitality": 139,
+        "resist_arcane": 0,
+        "resist_fire": 0,
+        "resist_lightning": 0,
+        "resist_poison": 0,
+        "resist_cold": 0,
+        "crit_chance": 0.08,
+        "damage_reduction": 0.333756,
+        "magic-find": 15,
+        "gold-find": 14
+    }
+}]
