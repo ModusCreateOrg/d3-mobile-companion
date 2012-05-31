@@ -4,6 +4,8 @@ Ext.define('D3Mobile.view.Main', {
     config   : {
         fullscreen     : true,
         tabBarPosition : 'bottom',
+        ui             : 'mainTabBar',
+        cls            : 'navBar',
         items          : [
             {
                 xtype : 'heroes'
