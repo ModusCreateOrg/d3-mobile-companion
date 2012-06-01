@@ -11,7 +11,8 @@ Ext.application({
     ],
     models : [
         'Account',
-        'Hero'
+        'Hero',
+        'Hireling'
     ],
     stores : [
         'CurrentUser',
