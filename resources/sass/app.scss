@@ -21,7 +21,13 @@ $page-bg-color: #1a1914;
 @include sencha-tabbar-ui('mainTabBar', #472a20, 'matte', #FFFFFF);
 
 .navBar {
+  .x-tabbar {
+    background-image: url('../images/nav-bg.png');
+  }
   .x-button-label {
     font-size: 11px !important;
+  }
+  .x-tab-active {
+    @include background-image(linear-gradient(rgba(0, 0, 0, .5), rgba(0, 0, 0, .7)));
   }
 }

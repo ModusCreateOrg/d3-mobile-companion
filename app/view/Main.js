@@ -6,6 +6,9 @@ Ext.define('D3Mobile.view.Main', {
         tabBarPosition : 'bottom',
         ui             : 'mainTabBar',
         cls            : 'navBar',
+        defaults : {
+            iconMask: true
+        },
         items          : [
             {
                 xtype : 'heroes'
