@@ -31,3 +31,8 @@ $page-bg-color: #1a1914;
     @include background-image(linear-gradient(rgba(0, 0, 0, .5), rgba(0, 0, 0, .7)));
   }
 }
+
+// overall body background for pages
+.x-layout-card-item {
+  background: url('../images/page-bg.png') no-repeat;
+}
