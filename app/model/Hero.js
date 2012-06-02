@@ -13,10 +13,9 @@ Ext.define('D3Mobile.model.Hero', {
 			{name : 'update_time', type : 'int'},
 			{name : 'elites_killed', type : 'int'},
 			{name : 'attributes'},
-			// {name : 'hireling'},
 			{name : 'skills'}
 		],
-		hasMany : {model : 'D3Mobile.model.Hireling', name : 'hireling'}
+		hasMany : {model : 'D3Mobile.model.Hireling', name : 'hireling', associationKey: 'hireling' }
 		
 	}
 });
