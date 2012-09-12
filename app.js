@@ -4,7 +4,8 @@ Ext.application({
         'Ext.MessageBox'
     ],
     controllers : [
-        'Main'
+        'Main',
+        'Hero'
     ],
     icon        : {
         '57'  : 'resources/icons/Icon.png',

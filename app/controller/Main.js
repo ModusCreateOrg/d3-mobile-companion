@@ -40,7 +40,8 @@ Ext.define('D3Mobile.controller.Main', {
     },
     onCurrentUserLoadCallback : function (records, operation, success) {
         if (success) {
-            this.getHeroes().buildCards(records[0].get("heroes"));
+            var record = records[0];
+            this.getHeroes().buildCards(record.get('battleTag').replace('#', '-'), record.get('heroes'));
         }
     }
 

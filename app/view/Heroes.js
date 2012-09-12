@@ -4,7 +4,7 @@ Ext.define('D3Mobile.view.Heroes', {
     config     : {
         title   : 'Heroes',
         cardTpl : ''.concat(
-            '<div class="hero-overview hero-overview-{class}_{gender}">',
+            '<div class="hero-overview hero-overview-{class}_{gender}" data-id="{id}" data-battletag="{battleTag}">',
                 '<div class="hero-header">',
                     '<div class="hero-header-name flex1">{name}</div>',
                     '<div class="hero-header-level flex1">{level}',
@@ -16,12 +16,27 @@ Ext.define('D3Mobile.view.Heroes', {
             '</div>'
         )
     },
-    buildCards : function (heroes) {
+    initialize : function () {
+        var me = this;
+        me.callParent();
+        me.element.on({
+            tap      : me.onHeroTap,
+            scope    : me,
+            delegate : '.hero-overview'
+        });
+
+    },
+    onHeroTap  : function(evtObj) {
+        var dataset = evtObj.delegatedTarget.dataset;
+        this.fireEvent('heroOverviewTap', dataset.battletag, dataset.id);
+    },
+    buildCards : function (battleTag, heroes) {
         var me = this,
             heroesCount = heroes.length,
             i;
         me.removeAll(true);
         for (i = 0; i < heroesCount; i++) {
+            heroes[i].battleTag = battleTag;
             me.add(me.buildCard(heroes[i]));
         }
         me.setActiveItem(0);
