@@ -23,6 +23,22 @@ Ext.define('D3Mobile.view.HeroDetail', {
                         '<div class="attribute-label">Vitality</div>',
                         '<div class="attribute-value">{stats.vitality}</div>',
                     '</div>',
+                    '<div class="stats-row">',
+                        '<div class="attribute-label">Armor</div>',
+                        '<div class="attribute-value">{stats.armor}</div>',
+                    '</div>',
+                    '<div class="stats-row">',
+                        '<div class="attribute-label">Damage</div>',
+                        '<div class="attribute-value">{stats.damage}</div>',
+                    '</div>',
+                    '<div class="stats-row">',
+                        '<div class="attribute-label">Life</div>',
+                        '<div class="attribute-value">{stats.life}</div>',
+                    '</div>',
+                    '<div class="stats-row">', // Make function to figure out label name and handle Demon Hunter 2 res.
+                        '<div class="attribute-label">Special Resource</div>',
+                        '<div class="attribute-value">{stats.primaryResource}</div>',
+                    '</div>',
                 '</div>',
             '</div>'
         )
