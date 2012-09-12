@@ -31,7 +31,9 @@ Ext.define('D3Mobile.controller.Hero', {
             xtype : 'herodetail',
             hero  : record.getData()
         });
-        this.getMain().setActiveItem(heroDetail);
+
+        // since these are 'cards', we flip them around to see the details
+        this.getMain().animateActiveItem(heroDetail, { type: 'flip' });
 
     },
     onHeroLoadFailure : function (error) {

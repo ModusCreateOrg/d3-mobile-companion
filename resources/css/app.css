@@ -8437,9 +8437,9 @@ html, body {
 /* line 51, ../sass/_hero.scss */
 .hero-attributes .attributes-header .sub {
   text-transform: capitalize;
-  font-size: .7em;
+  font-size: .62em;
   color: #D4B473;
-  margin-top: -10px;
+  margin-top: -8px;
 }
 /* line 58, ../sass/_hero.scss */
 .hero-attributes .stats-group {
