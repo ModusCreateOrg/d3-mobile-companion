@@ -8419,16 +8419,33 @@ html, body {
 /* attributes */
 /* line 37, ../sass/_hero.scss */
 .hero-attributes .attributes-header {
-  color: white;
+  color: #c06500;
   font-size: 1.5em;
-}
-/* line 41, ../sass/_hero.scss */
-.hero-attributes .attribute-label {
-  display: -webkit-box;
+  border-bottom: 3px double #2C2721;
+  margin-bottom: 5px;
+  font-weight: 600;
 }
 /* line 44, ../sass/_hero.scss */
-.hero-attributes .attribute-value {
+.hero-attributes .stats-row {
   display: -webkit-box;
+  -webkit-box-pack: justify;
+  padding: 3px 10px;
+}
+/* line 48, ../sass/_hero.scss */
+.hero-attributes .stats-row:nth-child(even) {
+  background: rgba(255, 255, 255, 0.05);
+}
+/* line 52, ../sass/_hero.scss */
+.hero-attributes .attribute-label {
+  text-align: left;
+  -webkit-box-flex: 1;
+  color: #eee;
+}
+/* line 57, ../sass/_hero.scss */
+.hero-attributes .attribute-value {
+  text-align: right;
+  -webkit-box-flex: 1;
+  color: #eee;
 }
 
 /* line 28, ../sass/app.scss */
@@ -8513,4 +8530,14 @@ html, body {
 /* line 70, ../sass/app.scss */
 .flex1 {
   -webkit-box-flex: 1;
+}
+
+/* line 74, ../sass/app.scss */
+.hero-detail-card > div {
+  height: 100%;
+}
+
+/* line 78, ../sass/app.scss */
+.hero-detail-card > div > div {
+  height: 100%;
 }

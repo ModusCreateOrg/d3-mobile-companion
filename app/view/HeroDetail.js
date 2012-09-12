@@ -53,7 +53,10 @@ Ext.define('D3Mobile.view.HeroDetail', {
     },
     buildAttributesCard : function () {
         return {
-            xtype            : 'component',
+            xtype            : 'container',
+            scrollable       : {
+                direction : 'vertical'
+            },
             cls              : 'hero-detail-card',
             tpl              : this.getAttributesCardTpl(),
             data             : this.getHero(),

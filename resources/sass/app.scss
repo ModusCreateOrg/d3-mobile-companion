@@ -42,7 +42,7 @@ html, body {
   }
   .x-tab-active {
     @include background-image(linear-gradient(rgba(0, 0, 0, .5), rgba(0, 0, 0, .7)));
-  } 
+  }
 }
 
 // overall body background for pages
@@ -70,3 +70,12 @@ html, body {
 .flex1 {
   -webkit-box-flex: 1;
 }
+
+.hero-detail-card > div {
+  height: 100%
+}
+
+.hero-detail-card > div > div {
+  height: 100%
+}
+
