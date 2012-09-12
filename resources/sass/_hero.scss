@@ -35,11 +35,18 @@
 /* attributes */
 .hero-attributes {
   .attributes-header {
-    color: #c06500;
-    font-size: 1.5em;   
-    border-bottom: 3px double #2C2721;
-    margin-bottom: 5px;     
-    font-weight: 600;
+    text-transform: uppercase;
+    color: #f3e6d0;
+    font-size: 1.75em;
+    border-bottom: 3px double #312a1e;
+    margin-bottom: 15px;
+    font-weight: 400;
+    text-align: center;
+  }
+  .stats-group {
+    margin-bottom: 15px;
+    border-bottom: 1px solid #272218;
+    border-radius: 5px;    
   }
   .stats-row {
     display: -webkit-box;
@@ -52,12 +59,13 @@
   .attribute-label {
     text-align: left;
     -webkit-box-flex: 1;
-    color: #eee;
+    color: #a9986d;
   }
   .attribute-value {
+    font-size: 1.3em;
     text-align: right;
     -webkit-box-flex: 1;
-    color: #eee;
+    color: #f3e6d0;
   }
 }
 

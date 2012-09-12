@@ -1,4 +1,5 @@
 $page-bg-color: #1a1914;
+$serif: "chaparral-pro", serif;
 $sansSerif: "proxima-nova-condensed", sans-serif;
 
 @import 'sencha-touch/default/all';
@@ -47,7 +48,8 @@ html, body {
 
 // overall body background for pages
 .x-container {
-  background-image: inline-image('page-bg.png');
+  background-color: #1c1812;
+  @include background-image(linear-gradient(top, rgb(28, 24, 18), rgb(18, 17, 15)));
 }
 
 @mixin hero-bg-image($className) {
