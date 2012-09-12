@@ -20,9 +20,17 @@ $page-bg-color: #1a1914;
 
 @include sencha-tabbar-ui('mainTabBar', #472a20, 'matte', #FFFFFF);
 
+html, body {
+  height: 100%;
+  background-image: inline-image('d3logo.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  font-family: "proxima-nova-condensed", sans-serif;
+}
+
 .navBar {
   .x-tabbar {
-    background-image: url('../images/nav-bg.png');
+    background-image: inline-image('nav-bg.png');
   }
   .x-button-label {
     font-size: 11px !important;
@@ -33,6 +41,6 @@ $page-bg-color: #1a1914;
 }
 
 // overall body background for pages
-.x-layout-card-item {
-  background: url('../images/page-bg.png') no-repeat;
+.x-container {
+  background-image: inline-image('page-bg.png');
 }

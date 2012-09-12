@@ -7,7 +7,8 @@ load File.join(dir, '..', '..', 'sdk', 'resources', 'themes')
 # Compass configurations
 sass_path = dir
 css_path = File.join(dir, "..", "css")
-images_dir = File.join(dir, "..", "images")
 
-output_style = :compressed
-environment = :production
+# Require any additional compass plugins here.
+images_dir = File.join('', "..", "images")
+output_style = :expanded
+environment = :development

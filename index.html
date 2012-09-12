@@ -9,10 +9,6 @@
          * It is recommended to keep this as minimal as possible to provide instant feedback
          * while other resources are still being loaded for the first time
          */
-        html, body {
-            height: 100%;
-            background: url('./resources/images/d3logo.jpg') no-repeat center;
-        }
 
         #appLoadingIndicator {
             position: absolute;
@@ -51,6 +47,10 @@
     </style>
     <!-- The line below must be kept intact for Sencha Command to build your application -->
     <script id="microloader" type="text/javascript" src="sdk/microloader/development.js"></script>
+
+    <script type="text/javascript" src="//use.typekit.net/qry5aew.js"></script>
+    <script type="text/javascript">try{Typekit.load();}catch(e){}</script>
+
 </head>
 <body>
     <div id="appLoadingIndicator">
