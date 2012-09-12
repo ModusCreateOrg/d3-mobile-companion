@@ -1,0 +1,47 @@
+/* main hero */
+.hero-overview-card div {
+  height: 100%;
+}
+
+.hero-overview {
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+  background-size: 55%;
+}
+
+.hero-header {
+  display: -webkit-box;
+  -webkit-box-pack: justify;
+}
+
+.hero-header-name {
+  text-align: left;
+  font-size: 2.3em;
+  text-shadow: 0px 4px #1E1B16;
+  font-weight: 800;
+  color: #eee;
+}
+
+.hero-header-level {
+  text-align: right;
+  font-size: 2em;
+  color: #eee;
+  .hero-header-paragon_level {
+    color: #5789ff;
+    padding-left: 5px;
+  }
+}
+
+/* attributes */
+.hero-attributes {
+  .attributes-header {
+    color: white;
+    font-size: 1.5em;    
+  }
+  .attribute-label {
+    display: -webkit-box;
+  }
+  .attribute-value {
+    display: -webkit-box;
+  }
+}

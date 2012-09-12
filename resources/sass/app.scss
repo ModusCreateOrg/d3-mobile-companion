@@ -1,4 +1,5 @@
 $page-bg-color: #1a1914;
+$sansSerif: "proxima-nova-condensed", sans-serif;
 
 @import 'sencha-touch/default/all';
 
@@ -20,12 +21,16 @@ $page-bg-color: #1a1914;
 
 @include sencha-tabbar-ui('mainTabBar', #472a20, 'matte', #FFFFFF);
 
+@import 'hero';
+
+
+
 html, body {
   height: 100%;
   background-image: inline-image('d3logo.jpg');
   background-repeat: no-repeat;
   background-size: cover;
-  font-family: "proxima-nova-condensed", sans-serif;
+  font-family: $sansSerif;
 }
 
 .navBar {
@@ -45,18 +50,6 @@ html, body {
   background-image: inline-image('page-bg.png');
 }
 
-
-.hero-overview-card div {
-  height: 100%;
-}
-
-.hero-overview {
-  background-position: 50% 50%;
-  background-repeat: no-repeat;
-  background-size: contain;
-  height: 100%;
-}
-
 @mixin hero-bg-image($className) {
   .hero-overview-#{$className} {
     background-image: url('../images/classes/#{$className}.png')
@@ -74,47 +67,6 @@ html, body {
 @include hero-bg-image('wizard_0');
 @include hero-bg-image('wizard_1');
 
-.hero-header {
-  display: -webkit-box;
-  -webkit-box-pack: justify;
-}
-
-.hero-header-name {
-  text-align: left;
-  font-size: 1.4em;
-  font-weight: 800;
-}
-
-.hero-header-level {
-  text-align: right;
-  font-size: 1.1em;
-}
-
 .flex1 {
-  -webkit-box-flex: 1;
-}
-
-.hero-detail-card > div {
-  height: 100%
-}
-.attributes-header {
-  font-size: 1.2em;
-  font-weight: 800;
-}
-
-.base-stats {
-
-}
-
-.stats-row {
-  display: -webkit-box;
-  -webkit-box-pack: justify;
-}
-.attribute-label {
-  text-align: left;
-  -webkit-box-flex: 1;
-}
-.attribute-value {
-  text-align: right;
   -webkit-box-flex: 1;
 }
