@@ -102,10 +102,10 @@ $carousel-track-size: 1.5em !default;
     height: 100%;
   }
 
-  $indicator-light: rgba(#fff, .1);
-  $indicator-light-active: rgba(#fff, .3);
-  $indicator-dark: rgba(#000, .1);
-  $indicator-dark-active: rgba(#000, .3);
+  $indicator-light: rgba(#ddd, .5);
+  $indicator-light-active: rgba(#ddd, .8);
+  $indicator-dark: rgba(#ddd, .1);
+  $indicator-dark-active: rgba(#ddd, .3);
 
   @include sencha-carousel-indicator-ui('light', $indicator-light, 'flat', $indicator-light-active, 'flat');
   @include sencha-carousel-indicator-ui('dark', $indicator-dark, 'flat', $indicator-dark-active, 'flat');
