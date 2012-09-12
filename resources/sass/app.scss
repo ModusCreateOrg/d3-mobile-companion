@@ -34,6 +34,10 @@ html, body {
   font-family: $sansSerif;
 }
 
+.x-html {
+  padding: .3em 1.2em; 
+}
+
 .navBar {
   .x-tabbar {
     background-image: inline-image('nav-bg.png');
