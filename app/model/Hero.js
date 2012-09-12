@@ -56,8 +56,7 @@ Ext.define('D3Mobile.model.Hero', {
             }
         ],
         proxy  : {
-            type    : 'ajax',
-            url     : 'http://us.battle.net/api/d3/profile/stan229-1441/hero/',
+            type    : 'jsonp',
             noCache : false,
             reader  : {
                 type : 'json'

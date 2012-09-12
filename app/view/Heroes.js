@@ -43,7 +43,7 @@ Ext.define('D3Mobile.view.Heroes', {
     },
     buildCard  : function (hero) {
         return {
-            xtype            : 'component',
+            xtype            : 'container',
             cls              : 'hero-overview-card',
             data             : hero,
             tpl              : this.getCardTpl(),
