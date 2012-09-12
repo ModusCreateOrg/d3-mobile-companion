@@ -42,7 +42,7 @@ Ext.define('D3Mobile.view.HeroDetail', {
                             '<div class="attribute-label">Vitality</div>',
                             '<div class="attribute-value">{stats.vitality}</div>',
                         '</div>',
-                        '<div class="stats-row">', // Make function to figure out label name and handle Demon Hunter 2 res.
+                        '<div class="stats-row">',
                             '<div class="attribute-label">Special Resource</div>',
                             '<div class="attribute-value">{stats.primaryResource}</div>',
                         '</div>',
@@ -142,7 +142,8 @@ Ext.define('D3Mobile.view.HeroDetail', {
         return {
             xtype            : 'container',
             scrollable       : {
-                direction : 'vertical'
+                direction : 'vertical',
+                directionLock: true
             },
             cls              : 'hero-detail-card',
             tpl              : this.getAttributesCardTpl(),
