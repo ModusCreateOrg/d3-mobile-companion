@@ -1,3 +1,8 @@
+/* base */
+.paragonLevel {
+  color: #5789ff;
+}
+
 /* main hero */
 .hero-overview-card div {
   height: 100%;
@@ -40,8 +45,15 @@
     font-size: 1.75em;
     border-bottom: 3px double #312a1e;
     margin-bottom: 15px;
+    padding-bottom: 5px;
     font-weight: 400;
     text-align: center;
+    .sub {
+      text-transform: capitalize;
+      font-size: .62em;
+      color: #D4B473;
+      margin-top: -8px;
+    }
   }
   .stats-group {
     margin-bottom: 15px;

@@ -8376,26 +8376,32 @@ html, body {
   color: white;
 }
 
-/* main hero */
+/* base */
 /* line 2, ../sass/_hero.scss */
+.paragonLevel {
+  color: #5789ff;
+}
+
+/* main hero */
+/* line 7, ../sass/_hero.scss */
 .hero-overview-card div {
   height: 100%;
 }
 
-/* line 6, ../sass/_hero.scss */
+/* line 11, ../sass/_hero.scss */
 .hero-overview {
   background-position: 50% 50%;
   background-repeat: no-repeat;
   background-size: 55%;
 }
 
-/* line 12, ../sass/_hero.scss */
+/* line 17, ../sass/_hero.scss */
 .hero-header {
   display: -webkit-box;
   -webkit-box-pack: justify;
 }
 
-/* line 17, ../sass/_hero.scss */
+/* line 22, ../sass/_hero.scss */
 .hero-header-name {
   text-align: left;
   font-size: 2.3em;
@@ -8404,48 +8410,56 @@ html, body {
   color: #eee;
 }
 
-/* line 25, ../sass/_hero.scss */
+/* line 30, ../sass/_hero.scss */
 .hero-header-level {
   text-align: right;
   font-size: 2em;
   color: #eee;
 }
-/* line 29, ../sass/_hero.scss */
+/* line 34, ../sass/_hero.scss */
 .hero-header-level .hero-header-paragon_level {
   color: #5789ff;
   padding-left: 5px;
 }
 
 /* attributes */
-/* line 37, ../sass/_hero.scss */
+/* line 42, ../sass/_hero.scss */
 .hero-attributes .attributes-header {
   text-transform: uppercase;
   color: #f3e6d0;
   font-size: 1.75em;
   border-bottom: 3px double #312a1e;
   margin-bottom: 15px;
+  padding-bottom: 5px;
   font-weight: 400;
   text-align: center;
 }
-/* line 46, ../sass/_hero.scss */
+/* line 51, ../sass/_hero.scss */
+.hero-attributes .attributes-header .sub {
+  text-transform: capitalize;
+  font-size: .7em;
+  color: #D4B473;
+  margin-top: -10px;
+}
+/* line 58, ../sass/_hero.scss */
 .hero-attributes .stats-group {
   margin-bottom: 15px;
   border-bottom: 1px solid #272218;
   border-radius: 5px;
 }
-/* line 51, ../sass/_hero.scss */
+/* line 63, ../sass/_hero.scss */
 .hero-attributes .stats-row {
   display: -webkit-box;
   -webkit-box-pack: justify;
   padding: 3px 10px;
 }
-/* line 56, ../sass/_hero.scss */
+/* line 68, ../sass/_hero.scss */
 .hero-attributes .attribute-label {
   text-align: left;
   -webkit-box-flex: 1;
   color: #a9986d;
 }
-/* line 61, ../sass/_hero.scss */
+/* line 73, ../sass/_hero.scss */
 .hero-attributes .attribute-value {
   font-size: 1.3em;
   text-align: right;

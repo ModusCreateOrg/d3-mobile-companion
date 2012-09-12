@@ -5,7 +5,10 @@ Ext.define('D3Mobile.view.HeroDetail', {
         hero              : null,
         attributesCardTpl : ''.concat(
             '<div class="hero-attributes">',
-                '<div class="attributes-header">Attributes</div>',
+                '<div class="attributes-header">',
+                    'Attributes',
+                    '<div class="sub">{level} <span class="paragonLevel">({paragonLevel})</span> - {class}</div>',
+                '</div>',
                 '<div class="base-stats">',
                     '<div class="stats-group">',
                         '<div class="stats-row">',
@@ -87,6 +90,7 @@ Ext.define('D3Mobile.view.HeroDetail', {
                         '</div>',
                     '</div>',
 
+                    // highlight the biggest resist
                     '<div class="stats-group">',
                         '<div class="stats-row">',
                             '<div class="attribute-label">Arcane Resist</div>',
@@ -110,6 +114,7 @@ Ext.define('D3Mobile.view.HeroDetail', {
                         '</div>',
                     '</div>',
 
+                    // convert these to a %
                     '<div class="stats-group">',
                         '<div class="stats-row">',
                             '<div class="attribute-label">Magic Find</div>',
