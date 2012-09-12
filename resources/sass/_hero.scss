@@ -38,44 +38,44 @@
 }
 
 /* attributes */
-.hero-attributes {
-  .attributes-header {
-    text-transform: uppercase;
-    color: #f3e6d0;
-    font-size: 1.75em;
-    border-bottom: 3px double #312a1e;
-    margin-bottom: 15px;
-    padding-bottom: 5px;
-    font-weight: 400;
-    text-align: center;
-    .sub {
-      text-transform: capitalize;
-      font-size: .62em;
-      color: #D4B473;
-      margin-top: -8px;
-    }
-  }
-  .stats-group {
-    margin-bottom: 15px;
-    border-bottom: 1px solid #272218;
-  }
-  .stats-row {
-    display: -webkit-box;
-    -webkit-box-pack: justify;  
-    padding: 3px 10px;
-  }
-  .attribute-label {
-    text-align: left;
-    -webkit-box-flex: 1;
-    color: #a9986d;
-  }
-  .attribute-value {
-    font-size: 1.3em;
-    text-align: right;
-    -webkit-box-flex: 1;
-    color: #f3e6d0;
+
+.header {
+  text-transform: uppercase;
+  color: #f3e6d0;
+  font-size: 1.75em;
+  border-bottom: 3px double #312a1e;
+  margin-bottom: 15px;
+  padding-bottom: 5px;
+  font-weight: 400;
+  text-align: center;
+  .sub {
+    text-transform: capitalize;
+    font-size: .62em;
+    color: #D4B473;
+    margin-top: -8px;
   }
 }
+.stats-group {
+  margin-bottom: 15px;
+  border-bottom: 1px solid #272218;
+}
+.stats-row {
+  display: -webkit-box;
+  -webkit-box-pack: justify;  
+  padding: 3px 10px;
+}
+.attribute-label {
+  text-align: left;
+  -webkit-box-flex: 1;
+  color: #a9986d;
+}
+.attribute-value {
+  font-size: 1.3em;
+  text-align: right;
+  -webkit-box-flex: 1;
+  color: #f3e6d0;
+}
+
 
 .base-stats {
 

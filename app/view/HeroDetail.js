@@ -5,7 +5,7 @@ Ext.define('D3Mobile.view.HeroDetail', {
         hero              : null,
         attributesCardTpl : ''.concat(
             '<div class="hero-attributes">',
-                '<div class="attributes-header">',
+                '<div class="header">',
                     'Attributes',
                     '<div class="sub">{level} <span class="paragonLevel">({paragonLevel})</span> - {class}</div>',
                 '</div>',
@@ -128,6 +128,16 @@ Ext.define('D3Mobile.view.HeroDetail', {
 
                 '</div>',
             '</div>'
+        ),
+        itemsCard : ''.concat(
+            '<div class="hero-items">',
+                '<div class="header">Items</div>',
+            '</div>'
+        ),
+        skillsCard : ''.concat(
+            '<div class="hero-skills">',
+                '<div class="header">Skills</div>',
+            '</div>'
         )
     },
     initialize          : function () {
@@ -155,16 +165,18 @@ Ext.define('D3Mobile.view.HeroDetail', {
         return {
             xtype : 'component',
             cls   : 'hero-detail-card',
-            tpl   : ''.concat('items'),
-            data  : this.getHero()
+            tpl   : this.getItemsCard(),
+            data  : this.getHero(),
+            styleHtmlContent : true
         };
     },
     buildSkillsCard     : function () {
         return {
             xtype : 'component',
             cls   : 'hero-detail-card',
-            tpl   : ''.concat('skills'),
-            data  : this.getHero()
+            tpl   : this.getSkillsCard(),
+            data  : this.getHero(),
+            styleHtmlContent : true
         };
     }
 });
