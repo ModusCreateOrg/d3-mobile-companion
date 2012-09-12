@@ -37,14 +37,13 @@ html, body {
   }
   .x-tab-active {
     @include background-image(linear-gradient(rgba(0, 0, 0, .5), rgba(0, 0, 0, .7)));
-  } 
+  }
 }
 
 // overall body background for pages
 .x-container {
   background-image: inline-image('page-bg.png');
 }
-
 
 .hero-overview-card div {
   height: 100%;
@@ -97,6 +96,11 @@ html, body {
 .hero-detail-card > div {
   height: 100%
 }
+
+.hero-detail-card > div > div {
+  height: 100%
+}
+
 .attributes-header {
   font-size: 1.2em;
   font-weight: 800;
@@ -110,10 +114,12 @@ html, body {
   display: -webkit-box;
   -webkit-box-pack: justify;
 }
+
 .attribute-label {
   text-align: left;
   -webkit-box-flex: 1;
 }
+
 .attribute-value {
   text-align: right;
   -webkit-box-flex: 1;
