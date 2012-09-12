@@ -1,11 +1,9 @@
 Ext.define('D3Mobile.store.Friends', {
-	extend : 'Ext.data.Store',
-	config : {
-		storeId  : 'friends',
-		model    : 'D3Mobile.model.Account',
-		autoLoad : false,
-		proxy    : {
-			type : 'memory'
-		}
-	}
+    extend : 'Ext.data.Store',
+    config : {
+        model : 'D3Mobile.model.Account',
+        proxy : {
+            type : 'memory'
+        }
+    }
 });

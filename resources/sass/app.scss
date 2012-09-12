@@ -14,7 +14,7 @@ $page-bg-color: #1a1914;
 @include sencha-indexbar;
 // @include sencha-list;
 @include sencha-layout;
-// @include sencha-carousel;
+@include sencha-carousel;
 // @include sencha-form;
 // @include sencha-msgbox;
 
@@ -35,4 +35,53 @@ $page-bg-color: #1a1914;
 // overall body background for pages
 .x-layout-card-item {
   background: url('../images/page-bg.png') no-repeat;
+}
+
+
+.hero-overview-card > div {
+  height: 100%;
+}
+
+.hero-overview {
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+  background-size: contain;
+  height: 100%;
+}
+
+@mixin hero-bg-image($className) {
+  .hero-overview-#{$className} {
+    background-image: url('../images/classes/#{$className}.png')
+  }
+}
+
+@include hero-bg-image('barbarian_0');
+@include hero-bg-image('barbarian_1');
+@include hero-bg-image('demon-hunter_0');
+@include hero-bg-image('demon-hunter_1');
+@include hero-bg-image('monk_0');
+@include hero-bg-image('monk_1');
+@include hero-bg-image('witch-doctor_0');
+@include hero-bg-image('witch-doctor_1');
+@include hero-bg-image('wizard_0');
+@include hero-bg-image('wizard_1');
+
+.hero-header {
+  display: -webkit-box;
+  -webkit-box-pack: justify;
+}
+
+.hero-header-name {
+  text-align: left;
+  font-size: 1.4em;
+  font-weight: 800;
+}
+
+.hero-header-level {
+  text-align: right;
+  font-size: 1.1em;
+}
+
+.flex1 {
+  -webkit-box-flex: 1;
 }
