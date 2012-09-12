@@ -8392,3 +8392,27 @@ html, body {
 .hero-detail-card > div {
   height: 100%;
 }
+
+/* line 100, ../sass/app.scss */
+.attributes-header {
+  font-size: 1.2em;
+  font-weight: 800;
+}
+
+/* line 109, ../sass/app.scss */
+.stats-row {
+  display: -webkit-box;
+  -webkit-box-pack: justify;
+}
+
+/* line 113, ../sass/app.scss */
+.attribute-label {
+  text-align: left;
+  -webkit-box-flex: 1;
+}
+
+/* line 117, ../sass/app.scss */
+.attribute-value {
+  text-align: right;
+  -webkit-box-flex: 1;
+}

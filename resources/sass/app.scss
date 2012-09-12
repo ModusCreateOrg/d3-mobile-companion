@@ -103,5 +103,18 @@ html, body {
 }
 
 .base-stats {
-  
+
+}
+
+.stats-row {
+  display: -webkit-box;
+  -webkit-box-pack: justify;
+}
+.attribute-label {
+  text-align: left;
+  -webkit-box-flex: 1;
+}
+.attribute-value {
+  text-align: right;
+  -webkit-box-flex: 1;
 }
