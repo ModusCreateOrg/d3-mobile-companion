@@ -132,12 +132,20 @@ Ext.define('D3Mobile.view.HeroDetail', {
         ),
         itemsCard : ''.concat(
             '<div class="hero-items">',
-                '<div class="header">Items</div>',
+                '<div class="header">',
+                    '<div class="hero-detail-back"></div>',
+                    'Items',
+                    '<div class="sub">{level} <span class="paragonLevel">({paragonLevel})</span> - {class}</div>',
+                '</div>',
             '</div>'
         ),
         skillsCard : ''.concat(
             '<div class="hero-skills">',
-                '<div class="header">Skills</div>',
+                '<div class="header">',
+                    '<div class="hero-detail-back"></div>',
+                    'Skills',
+                    '<div class="sub">{level} <span class="paragonLevel">({paragonLevel})</span> - {class}</div>',
+                '</div>',
             '</div>'
         )
     },
