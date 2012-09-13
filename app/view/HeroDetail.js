@@ -8,7 +8,7 @@ Ext.define('D3Mobile.view.HeroDetail', {
                 '<div class="header">',
                     '<div class="hero-detail-back">Heros</div>',
                     'Attributes',
-                    '<div class="sub">{level} <span class="paragonLevel">({paragonLevel})</span> - {class}</div>',
+                    '<div class="sub">{name} {level} <span class="paragonLevel">({paragonLevel})</span> - {class}</div>',
                 '</div>',
                 '<div class="base-stats">',
 
@@ -140,7 +140,7 @@ Ext.define('D3Mobile.view.HeroDetail', {
                 '<div class="header">',
                     '<div class="hero-detail-back">Heros</div>',
                     'Items',
-                    '<div class="sub">{level} <span class="paragonLevel">({paragonLevel})</span> - {class}</div>',
+                    '<div class="sub">{name} {level} <span class="paragonLevel">({paragonLevel})</span> - {class}</div>',
                 '</div>',
                 '<div class="items-container">',
                     '<div class="item helm orange"></div>',
@@ -164,7 +164,7 @@ Ext.define('D3Mobile.view.HeroDetail', {
                 '<div class="header">',
                     '<div class="hero-detail-back">Heros</div>',
                     'Skills',
-                    '<div class="sub">{level} <span class="paragonLevel">({paragonLevel})</span> - {class}</div>',
+                    '<div class="sub">{name} {level} <span class="paragonLevel">({paragonLevel})</span> - {class}</div>',
                 '</div>',
 
                 // icons are located:
