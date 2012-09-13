@@ -6,9 +6,9 @@ Ext.define('D3Mobile.view.HeroDetail', {
         attributesCardTpl : ''.concat(
             '<div class="hero-attributes">',
                 '<div class="header">',
-                    '<div class="hero-detail-back"></div>',
+                    '<div class="hero-detail-back">Heros</div>',
                     'Attributes',
-                    '<div class="sub">{level} <span class="paragonLevel">({paragonLevel})</span> - {class}</div>',
+                    '<div class="sub">{name} {level} <span class="paragonLevel">({paragonLevel})</span> - {class}</div>',
                 '</div>',
                 '<div class="base-stats">',
 
@@ -138,18 +138,33 @@ Ext.define('D3Mobile.view.HeroDetail', {
         itemsCard : ''.concat(
             '<div class="hero-items">',
                 '<div class="header">',
-                    '<div class="hero-detail-back"></div>',
+                    '<div class="hero-detail-back">Heros</div>',
                     'Items',
-                    '<div class="sub">{level} <span class="paragonLevel">({paragonLevel})</span> - {class}</div>',
+                    '<div class="sub">{name} {level} <span class="paragonLevel">({paragonLevel})</span> - {class}</div>',
+                '</div>',
+                '<div class="items-container">',
+                    '<div class="item helm orange"><img xmlns="http://www.w3.org/1999/xhtml" src="http://us.media.blizzard.com/d3/icons/items/large/unique_helm_011_104_demonhunter_male.png" alt="" /></div>',
+                    '<div class="item shoulders yellow"><img xmlns="http://www.w3.org/1999/xhtml" src="http://us.media.blizzard.com/d3/icons/items/large/shoulders_205_barbarian_male.png" alt="" /></div>',
+                    '<div class="item neck yellow"><img xmlns="http://www.w3.org/1999/xhtml" src="http://us.media.blizzard.com/d3/icons/items/large/amulet14_demonhunter_male.png" alt="" /></div>',
+                    '<div class="item chest green"><img xmlns="http://www.w3.org/1999/xhtml" src="http://us.media.blizzard.com/d3/icons/items/large/unique_chest_013_104_demonhunter_male.png" alt="" /></div>',
+                    '<div class="item hands yellow"><img xmlns="http://www.w3.org/1999/xhtml" src="http://us.media.blizzard.com/d3/icons/items/large/gloves_206_barbarian_male.png" alt="" /></div>',
+                    '<div class="item wrist yellow"><img xmlns="http://www.w3.org/1999/xhtml" src="http://us.media.blizzard.com/d3/icons/items/large/unique_bracer_007_104_demonhunter_male.png" alt="" /></div>',
+                    '<div class="item ringL blue"><img xmlns="http://www.w3.org/1999/xhtml" src="http://us.media.blizzard.com/d3/icons/items/large/ring_14_demonhunter_male.png" alt="" /></div>',
+                    '<div class="item belt yellow"><img xmlns="http://www.w3.org/1999/xhtml" src="http://us.media.blizzard.com/d3/icons/items/large/belt_206_barbarian_male.png" alt="" /></div>',
+                    '<div class="item ringR blue"><img xmlns="http://www.w3.org/1999/xhtml" src="http://us.media.blizzard.com/d3/icons/items/large/ring_14_demonhunter_male.png" alt="" /></div>',
+                    '<div class="item legs green"><img xmlns="http://www.w3.org/1999/xhtml" src="http://us.media.blizzard.com/d3/icons/items/large/unique_pants_013_demonhunter_male.png" alt="" /></div>',
+                    '<div class="item feet orange"><img xmlns="http://www.w3.org/1999/xhtml" src="http://us.media.blizzard.com/d3/icons/items/large/unique_boots_007_104_demonhunter_male.png" alt="" /></div>',
+                    '<div class="item mainHand orange"><img xmlns="http://www.w3.org/1999/xhtml" src="http://us.media.blizzard.com/d3/icons/items/large/unique_mighty_1h_005_104_demonhunter_male.png" alt="" /></div>',
+                    '<div class="item offHand yellow"><img xmlns="http://www.w3.org/1999/xhtml" src="http://us.media.blizzard.com/d3/icons/items/large/mace_1h_207_demonhunter_male.png" alt="" /></div>',
                 '</div>',
             '</div>'
         ),
         skillsCard : ''.concat(
             '<div class="hero-skills">',
                 '<div class="header">',
-                    '<div class="hero-detail-back"></div>',
+                    '<div class="hero-detail-back">Heros</div>',
                     'Skills',
-                    '<div class="sub">{level} <span class="paragonLevel">({paragonLevel})</span> - {class}</div>',
+                    '<div class="sub">{name} {level} <span class="paragonLevel">({paragonLevel})</span> - {class}</div>',
                 '</div>',
 
                 // icons are located:
@@ -213,7 +228,11 @@ Ext.define('D3Mobile.view.HeroDetail', {
     },
     buildItemsCard      : function () {
         return {
-            xtype : 'component',
+            xtype : 'container',
+            scrollable       : {
+                direction : 'vertical',
+                directionLock: true
+            },
             cls   : 'hero-detail-card',
             tpl   : this.getItemsCard(),
             data  : this.getHero(),
