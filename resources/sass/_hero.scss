@@ -126,14 +126,24 @@
 
 /* skills */
 .hero-skills {
+  .skills {
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+  }
+  .actives {
+    .skill {
+      width: 50%;
+      float: left;
+      //text-align: center;
+    }
+  }
   .passives {
     display: -webkit-box;
+    margin-top: 10px;
     .skill {
-      background: red;
       -webkit-box-flex: 1;
       margin: 0px 5px;
-      text-align: center;
-      padding: 20px;
+      //text-align: center;
     }
   }
 }

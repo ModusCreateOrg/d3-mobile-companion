@@ -1,7 +1,8 @@
 Ext.application({
     name        : 'D3Mobile',
     requires    : [
-        'Ext.MessageBox'
+        'Ext.MessageBox',
+        'D3Mobile.data.JsonP'
     ],
     controllers : [
         'Main',

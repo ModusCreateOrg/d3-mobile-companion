@@ -155,12 +155,24 @@ Ext.define('D3Mobile.view.HeroDetail', {
                 // icons are located:
                 // 64x64 = http://us.media.blizzard.com/d3/icons/skills/64/{passive.skill.icon}.png
                 // 21x21 = http://us.media.blizzard.com/d3/icons/skills/21/{passive.skill.icon}.png
-
-                '<div class="passives">',
-                    '<div class="skill">1</div>',
-                    '<div class="skill">2</div>',
-                    '<div class="skill">3</div>',
-
+                '<div class="skills">',
+                    '<div class="actives">',
+                        '<tpl for="skills.active">',
+                            '<div class="skill" data-tooltipurl="{skill.tooltipUrl}" data-runetype="{rune.type}">',
+                                '<img alt="{skill.name}" src="http://us.media.blizzard.com/d3/icons/skills/64/{skill.icon}.png">',
+                                '{skill.name}',
+                            '</div>',
+                        '</tpl>',
+                    '</div>',
+                    '<div class="passives">',
+                        '<tpl for="skills.passive">',
+                            '<div class="skill">',
+                                '<img alt="{skill.name}" src="http://us.media.blizzard.com/d3/icons/skills/64/{skill.icon}.png">',
+                                '{skill.name}',
+                            '</div>',
+                        '</tpl>',
+                    '</div>',
+                '</div>',
             '</div>'
         )
     },
@@ -178,9 +190,12 @@ Ext.define('D3Mobile.view.HeroDetail', {
         me.callParent();
     },
     onTap : function(evtObj) {
-        var backButton = evtObj.getTarget('.hero-detail-back');
+        var backButton = evtObj.getTarget('.hero-detail-back'),
+            skill      = evtObj.getTarget('.skill');
         if(backButton) {
             this.fireEvent('close');
+        } else if(skill) {
+            this.fireEvent('skillTap', skill.dataset.tooltipurl, skill.dataset.runetype);
         }
     },
     buildAttributesCard : function () {
