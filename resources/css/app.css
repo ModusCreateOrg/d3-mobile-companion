@@ -8633,7 +8633,32 @@ html, body {
   color: #5789ff;
 }
 
-/* line 5, ../sass/_hero.scss */
+/* line 6, ../sass/_hero.scss */
+.d3-color-yellow {
+  color: #f8de07 !important;
+}
+
+/* line 7, ../sass/_hero.scss */
+.d3-color-blue {
+  color: #6969ff !important;
+}
+
+/* line 8, ../sass/_hero.scss */
+.d3-color-orange {
+  color: #bf642f !important;
+}
+
+/* line 9, ../sass/_hero.scss */
+.d3-color-green {
+  color: #01d701 !important;
+}
+
+/* line 10, ../sass/_hero.scss */
+.d3-color-gold, .skill-tooltip .d3-item-properties .item-extras .item-ilvl {
+  color: #c0b377 !important;
+}
+
+/* line 12, ../sass/_hero.scss */
 .header {
   text-transform: uppercase;
   color: #f3e6d0;
@@ -8644,7 +8669,7 @@ html, body {
   font-weight: 400;
   text-align: center;
 }
-/* line 14, ../sass/_hero.scss */
+/* line 21, ../sass/_hero.scss */
 .header .sub {
   text-transform: capitalize;
   font-size: .62em;
@@ -8653,35 +8678,35 @@ html, body {
 }
 
 /* main hero */
-/* line 24, ../sass/_hero.scss */
+/* line 31, ../sass/_hero.scss */
 .heroes-container > div {
   height: 100%;
 }
 
-/* line 28, ../sass/_hero.scss */
+/* line 35, ../sass/_hero.scss */
 .heroes-container > div > div {
   height: 100%;
 }
 
-/* line 32, ../sass/_hero.scss */
+/* line 39, ../sass/_hero.scss */
 .hero-overview-card div {
   height: 100%;
 }
 
-/* line 36, ../sass/_hero.scss */
+/* line 43, ../sass/_hero.scss */
 .hero-overview {
   background-position: 50% 50%;
   background-repeat: no-repeat;
   background-size: 55%;
 }
 
-/* line 42, ../sass/_hero.scss */
+/* line 49, ../sass/_hero.scss */
 .hero-header {
   display: -webkit-box;
   -webkit-box-pack: justify;
 }
 
-/* line 47, ../sass/_hero.scss */
+/* line 54, ../sass/_hero.scss */
 .hero-header-name {
   text-align: left;
   font-size: 2.3em;
@@ -8690,30 +8715,30 @@ html, body {
   color: #eee;
 }
 
-/* line 55, ../sass/_hero.scss */
+/* line 62, ../sass/_hero.scss */
 .hero-header-level {
   text-align: right;
   font-size: 2em;
   color: #eee;
 }
-/* line 59, ../sass/_hero.scss */
+/* line 66, ../sass/_hero.scss */
 .hero-header-level .hero-header-paragon_level {
   color: #5789ff;
   padding-left: 5px;
 }
 
-/* line 65, ../sass/_hero.scss */
+/* line 72, ../sass/_hero.scss */
 .hero-detail-card > div {
   height: 100%;
 }
 
-/* line 69, ../sass/_hero.scss */
+/* line 76, ../sass/_hero.scss */
 .hero-detail-card > div > div {
   height: 100%;
 }
 
 /* attributes */
-/* line 74, ../sass/_hero.scss */
+/* line 81, ../sass/_hero.scss */
 .header {
   text-transform: uppercase;
   color: #f3e6d0;
@@ -8724,7 +8749,7 @@ html, body {
   font-weight: 400;
   text-align: center;
 }
-/* line 83, ../sass/_hero.scss */
+/* line 90, ../sass/_hero.scss */
 .header .sub {
   text-transform: capitalize;
   font-size: .62em;
@@ -8732,7 +8757,7 @@ html, body {
   margin-top: -8px;
 }
 
-/* line 90, ../sass/_hero.scss */
+/* line 97, ../sass/_hero.scss */
 .hero-detail-back {
   -webkit-mask-image: url('data:image/png;base64,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');
   -webkit-mask-size: contain;
@@ -8746,33 +8771,33 @@ html, body {
   float: left;
 }
 
-/* line 102, ../sass/_hero.scss */
+/* line 109, ../sass/_hero.scss */
 .stats-group {
   margin-bottom: 15px;
   border-bottom: 1px solid #272218;
 }
 
-/* line 106, ../sass/_hero.scss */
+/* line 113, ../sass/_hero.scss */
 .stats-row {
   display: -webkit-box;
   -webkit-box-pack: justify;
   padding: 3px 10px;
 }
-/* line 110, ../sass/_hero.scss */
+/* line 117, ../sass/_hero.scss */
 .stats-row.highlight {
   background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, rgba(255, 255, 255, 0.01)), color-stop(100%, rgba(255, 255, 255, 0.025)));
   background-image: -webkit-linear-gradient(top, rgba(255, 255, 255, 0.01), rgba(255, 255, 255, 0.025));
   background-image: linear-gradient(top, rgba(255, 255, 255, 0.01), rgba(255, 255, 255, 0.025));
 }
 
-/* line 115, ../sass/_hero.scss */
+/* line 122, ../sass/_hero.scss */
 .attribute-label {
   text-align: left;
   -webkit-box-flex: 1;
   color: #a9986d;
 }
 
-/* line 120, ../sass/_hero.scss */
+/* line 127, ../sass/_hero.scss */
 .attribute-value {
   font-size: 1.3em;
   text-align: right;
@@ -8781,18 +8806,18 @@ html, body {
 }
 
 /* items */
-/* line 128, ../sass/_hero.scss */
+/* line 135, ../sass/_hero.scss */
 .hero-items {
   text-align: center;
 }
-/* line 130, ../sass/_hero.scss */
+/* line 137, ../sass/_hero.scss */
 .hero-items .items-container {
   margin: 0px auto;
   width: 286px;
   height: 438px;
   position: relative;
 }
-/* line 136, ../sass/_hero.scss */
+/* line 143, ../sass/_hero.scss */
 .hero-items .items-container .item {
   -webkit-border-radius: 5px;
   border-radius: 5px;
@@ -8801,11 +8826,11 @@ html, body {
   height: 20px;
   border: 1px solid white;
 }
-/* line 142, ../sass/_hero.scss */
+/* line 149, ../sass/_hero.scss */
 .hero-items .items-container .item img {
   position: relative;
 }
-/* line 144, ../sass/_hero.scss */
+/* line 151, ../sass/_hero.scss */
 .hero-items .items-container .item.yellow {
   border-color: #b1a73c;
   background-color: #322a0d;
@@ -8813,12 +8838,12 @@ html, body {
   background-image: -webkit-linear-gradient(top, #322a0d, #605018);
   background-image: linear-gradient(top, #322a0d, #605018);
 }
-/* line 148, ../sass/_hero.scss */
+/* line 155, ../sass/_hero.scss */
 .hero-items .items-container .item.yellow.tapped {
   border-color: #dad492;
   background-color: #5a4c18;
 }
-/* line 153, ../sass/_hero.scss */
+/* line 160, ../sass/_hero.scss */
 .hero-items .items-container .item.blue {
   border-color: #6ba9ba;
   background-color: #131b27;
@@ -8826,12 +8851,12 @@ html, body {
   background-image: -webkit-linear-gradient(top, #131b27, #273850);
   background-image: linear-gradient(top, #131b27, #273850);
 }
-/* line 157, ../sass/_hero.scss */
+/* line 164, ../sass/_hero.scss */
 .hero-items .items-container .item.blue.tapped {
   border-color: #c2dce3;
   background-color: #243349;
 }
-/* line 162, ../sass/_hero.scss */
+/* line 169, ../sass/_hero.scss */
 .hero-items .items-container .item.orange {
   border-color: #c29337;
   background-color: #39240f;
@@ -8839,12 +8864,12 @@ html, body {
   background-image: -webkit-linear-gradient(top, #39240f, #69421c);
   background-image: linear-gradient(top, #39240f, #69421c);
 }
-/* line 166, ../sass/_hero.scss */
+/* line 173, ../sass/_hero.scss */
 .hero-items .items-container .item.orange.tapped {
   border-color: #e2c897;
   background-color: #613e1a;
 }
-/* line 171, ../sass/_hero.scss */
+/* line 178, ../sass/_hero.scss */
 .hero-items .items-container .item.green {
   border-color: #87a73d;
   background-color: #20300d;
@@ -8852,144 +8877,144 @@ html, body {
   background-image: -webkit-linear-gradient(top, #20300d, #3f6019);
   background-image: linear-gradient(top, #20300d, #3f6019);
 }
-/* line 175, ../sass/_hero.scss */
+/* line 182, ../sass/_hero.scss */
 .hero-items .items-container .item.green.tapped {
   border-color: #c0d68e;
   background-color: #3b5818;
 }
-/* line 181, ../sass/_hero.scss */
+/* line 188, ../sass/_hero.scss */
 .hero-items .items-container .item.helm {
   top: 25px;
   left: 108px;
   width: 66px;
   height: 66px;
 }
-/* line 186, ../sass/_hero.scss */
+/* line 193, ../sass/_hero.scss */
 .hero-items .items-container .item.helm img {
   top: -31px;
 }
-/* line 190, ../sass/_hero.scss */
+/* line 197, ../sass/_hero.scss */
 .hero-items .items-container .item.shoulders {
   top: 49px;
   left: 26px;
   width: 66px;
   height: 88px;
 }
-/* line 195, ../sass/_hero.scss */
+/* line 202, ../sass/_hero.scss */
 .hero-items .items-container .item.shoulders img {
   top: -20px;
 }
-/* line 199, ../sass/_hero.scss */
+/* line 206, ../sass/_hero.scss */
 .hero-items .items-container .item.neck {
   top: 69px;
   left: 192px;
   width: 55px;
   height: 56px;
 }
-/* line 204, ../sass/_hero.scss */
+/* line 211, ../sass/_hero.scss */
 .hero-items .items-container .item.neck img {
   width: 52px;
   height: 52px;
   top: 1px;
 }
-/* line 210, ../sass/_hero.scss */
+/* line 217, ../sass/_hero.scss */
 .hero-items .items-container .item.chest {
   top: 95px;
   left: 100px;
   width: 82px;
   height: 115px;
 }
-/* line 215, ../sass/_hero.scss */
+/* line 222, ../sass/_hero.scss */
 .hero-items .items-container .item.chest img {
   top: -25px;
 }
-/* line 219, ../sass/_hero.scss */
+/* line 226, ../sass/_hero.scss */
 .hero-items .items-container .item.hands {
   top: 148px;
   left: 0px;
   width: 66px;
   height: 88px;
 }
-/* line 224, ../sass/_hero.scss */
+/* line 231, ../sass/_hero.scss */
 .hero-items .items-container .item.hands img {
   top: -20px;
 }
-/* line 228, ../sass/_hero.scss */
+/* line 235, ../sass/_hero.scss */
 .hero-items .items-container .item.wrist {
   top: 148px;
   left: 216px;
   width: 66px;
   height: 88px;
 }
-/* line 233, ../sass/_hero.scss */
+/* line 240, ../sass/_hero.scss */
 .hero-items .items-container .item.wrist img {
   top: -20px;
 }
-/* line 237, ../sass/_hero.scss */
+/* line 244, ../sass/_hero.scss */
 .hero-items .items-container .item.ringL {
   top: 248px;
   left: 12px;
   width: 42px;
   height: 42px;
 }
-/* line 242, ../sass/_hero.scss */
+/* line 249, ../sass/_hero.scss */
 .hero-items .items-container .item.ringL img {
   top: -12px;
   left: -12px;
 }
-/* line 247, ../sass/_hero.scss */
+/* line 254, ../sass/_hero.scss */
 .hero-items .items-container .item.belt {
   top: 214px;
   left: 100px;
   width: 82px;
   height: 34px;
 }
-/* line 252, ../sass/_hero.scss */
+/* line 259, ../sass/_hero.scss */
 .hero-items .items-container .item.belt img {
   top: -15px;
 }
-/* line 256, ../sass/_hero.scss */
+/* line 263, ../sass/_hero.scss */
 .hero-items .items-container .item.ringR {
   top: 248px;
   left: 228px;
   width: 42px;
   height: 42px;
 }
-/* line 261, ../sass/_hero.scss */
+/* line 268, ../sass/_hero.scss */
 .hero-items .items-container .item.ringR img {
   top: -12px;
   left: -12px;
 }
-/* line 266, ../sass/_hero.scss */
+/* line 273, ../sass/_hero.scss */
 .hero-items .items-container .item.legs {
   top: 252px;
   left: 108px;
   width: 66px;
   height: 88px;
 }
-/* line 271, ../sass/_hero.scss */
+/* line 278, ../sass/_hero.scss */
 .hero-items .items-container .item.legs img {
   top: -20px;
 }
-/* line 275, ../sass/_hero.scss */
+/* line 282, ../sass/_hero.scss */
 .hero-items .items-container .item.feet {
   bottom: 5px;
   left: 108px;
   width: 66px;
   height: 89px;
 }
-/* line 280, ../sass/_hero.scss */
+/* line 287, ../sass/_hero.scss */
 .hero-items .items-container .item.feet img {
   top: -20px;
 }
-/* line 284, ../sass/_hero.scss */
+/* line 291, ../sass/_hero.scss */
 .hero-items .items-container .item.mainHand {
   bottom: 5px;
   left: 0px;
   width: 66px;
   height: 130px;
 }
-/* line 290, ../sass/_hero.scss */
+/* line 297, ../sass/_hero.scss */
 .hero-items .items-container .item.offHand {
   bottom: 5px;
   left: 216px;
@@ -8998,13 +9023,13 @@ html, body {
 }
 
 /* skills */
-/* line 306, ../sass/_hero.scss */
+/* line 313, ../sass/_hero.scss */
 .hero-skills .actives {
   overflow: hidden;
   border-bottom: 1px solid #252018;
   padding-bottom: 20px;
 }
-/* line 310, ../sass/_hero.scss */
+/* line 317, ../sass/_hero.scss */
 .hero-skills .actives .skill {
   position: relative;
   margin: 5px;
@@ -9012,7 +9037,7 @@ html, body {
   width: 30%;
   text-align: center;
 }
-/* line 316, ../sass/_hero.scss */
+/* line 323, ../sass/_hero.scss */
 .hero-skills .actives .skill .number {
   font-size: .65em;
   color: #ad835a;
@@ -9026,29 +9051,29 @@ html, body {
   left: 15px;
   top: -4px;
 }
-/* line 329, ../sass/_hero.scss */
+/* line 336, ../sass/_hero.scss */
 .hero-skills .actives .skill .name {
   color: #f3e6d0;
   font-weight: 600;
   line-height: 1.1;
 }
-/* line 330, ../sass/_hero.scss */
+/* line 337, ../sass/_hero.scss */
 .hero-skills .actives .skill .rune {
   color: #796d55;
 }
-/* line 333, ../sass/_hero.scss */
+/* line 340, ../sass/_hero.scss */
 .hero-skills .passives {
   overflow: hidden;
   margin-top: 10px;
 }
-/* line 336, ../sass/_hero.scss */
+/* line 343, ../sass/_hero.scss */
 .hero-skills .passives .skill {
   margin: 5px;
   float: left;
   width: 30%;
   text-align: center;
 }
-/* line 341, ../sass/_hero.scss */
+/* line 348, ../sass/_hero.scss */
 .hero-skills .passives .skill .name {
   color: #f3e6d0;
   font-weight: 600;
@@ -9057,7 +9082,7 @@ html, body {
 
 /* line 1, ../sass/_tooltip.scss */
 .skill-tooltip {
-  height: 420px;
+  min-height: 420px;
   width: 280px;
 }
 @media only screen and (orientation: landscape) {
@@ -9083,34 +9108,83 @@ html, body {
 }
 /* line 20, ../sass/_tooltip.scss */
 .skill-tooltip .tooltip-head h3 {
-  color: #F3E6D0;
   text-align: center;
-  text-transform: uppercase;
-  font-size: 1.3em;
+  text-transform: none;
+  font-size: 1.7em;
+  border-bottom: 3px double #322A20;
+  padding-bottom: 10px;
+  margin-bottom: 10px;
 }
-/* line 27, ../sass/_tooltip.scss */
+/* line 30, ../sass/_tooltip.scss */
+.skill-tooltip .d3-item-properties .item-armor-weapon {
+  color: #878b83;
+}
+/* line 32, ../sass/_tooltip.scss */
+.skill-tooltip .d3-item-properties .item-armor-weapon li {
+  list-style: none;
+}
+/* line 34, ../sass/_tooltip.scss */
+.skill-tooltip .d3-item-properties .item-type {
+  margin-bottom: 0;
+}
+/* line 36, ../sass/_tooltip.scss */
+.skill-tooltip .d3-item-properties .item-type li {
+  list-style: none;
+}
+/* line 38, ../sass/_tooltip.scss */
+.skill-tooltip .d3-item-properties .item-extras {
+  border-top: 1px solid #322A20;
+  margin: 5px 0 0 0;
+  padding: 5px 0 0 0;
+}
+/* line 42, ../sass/_tooltip.scss */
+.skill-tooltip .d3-item-properties .item-extras .value {
+  color: white;
+}
+/* line 43, ../sass/_tooltip.scss */
+.skill-tooltip .d3-item-properties .item-extras .item-reqlevel {
+  list-style: none;
+  float: left;
+}
+/* line 47, ../sass/_tooltip.scss */
+.skill-tooltip .d3-item-properties .item-extras .item-ilvl {
+  list-style: none;
+  float: right;
+  text-align: right;
+}
+/* line 54, ../sass/_tooltip.scss */
+.skill-tooltip .d3-item-properties .big {
+  font-size: 3.2em;
+  line-height: 1.1;
+  color: white;
+  list-style-type: none;
+}
+/* line 60, ../sass/_tooltip.scss */
+.skill-tooltip .d3-item-properties li p {
+  margin: 0;
+}
+/* line 62, ../sass/_tooltip.scss */
 .skill-tooltip .d3-tooltip-rune {
   border-top: 2px solid #322A20;
   padding-top: 20px;
 }
-/* line 32, ../sass/_tooltip.scss */
+/* line 67, ../sass/_tooltip.scss */
 .skill-tooltip .description p {
   color: #c7b377;
 }
-/* line 33, ../sass/_tooltip.scss */
+/* line 68, ../sass/_tooltip.scss */
 .skill-tooltip .description .d3-color-green {
   font-weight: 600;
-  color: #01d701;
 }
-/* line 37, ../sass/_tooltip.scss */
+/* line 71, ../sass/_tooltip.scss */
 .skill-tooltip .description .special {
   color: #ad8332;
 }
-/* line 40, ../sass/_tooltip.scss */
+/* line 74, ../sass/_tooltip.scss */
 .skill-tooltip .description .subtle {
   color: #7b6d55;
 }
-/* line 42, ../sass/_tooltip.scss */
+/* line 76, ../sass/_tooltip.scss */
 .skill-tooltip .description .subtle em {
   font-style: normal;
   color: #ad835a;
