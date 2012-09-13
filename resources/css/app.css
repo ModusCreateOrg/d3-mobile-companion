@@ -8809,7 +8809,23 @@ html, body {
   background-image: -webkit-linear-gradient(top, #322a0d, #605018);
   background-image: linear-gradient(top, #322a0d, #605018);
 }
-/* line 149, ../sass/_hero.scss */
+/* line 147, ../sass/_hero.scss */
+.hero-items .items-container .item.blue {
+  border-color: #6ba9ba;
+  background-color: #131b27;
+  background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #131b27), color-stop(100%, #273850));
+  background-image: -webkit-linear-gradient(top, #131b27, #273850);
+  background-image: linear-gradient(top, #131b27, #273850);
+}
+/* line 153, ../sass/_hero.scss */
+.hero-items .items-container .item.orange {
+  border-color: #c29337;
+  background-color: #39240f;
+  background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #39240f), color-stop(100%, #69421c));
+  background-image: -webkit-linear-gradient(top, #39240f, #69421c);
+  background-image: linear-gradient(top, #39240f, #69421c);
+}
+/* line 159, ../sass/_hero.scss */
 .hero-items .items-container .item.green {
   border-color: #87a73d;
   background-color: #20300d;
@@ -8817,91 +8833,91 @@ html, body {
   background-image: -webkit-linear-gradient(top, #20300d, #3f6019);
   background-image: linear-gradient(top, #20300d, #3f6019);
 }
-/* line 156, ../sass/_hero.scss */
+/* line 166, ../sass/_hero.scss */
 .hero-items .items-container .item.helm {
   top: 25px;
   left: 108px;
   width: 66px;
   height: 66px;
 }
-/* line 163, ../sass/_hero.scss */
+/* line 173, ../sass/_hero.scss */
 .hero-items .items-container .item.shoulders {
   top: 49px;
   left: 26px;
   width: 66px;
   height: 88px;
 }
-/* line 170, ../sass/_hero.scss */
+/* line 180, ../sass/_hero.scss */
 .hero-items .items-container .item.neck {
   top: 69px;
   left: 192px;
   width: 55px;
   height: 56px;
 }
-/* line 177, ../sass/_hero.scss */
+/* line 187, ../sass/_hero.scss */
 .hero-items .items-container .item.chest {
   top: 95px;
   left: 100px;
   width: 82px;
   height: 115px;
 }
-/* line 184, ../sass/_hero.scss */
+/* line 194, ../sass/_hero.scss */
 .hero-items .items-container .item.hands {
   top: 148px;
   left: 0px;
   width: 66px;
   height: 88px;
 }
-/* line 191, ../sass/_hero.scss */
+/* line 201, ../sass/_hero.scss */
 .hero-items .items-container .item.wrist {
   top: 148px;
   left: 216px;
   width: 66px;
   height: 88px;
 }
-/* line 198, ../sass/_hero.scss */
+/* line 208, ../sass/_hero.scss */
 .hero-items .items-container .item.ringL {
   top: 248px;
   left: 12px;
   width: 42px;
   height: 42px;
 }
-/* line 205, ../sass/_hero.scss */
+/* line 215, ../sass/_hero.scss */
 .hero-items .items-container .item.belt {
   top: 214px;
   left: 100px;
   width: 82px;
   height: 34px;
 }
-/* line 212, ../sass/_hero.scss */
+/* line 222, ../sass/_hero.scss */
 .hero-items .items-container .item.ringR {
   top: 248px;
   left: 228px;
   width: 42px;
   height: 42px;
 }
-/* line 219, ../sass/_hero.scss */
+/* line 229, ../sass/_hero.scss */
 .hero-items .items-container .item.legs {
   top: 252px;
   left: 108px;
   width: 66px;
   height: 88px;
 }
-/* line 226, ../sass/_hero.scss */
+/* line 236, ../sass/_hero.scss */
 .hero-items .items-container .item.feet {
   bottom: 5px;
   left: 108px;
   width: 66px;
   height: 89px;
 }
-/* line 233, ../sass/_hero.scss */
+/* line 243, ../sass/_hero.scss */
 .hero-items .items-container .item.mainHand {
   bottom: 5px;
   left: 0px;
   width: 66px;
   height: 130px;
 }
-/* line 240, ../sass/_hero.scss */
+/* line 250, ../sass/_hero.scss */
 .hero-items .items-container .item.offHand {
   bottom: 5px;
   left: 216px;
@@ -8910,11 +8926,11 @@ html, body {
 }
 
 /* skills */
-/* line 254, ../sass/_hero.scss */
+/* line 264, ../sass/_hero.scss */
 .hero-skills .passives {
   display: -webkit-box;
 }
-/* line 256, ../sass/_hero.scss */
+/* line 266, ../sass/_hero.scss */
 .hero-skills .passives .skill {
   background: red;
   -webkit-box-flex: 1;
