@@ -301,14 +301,13 @@
 /* skills */
 .hero-skills {
   .skills {
-    display: -webkit-box;
-    -webkit-box-orient: vertical;
+    
   }
   .actives {
+    display: -webkit-box;
     .skill {
-      width: 50%;
-      float: left;
-      //text-align: center;
+      -webkit-box-flex: 1;
+      margin: 0px 5px;
     }
   }
   .passives {

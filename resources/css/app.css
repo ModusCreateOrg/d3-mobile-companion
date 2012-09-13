@@ -8998,22 +8998,21 @@ html, body {
 }
 
 /* skills */
-/* line 303, ../sass/_hero.scss */
-.hero-skills .skills {
+/* line 306, ../sass/_hero.scss */
+.hero-skills .actives {
   display: -webkit-box;
-  -webkit-box-orient: vertical;
 }
 /* line 308, ../sass/_hero.scss */
 .hero-skills .actives .skill {
-  width: 50%;
-  float: left;
+  -webkit-box-flex: 1;
+  margin: 0px 5px;
 }
-/* line 314, ../sass/_hero.scss */
+/* line 313, ../sass/_hero.scss */
 .hero-skills .passives {
   display: -webkit-box;
   margin-top: 10px;
 }
-/* line 317, ../sass/_hero.scss */
+/* line 316, ../sass/_hero.scss */
 .hero-skills .passives .skill {
   -webkit-box-flex: 1;
   margin: 0px 5px;
