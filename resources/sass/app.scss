@@ -26,6 +26,7 @@ $sansSerif: "proxima-nova-condensed", sans-serif;
 @include pictos-iconmask(refresh1);
 
 @import 'hero';
+@import 'tooltip';
 
 
 
@@ -79,14 +80,3 @@ html, body {
 .flex1 {
   -webkit-box-flex: 1;
 }
-
-.tooltip {
-  height: 420px;
-  width: 280px;
-  @media only screen and (orientation : landscape) {
-    height: 260px;
-    width: 440px;
-  }
-
-}
-

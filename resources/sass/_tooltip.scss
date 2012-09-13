@@ -1,0 +1,45 @@
+.skill-tooltip {
+  height: 420px;
+  width: 280px;
+  @media only screen and (orientation : landscape) {
+    height: 260px;
+    width: 440px;
+  }
+  .x-body {
+    background: #010101 !important;
+    border: 2px solid #322A20;
+  }
+  .x-html {
+    padding: 1.2em 1.2em;
+  }  
+  .tooltip-head {
+    h3 { 
+      color: #F3E6D0;
+      text-align: center;
+      text-transform: uppercase;
+      font-size: 1.3em;
+    }
+  }
+  .d3-tooltip-rune {
+    border-top: 2px solid #322A20;
+    padding-top: 20px;    
+  }
+  .description {
+    p { color: #c7b377; }
+    .d3-color-green {
+      font-weight: 600;
+      color: #01d701;
+    }
+    .special {
+      color: #ad8332;
+    }
+    .subtle {
+      color: #7b6d55;
+      em {
+        font-style: normal;
+        color: #ad835a;
+        font-weight: 600;
+      }
+    }
+  }
+}

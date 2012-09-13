@@ -2,7 +2,7 @@ Ext.define('D3Mobile.view.Tooltip', {
     extend     : 'Ext.Panel',
     xtype      : 'tooltip',
     config     : {
-        cls              : 'tooltip',
+        cls              : 'skill-tooltip',
         modal            : true,
         centered         : true,
         hideOnMaskTap    : true,
