@@ -23,7 +23,7 @@ $sansSerif: "proxima-nova-condensed", sans-serif;
 
 @include sencha-tabbar-ui('mainTabBar', #472a20, 'matte', #FFFFFF);
 
-@include pictos-iconmask(refresh1);
+@include pictos-iconmask(refresh);
 
 @import 'hero';
 @import 'tooltip';

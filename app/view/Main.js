@@ -17,15 +17,19 @@ Ext.define('D3Mobile.view.Main', {
         },
         items          : [
             {
+                iconCls: 'refresh',
                 xtype : 'heroescontainer'
             },
             {
+                iconCls: 'refresh',
                 xtype : 'friends'
             },
             {
+                iconCls: 'refresh',
                 xtype : 'news'
             },
             {
+                iconCls: 'refresh',
                 xtype : 'servers'
             }
         ]
