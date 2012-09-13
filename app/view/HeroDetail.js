@@ -146,7 +146,9 @@ Ext.define('D3Mobile.view.HeroDetail', {
         ),
         skillsCard : ''.concat(
             '<div class="hero-skills">',
-                '<div class="header">Skills</div>',
+                '<div class="header">',
+                '<div class="hero-detail-back"></div>',
+                    'Skills</div>',
 
                 // icons are located:
                 // 64x64 = http://us.media.blizzard.com/d3/icons/skills/64/{passive.skill.icon}.png
