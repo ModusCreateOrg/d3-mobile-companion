@@ -156,11 +156,7 @@ Ext.define('D3Mobile.view.HeroDetail', {
                     '<div class="skill">1</div>',
                     '<div class="skill">2</div>',
                     '<div class="skill">3</div>',
-                '<div class="header">',
-                    '<div class="hero-detail-back"></div>',
-                    'Skills',
-                    '<div class="sub">{level} <span class="paragonLevel">({paragonLevel})</span> - {class}</div>',
-                '</div>',
+
             '</div>'
         )
     },
