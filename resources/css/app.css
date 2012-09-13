@@ -9032,14 +9032,14 @@ html, body {
   }
 }
 /* line 8, ../sass/_tooltip.scss */
-.skill-tooltip .x-panel.x-floating, .skill-tooltip .x-msgbox.x-floating, .skill-tooltip .x-form.x-floating {
-  background: none;
-  padding: 0;
+.skill-tooltip.x-panel.x-floating, .skill-tooltip .x-msgbox.x-floating, .skill-tooltip .x-form.x-floating {
+  background: none !important;
+  padding: 0 !important;
 }
 /* line 12, ../sass/_tooltip.scss */
 .skill-tooltip .x-body {
   background: #010101 !important;
-  border: 2px solid #322A20;
+  border: 2px solid #322A20 !important;
 }
 /* line 16, ../sass/_tooltip.scss */
 .skill-tooltip .x-html {
