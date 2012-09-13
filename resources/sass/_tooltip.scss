@@ -27,6 +27,22 @@
     }
   }
   .d3-item-properties {
+    .full-socket {
+      color: white;
+      list-style: none;
+      margin-left: -25px;
+      position: relative;      
+      font-weight: 400;
+      .socket-effect {
+        top: -6px;
+        position: relative;
+        left: 3px;        
+      }
+      img { width: 24px; }
+    }
+    .full-socket:first-child {
+      margin-top: 15px;
+    }
     .item-armor-weapon {
       color: #878b83;
       li { list-style: none; }
