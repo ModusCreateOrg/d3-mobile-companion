@@ -6,6 +6,7 @@ Ext.define('D3Mobile.view.HeroDetail', {
         attributesCardTpl : ''.concat(
             '<div class="hero-attributes">',
                 '<div class="header">',
+                    '<div class="hero-detail-back"></div>',
                     'Attributes',
                     '<div class="sub">{level} <span class="paragonLevel">({paragonLevel})</span> - {class}</div>',
                 '</div>',
@@ -146,7 +147,18 @@ Ext.define('D3Mobile.view.HeroDetail', {
         me.add(me.buildAttributesCard());
         me.add(me.buildItemsCard());
         me.add(me.buildSkillsCard());
+
+        me.element.on({
+            tap   : me.onTap,
+            scope : me
+        });
         me.callParent();
+    },
+    onTap : function(evtObj) {
+        var backButton = evtObj.getTarget('.hero-detail-back');
+        if(backButton) {
+            this.fireEvent('close');
+        }
     },
     buildAttributesCard : function () {
         return {

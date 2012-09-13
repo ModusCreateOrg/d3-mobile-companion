@@ -4,6 +4,15 @@
 }
 
 /* main hero */
+
+.heroes-container > div {
+  height: 100%;
+}
+
+.heroes-container > div > div {
+  height: 100%;
+}
+
 .hero-overview-card div {
   height: 100%;
 }
@@ -37,6 +46,14 @@
   }
 }
 
+.hero-detail-card > div {
+  height: 100%
+}
+
+.hero-detail-card > div > div {
+  height: 100%
+}
+
 /* attributes */
 
 .header {
@@ -54,6 +71,18 @@
     color: #D4B473;
     margin-top: -8px;
   }
+}
+.hero-detail-back {
+  -webkit-mask-image: theme_image($theme-name, "pictos/" + "arrow_left" + ".png");
+  -webkit-mask-size: contain;
+  -webkit-mask-repeat: no-repeat;
+  position: absolute;
+  left: 10px;
+  top: 10px;
+  background-color: #f3e6d0;
+  width: 40px;
+  height: 40px;
+  float: left;
 }
 .stats-group {
   margin-bottom: 15px;
@@ -80,3 +109,4 @@
 .base-stats {
 
 }
+
