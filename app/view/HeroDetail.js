@@ -176,6 +176,7 @@ Ext.define('D3Mobile.view.HeroDetail', {
                             '<div class="skill" data-tooltipurl="{skill.tooltipUrl}" data-runetype="{rune.type}">',
                                 '<img alt="{skill.name}" src="http://us.media.blizzard.com/d3/icons/skills/64/{skill.icon}.png">',
                                 '{skill.name}',
+                                '{rune.name}',
                             '</div>',
                         '</tpl>',
                     '</div>',
