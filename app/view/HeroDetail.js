@@ -182,7 +182,7 @@ Ext.define('D3Mobile.view.HeroDetail', {
                     '</div>',
                     '<div class="passives">',
                         '<tpl for="skills.passive">',
-                            '<div class="skill">',
+                            '<div class="skill" data-tooltipurl="{skill.tooltipUrl}">',
                                 '<img alt="{skill.name}" src="http://us.media.blizzard.com/d3/icons/skills/64/{skill.icon}.png">',
                                 '{skill.name}',
                             '</div>',
