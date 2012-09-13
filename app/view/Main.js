@@ -2,7 +2,7 @@ Ext.define('D3Mobile.view.Main', {
     extend   : 'Ext.tab.Panel',
     xtype    : 'main',
     requires : [
-        'D3Mobile.view.Heroes',
+        'D3Mobile.view.HeroesContainer',
         'D3Mobile.view.Friends',
         'D3Mobile.view.News',
         'D3Mobile.view.Servers'
@@ -17,7 +17,7 @@ Ext.define('D3Mobile.view.Main', {
         },
         items          : [
             {
-                xtype : 'heroes'
+                xtype : 'heroescontainer'
             },
             {
                 xtype : 'friends'

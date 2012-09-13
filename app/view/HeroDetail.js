@@ -6,6 +6,7 @@ Ext.define('D3Mobile.view.HeroDetail', {
         attributesCardTpl : ''.concat(
             '<div class="hero-attributes">',
                 '<div class="header">',
+                    '<div class="hero-detail-back"></div>',
                     'Attributes',
                     '<div class="sub">{level} <span class="paragonLevel">({paragonLevel})</span> - {class}</div>',
                 '</div>',
@@ -18,7 +19,7 @@ Ext.define('D3Mobile.view.HeroDetail', {
                         '</div>',
                         '<div class="stats-row">',
                             '<div class="attribute-label">Damage</div>',
-                            '<div class="attribute-value">{stats.damage}</div>',
+                            '<div class="attribute-value">{[values.stats.damage.toFixed(2)]}</div>',
                         '</div>',
                         '<div class="stats-row">',
                             '<div class="attribute-label">Life</div>',
@@ -56,42 +57,42 @@ Ext.define('D3Mobile.view.HeroDetail', {
                     '<div class="stats-group">',
                         '<div class="stats-row">',
                             '<div class="attribute-label">Attack Speed</div>',
-                            '<div class="attribute-value">{stats.attackSpeed}</div>',
+                            '<div class="attribute-value">{[values.stats.attackSpeed.toFixed(2)]}</div>',
                         '</div>',
                         '<div class="stats-row">',
-                            '<div class="attribute-label">Critical Hit Chance Speed</div>',
-                            '<div class="attribute-value">{stats.critChance}</div>',
+                            '<div class="attribute-label">Critical Hit Chance</div>',
+                            '<div class="attribute-value">{[(values.stats.critChance * 100).toFixed(2)]}%</div>',
                         '</div>',
                         '<div class="stats-row">',
                             '<div class="attribute-label">Critical Hit Damage</div>',
-                            '<div class="attribute-value">{stats.critDamage}</div>',
+                            '<div class="attribute-value">{[(values.stats.critDamage * 100).toFixed(2)]}%</div>',
                         '</div>',
                         '<div class="stats-row">',
                             '<div class="attribute-label">Damage Increase</div>',
-                            '<div class="attribute-value">{stats.damageIncrease}</div>',
+                            '<div class="attribute-value">{[(values.stats.damageIncrease * 100).toFixed(2)]}%</div>',
                         '</div>',
                     '</div>',
 
                     '<div class="stats-group">',
                         '<div class="stats-row">',
                             '<div class="attribute-label">Damage Reduction</div>',
-                            '<div class="attribute-value">{stats.damageReduction}</div>',
+                            '<div class="attribute-value">{[(values.stats.damageReduction * 100).toFixed(2)]}%</div>',
                         '</div>',
                         '<div class="stats-row">',
                             '<div class="attribute-label">Life on Hit</div>',
-                            '<div class="attribute-value">{stats.lifeOnHit}</div>',
+                            '<div class="attribute-value">{[values.stats.lifeOnHit.toFixed(2)]}</div>',
                         '</div>',
                         '<div class="stats-row">',
                             '<div class="attribute-label">Life per Kill</div>',
-                            '<div class="attribute-value">{stats.lifePerKill}</div>',
+                            '<div class="attribute-value">{[values.stats.lifePerKill.toFixed(2)]}</div>',
                         '</div>',
                         '<div class="stats-row">',
                             '<div class="attribute-label">Life Steal</div>',
-                            '<div class="attribute-value">{stats.lifeSteal}</div>',
+                            '<div class="attribute-value">{[(values.stats.lifeSteal * 100).toFixed(2)]}%</div>',
                         '</div>',
                         '<div class="stats-row">',
                             '<div class="attribute-label">Block Chance</div>',
-                            '<div class="attribute-value">{stats.blockChance}</div>',
+                            '<div class="attribute-value">{[(values.stats.blockChance * 100).toFixed(2)]}%</div>',
                         '</div>',
                     '</div>',
 
@@ -123,11 +124,11 @@ Ext.define('D3Mobile.view.HeroDetail', {
                     '<div class="stats-group">',
                         '<div class="stats-row">',
                             '<div class="attribute-label">Magic Find</div>',
-                            '<div class="attribute-value">{stats.magicFind}</div>',
+                            '<div class="attribute-value">{[(values.stats.magicFind * 100).toFixed(0)]}%</div>',
                         '</div>',
                         '<div class="stats-row">',
                             '<div class="attribute-label">Gold Find</div>',
-                            '<div class="attribute-value">{stats.goldFind}</div>',
+                            '<div class="attribute-value">{[(values.stats.goldFind * 100).toFixed(0)]}%</div>',
                         '</div>',
                     '</div>',
 
@@ -161,7 +162,18 @@ Ext.define('D3Mobile.view.HeroDetail', {
         me.add(me.buildAttributesCard());
         me.add(me.buildItemsCard());
         me.add(me.buildSkillsCard());
+
+        me.element.on({
+            tap   : me.onTap,
+            scope : me
+        });
         me.callParent();
+    },
+    onTap : function(evtObj) {
+        var backButton = evtObj.getTarget('.hero-detail-back');
+        if(backButton) {
+            this.fireEvent('close');
+        }
     },
     buildAttributesCard : function () {
         return {
