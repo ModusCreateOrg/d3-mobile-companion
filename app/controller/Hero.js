@@ -49,6 +49,7 @@ Ext.define('D3Mobile.controller.Hero', {
     },
     onCloseHeroDetailTap : function () {
         var heroesContainer = this.getHeroesContainer();
+        this.getMain().getTabBar().getActiveTab().setTitle('Heroes');
         heroesContainer.animateActiveItem(0, { type : 'flip' });
         setTimeout( function() {
             heroesContainer.remove(heroesContainer.down('herodetail'), true);
