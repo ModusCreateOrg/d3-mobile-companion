@@ -26,10 +26,10 @@ Ext.define('D3Mobile.controller.Main', {
     },
     launch                    : function () {
         Ext.Viewport.add({
-            xtype : 'main'
+            xtype : 'login'
         });
 
-        this.loadStores();
+//        this.loadStores();
     },
     loadStores                : function () {
         var me = this;
