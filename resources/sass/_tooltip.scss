@@ -5,6 +5,10 @@
     height: 260px;
     width: 440px;
   }
+  .x-panel.x-floating, .x-msgbox.x-floating, .x-form.x-floating {
+    background: none;
+    padding: 0;
+  }
   .x-body {
     background: #010101 !important;
     border: 2px solid #322A20;
