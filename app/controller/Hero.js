@@ -99,7 +99,6 @@ Ext.define('D3Mobile.controller.Hero', {
     onItemTooltipSuccess  : function (success, itemInfo) {
         var xTpl,
             htmlTpl;
-
         htmlTpl = ''.concat(
             '<div class="tooltip-content">',
                 '<div class="d3-tooltip d3-tooltip-item">',
@@ -139,6 +138,12 @@ Ext.define('D3Mobile.controller.Hero', {
                                 '<tpl for="attributes">',
                                     '<li class="d3-color-blue"><p>{.}</p></li>',
                                 '</tpl>',
+                                '<tpl for="gems">',
+                                '<li class="d3-color-white full-socket">',
+                                    '<img class="gem" src="http://us.media.blizzard.com/d3/icons/items/small/{item.icon}.png" />',
+                                    '<span class="socket-effect">{attributes[0]}</span>',
+                                '</li>',
+                            '</tpl>',
                             '</ul>',
                             '<ul class="item-extras">',
                                 '<li class="item-reqlevel"><span class="d3-color-gold">Required Level: </span><span class="value">{requiredLevel}</span></li>',
