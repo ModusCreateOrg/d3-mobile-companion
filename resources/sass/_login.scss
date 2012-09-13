@@ -25,6 +25,7 @@
     margin-top: 200px;
     input {
       @include border-radius(5px);
+      text-align: center;
       border-radius:0.3em;
       border:1px solid #91897e;
       box-shadow:inset 0 0 4px rgba(25,0,0,0.4);
@@ -32,9 +33,11 @@
       margin:5px 0;
       transition:all 0.3s ease-out;
       width:100%;
-      
-
       color: #333;
+      &.invalid {
+        border: 3px solid #aa1711;
+      }
+
       &[name=battleTag] {
         width: 45%;
         margin-right: 10px;

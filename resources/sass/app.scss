@@ -2,8 +2,6 @@ $page-bg-color: #1a1914;
 $serif: "chaparral-pro", serif;
 $sansSerif: "proxima-nova-condensed", sans-serif;
 
-$button-radius: '0px';
-
 .d3-color-yellow { color: #f8de07 !important; }
 .d3-color-blue { color: #6969ff !important; }
 .d3-color-orange { color: #bf642f !important; }
@@ -30,7 +28,7 @@ $button-radius: '0px';
 @include sencha-loading-spinner;
 
 @include sencha-tabbar-ui('mainTabBar', #472a20, 'matte', #FFFFFF);
-@include sencha-button-ui('loginButton', #cb6c3b, 'matte');
+@include sencha-button-ui('loginButton', #333, 'matte');
 
 @include pictos-iconmask(refresh);
 
