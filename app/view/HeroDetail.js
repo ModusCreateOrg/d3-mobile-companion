@@ -11,7 +11,12 @@ Ext.define('D3Mobile.view.HeroDetail', {
                     '<div class="sub">{level} <span class="paragonLevel">({paragonLevel})</span> - {class}</div>',
                 '</div>',
                 '<div class="base-stats">',
+
                     '<div class="stats-group">',
+                        '<div class="stats-row highlight">',
+                            '<div class="attribute-label">Elite Kills</div>',
+                            '<div class="attribute-value">{kills.elites}</div>',
+                        '</div>',
                         '<div class="stats-row">',
                             '<div class="attribute-label">Damage</div>',
                             '<div class="attribute-value">{[values.stats.damage.toFixed(2)]}</div>',
@@ -146,6 +151,16 @@ Ext.define('D3Mobile.view.HeroDetail', {
                     'Skills',
                     '<div class="sub">{level} <span class="paragonLevel">({paragonLevel})</span> - {class}</div>',
                 '</div>',
+
+                // icons are located:
+                // 64x64 = http://us.media.blizzard.com/d3/icons/skills/64/{passive.skill.icon}.png
+                // 21x21 = http://us.media.blizzard.com/d3/icons/skills/21/{passive.skill.icon}.png
+
+                '<div class="passives">',
+                    '<div class="skill">1</div>',
+                    '<div class="skill">2</div>',
+                    '<div class="skill">3</div>',
+
             '</div>'
         )
     },
