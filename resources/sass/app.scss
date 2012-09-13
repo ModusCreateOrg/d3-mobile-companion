@@ -2,6 +2,14 @@ $page-bg-color: #1a1914;
 $serif: "chaparral-pro", serif;
 $sansSerif: "proxima-nova-condensed", sans-serif;
 
+$button-radius: '0px';
+
+.d3-color-yellow { color: #f8de07 !important; }
+.d3-color-blue { color: #6969ff !important; }
+.d3-color-orange { color: #bf642f !important; }
+.d3-color-green { color: #01d701 !important; }
+.d3-color-gold { color: #c0b377 !important; }
+
 @import 'sencha-touch/default/all';
 
 // You may remove any of the following modules that you
@@ -22,13 +30,13 @@ $sansSerif: "proxima-nova-condensed", sans-serif;
 @include sencha-loading-spinner;
 
 @include sencha-tabbar-ui('mainTabBar', #472a20, 'matte', #FFFFFF);
+@include sencha-button-ui('loginButton', #cb6c3b, 'matte');
 
 @include pictos-iconmask(refresh);
 
+@import 'login';
 @import 'hero';
 @import 'tooltip';
-
-
 
 html, body {
   height: 100%;
