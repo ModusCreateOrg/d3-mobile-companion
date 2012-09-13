@@ -124,6 +124,21 @@
   color: #f3e6d0;
 }
 
+/* items */
+.hero-items {
+  text-align: center;
+  .items-container {
+    background-image: inline-image('items-skeleton.png');
+    margin: 0px auto;
+    width: 286px;
+    height: 438px;
+    position: relative;
+    .helm {
+
+    }
+  }
+}
+
 /* skills */
 .hero-skills {
   .passives {
