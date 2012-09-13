@@ -4,8 +4,8 @@ Ext.define('D3Mobile.view.Login', {
     requires   : ['Ext.form.Panel', 'Ext.field.Text', 'Ext.TitleBar', 'Ext.form.FieldSet', 'Ext.Button'],
     config     : {
         fullscreen : true,
-        cls: 'login',
-        padding: 10,
+        cls        : 'login',
+        padding    : 10,
         items      : [
             {
                 xtype            : 'component',
@@ -16,7 +16,7 @@ Ext.define('D3Mobile.view.Login', {
                         '<div class="d3-logo"></div>',
                         '<div class="battle-tag-input">',
                             '<form>',
-                                '<input class="invalid" type="text" name="battleTag" placeholder="Battle Tag" autocorrect="off" autocapitalize="off" required />',
+                                '<input type="text" name="battleTag" placeholder="Battle Tag" autocorrect="off" autocapitalize="off" required />',
                                 '<input type="text" name="battleTagNum" placeholder="####" autocorrect="off" autocapitalize="off" required />',
                             '</form>',
                         '</div>',
@@ -25,13 +25,37 @@ Ext.define('D3Mobile.view.Login', {
             },
             {
                 xtype : 'button',
-                cls: 'loginBtn',
-                ui: 'loginButton',
+                cls   : 'loginBtn',
+                ui    : 'loginButton',
                 text  : 'Log In'
             }
         ]
     },
     initialize : function () {
         this.callParent();
+    },
+    isValid    : function () {
+        var element         = this.element,
+            battleTag       = element.down('input[name="battleTag"]'),
+            battleTagVal    = battleTag.dom.value,
+            battleTagNum    = element.down('input[name="battleTagNum"]'),
+            battleTagNumVal = battleTagNum.dom.value,
+            isValid         = (battleTag && battleTagNumVal && battleTagNumVal.length == 4);
+
+        this.markValid(battleTag, battleTagVal);
+        this.markValid(battleTagNum, battleTagNumVal && battleTagNumVal.length == 4);
+
+        if(isValid) {
+            return battleTagVal + "-" + battleTagNumVal;
+        } else {
+            return false;
+        }
+    },
+    markValid : function (el, valid) {
+        if (valid) {
+            el.removeCls("invalid");
+        } else {
+            el.addCls("invalid");
+        }
     }
 });
