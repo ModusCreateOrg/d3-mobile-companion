@@ -304,24 +304,27 @@
     
   }
   .actives {
-    display: -webkit-box;
+    overflow: hidden;
+    border-bottom: 1px solid #252018;
+    padding-bottom: 20px;
     .skill {
-      -webkit-box-flex: 1;
-      margin: 0px 5px;
+      margin: 5px;
+      float: left;
+      width: 30%;
+      text-align: center;
+      .name { color: #f3e6d0; font-weight: 600; line-height: 1.1; }
+      .rune { color: #796d55; }
     }
   }
   .passives {
-    display: -webkit-box;
+    overflow: hidden;
     margin-top: 10px;
     .skill {
-      -webkit-box-flex: 1;
-      margin: 0px 5px;
-      //text-align: center;
+      margin: 5px;
+      float: left;
+      width: 30%;
+      text-align: center;
+      .name { color: #f3e6d0; font-weight: 600; line-height: 1.1; }
     }
   }
 }
-
-.base-stats {
-
-}
-
