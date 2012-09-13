@@ -229,8 +229,18 @@ Ext.define('D3Mobile.view.HeroDetail', {
             tap   : me.onTap,
             scope : me
         });
+
+        me.element.on({
+            touchstart : me.onTouchStart,
+            touchend   : me.onTouchEnd,
+            delegate   : '.item',
+            scope: me
+        });
+
         me.callParent();
     },
+
+
     onTap : function(evtObj) {
         var backButton = evtObj.getTarget('.hero-detail-back'),
             skill      = evtObj.getTarget('.skill'),
@@ -243,6 +253,21 @@ Ext.define('D3Mobile.view.HeroDetail', {
             this.fireEvent('itemTap', item.dataset.tooltipparams);
         }
     },
+
+    onTouchStart : function(evtObj) {
+        var target = evtObj.getTarget();
+        if (target) {
+            Ext.fly(target).addCls('tapped');
+        }
+    },
+
+    onTouchEnd : function(evtObj) {
+        var target = evtObj.getTarget();
+        if (target) {
+            Ext.fly(target).removeCls('tapped');
+        }
+    },
+
     buildAttributesCard : function () {
         return {
             xtype            : 'container',
