@@ -1,20 +1,26 @@
 Ext.define('D3Mobile.view.Tooltip', {
-    extend           : 'Ext.Panel',
-    xtype            : 'tooltip',
-    config           : {
-        cls      : 'tooltip',
-        modal    : true,
-        centered : true
+    extend     : 'Ext.Panel',
+    xtype      : 'tooltip',
+    config     : {
+        cls              : 'tooltip',
+        modal            : true,
+        centered         : true,
+        hideOnMaskTap    : true,
+        styleHtmlContent : true,
+        scrollable       : {
+            direction : 'vertical'
+        }
     },
-    initialize       : function () {
-        this.add(this.buildCloseButton());
-        this.callParent();
+    initialize : function () {
+        var me = this;
+        me.callParent();
+        me.on({
+            hide  : me.onHide,
+            scope : me
+        });
     },
-    buildCloseButton : function () {
-        return {
-            xtype  : 'component',
-            docked : 'top',
-            html   : '<div class="close-button"></div>'
-        };
+    onHide     : function () {
+        this.destroy();
     }
+
 });

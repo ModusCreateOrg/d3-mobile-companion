@@ -82,9 +82,7 @@ Ext.define('D3Mobile.controller.Hero', {
     },
     onRuneTooltipSuccess  : function (success, response, notSure, request) {
         Ext.Viewport.add({
-            xtype    : 'panel',
-            modal    : true,
-            centered : true,
+            xtype    : 'tooltip',
             html     : request.callbackExtras.tooltipHtml + response.tooltipHtml
         });
     }

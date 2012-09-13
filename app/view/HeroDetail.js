@@ -217,8 +217,8 @@ Ext.define('D3Mobile.view.HeroDetail', {
         return {
             xtype            : 'container',
             scrollable       : {
-                direction : 'vertical',
-                directionLock: true
+                direction     : 'vertical',
+                directionLock : true
             },
             cls              : 'hero-detail-card',
             tpl              : this.getAttributesCardTpl(),
@@ -228,23 +228,27 @@ Ext.define('D3Mobile.view.HeroDetail', {
     },
     buildItemsCard      : function () {
         return {
-            xtype : 'container',
+            xtype            : 'container',
             scrollable       : {
-                direction : 'vertical',
-                directionLock: true
+                direction     : 'vertical',
+                directionLock : true
             },
-            cls   : 'hero-detail-card',
-            tpl   : this.getItemsCard(),
-            data  : this.getHero(),
+            cls              : 'hero-detail-card',
+            tpl              : this.getItemsCard(),
+            data             : this.getHero(),
             styleHtmlContent : true
         };
     },
     buildSkillsCard     : function () {
         return {
-            xtype : 'component',
-            cls   : 'hero-detail-card',
-            tpl   : this.getSkillsCard(),
-            data  : this.getHero(),
+            xtype            : 'container',
+            scrollable       : {
+                direction     : 'vertical',
+                directionLock : true
+            },
+            cls              : 'hero-detail-card',
+            tpl              : this.getSkillsCard(),
+            data             : this.getHero(),
             styleHtmlContent : true
         };
     }

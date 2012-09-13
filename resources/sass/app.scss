@@ -80,5 +80,13 @@ html, body {
   -webkit-box-flex: 1;
 }
 
+.tooltip {
+  height: 420px;
+  width: 280px;
+  @media only screen and (orientation : landscape) {
+    height: 260px;
+    width: 440px;
+  }
 
+}
 
