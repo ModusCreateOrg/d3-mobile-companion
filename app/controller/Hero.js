@@ -70,20 +70,27 @@ Ext.define('D3Mobile.controller.Hero', {
         });
     },
     onSkillTooltipSuccess : function (success, response, notSure, request) {
-        console.log(arguments);
-        var me  = this,
-            url = 'http://us.battle.net/d3/en/tooltip/rune/' + response.params.key + '/' + request.callbackExtras + '?format=jsonp';
-        D3Mobile.data.JsonP.request({
-            url            : url,
-            callback       : me.onRuneTooltipSuccess,
-            callbackExtras : response,
-            scope          : me
-        });
+        if (request.callbackExtras) {
+            var me = this,
+                url = 'http://us.battle.net/d3/en/tooltip/rune/' + response.params.key + '/' + request.callbackExtras + '?format=jsonp';
+
+            D3Mobile.data.JsonP.request({
+                url            : url,
+                callback       : me.onRuneTooltipSuccess,
+                callbackExtras : response,
+                scope          : me
+            });
+        } else {
+            this.showTooltip(response.tooltipHtml);
+        }
     },
     onRuneTooltipSuccess  : function (success, response, notSure, request) {
+        this.showTooltip(request.callbackExtras.tooltipHtml + response.tooltipHtml);
+    },
+    showTooltip           : function (tooltipHtml) {
         Ext.Viewport.add({
-            xtype    : 'tooltip',
-            html     : request.callbackExtras.tooltipHtml + response.tooltipHtml
+            xtype : 'tooltip',
+            html  : tooltipHtml
         });
     }
 });
