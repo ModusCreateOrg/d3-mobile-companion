@@ -5,13 +5,13 @@
     height: 260px;
     width: 440px;
   }
-  .x-panel.x-floating, .x-msgbox.x-floating, .x-form.x-floating {
-    background: none;
-    padding: 0;
+  &.x-panel.x-floating, .x-msgbox.x-floating, .x-form.x-floating {
+    background: none !important;
+    padding: 0 !important;;
   }
   .x-body {
     background: #010101 !important;
-    border: 2px solid #322A20;
+    border: 2px solid #322A20 !important;;
   }
   .x-html {
     padding: 1.2em 1.2em;
