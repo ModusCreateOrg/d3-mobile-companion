@@ -46,6 +46,9 @@ Ext.define('D3Mobile.model.Account', {
                 name : 'lastUpdated',
                 type : 'integer'
             }
-        ]
+        ],
+        proxy : {
+            type : 'jsonp'
+        }
     }
 });

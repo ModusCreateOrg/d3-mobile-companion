@@ -3,7 +3,7 @@ Ext.define('D3Mobile.store.CurrentUser', {
 	config : {
 		model    : 'D3Mobile.model.Account',
 		proxy    : {
-			type : 'ajax',
+			type : 'jsonp',
 			url  : 'data/account.json'
 		}
 	}

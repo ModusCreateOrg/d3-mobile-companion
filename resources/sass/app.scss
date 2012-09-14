@@ -32,6 +32,8 @@ $sansSerif: "proxima-nova-condensed", sans-serif;
 
 @include pictos-iconmask(refresh);
 @include pictos-iconmask(power_on);
+@include pictos-iconmask(user_add);
+@include pictos-iconmask(user_remove2);
 
 @import 'login';
 @import 'hero';

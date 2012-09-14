@@ -59,9 +59,9 @@ Ext.define('D3Mobile.controller.Main', {
     },
     loadUser                  : function (battleTag) {
         var me = this;
-        battleTag = "stan229-1441";
+//        battleTag = "stan229-1441";
         Ext.getStore("CurrentUser").load({
-//            url      : 'http://us.battle.net/api/d3/profile/' + battleTag + '/',
+            url      : 'http://us.battle.net/api/d3/profile/' + battleTag + '/',
             callback : me.onCurrentUserLoadCallback,
             scope    : me
         });
@@ -77,10 +77,10 @@ Ext.define('D3Mobile.controller.Main', {
                 xtype : 'main'
             });
             this.getHeroes().buildCards(battleTag, record.get('heroes'));
-            Ext.Viewport.setMasked(false);
         } else {
             Ext.Msg.alert("Invalid BattleTag", "Battle Tag Not Found, please try again.", Ext.emptyFn);
         }
+        Ext.Viewport.setMasked(false);
     },
     onMainActiveItemChange : function(main, newPanel, oldPanel) {
         if(newPanel.action == "logOut") {
