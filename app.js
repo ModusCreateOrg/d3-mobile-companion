@@ -6,7 +6,8 @@ Ext.application({
     ],
     controllers : [
         'Main',
-        'Hero'
+        'Hero',
+        'Friend'
     ],
     icon        : {
         '57'  : 'resources/icons/Icon.png',

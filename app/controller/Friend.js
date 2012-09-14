@@ -8,22 +8,30 @@
 Ext.define('D3Mobile.controller.Friend', {
     extend             : 'Ext.app.Controller',
     config             : {
+        views   : [
+            'AddFriendModal'
+        ],
         refs    : {
-            friends : 'friends'
+            friends        : 'friends',
+            addFriendModal : 'addfriendmodal'
         },
         control : {
-            'friends titlebar button[action="add"]'    : {
-                tap : 'onFriendsAddTap'
-            },
-            'friends titlebar button[action="remove"]' : {
-                tap : 'onFriendsRemoveTap'
+            'friends titlebar button' : {
+                tap : 'onFriendsButtonTap'
             }
         }
     },
-    onFriendsAddTap    : function () {
+    onFriendsButtonTap : function (button) {
+        console.log(arguments);
+        var action = button.action;
+        console.log(action);
+        if (action == "add") {
+            Ext.Viewport.add({
+                xtype : 'addfriendmodal'
+            });
 
-    },
-    onFriendsRemoveTap : function () {
+        } else if (action == "remove") {
 
+        }
     }
 });

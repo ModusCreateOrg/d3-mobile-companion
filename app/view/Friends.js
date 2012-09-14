@@ -16,12 +16,14 @@ Ext.define('D3Mobile.view.Friends', {
                     {
                         xtype   : 'button',
                         iconCls : 'user_remove2',
-                        align   : 'left'
+                        align   : 'left',
+                        action  : 'remove'
                     },
                     {
                         xtype   : 'button',
                         iconCls : 'user_add',
-                        align   : 'right'
+                        align   : 'right',
+                        action  : 'add'
                     }
                 ]
             }

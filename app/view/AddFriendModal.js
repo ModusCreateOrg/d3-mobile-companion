@@ -11,18 +11,41 @@ Ext.define('D3Mobile.view.AddFriendModal', {
     config : {
         modal    : true,
         centered : true,
+        defaults : {
+            styleHtmlContent : true
+        },
         items    : [
             {
-                xtype            : 'component',
-                styleHtmlContent : true,
-                html             : ''.concat(
-                    '<div class="battle-tag-input">',
-                        '<form>',
-                            '<input type="text" name="battleTag" placeholder="Battle Tag" autocorrect="off" autocapitalize="off" required />',
-                            '<input type="tel" name="battleTagNum" placeholder="####" autocorrect="off" autocapitalize="off" maxlength="4" required />',
-                        '</form>',
+                xtype  : 'component',
+                html   : '<h3 class="d3-color-orange">Add Friend</h1>',
+                docked : 'top'
+            },
+            {
+                xtype : 'component',
+                html  : ''.concat(
+                    '<div class="login-container">',
+                        '<div class="battle-tag-input">',
+                            '<form>',
+                                '<input type="text" name="battleTag" placeholder="Battle Tag" autocorrect="off" autocapitalize="off" required />',
+                                '<input type="tel" name="battleTagNum" placeholder="####" autocorrect="off" autocapitalize="off" maxlength="4" required />',
+                            '</form>',
+                        '</div>',
                     '</div>'
                 )
+            },
+            {
+                xtype  : 'button',
+                cls    : 'loginBtn',
+                ui     : 'loginButton',
+                text   : 'Log In',
+                action : 'logIn'
+            },
+            {
+                xtype  : 'button',
+                cls    : 'loginBtn',
+                ui     : 'loginButton',
+                text   : 'Cancel',
+                action : 'cancel'
             }
         ]
     }
