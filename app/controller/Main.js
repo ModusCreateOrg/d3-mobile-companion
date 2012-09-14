@@ -83,6 +83,9 @@ Ext.define('D3Mobile.controller.Main', {
     },
     loadLocalStorage              : function (battleTag) {
         localStorage.battleTag = battleTag;
+        if(!localStorage.friends) {
+            localStorage.friends = {};
+        }
         var localStorageFriends = localStorage.friends[battleTag];
         if (!localStorageFriends) {
             localStorage.friends[battleTag] = [];
