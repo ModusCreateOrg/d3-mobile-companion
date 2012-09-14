@@ -1,11 +1,14 @@
 Ext.define('D3Mobile.view.Friends', {
-    extend   : 'Ext.Container',
+    extend   : 'Ext.List',
     xtype    : 'friends',
     requires : ['Ext.TitleBar'],
     config   : {
-        title : 'Friends',
-        cls   : 'friends',
-        items : [
+        title   : 'Friends',
+        cls     : 'friends',
+        store   : 'D3Mobile.store.Friends',
+        itemTpl : '{battleTag}',
+        mode    : 'default',
+        items   : [
             {
                 xtype    : 'titlebar',
                 title    : 'Friends',

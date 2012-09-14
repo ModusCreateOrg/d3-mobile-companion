@@ -31,9 +31,6 @@ Ext.define('D3Mobile.view.Login', {
             }
         ]
     },
-    initialize : function () {
-        this.callParent();
-    },
     isValid    : function () {
         var element         = this.element,
             battleTag       = element.down('input[name="battleTag"]'),

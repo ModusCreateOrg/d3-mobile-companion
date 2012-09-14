@@ -46,9 +46,7 @@ Ext.define('D3Mobile.controller.Main', {
 
     },
     onLoginTap                : function () {
-        var login          = this.getLogin(),
-            loginEl        = login.element,
-            validBattleTag = login.isValid();
+        var validBattleTag = this.getLogin().isValid();
 
         if (validBattleTag) {
             Ext.Viewport.setMasked({
@@ -68,19 +66,32 @@ Ext.define('D3Mobile.controller.Main', {
     },
     onCurrentUserLoadCallback : function (records, operation, success) {
         if (records[0].get('heroes')) {
-            var record    = records[0],
+            var me        = this,
+                record    = records[0],
                 battleTag = record.get('battleTag').replace('#', '-'),
-                login     = this.getLogin();
-            localStorage.battleTag = battleTag;
+                login     = me.getLogin();
+            me.loadLocalStorage(battleTag);
             login && login.destroy();
             Ext.Viewport.add({
                 xtype : 'main'
             });
-            this.getHeroes().buildCards(battleTag, record.get('heroes'));
+            me.getHeroes().buildCards(battleTag, record.get('heroes'));
         } else {
-            Ext.Msg.alert("Invalid BattleTag", "Battle Tag Not Found, please try again.", Ext.emptyFn);
+            Ext.Msg.alert("Invalid BattleTag", "BattleTag Not Found, please try again.", Ext.emptyFn);
         }
         Ext.Viewport.setMasked(false);
+    },
+    loadLocalStorage              : function (battleTag) {
+        localStorage.battleTag = battleTag;
+        if(!localStorage.friends) {
+            localStorage.friends = {};
+        }
+        var localStorageFriends = localStorage.friends[battleTag];
+        if (!localStorageFriends) {
+            localStorage.friends[battleTag] = [];
+        } else {
+            Ext.getStore("Friends").add(localStorageFriends);
+        }
     },
     onMainActiveItemChange : function(main, newPanel, oldPanel) {
         if(newPanel.action == "logOut") {

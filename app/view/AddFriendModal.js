@@ -48,5 +48,30 @@ Ext.define('D3Mobile.view.AddFriendModal', {
                 action : 'cancel'
             }
         ]
+    },
+    // This is a copy from Login... should refactor if I find time
+    isValid    : function () {
+        var element         = this.element,
+            battleTag       = element.down('input[name="battleTag"]'),
+            battleTagVal    = battleTag.dom.value,
+            battleTagNum    = element.down('input[name="battleTagNum"]'),
+            battleTagNumVal = battleTagNum.dom.value,
+            isValid         = (battleTag && battleTagNumVal && battleTagNumVal.length == 4);
+
+        this.markValid(battleTag, battleTagVal);
+        this.markValid(battleTagNum, battleTagNumVal && battleTagNumVal.length == 4);
+
+        if(isValid) {
+            return battleTagVal + "-" + battleTagNumVal;
+        } else {
+            return false;
+        }
+    },
+    markValid : function (el, valid) {
+        if (valid) {
+            el.removeCls("invalid");
+        } else {
+            el.addCls("invalid");
+        }
     }
 });
