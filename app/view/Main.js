@@ -17,19 +17,19 @@ Ext.define('D3Mobile.view.Main', {
         },
         items          : [
             {
-                iconCls : 'refresh',
+                iconCls : 'heart',
                 xtype   : 'heroescontainer'
             },
             {
-                iconCls : 'refresh',
+                iconCls : 'user_fave',
                 xtype   : 'friends'
             },
             {
-                iconCls : 'refresh',
+                iconCls : 'list',
                 xtype   : 'news'
             },
             {
-                iconCls : 'refresh',
+                iconCls : 'cloud_black',
                 xtype   : 'servers'
             },
             {
