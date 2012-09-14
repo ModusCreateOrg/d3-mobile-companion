@@ -30,13 +30,18 @@ $sansSerif: "proxima-nova-condensed", sans-serif;
 @include sencha-tabbar-ui('mainTabBar', #472a20, 'matte', #FFFFFF);
 @include sencha-button-ui('loginButton', #333, 'matte');
 
-@include pictos-iconmask(refresh);
+@include pictos-iconmask(cloud_black);
+@include pictos-iconmask(heart);
 @include pictos-iconmask(power_on);
+@include pictos-iconmask(user);
+@include pictos-iconmask(list);
+@include pictos-iconmask(user_fave);
 @include pictos-iconmask(user_add);
 @include pictos-iconmask(user_remove2);
 
 @import 'login';
 @import 'hero';
+@import 'friends';
 @import 'tooltip';
 
 html, body {
@@ -59,7 +64,13 @@ html, body {
     font-size: 11px !important;
   }
   .x-tab-active {
-    @include background-image(linear-gradient(rgba(0, 0, 0, .5), rgba(0, 0, 0, .7)));
+    .x-button-label {
+      color: #f3e6ac;
+    }
+    .x-button-icon {
+      background-image: -webkit-gradient(linear, left top, left bottom, from(rgb(223, 198, 106)), to(rgb(196, 121, 20))) !important;
+      background-image: -webkit-linear-gradient(top, rgb(223, 198, 106), rgb(196, 121, 20)) !important;;
+    }
   }
 }
 

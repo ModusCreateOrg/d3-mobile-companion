@@ -4,6 +4,7 @@ Ext.define('D3Mobile.view.Friends', {
     requires : ['Ext.TitleBar'],
     config   : {
         title : 'Friends',
+        cls   : 'friends',
         items : [
             {
                 xtype    : 'titlebar',
