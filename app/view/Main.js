@@ -17,20 +17,26 @@ Ext.define('D3Mobile.view.Main', {
         },
         items          : [
             {
-                iconCls: 'refresh',
-                xtype : 'heroescontainer'
+                iconCls : 'refresh',
+                xtype   : 'heroescontainer'
             },
             {
-                iconCls: 'refresh',
-                xtype : 'friends'
+                iconCls : 'refresh',
+                xtype   : 'friends'
             },
             {
-                iconCls: 'refresh',
-                xtype : 'news'
+                iconCls : 'refresh',
+                xtype   : 'news'
             },
             {
-                iconCls: 'refresh',
-                xtype : 'servers'
+                iconCls : 'refresh',
+                xtype   : 'servers'
+            },
+            {
+                iconCls : 'power_on',
+                xtype   : 'component',
+                title   : 'Log Out',
+                action  : 'logOut'
             }
         ]
 

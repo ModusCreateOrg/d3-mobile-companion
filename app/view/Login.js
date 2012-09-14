@@ -17,7 +17,7 @@ Ext.define('D3Mobile.view.Login', {
                         '<div class="battle-tag-input">',
                             '<form>',
                                 '<input type="text" name="battleTag" placeholder="Battle Tag" autocorrect="off" autocapitalize="off" required />',
-                                '<input type="text" name="battleTagNum" placeholder="####" autocorrect="off" autocapitalize="off" required />',
+                                '<input type="tel" name="battleTagNum" placeholder="####" autocorrect="off" autocapitalize="off" maxlength="4" required />',
                             '</form>',
                         '</div>',
                     '</div>'
