@@ -9275,6 +9275,7 @@ html, body {
 }
 /* line 20, ../sass/_tooltip.scss */
 .skill-tooltip .tooltip-head h3 {
+  color: #fefefe;
   text-align: center;
   text-transform: none;
   font-size: 1.7em;
@@ -9282,7 +9283,7 @@ html, body {
   padding-bottom: 10px;
   margin-bottom: 10px;
 }
-/* line 30, ../sass/_tooltip.scss */
+/* line 31, ../sass/_tooltip.scss */
 .skill-tooltip .d3-item-properties .full-socket {
   color: white;
   list-style: none;
@@ -9290,90 +9291,90 @@ html, body {
   position: relative;
   font-weight: 400;
 }
-/* line 36, ../sass/_tooltip.scss */
+/* line 37, ../sass/_tooltip.scss */
 .skill-tooltip .d3-item-properties .full-socket .socket-effect {
   top: -6px;
   position: relative;
   left: 3px;
 }
-/* line 41, ../sass/_tooltip.scss */
+/* line 42, ../sass/_tooltip.scss */
 .skill-tooltip .d3-item-properties .full-socket img {
   width: 24px;
 }
-/* line 43, ../sass/_tooltip.scss */
+/* line 44, ../sass/_tooltip.scss */
 .skill-tooltip .d3-item-properties .full-socket:first-child {
   margin-top: 15px;
 }
-/* line 46, ../sass/_tooltip.scss */
+/* line 47, ../sass/_tooltip.scss */
 .skill-tooltip .d3-item-properties .item-armor-weapon {
   color: #878b83;
 }
-/* line 48, ../sass/_tooltip.scss */
+/* line 49, ../sass/_tooltip.scss */
 .skill-tooltip .d3-item-properties .item-armor-weapon li {
   list-style: none;
 }
-/* line 50, ../sass/_tooltip.scss */
+/* line 51, ../sass/_tooltip.scss */
 .skill-tooltip .d3-item-properties .item-type {
   margin-bottom: 0;
 }
-/* line 52, ../sass/_tooltip.scss */
+/* line 53, ../sass/_tooltip.scss */
 .skill-tooltip .d3-item-properties .item-type li {
   list-style: none;
 }
-/* line 54, ../sass/_tooltip.scss */
+/* line 55, ../sass/_tooltip.scss */
 .skill-tooltip .d3-item-properties .item-extras {
   border-top: 1px solid #322A20;
   margin: 5px 0 0 0;
   padding: 5px 0 0 0;
 }
-/* line 58, ../sass/_tooltip.scss */
+/* line 59, ../sass/_tooltip.scss */
 .skill-tooltip .d3-item-properties .item-extras .value {
   color: white;
 }
-/* line 59, ../sass/_tooltip.scss */
+/* line 60, ../sass/_tooltip.scss */
 .skill-tooltip .d3-item-properties .item-extras .item-reqlevel {
   list-style: none;
   float: left;
 }
-/* line 63, ../sass/_tooltip.scss */
+/* line 64, ../sass/_tooltip.scss */
 .skill-tooltip .d3-item-properties .item-extras .item-ilvl {
   list-style: none;
   float: right;
   text-align: right;
 }
-/* line 70, ../sass/_tooltip.scss */
+/* line 71, ../sass/_tooltip.scss */
 .skill-tooltip .d3-item-properties .big {
   font-size: 3.2em;
   line-height: 1.1;
   color: white;
   list-style-type: none;
 }
-/* line 76, ../sass/_tooltip.scss */
+/* line 77, ../sass/_tooltip.scss */
 .skill-tooltip .d3-item-properties li p {
   margin: 0;
 }
-/* line 78, ../sass/_tooltip.scss */
+/* line 79, ../sass/_tooltip.scss */
 .skill-tooltip .d3-tooltip-rune {
   border-top: 2px solid #322A20;
   padding-top: 20px;
 }
-/* line 83, ../sass/_tooltip.scss */
+/* line 84, ../sass/_tooltip.scss */
 .skill-tooltip .description p {
   color: #c7b377;
 }
-/* line 84, ../sass/_tooltip.scss */
+/* line 85, ../sass/_tooltip.scss */
 .skill-tooltip .description .d3-color-green {
   font-weight: 600;
 }
-/* line 87, ../sass/_tooltip.scss */
+/* line 88, ../sass/_tooltip.scss */
 .skill-tooltip .description .special {
   color: #ad8332;
 }
-/* line 90, ../sass/_tooltip.scss */
+/* line 91, ../sass/_tooltip.scss */
 .skill-tooltip .description .subtle {
   color: #7b6d55;
 }
-/* line 92, ../sass/_tooltip.scss */
+/* line 93, ../sass/_tooltip.scss */
 .skill-tooltip .description .subtle em {
   font-style: normal;
   color: #ad835a;
