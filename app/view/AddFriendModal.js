@@ -37,8 +37,8 @@ Ext.define('D3Mobile.view.AddFriendModal', {
                 xtype  : 'button',
                 cls    : 'loginBtn',
                 ui     : 'loginButton',
-                text   : 'Log In',
-                action : 'logIn'
+                text   : 'Add Friend',
+                action : 'add'
             },
             {
                 xtype  : 'button',

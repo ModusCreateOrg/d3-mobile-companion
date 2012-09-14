@@ -6,8 +6,8 @@
  * To change this template use File | Settings | File Templates.
  */
 Ext.define('D3Mobile.controller.Friend', {
-    extend             : 'Ext.app.Controller',
-    config             : {
+    extend                    : 'Ext.app.Controller',
+    config                    : {
         views   : [
             'AddFriendModal'
         ],
@@ -18,10 +18,14 @@ Ext.define('D3Mobile.controller.Friend', {
         control : {
             'friends titlebar button' : {
                 tap : 'onFriendsButtonTap'
+            },
+            'addfriendmodal button'   : {
+                tap : 'onAddFriendModalButtonTap'
             }
+
         }
     },
-    onFriendsButtonTap : function (button) {
+    onFriendsButtonTap        : function (button) {
         console.log(arguments);
         var action = button.action;
         console.log(action);
@@ -33,5 +37,14 @@ Ext.define('D3Mobile.controller.Friend', {
         } else if (action == "remove") {
 
         }
+    },
+    onAddFriendModalButtonTap : function (button) {
+        var action = button.action;
+        if (action == "add") {
+            // impl
+        } else if (action == "cancel") {
+            this.getAddFriendModal().destroy();
+        }
+
     }
 });
