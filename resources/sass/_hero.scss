@@ -298,7 +298,10 @@
         left: 216px;
         width: 66px;
         height: 130px;
-      }                                
+        &.repeat {
+          opacity: .5;
+        }
+      }
     }
 
   }
