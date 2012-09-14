@@ -130,7 +130,7 @@ Ext.define('D3Mobile.controller.Hero', {
                                 '</ul>',
                                     '<ul class="item-armor-weapon item-weapon-damage">',
                                     '<li><p><span class="value">{[values.minDamage.max.toFixed(0)]}–{[values.maxDamage.max.toFixed(0)]}</span> <span>Damage</span></p></li>',
-                                    '<li><p><span class="value">{[values.attacksPerSecond.max.toFixed(0)]}</span> <span>Attacks per Second</span></p></li>',
+                                    '<li><p><span class="value">{[values.attacksPerSecond.max.toFixed(2)]}</span> <span>Attacks per Second</span></p></li>',
                                 '</ul>',
                             '</tpl>',
                             '<div class="item-before-effects"></div>',
