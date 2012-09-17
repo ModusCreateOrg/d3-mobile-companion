@@ -31,11 +31,11 @@ Ext.define('D3Mobile.model.Article', {
             },
             {
                 name : 'summary',
-                type : 'string'
+                type : 'auto'
             },
             {
                 name : 'content',
-                type : 'string'
+                type : 'auto'
             }
         ]
     }

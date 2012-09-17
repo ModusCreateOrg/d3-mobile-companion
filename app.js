@@ -7,7 +7,8 @@ Ext.application({
     controllers : [
         'Main',
         'Hero',
-        'Friend'
+        'Friend',
+        'News'
     ],
     icon        : {
         '57'  : 'resources/icons/Icon.png',

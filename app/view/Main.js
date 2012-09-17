@@ -4,7 +4,7 @@ Ext.define('D3Mobile.view.Main', {
     requires : [
         'D3Mobile.view.HeroesContainer',
         'D3Mobile.view.FriendsContainer',
-        'D3Mobile.view.News',
+        'D3Mobile.view.NewsContainer',
         'D3Mobile.view.Servers'
     ],
     config   : {
@@ -26,7 +26,7 @@ Ext.define('D3Mobile.view.Main', {
             },
             {
                 iconCls : 'list',
-                xtype   : 'news'
+                xtype   : 'newscontainer'
             },
 //            Taking out servers until theres an API or we can embed the frame
 //            {

@@ -3,14 +3,12 @@ Ext.define('D3Mobile.controller.Main', {
     config                    : {
         models  : [
             'Account',
-            'Hero',
-            'Article'
+            'Hero'
         ],
         stores  : [
             'CurrentUser',
             'Friends',
-            'Heroes',
-            'Articles'
+            'Heroes'
         ],
         views   : [
             'Main',
