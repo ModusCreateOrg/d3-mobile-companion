@@ -9,7 +9,7 @@ Ext.define('D3Mobile.view.Friends', {
         itemTpl          : '<h3>{battleTag}</h3>',
         styleHtmlContent : true,
         itemCls          : 'friends-list-item',
-        mode             : 'default',
+        status           : 'default',
         items            : [
             {
                 xtype    : 'titlebar',

@@ -3,7 +3,7 @@ Ext.define('D3Mobile.view.Main', {
     xtype    : 'main',
     requires : [
         'D3Mobile.view.HeroesContainer',
-        'D3Mobile.view.Friends',
+        'D3Mobile.view.FriendsContainer',
         'D3Mobile.view.News',
         'D3Mobile.view.Servers'
     ],
@@ -22,7 +22,7 @@ Ext.define('D3Mobile.view.Main', {
             },
             {
                 iconCls : 'user_fave',
-                xtype   : 'friends'
+                xtype   : 'friendscontainer'
             },
             {
                 iconCls : 'list',

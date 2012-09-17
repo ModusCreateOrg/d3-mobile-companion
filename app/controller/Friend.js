@@ -13,9 +13,10 @@ Ext.define('D3Mobile.controller.Friend', {
             'Heroes'
         ],
         refs    : {
-            main           : 'main',
-            friends        : 'friends',
-            addFriendModal : 'addfriendmodal'
+            main             : 'main',
+            friends          : 'friends',
+            friendsContainer : 'friendscontainer',
+            addFriendModal   : 'addfriendmodal'
         },
         control : {
             'friends titlebar button' : {
@@ -70,7 +71,6 @@ Ext.define('D3Mobile.controller.Friend', {
     onFriendAccountLoad       : function (record) {
         console.log('record', record);
         if (record.get('heroes')) {
-            debugger;
             var battleTag    = localStorage.battleTag,
                 friendsStore = Ext.getStore("Friends"),
                 localStorageFriends,
@@ -90,22 +90,23 @@ Ext.define('D3Mobile.controller.Friend', {
         Ext.Viewport.setMasked(false);
 
     },
-    onFriendsItemTap          : function (list, record, index, evt) {
-        if (list.getMode() == "default") {
+    onFriendsItemTap          : function (list, index, target, record, evt) {
+        if (list.getStatus() == "default") {
             console.log('open friend');
             this.showFriendsHeroes(record);
-        } else if (list.getMode() == "remove") {
+        } else if (list.getStatus() == "remove") {
             console.log('remove friend');
             Ext.getStore("Friends").remove(record);
             Ext.Array.remove(localStorage.friends[localStorage.battleTag], record);
         }
     },
-    showFriendsHeroes : function(record) {
-        var friends         = this.getFriends(),
-            heroesContainer = friends.add({
-                xtype : 'heroescontainer'
+    showFriendsHeroes         : function (record) {
+        var friendsContainer = this.getFriendsContainer(),
+            heroesContainer  = friendsContainer.add({
+                xtype           : 'heroescontainer',
+                showCloseButton : true
             });
-        heroesContainer.down('heroes').buildCards(record.battleTag.replace("#",'-'), record.get('heroes'));
-        friends.setActiveItem(heroesContainer);
+        heroesContainer.down('heroes').buildCards(record.get('battleTag').replace("#", '-'), record.get('heroes'));
+        friendsContainer.setActiveItem(heroesContainer);
     }
 });
