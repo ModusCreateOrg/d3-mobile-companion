@@ -6,13 +6,14 @@ Ext.define('D3Mobile.view.Friends', {
         title            : 'Friends',
         cls              : 'friends',
         store            : 'Friends',
-        itemTpl          : '<h3>{battleTag}</h3>',
+        itemTpl          : '<h3 style="color:pink;">{battleTag}</h3>',
         styleHtmlContent : true,
         itemCls          : 'friends-list-item',
         status           : 'default',
         items            : [
             {
                 xtype    : 'titlebar',
+                docked   : 'top',
                 title    : 'Friends',
                 defaults : {
                     iconMask : true,
