@@ -28,10 +28,11 @@ Ext.define('D3Mobile.view.Main', {
                 iconCls : 'list',
                 xtype   : 'news'
             },
-            {
-                iconCls : 'cloud_black',
-                xtype   : 'servers'
-            },
+//            Taking out servers until theres an API or we can embed the frame
+//            {
+//                iconCls : 'cloud_black',
+//                xtype   : 'servers'
+//            },
             {
                 iconCls : 'power_on',
                 xtype   : 'component',

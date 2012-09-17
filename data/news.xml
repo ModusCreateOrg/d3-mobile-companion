@@ -1,0 +1,2632 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en-us">
+    <author>
+        <name>Blizzard Entertainment</name>
+    </author>
+    <title type="text">Diablo III™</title>
+    <id>4</id>
+    <updated>2012-09-14T16:08:19.321Z</updated>
+    <entry>
+        <title type="text">Dev Journal: Defensive Bonuses and Monster Damage</title>
+        <published>2012-09-14T16:00:00.000Z</published>
+        <updated>2012-09-14T16:08:19.321Z</updated>
+        <id>7155884</id>
+        <link href="http://us.battle.net//d3/en/blog/7155884"/>
+        <summary type="xhtml">
+            <div xmlns="http://www.w3.org/1999/xhtml">
+                <p><span style="font-size: 12px; ">In 1.0.5, we will be reducing the defensive bonuses provided by some
+                    of the more powerful skills and skill runes. </span> 
+                    <span style="font-size: 12px; ">In addition to reducing defensive bonuses, we're also going to be
+                        nerfing incoming monster 
+                    </span>
+                    <em style="font-size: 12px; ">even more</em>
+                    <span style="font-size: 12px; "> to compensate, which should open up more build options for players
+                        progressing through the higher difficulty levels.
+                    </span>
+                </p>
+            </div>
+        </summary>
+        <content type="xhtml">
+            <div xmlns="http://www.w3.org/1999/xhtml">
+                <p>We're taking a close look at defensive skills vs. incoming monster damage in 1.0.5. We’re going to be
+                    changing a few defensive skills for each class, including some direct nerfs to skills like wizard
+                    Energy Armor and barbarian War Cry - Impunity. However, we're also reducing incoming damage in
+                    Inferno, so players will actually come out ahead. In short the plan is:
+                </p>
+                <ol>
+                    <li>Reduce the effectiveness of select defensive skills</li>
+                    <li>Reduce monster damage by more than the mitigation lost by these skills</li>
+                    <li>Putting both changes together, players actually take less damage than before</li>
+                </ol>
+                <p> </p>
+                <div class="ctextheadline">
+                    <img src="http://us.media5.battle.net/cms/content_folder_media/PPWV73X5AC8P1346202513358.jpg?v=0"
+                         style="width: 590px; height: 56px; "/>
+                    <h1>
+                        Why We're Making This Change
+                    </h1>
+                </div>
+                <p class="pullquote"
+                   title="High incoming monster damage combined with extremely powerful defensive skills make those skills and runes feel mandatory.">
+                    Why are we doing this? The reason is not complicated. High incoming monster damage combined with
+                    extremely powerful defensive skills make those skills and runes feel mandatory. Our goal is that by
+                    simultaneously nerfing defensive skills and reducing incoming damage, players who choose to continue
+                    using these defensive skills will take less damage overall, and players who choose to forego these
+                    "mandatory" skills will find themselves more survivable than what you would currently experience on
+                    live. Overall, these changes result in a huge buff in the player’s favor. Just how mandatory are
+                    these skills?
+                </p>
+                <p>
+                    <br/>
+                    As it is now, Energy Armor is used by 83% of level 60 wizards. Also, take a look at the distribution
+                    of the War Cry skill on level 60 barbarians:
+                    <br/>
+                     
+                </p>
+                <p style="text-align: center;">
+                    <a class="lightbox"
+                       href="http://us.media4.battle.net/cms/gallery/TYMIO49ZLIVR1347503513788.jpg?v=1">
+                        <img alt="" src="http://us.media4.battle.net/cms/gallery/TYMIO49ZLIVR1347503513788.jpg?v=1"
+                             style="width: 325px; height: 287px; "/>
+                    </a>
+                </p>
+                <p>In developing Diablo III, defensive skills were made potent because we wanted to ensure they would be
+                    attractive. In some regards, we were too successful. Many players feel compelled to grab every
+                    defensive skill available to them, which can take away from some flexibility in using different
+                    build options.
+                    <br/>
+                    <br/>
+                    This also creates problems for a class that may have less defensive skills. When one class has
+                    massive defensive buffs, abilities like Mortar, Arcane Enchanted, and Plagued can feel pretty
+                    modest, and at the same time feel overly punishing to a class without them. We’re all in favor of
+                    people being able to build their character for survivability, but there needs to be a balance.
+                </p>
+                <p> </p>
+                <div class="ctextheadline">
+                    <img src="http://us.media5.battle.net/cms/content_folder_media/KFLQB5KCVNPO1346202513254.jpg?v=0"
+                         style="width: 590px; height: 56px; "/>
+                    <h1>
+                        How Much is Enough?
+                    </h1>
+                </div>
+                <p>So the stated goal is to make sure the combination of the defensive skill nerf combined with the
+                    reduced damage from monsters still results in an overall buff to players. Let's bust out some math!
+                    As previously mentioned, Energy Armor is one of the skills being impacted. The exact change is the
+                    base armor provided by Energy Armor is being reduced from 65% to 35%, and the resistance increase
+                    provided by Prismatic Armor is being reduced from 40% to 25%.
+                </p>
+                <p>
+                    <br/>
+                    The benefit of these skills is greater at higher levels of Armor and Resistance, so let’s assume
+                    very high numbers of each. Suppose a wizard has 6000 Armor and 800 Resist before Prismatic Armor.
+                    Assuming a level 63 enemy:
+                </p>
+                <ul>
+                    <li>In 1.0.4 this translates to 9900 Armor (75.86% mitigation) and 1120 Resist (78.05% mitigation)
+                        with Prismatic Armor, for a total mitigation of 94.70%
+                    </li>
+                    <li>In 1.0.5 this will be 8100 Armor (72.00% mitigation) and 1000 Resist (76.05% mitigation) with
+                        Prismatic Armor, for a total mitigation of 93.29%
+                    </li>
+                    <li>If a monster hits for 50,000 damage, then the damage taken by the wizard will go from 2650
+                        damage to 3355 damage.
+                    </li>
+                    <li>This means incoming damage would have to be less than 79% of the current value (2650 /3355) in
+                        order for it to feel the same after 1.0.5.
+                    </li>
+                </ul>
+                <p>Based on this it’s clear that in order to ensure 1.0.5 is a net buff for all wizards we’d have to
+                    reduce incoming monster damage by at least 21%. Prismatic Armor still provides a significant boost
+                    to survivability, but it should no longer feel mandatory, opening up other options such as a more
+                    offensively minded Storm Armor (which is getting buffed in 1.0.5).
+                    <br/>
+                    <br/>
+                    Let’s do another example with the barbarian. War Cry Impunity is being reduced from 50% resistances
+                    to 20%.
+                </p>
+                <ul>
+                    <li>A barbarian with 800 resist before War Cry against a level 63 enemy translates to 1200 Resist
+                        (79.21% mitigation) with Impunity in 1.0.4
+                    </li>
+                    <li>In 1.0.5 this will be 960 Resist (75.29% mitigation) with Impunity</li>
+                    <li>If a monster hits for 20,000 damage after Armor, then the damage taken by the Barbarian will go
+                        from 4158 damage to 4942 damage
+                    </li>
+                    <li>This means incoming damage would have to be less than 84% of the current value on live
+                        (4158/4942) in order for the game to feel the same.
+                    </li>
+                </ul>
+                <p class="pullquote" title="we’re going to reduce all damage in Inferno by at least 25%">As it happens,
+                    we’re going to reduce all damage in Inferno by at least 25%. Players who want to be the toughest
+                    damage mitigators in the game can continue to use defensive skills and get a sizable bonus for doing
+                    so. Players who want to use other skills can do so without sacrificing such a massive amount of
+                    survivability. Class builds that don't currently use heavy mitigation skills such as Smoke
+                    Screen-focused demon hunters or Gargantuan-tanking witch doctors will find their survivability has
+                    gone up considerably due to reduced incoming monster damage.
+                </p>
+                <p> </p>
+                <div class="ctextheadline">
+                    <img src="http://us.media2.battle.net/cms/content_folder_media/DO3TXX2498TV1346202513188.jpg?v=0"
+                         style="width: 590px; height: 56px; "/>
+                    <h1>
+                        Class by Class
+                    </h1>
+                </div>
+                <p>Here's a quick rundown of what's changing in terms of defensive skills in 1.0.5.</p>
+                <div class="d3class">
+                    <p>
+                        <strong><img alt="" src="http://us.battle.net/d3/static/images/hero/barbarian/crest.png"/>
+                            Barbarian:
+                        </strong>
+                    </p>
+                    <ul>
+                        <li>War Cry - Impunity: Bonus resistance reduced from 50% to 20%.</li>
+                        <li>Leap - Iron Impact: We’re adjusting the design of this skill. Rather than providing 300%
+                            armor for 4 seconds, it’s going to provide 100% armor per target hit for 3 seconds. So if
+                            you don't hit any targets, you won't get any armor. If you hit 5 targets, you'll actually
+                            get 500% armor. We are making this change because the intended fantasy of Iron Impact is a
+                            barbarian who leaps into the thick of battle and is super tough. The way the skill plays out
+                            on live it is essentially an Ignore Pain that can also move you. For the most part it is
+                            better than Ignore Pain, making not only Ignore Pain unattractive, but also the other Leap
+                            Attack runes. In 1.0.5, if you want a defensive cooldown - grab Ignore Pain. If you want to
+                            leap into the thick of battle and be super tough, take Iron Impact.
+                        </li>
+                    </ul>
+                </div>
+                <div class="d3class">
+                    <p>
+                        <strong><img alt="" src="http://us.battle.net/d3/static/images/hero/demon-hunter/crest.png"/>
+                            Demon Hunter:
+                        </strong>
+                    </p>
+                    <ul>
+                        <li>In the case of the demon hunter, the class is a bit too binary. If you're playing a glass
+                            cannon Smoke Screen build, then you're invulnerable most of the time, and when you make a
+                            mistake, you die instantly. If you're using Shadow Power - Gloom with a legacy Natalya's
+                            set, then you have near constant uptime of 65% damage reduction, but if you're not using the
+                            legacy Natalya's set, Shadow Power - Gloom is a luxury.
+                        </li>
+                        <li>Independent of the general defensive skill nerf, we had already decided to buff Shadow Power
+                            to last longer. The primary purpose of Shadow Power is to give you a short window of time
+                            during which you can unload some damage to recoup some Life. Unfortunately the 3-second
+                            duration makes this awkward to use. We are changing Shadow Power from 20% Life Steal for 3
+                            seconds to 15% Life Steal for 5 seconds. This should be a modest buff to the skill as well
+                            as making it a lot more pleasant to use. All of the runes are scheduled to see similar
+                            changes, such as Blood Moon going from 30% Life Steal for 3 seconds to 25% Life Steal for 5
+                            seconds. Each rune effect is slightly smaller, but for 5 seconds instead of 3 seconds,
+                            resulting in an overall buff over the duration of the effect.
+                        </li>
+                        <li>Taking into account the across-the-board nerf to defensive skills, Gloom will become 35%
+                            damage reduction for 5 seconds.
+                        </li>
+                        <li>This developer journal is focused primarily on defensive skill changes, but because the
+                            change to Gloom is significant, I want to mention that we are looking at concrete mechanics
+                            changes to the demon hunter to introduce new play styles. Many players have mentioned that
+                            outside of Gloom, demon hunters seem to lack defensive options. More importantly, demon
+                            hunters would like some different play styles, and we agree! Here are a few changes we are
+                            adding for demon hunters in 1.0.5 to open up new ways to play:
+                        </li>
+                        <li>We are adjusting some runes and passives to provide ways to increase survivability that
+                            scales with your Life, Armor, and resistances.
+                        </li>
+                        <li>We are changing the Spider, Boar, and Wolf companion pets to be actual pets that can tank
+                            for you like a Gargantuan or Zombie Dog.
+                        </li>
+                        <li>We are putting a short cooldown on Sentry, but you can have two out simultaneously. On top
+                            of that, the Custom Engineering passive will let you have a third Sentry turret! This opens
+                            up a whole new play style for the Demon Hunter of establishing a "nest" that you can draw
+                            enemies into.
+                        </li>
+                    </ul>
+                </div>
+                <div class="d3class">
+                    <p>
+                        <strong><img alt="" src="http://us.battle.net/d3/static/images/hero/monk/crest.png"/>Monk:
+                        </strong>
+                    </p>
+                    <ul>
+                        <li>The strongest monk defensive skill is One With Everything. We've mentioned it before and it
+                            bears repeating - this is something we would like to fix someday, but we're going to take
+                            our time. Changes to One With Everything heavily impact existing monk gear. We still plan on
+                            addressing this in the future but will do so in a way that does not invalidate the gear
+                            monks have invested in.
+                        </li>
+                        <li>Resolve: Damage reduction reduced from 25% to 20%.</li>
+                        <li>Seize the Initiative: Changed to grant 50% of your Dexterity as Armor. This will result in
+                            anywhere from 750 to 1250 armor for most monks (depending on your Dex) which is comparable
+                            to the mitigation lost by other classes. The reduction to Resolve and Seize the Initiative
+                            should mean if you want to be a “super-tanky monk” you can still take all three defensive
+                            skills, but it should be a lot easier to pick some other passives without feeling like
+                            you’re going to blow up at the first Elite pack you encounter.
+                        </li>
+                    </ul>
+                </div>
+                <div class="d3class">
+                    <p>
+                        <strong><img alt="" src="http://us.battle.net/d3/static/images/hero/witch-doctor/crest.png"/>
+                            Witch Doctor:
+                        </strong>
+                    </p>
+                    <ul>
+                        <li>Jungle Fortitude is being reduced from 20% to 15% damage reduction.</li>
+                    </ul>
+                </div>
+                <div class="d3class">
+                    <p>
+                        <strong><img alt="" src="http://us.battle.net/d3/static/images/hero/wizard/crest.png"/>Wizard:
+                        </strong>
+                    </p>
+                    <ul>
+                        <li>Energy Armor: Armor increase reduced from 65% to 35%.</li>
+                        <li>Energy Armor - Prismatic Armor: Resistance increase reduced from 40% to 25%.</li>
+                        <li>It’s worth noting that we’re going to provide additional alternative defensive options for
+                            the wizard such as adding flat melee damage reduction to Ice Armor and creating a Familiar
+                            variant that provides passive Life regeneration.
+                        </li>
+                    </ul>
+                </div>
+                <div class="ctextheadline">
+                    <strong>
+                        <img src="http://us.media2.battle.net/cms/content_folder_media/6BNTULK3ZBG61346202513289.jpg?v=0"
+                             style="width: 590px; height: 56px; "/>
+                    </strong>
+                    <h1>
+                        Why You Nerf Inferno?
+                    </h1>
+                </div>
+                <p>Alright, so let's recap. Defensive skills are taking a hit in 1.0.5, but incoming damage from
+                    monsters is also being reduced. Taken together, the changes mean Inferno is going to be easier. For
+                    some of you this is totally cool; you welcome an easier Inferno because it’s about efficiency and
+                    not difficulty. For others, you may be skeptical but you're at least intrigued at the possibility
+                    that you'll be able to drop some defensive skills and discover some new builds. However, for others,
+                    Inferno is currently already too easy. Maybe you don't use any defensive skills; maybe your gear is
+                    so good you dropped War Cry - Impunity weeks ago. For this last group you may be wondering "Another
+                    Inferno nerf? But I crave more of a challenge, not less!"
+                    <br/>
+                     
+                </p>
+                <p class="pullquote"
+                   title="1.0.5 is bringing the ”Monster Power” system...in short this is a callback to the Diablo II ”players X” option">
+                    For people in this last group, 1.0.5 is bringing the "Monster Power" system. The details of this
+                    system will be outlined as we get closer to 1.0.5, but in short this is a callback to the Diablo II
+                    ”players X” option, allowing you to increase the level of challenge for increased rewards. Our hope
+                    is that we can make Inferno easier while simultaneously providing new ways for top-end players to
+                    gauge their increasing power in tangible ways.
+                    <br/>
+                    <br/>
+                    We’re going to lock comments here, and ask that you instead head to
+                    <a href="http://us.battle.net/d3/en/forum/topic/6571517430#1" target="_blank">this forum thread</a>
+                    to let us know what you think.
+                </p>
+                <p> </p>
+                <p>
+                    <em>Wyatt Cheng is a Senior Technical Game Designer for Diablo III, and he’s annoyingly excited
+                        about Netrunner being re-released as a Living Card Game. It’s really starting to get on
+                        everyone’s nerves.
+                    </em>
+                </p>
+                <style type="text/css">
+                    #blog .detail div.ctextheadline {
+                        position: relative;
+                        display: block;
+                        text-decoration: none;
+                        line-height: 1 !important;
+                        font-family: Georgia !important;
+                        margin-left: 3px;
+                    }
+
+                    #blog .detail div.ctextheadline h1 {
+                        position: absolute;
+                        top: 17px;
+                        left: 30px;
+                        color: #FFBF55 !important;
+                        font-size: 23px !important;
+                    }
+
+                    #blog .detail img {
+                        -moz-border-radius: 4px;
+                        -webkit-border-radius: 4px;
+                        border-radius: 4px;
+                        -moz-box-shadow: 0 0 20px #000000;
+                        -webkit-box-shadow: 0 0 20px #000000;
+                        box-shadow: 0 0 20px #000000;
+                        border: 1px solid #300E0D;
+                        max-width: 570px !important;
+                        padding: 1px;
+                    }
+
+                    #blog .detail td:hover > a img, #blog .detail a img:hover {
+                        border: 1px solid #BA5E0B;
+                    }
+
+                    #blog .detail .d3class {
+                        min-height: 120px;
+                        margin-bottom: 50px;
+                        clear: both;
+                    }
+
+                    #blog .detail .d3class ul li {
+                        margin-left: 40px;
+                    }
+
+                    #blog .detail .d3class img {
+                        -moz-border-radius: 0px;
+                        -webkit-border-radius: 0px;
+                        border-radius: 0px;
+                        -moz-box-shadow: 0 0 00px #000000;
+                        -webkit-box-shadow: 0 0 00px #000000;
+                        box-shadow: 0 0 00px #000000;
+                        border: none;
+                        width: 100px;
+                        height: 100px;
+                        margin-left: 10px;
+                        margin-right: 10px;
+                        padding-right: 15px;
+                        float: left;
+                    }
+
+                    .pullquote:before {
+                        content: "\201C" attr(title) "\201D";
+                        font-size: 1.2em;
+                        display: block;
+                        float: right;
+                        width: 8em;
+                        margin: 0.25em 1em 0.5em 0;
+                        padding: 1em;
+                    }</style>
+                <style type="text/css">
+                    #page-comments {
+                        display: none;
+                    }</style>
+            </div>
+        </content>
+    </entry>
+    <entry>
+        <title type="text">Blizzard Comic Contest Winner</title>
+        <published>2012-09-14T15:45:00.000Z</published>
+        <updated>2012-09-14T00:12:01.879Z</updated>
+        <id>7207167</id>
+        <link href="http://us.battle.net//wow/en/blog/7207167"/>
+        <summary type="xhtml">
+            <div xmlns="http://www.w3.org/1999/xhtml">
+                <p>And the comic contest winner for August, 2012, is ...
+                    <strong>Heather Scoggins  (Theodel).</strong>
+                </p>
+            </div>
+        </summary>
+        <content type="xhtml">
+            <div xmlns="http://www.w3.org/1999/xhtml">
+                <p>And the comic contest winner for August, 2012, is ...
+                    <strong>Heather Scoggins  (Theodel).</strong>
+                </p>
+                <p>The talented winner will receive a<a href="http://us.blizzard.com/store/details.xml?id=1100001962">DC
+                    Unlimited StarCraft® Premium Series 2: Tychus Findlay Action Figure</a>. Congratulations!  In
+                    September, we’ll be giving away a
+                    <a href="http://us.blizzard.com/store/details.xml?id=1100001819">SteelSeries Diablo® III Headset</a>
+                    to the winner of the next Blizzard Comic Contest.
+                </p>
+                <p style="text-align: center;">
+                    <a href="http://us.battle.net/wow/en/media/comics/?view#/comic-2012-09-01" target="_blank">
+                        <img alt=""
+                             src="http://us.media5.battle.net/cms/content_folder_media/J85HEZCYBNQY1347394480446.jpg?v=1"
+                             style="width: 188px; height: 118px;"/>
+                    </a>
+                </p>
+                <p><a href="http://us.blizzard.com/en-us/community/contests/comic/rules.html">Keep those comics
+                    coming</a>, and you might be the next artist to take home a prize! Also, be sure to set aside some
+                    time to check out our<a href="http://us.battle.net/wow/en/media/comics/#/1">Warcraft</a>and
+                    <a href="http://us.battle.net/sc2/en/media/comics/#/1">StarCraft</a>
+                    comic sections. 
+                </p>
+                <style type="text/css">
+                    #blog .detail img {
+                        -moz-border-radius: 4px;
+                        -webkit-border-radius: 4px;
+                        border-radius: 4px;
+                        -moz-box-shadow: 0 0 20px #000000;
+                        -webkit-box-shadow: 0 0 20px #000000;
+                        box-shadow: 0 0 20px #000000;
+                        border: 1px solid #372511;
+                        max-width: 570px !important;
+                        padding: 1px;
+                    }
+
+                    #blog .detail td:hover > a img, #blog .detail a img:hover {
+                        border: 1px solid #CD9000;
+                    }</style>
+                <p> </p>
+            </div>
+        </content>
+    </entry>
+    <entry>
+        <title type="text">The Voices of Diablo III, Part One</title>
+        <published>2012-09-13T17:00:00.000Z</published>
+        <updated>2012-09-13T00:26:36.577Z</updated>
+        <id>7054209</id>
+        <link href="http://us.battle.net//d3/en/blog/7054209"/>
+        <summary type="xhtml">
+            <div xmlns="http://www.w3.org/1999/xhtml">
+                <p>We rounded up a few of the actors behind Diablo III's most memorable voices, and chatted with them
+                    about the time they spent working on the game. To begin, you'll hear from the actors behind Azmodan,
+                    Tyrael, and Covetous Shen.
+                </p>
+            </div>
+        </summary>
+        <content type="xhtml">
+            <div xmlns="http://www.w3.org/1999/xhtml">
+                <p>We recently rounded up a few of the actors behind Diablo III's most memorable voices, and chatted
+                    with them about the time they spent working on the game. Today, we’d like to share our conversations
+                    with Jonathan Adams (Tyrael), David Sobolov (Azmodan), and James Hong (Covetous Shen).
+                </p>
+                <p>Click on the tabs below to read each Q&amp;A, and keep watch for more to come in the future.</p>
+                <table class="table2">
+                    <tbody>
+                        <tr>
+                            <th>
+                                <div class="goose" onclick="osTabSelect(this,1);">
+                                    Tyrael
+                                </div>
+                                <div class="duck" onclick="osTabSelect(this,2);">
+                                    Azmodan
+                                </div>
+                                <div class="duck" onclick="osTabSelect(this,3);">
+                                    Covetous Shen
+                                </div>
+                            </th>
+                        </tr>
+                    </tbody>
+                </table>
+                <div id="osContentDiv">
+                    <div>
+                        <div class="sorTable">
+                            <b class="fancyTitle">Jonathan Adams - Tyrael</b>
+                            <br/>
+                            <p><strong>BLIZZARD:</strong>So, how’d you get into this whole voice acting gig?
+                            </p>
+                            <p>
+                                <strong>JONATHAN:</strong>
+                                Well, I was a professional stage actor for like 15 years, and then I came out to LA and
+                                started doing TV. While I was a stage actor, I would do the occasional voice gig on the
+                                side. My wife has always said, “You should do voice over,” and when I was in Chicago I
+                                went for a few auditions, and they didn’t quite work out. When I got to LA, I was doing
+                                this television show
+                                <em>American Dreams</em>
+                                for a while, and I asked my manager if he knew any agencies that might be able to hook
+                                me up. One of the first things I booked was the voice of [the] Buick [car company] -- I
+                                was the voice in all the Buick commercials for something like 3 years. Then I started
+                                doing a few animation jobs -- the first good-sized animation thing I did was for Marvel
+                                Studios. I was Dormammu in the Dr. Strange animated movie. That was fun, and it just
+                                started going on from there. What I really found was that my stage acting training, and
+                                the fact that I was able to translate it to what I did on camera helped me translate it
+                                all into voice acting.
+                            </p>
+                            <p><strong>BLIZZARD:</strong>One thing that’s different about video games as opposed to
+                                voicing animation is player activity and the fact that your lines will sometimes get
+                                repeated when there’s an appropriate gameplay trigger. The player has to go somewhere,
+                                so you’re telling them, “Go left, go left, go left!” How do you handle that -- do you
+                                feel like your stage training prepared you, or is it a totally different experience?
+                            </p>
+                            <p>
+                                <strong>JONATHAN:</strong>
+                                I don’t consider [guiding player activity] part of what
+                                <em>I</em>
+                                can do -- I feel like I just try to be as honest as possible when I’m doing anything --
+                                that’s my litmus test. “Do you believe it, Jonathan?” is what I ask myself every time
+                                I’m acting, over and over, in different permutations. If I believe it, and I’m honest
+                                with myself, then I feel like the player will believe what I’m saying is a natural,
+                                honest thing.
+                            </p>
+                            <p><strong>BLIZZARD:</strong>Slight segue -- have you had a chance to play Diablo III at
+                                all?
+                            </p>
+                            <p><strong>JONATHAN:</strong>I’m a gamer; I do play games, and I just got my copy . . . and
+                                then I moved. It’s still in a box. I really can’t wait to find it in one of the boxes we
+                                have lying around and start playing. I’m gonna be a monk . . . or the demon hunter.
+                                Those are the ones that appeal to me the most. I like stealth, quiet, and not too much
+                                fuss and muss -- I like to get it over with.
+                            </p>
+                            <p><strong>BLIZZARD:</strong>What sort of cues do you get when you’re in the recording
+                                booth? Do you get to see yourself or your character in motion, or do you get concept art
+                                references?
+                            </p>
+                            <p><strong>JONATHAN:</strong>We get a lot of concept art, and what was really great for
+                                Diablo III is that we got to see a few of the cinematics before they were completely
+                                animated, so we had a strong idea of the storyline’s size and scope. These characters
+                                are almost Shakespearean; they’re absolutely larger than life, they deal with incredible
+                                things, but you have to keep them full and realized and human as well, otherwise the
+                                audience turns off. I’d also look at the Diablo III website whenever I could, because
+                                that was an interesting clue to the direction the series was heading.
+                            </p>
+                            <p><strong>BLIZZARD:</strong>Did you know the trajectory of Tyrael’s character arc, and what
+                                was going to be happening from the beginning of your work, or is that something that got
+                                parceled out as you got more lines?
+                            </p>
+                            <img src="http://us.media3.battle.net/cms/gallery/BAVR9ZWD2IT01347387544252.jpg?v=0"
+                                 style="float: right;"/>
+                            <p>
+                                <strong>JONATHAN:</strong>
+                                What was interesting was . . . it changed a few times during the time I was doing it.
+                                First it was “How long is Tyrael gonna be the Stranger?” “How long before he realizes
+                                he’s an angel?” “What does the Stranger know about being an angel?” “Once Tyrael has the
+                                knowledge that he’s an angel, but also has the limitations of being mortal, where does
+                                that leave him?” So, I got that information parceled out, and then, during a big
+                                three-month arc of work, I got a really good picture of what Tyrael was going to be.
+                            </p>
+                            <p><strong>BLIZZARD:</strong>You brought the Stranger up, and that ties into another
+                                question. We asked you to pack a lot into one character voice. How do you voice a
+                                character who is both a human and an angel and has this very different vocal modulation
+                                and confidence level at different parts of the game? Do you prep in a certain way for
+                                voicing two sides of the same character?
+                            </p>
+                            <p>
+                                <strong>JONATHAN:</strong>
+                                <img src="http://us.media3.battle.net/cms/gallery/CWZ40AYZ4YKQ1347387544211.jpg?v=0"
+                                     style="float: right;"/>My basis for Tyrael was Tyrael as man AND angel. “How would
+                                a person sound if he knew he was once an angel, but now has human limitations?” That
+                                kind of juxtaposition is fun to play with in fantasy and science fiction -- you get
+                                characters like Data on Star Trek who’s so much fun to watch, because he’s human and
+                                robot, and you’re watching him struggle with what that means. That’s what makes those
+                                characters fascinating. What I did is [project] what Tyrael would be if he knew nothing
+                                about being an angel, and he was simply human, and he had just woken up. That character
+                                was the original character, minus his divinity. And then, later on, he was the same
+                                character -- but minus his humanity. The baseline was the human &amp; divine character,
+                                who could be haughty at times, like “I’m above it all,” but he loves humans, he loves
+                                people.
+                            </p>
+                            <p>
+                                <strong>BLIZZARD:</strong>
+                                “Subtracting the humanity” sounds like a hard thing to do.
+                            </p>
+                            <p><strong>JONATHAN:</strong>Well, you think of yourself as detaching from the human race.
+                                Humans are . . . not exactly below you, but not quite up to where you are, like a dog or
+                                a cat. You still love your dog, you still feed your dog, but you’re not gonna have a
+                                conversation with your dog and expect him to answer you. You always know they’re not
+                                like you.
+                            </p>
+                            <p>
+                                <strong>BLIZZARD:</strong>
+                                You’ve got a period in Act 3 where you’re fighting alongside the player -- you must have
+                                done a lot of fight recording, a lot of sword-swinging type stuff. What was that like?
+                            </p>
+                            <p>
+                                <strong>JONATHAN:</strong>
+                                 [<em>laughs</em>] I don’t like fighting in games. It’s a hard vocal couple of days.
+                                It’d be the same as trying to fight -- not the same exactly, but your whole body gets
+                                completely tired. You get very, very worn out. When I was in college, my friends and I
+                                had a band; we played one live gig in front of a bunch of people. I was the singer, I
+                                sang the whole time, and by the end of it my voice was shot. I hadn’t realized how hard
+                                I’d been singing because I was so incredibly nervous. Those fighting days are just like
+                                that. You’re so worn out -- to me, it’s incredible. It takes a lot out of you. But we
+                                stretched the recording sessions out.
+                            </p>
+                            <p>You also have different kinds of fighting. “Ok, you just got hit by a big sword.” [<em>
+                                vocalizes</em>] “Aaagh.” “Ok, now you got hit by a dagger.” [<em>vocalizes</em>] “Egh.”
+                                Different sounds for different things.
+                            </p>
+                            <p>
+                                <strong>BLIZZARD:</strong>
+                                Is it all sort of the same “fight session” recording?
+                            </p>
+                            <p>
+                                <strong>JONATHAN:</strong>
+                                We’ll have two or three recordings that’ll be two or three hours each of<em>just</em>
+                                fighting, because you can’t really do more than that. You’re swinging your sword, you’re
+                                blocking, you get hit, you’re hit with a spell. You’re running all over the place.
+                                “El’druin!” keeps coming out. Those kinds of things.
+                            </p>
+                            <p>
+                                <strong>BLIZZARD:</strong>
+                                The story of Diablo is pretty dark, it’s fairly bloody, it’s a little brutal, lots of
+                                people die -- how do you have fun with something like that?
+                            </p>
+                            <p>
+                                <strong>JONATHAN:</strong>
+                                I like fantasy, I like science fiction -- I was a D&amp;D player when it was just a
+                                little cardboard box with pamphlets in it, and your characters were fighter, thief,
+                                wizard, cleric . . . .
+                            </p>
+                            <p><strong>BLIZZARD:</strong>Oh, man, the Red Box. Classic. Good times.
+                            </p>
+                            <p>
+                                <strong>JONATHAN:</strong>
+                                You had those six-sided, ten, twenty, twelve, four-sided dice; it was a lot of
+                                imagination-based fun. I used to play Neverwinter Nights and games like that, Icewind
+                                Dale, every Sid Meier’s Civ game. To me, it’s just fun -- it doesn’t really affect me
+                                that much.
+                            </p>
+                            <p>
+                                <strong>BLIZZARD:</strong>
+                                I wanted to ask you a question about the craft, too. Do you think that if someone is
+                                extremely hard-working and determined, sends out a lot of samples and reels, and really
+                                tries, is that enough to get involved in voice acting, or is it more that you have to
+                                have a certain voice in order to find your niche?
+                            </p>
+                            <p><strong>JONATHAN:</strong>There are all kinds of voices in voice acting. Everything. The
+                                fact that I have a deep, powerful voice is a leg up for me, and it puts me in a bunch of
+                                different niches as an actor. But I also think that the main thing you need to do is not
+                                necessarily get yourself out there, but to practice. Like any instrument, you have to
+                                learn to play it. Fortunately, I’ve had on-the-job training over the past 5 years. I
+                                think that the quality of the performances I’m doing now is a lot better than what I did
+                                when I did that first Dormammu character on Dr. Strange. I don’t just rely on the fact
+                                that my voice is deep and strong. I really think acting is a craft. Talent
+                                <em>helps</em>
+                                -- if you have talent for it, that’s great -- but it’s not gonna get you all the way
+                                there, nor will just doing a lot get you there. I’d say it’s like 70% craft, 30% talent.
+                                Your talent will help your craft, but you really have to keep working at it.
+                            </p>
+                            <p>
+                                <strong>BLIZZARD:</strong>
+                                Jon, thanks so much for your interview.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="sorNoTable" id="osContainer1">
+                    <div>
+                        <div class="sorTable">
+                            <b class="fancyTitle">Jonathan Adams - Tyrael</b>
+                            <br/>
+                            <p><strong>BLIZZARD:</strong>So, how’d you get into this whole voice acting gig?
+                            </p>
+                            <p>
+                                <strong>JONATHAN:</strong>
+                                Well, I was a professional stage actor for like 15 years, and then I came out to LA and
+                                started doing TV. While I was a stage actor, I would do the occasional voice gig on the
+                                side. My wife has always said, “You should do voice over,” and when I was in Chicago I
+                                went for a few auditions, and they didn’t quite work out. When I got to LA, I was doing
+                                this television show
+                                <em>American Dreams</em>
+                                for a while, and I asked my manager if he knew any agencies that might be able to hook
+                                me up. One of the first things I booked was the voice of [the] Buick [car company] -- I
+                                was the voice in all the Buick commercials for something like 3 years. Then I started
+                                doing a few animation jobs -- the first good-sized animation thing I did was for Marvel
+                                Studios. I was Dormammu in the Dr. Strange animated movie. That was fun, and it just
+                                started going on from there. What I really found was that my stage acting training, and
+                                the fact that I was able to translate it to what I did on camera helped me translate it
+                                all into voice acting.
+                            </p>
+                            <p><strong>BLIZZARD:</strong>One thing that’s different about video games as opposed to
+                                voicing animation is player activity and the fact that your lines will sometimes get
+                                repeated when there’s an appropriate gameplay trigger. The player has to go somewhere,
+                                so you’re telling them, “Go left, go left, go left!” How do you handle that -- do you
+                                feel like your stage training prepared you, or is it a totally different experience?
+                            </p>
+                            <p>
+                                <strong>JONATHAN:</strong>
+                                I don’t consider [guiding player activity] part of what
+                                <em>I</em>
+                                can do -- I feel like I just try to be as honest as possible when I’m doing anything --
+                                that’s my litmus test. “Do you believe it, Jonathan?” is what I ask myself every time
+                                I’m acting, over and over, in different permutations. If I believe it, and I’m honest
+                                with myself, then I feel like the player will believe what I’m saying is a natural,
+                                honest thing.
+                            </p>
+                            <p><strong>BLIZZARD:</strong>Slight segue -- have you had a chance to play Diablo III at
+                                all?
+                            </p>
+                            <p><strong>JONATHAN:</strong>I’m a gamer; I do play games, and I just got my copy . . . and
+                                then I moved. It’s still in a box. I really can’t wait to find it in one of the boxes we
+                                have lying around and start playing. I’m gonna be a monk . . . or the demon hunter.
+                                Those are the ones that appeal to me the most. I like stealth, quiet, and not too much
+                                fuss and muss -- I like to get it over with.
+                            </p>
+                            <p><strong>BLIZZARD:</strong>What sort of cues do you get when you’re in the recording
+                                booth? Do you get to see yourself or your character in motion, or do you get concept art
+                                references?
+                            </p>
+                            <p><strong>JONATHAN:</strong>We get a lot of concept art, and what was really great for
+                                Diablo III is that we got to see a few of the cinematics before they were completely
+                                animated, so we had a strong idea of the storyline’s size and scope. These characters
+                                are almost Shakespearean; they’re absolutely larger than life, they deal with incredible
+                                things, but you have to keep them full and realized and human as well, otherwise the
+                                audience turns off. I’d also look at the Diablo III website whenever I could, because
+                                that was an interesting clue to the direction the series was heading.
+                            </p>
+                            <p><strong>BLIZZARD:</strong>Did you know the trajectory of Tyrael’s character arc, and what
+                                was going to be happening from the beginning of your work, or is that something that got
+                                parceled out as you got more lines?
+                            </p>
+                            <img src="http://us.media3.battle.net/cms/gallery/BAVR9ZWD2IT01347387544252.jpg?v=0"
+                                 style="float: right;"/>
+                            <p>
+                                <strong>JONATHAN:</strong>
+                                What was interesting was . . . it changed a few times during the time I was doing it.
+                                First it was “How long is Tyrael gonna be the Stranger?” “How long before he realizes
+                                he’s an angel?” “What does the Stranger know about being an angel?” “Once Tyrael has the
+                                knowledge that he’s an angel, but also has the limitations of being mortal, where does
+                                that leave him?” So, I got that information parceled out, and then, during a big
+                                three-month arc of work, I got a really good picture of what Tyrael was going to be.
+                            </p>
+                            <p><strong>BLIZZARD:</strong>You brought the Stranger up, and that ties into another
+                                question. We asked you to pack a lot into one character voice. How do you voice a
+                                character who is both a human and an angel and has this very different vocal modulation
+                                and confidence level at different parts of the game? Do you prep in a certain way for
+                                voicing two sides of the same character?
+                            </p>
+                            <p>
+                                <strong>JONATHAN:</strong>
+                                <img src="http://us.media3.battle.net/cms/gallery/CWZ40AYZ4YKQ1347387544211.jpg?v=0"
+                                     style="float: right;"/>My basis for Tyrael was Tyrael as man AND angel. “How would
+                                a person sound if he knew he was once an angel, but now has human limitations?” That
+                                kind of juxtaposition is fun to play with in fantasy and science fiction -- you get
+                                characters like Data on Star Trek who’s so much fun to watch, because he’s human and
+                                robot, and you’re watching him struggle with what that means. That’s what makes those
+                                characters fascinating. What I did is [project] what Tyrael would be if he knew nothing
+                                about being an angel, and he was simply human, and he had just woken up. That character
+                                was the original character, minus his divinity. And then, later on, he was the same
+                                character -- but minus his humanity. The baseline was the human &amp; divine character,
+                                who could be haughty at times, like “I’m above it all,” but he loves humans, he loves
+                                people.
+                            </p>
+                            <p>
+                                <strong>BLIZZARD:</strong>
+                                “Subtracting the humanity” sounds like a hard thing to do.
+                            </p>
+                            <p><strong>JONATHAN:</strong>Well, you think of yourself as detaching from the human race.
+                                Humans are . . . not exactly below you, but not quite up to where you are, like a dog or
+                                a cat. You still love your dog, you still feed your dog, but you’re not gonna have a
+                                conversation with your dog and expect him to answer you. You always know they’re not
+                                like you.
+                            </p>
+                            <p>
+                                <strong>BLIZZARD:</strong>
+                                You’ve got a period in Act 3 where you’re fighting alongside the player -- you must have
+                                done a lot of fight recording, a lot of sword-swinging type stuff. What was that like?
+                            </p>
+                            <p>
+                                <strong>JONATHAN:</strong>
+                                 [<em>laughs</em>] I don’t like fighting in games. It’s a hard vocal couple of days.
+                                It’d be the same as trying to fight -- not the same exactly, but your whole body gets
+                                completely tired. You get very, very worn out. When I was in college, my friends and I
+                                had a band; we played one live gig in front of a bunch of people. I was the singer, I
+                                sang the whole time, and by the end of it my voice was shot. I hadn’t realized how hard
+                                I’d been singing because I was so incredibly nervous. Those fighting days are just like
+                                that. You’re so worn out -- to me, it’s incredible. It takes a lot out of you. But we
+                                stretched the recording sessions out.
+                            </p>
+                            <p>You also have different kinds of fighting. “Ok, you just got hit by a big sword.” [<em>
+                                vocalizes</em>] “Aaagh.” “Ok, now you got hit by a dagger.” [<em>vocalizes</em>] “Egh.”
+                                Different sounds for different things.
+                            </p>
+                            <p>
+                                <strong>BLIZZARD:</strong>
+                                Is it all sort of the same “fight session” recording?
+                            </p>
+                            <p>
+                                <strong>JONATHAN:</strong>
+                                We’ll have two or three recordings that’ll be two or three hours each of<em>just</em>
+                                fighting, because you can’t really do more than that. You’re swinging your sword, you’re
+                                blocking, you get hit, you’re hit with a spell. You’re running all over the place.
+                                “El’druin!” keeps coming out. Those kinds of things.
+                            </p>
+                            <p>
+                                <strong>BLIZZARD:</strong>
+                                The story of Diablo is pretty dark, it’s fairly bloody, it’s a little brutal, lots of
+                                people die -- how do you have fun with something like that?
+                            </p>
+                            <p>
+                                <strong>JONATHAN:</strong>
+                                I like fantasy, I like science fiction -- I was a D&amp;D player when it was just a
+                                little cardboard box with pamphlets in it, and your characters were fighter, thief,
+                                wizard, cleric . . . .
+                            </p>
+                            <p><strong>BLIZZARD:</strong>Oh, man, the Red Box. Classic. Good times.
+                            </p>
+                            <p>
+                                <strong>JONATHAN:</strong>
+                                You had those six-sided, ten, twenty, twelve, four-sided dice; it was a lot of
+                                imagination-based fun. I used to play Neverwinter Nights and games like that, Icewind
+                                Dale, every Sid Meier’s Civ game. To me, it’s just fun -- it doesn’t really affect me
+                                that much.
+                            </p>
+                            <p>
+                                <strong>BLIZZARD:</strong>
+                                I wanted to ask you a question about the craft, too. Do you think that if someone is
+                                extremely hard-working and determined, sends out a lot of samples and reels, and really
+                                tries, is that enough to get involved in voice acting, or is it more that you have to
+                                have a certain voice in order to find your niche?
+                            </p>
+                            <p><strong>JONATHAN:</strong>There are all kinds of voices in voice acting. Everything. The
+                                fact that I have a deep, powerful voice is a leg up for me, and it puts me in a bunch of
+                                different niches as an actor. But I also think that the main thing you need to do is not
+                                necessarily get yourself out there, but to practice. Like any instrument, you have to
+                                learn to play it. Fortunately, I’ve had on-the-job training over the past 5 years. I
+                                think that the quality of the performances I’m doing now is a lot better than what I did
+                                when I did that first Dormammu character on Dr. Strange. I don’t just rely on the fact
+                                that my voice is deep and strong. I really think acting is a craft. Talent
+                                <em>helps</em>
+                                -- if you have talent for it, that’s great -- but it’s not gonna get you all the way
+                                there, nor will just doing a lot get you there. I’d say it’s like 70% craft, 30% talent.
+                                Your talent will help your craft, but you really have to keep working at it.
+                            </p>
+                            <p>
+                                <strong>BLIZZARD:</strong>
+                                Jon, thanks so much for your interview.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="sorNoTable" id="osContainer2">
+                    <div>
+                        <div class="sorTable">
+                            <b class="fancyTitle">David Sobolov - Azmodan</b>
+                            <br/>
+                            <p>
+                                <strong>BLIZZARD:</strong>
+                                What got you started down the path toward becoming a voice actor?
+                            </p>
+                            <p>
+                                <strong>DAVID:</strong>
+                                I was originally a French horn player. I did pit orchestra work, played in small
+                                ensembles, and then I started getting into stage acting. About 15 years ago, in
+                                Vancouver, an agent saw me, and basically said, “You’ve got a voice that’d be good for
+                                villains. You should come do cartoons.” I started booking pretty quickly. In the arts,
+                                you have to kind of gravitate toward where they’re willing to pay you. It seemed like
+                                that was the most viable path for me. I think a lot of people who are interested in
+                                getting into voice acting have no idea how to do it; it just sort of fell into my lap
+                                that way.
+                            </p>
+                            <p>
+                                <strong>BLIZZARD:</strong>
+                                How does theatre translate into voice acting?
+                            </p>
+                            <p>
+                                <strong>DAVID:</strong>
+                                Theatre hugely translates into voice acting. As you’ve seen in Diablo III, you have to
+                                be so much bigger than life. Azmodan, in the Black Soulstone cinematic, is larger than
+                                any human being could ever be. To even attempt to fit into that in a realistic way, you
+                                have to be very theatrical. You want to be huge in your characters, and let [the
+                                directors] bring you back if they need to. A lot of people who do what I do come from a
+                                theatre background – it really does help a lot.
+                            </p>
+                            <p>
+                                <strong>BLIZZARD:</strong>
+                                Diablo III was in development for several years. How did you stay focused on the
+                                character over that period of time?
+                            </p>
+                            <p><strong>DAVID:</strong>Well, you have to use your skills every time you go back into the
+                                studio as a voice actor. They’ll play you a reference of what you did last time, and
+                                it’s pretty organic. You remember where you were, emotionally and physically, and you
+                                just jump back into the role.
+                            </p>
+                            <p>The very first scene I worked on years ago was the [Black Soulstone] cinematic. It was
+                                out of context; I didn’t quite understand how big of a part I was going to have in the
+                                game when I did that cinematic. We worked on those few lines for maybe two-and-a-half or
+                                three hours, and I don’t think we even finished it that day, I think we just did some of
+                                the lines just to get into the character.
+                            </p>
+                            <p>I also recall the time you guys took me down to the Blizzard offices in Irvine just to
+                                provide “voice” to the movement of the character. They showed me Azmodan’s animations,
+                                his feet and big arms, on the screen, and we recorded live, next to the picture. Most of
+                                the material was recorded here in LA where the majority of the voice talent is, but it
+                                really speaks to the quality of the project that you brought me all the way down to your
+                                offices, even though we weren’t doing any dialogue at all, just so you could bring that
+                                extra bit of reality to the character.
+                            </p>
+                            <p>
+                                <strong>BLIZZARD:</strong>
+                                So, how do you go about lending your voice to a demon?
+                            </p>
+                            <p><strong>DAVID:</strong>There’s an acting technique that I was taught by Sanford Meisner,
+                                a very famous acting teacher in New York several years ago – it’s to “live truthfully
+                                under given imaginary circumstances.” This world doesn’t exist, but you make it exist.
+                                If I’m not really Azmodan in that moment, if the people at home don’t believe it,
+                                they’re gonna go, “pssh, this guy’s just phoning it in.” It has to actually feel like
+                                I’m this huge, amazingly powerful evil guy. So I just kind of get into the space, I get
+                                into feeling the power, the size, the weight of the character – all the different
+                                aspects that you’d really feel if you were living as that person. It’s a skill you
+                                develop over time. But I also think it’s something you can either do or you can’t. You
+                                can learn about acting and get performance experience, but you either have to be able to
+                                jump into that, or you just can’t. Luckily I’m able to do that, so I keep working.
+                            </p>
+                            <p>
+                                <strong>BLIZZARD:</strong>
+                                Do you remember how long on average you’d spend in the recording studio?
+                            </p>
+                            <p>
+                                <strong>DAVID:</strong>
+                                Probably 2-3 hours. There might’ve been a four hour session in there somewhere, but this
+                                particular character seemed to come, I wouldn’t say “easily,” but it didn’t feel like a
+                                huge stretch beyond what I was able to do. And the directors, Andrea Toyias and Andrea
+                                Romano, made me feel so comfortable with what I was doing. I never went, “oh, I’ve been
+                                here for hours and hours.” The time just flew by.
+                            </p>
+                            <p>
+                                <img src="http://us.media5.battle.net/cms/gallery/NCOLLJPYJ27U1347387543325.jpg?v=0"
+                                     style="float:left;"/>
+                                <img src="http://us.media2.battle.net/cms/gallery/EN4ZMU3B6OYY1347387543316.jpg?v=0"
+                                     style="float:left;"/>
+                            </p>
+                            <p>
+                                <strong>BLIZZARD:</strong>
+                                The growls and everything must take a lot out of you.
+                            </p>
+                            <p>
+                                <strong>DAVID:</strong>
+                                You just want to make sure you’re rested, especially if you have a lot of jobs going on.
+                                There are some days where I have to just not talk to anybody, and text to save my voice.
+                                If I know I’ve got a big week coming up – if I’ve got a video game session while I’m on
+                                a couple of animated series – I have to be able to sound like that character did last
+                                time, and if my voice is gone, he’s not going to sound very good, is he? Also, I’m
+                                pretty tame in my personal life. I’m not going out partying, I don’t smoke, I don’t
+                                drink, don’t do drugs, and I just take care of myself.
+                            </p>
+                            <p><strong>BLIZZARD:</strong>For a guy whose job is to get killed by the player, Azmodan has
+                                a
+                                <strong>lot</strong>
+                                of lines. How did you stay menacing?
+                            </p>
+                            <p>
+                                <strong>DAVID:</strong>
+                                Well, I think having multiple recording sessions helps. You can only keep that level of
+                                intensity up for so many hours, so you do three hours here, three hours there, and when
+                                you put it all together, it might be 20 hours of work, but it’s all stuck into one act,
+                                so it actually feels more intense than it would otherwise. There’s no way you could keep
+                                doing that all day and all night.
+                            </p>
+                            <p><strong>BLIZZARD:</strong>Azmodan doesn’t really have any lips; how did that influence
+                                your delivery?
+                            </p>
+                            <p>
+                                <strong>DAVID:</strong>
+                                I wasn’t aware that he didn’t have lips until late in the recording process. I think you
+                                just have to ignore that, and it’s up to the animators to make it work. I can’t act
+                                without my lips – it doesn’t work! We did do some things that made him sound extra fat
+                                and a little bit muddy. He was very much [David uses the Azmodan voice]<em>down here
+                                like this. Super low, super grumbly</em>. It was an extremely quiet performance, almost
+                                whispered. And they blew it up in production to make him sound really huge. That gave
+                                Azmodan a level of intimacy he wouldn’t have otherwise . . . a scary intimacy, a level
+                                of menace.
+                            </p>
+                            <p>
+                                <strong>BLIZZARD:</strong>
+                                Is it more fun to play a villain?
+                            </p>
+                            <p><strong>DAVID:</strong>Oh, yeah. It’s fun. I like intelligent villains. It’s what I
+                                gravitate to. They
+                                <em>always</em>
+                                think they’re gonna win. They have so much confidence; there’s not a thought in their
+                                mind that they won’t prevail, and they love torturing their enemies. I’m doing something
+                                with my hands now like a puppeteer . . . when they get someone in their grasp, there’s
+                                an evil sense of play, where they’re in control. It’s very sadistic, I know, but it’s
+                                fun to play something so far away from myself.
+                            </p>
+                            <p>I’ve had sessions where I’ll do something really super evil, and then I’ll just start
+                                laughing. It’s the total opposite of who I am; a pretty affable, calm, pleasant person.
+                                I’m always playing mean guys in games.
+                            </p>
+                            <p><strong>BLIZZARD:</strong>Azmodan sounds like he has a tremendous amount of modulation in
+                                his voice, a ton of reverb, but you doing the voice without any modulation sounds very
+                                similar to the Azmodan I hear in the game. Do you know what was done in production to
+                                modify your voice?
+                            </p>
+                            <p><strong>DAVID:</strong>They put a little reverb on it – that’s about it. I don’t know how
+                                this stuff comes out of my face, but it does! I work with guys who do lots of crazy
+                                voices, like Dee Bradley Baker, and I just go, “What? That came out of your face? You’re
+                                a human being, right?” I have my thing – the super deep, evil thing – and he has his
+                                thing. Somebody once told me that I get a lot of video game work because, apparently, my
+                                voice is really easy to process. I don’t know why – just the deepness of it.
+                            </p>
+                            <p>If a character that has a super deep voice has to scream, it’s pretty hard to do. Azmodan
+                                never really had to raise his voice very much, because he had so much weight as a
+                                character, people would just listen to him. They actually kept bringing me back, like
+                                “less emotion, less emotion, more focused emotion.” It was in a very tiny space, like I
+                                was always whispering in somebody’s ear.
+                            </p>
+                            <p>
+                                <strong>BLIZZARD:</strong>
+                                I’d never considered that the level or timbre of your voice would affect how easy or
+                                difficult it’d be to record you.
+                            </p>
+                            <p><strong>DAVID:</strong>One of the biggest challenges that I find in video game voice
+                                acting is when a super deep-voiced character has to be in a battle. They want so much
+                                more intensity – but they want it to be that focused intensity. It sometimes physically
+                                can’t happen. Think about human nature; if somebody came up to you with a knife, and you
+                                were fighting back, your voice would go higher!
+                            </p>
+                            <p>
+                                <strong>BLIZZARD:</strong>
+                                Voice acting is something that lot of people are interested in, but many of those same
+                                people don’t have the foggiest idea of what goes into it. Do you think that anybody who
+                                really works hard and puts a lot of resumes out has the capacity to be a voice actor?
+                            </p>
+                            <p><strong>DAVID:</strong>Without trying to sounding conceited, the reality is that Joe from
+                                accounting can’t walk up to the microphone and be Azmodan. Everybody finds what they’re
+                                good at. Dee [Baker] is good at, well, everything, but he’s good at crazy wacky stuff,
+                                I’m good at the villainous characters, the dramatic characters – we all have our thing.
+                                People have to identify what they’re good at, market themselves, and get tons and tons
+                                of practice. It’s a process. I didn’t arrive in LA and have a career handed to me on a
+                                silver platter. I had to prove myself.
+                            </p>
+                            <p>If you just want to start out, you might do improv theatre just to get ready for
+                                everything. In a video game session, you often don’t get to read the script in advance –
+                                they put it in front of you and they say “go.” I have to give a quality performance from
+                                the minute I open my mouth. There’s no second chance. Everything has to be at a certain
+                                level; even if you give a great audition, you kind of have to be known in the business
+                                for a while before you get the chance to do something as prestigious as a Blizzard game.
+                                They’re not just gonna let anybody do it. I guess the answer to your question is that it
+                                takes years – years of practice, years of dedication.
+                            </p>
+                            <p>It’s important to not let anybody squish your dreams, though. If you really believe in
+                                yourself and you’re good at what you do, you’ll eventually find your audience.
+                            </p>
+                            <p>
+                                <strong>BLIZZARD:</strong>
+                                One more question! In the game narrative, Azmodan’s dead. By our count, he’s been killed
+                                millions of times at this point. Do you think there’s any chance of him – of you –
+                                coming back?
+                            </p>
+                            <p>
+                                <strong>DAVID:</strong>
+                                This is a fantasy world – it doesn’t matter if you’re dead. If you have clever enough
+                                writers, anyone can come back to life believably. I’d love to keep going with this
+                                character.
+                            </p>
+                            <p><strong>BLIZZARD:</strong>Thanks so much, David!
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="sorNoTable" id="osContainer3">
+                    <div>
+                        <div class="sorTable">
+                            <b class="fancyTitle">James Hong - Covetous Shen</b>
+                            <br/>
+                            <p>
+                                <strong>BLIZZARD:</strong>
+                                Hi, James! I read in your biography that you lived in Hong Kong – what was that like?
+                            </p>
+                            <p>
+                                <strong>JAMES:</strong>
+                                I was there in Kowloon, educated during grade school from the age of 5 to 9. Everything
+                                you do in life adds to your art, and that gave me the sense of adjusting to a whole new
+                                world, of the Hong Kong atmosphere, which, as you can imagine, is great. Getting a piece
+                                of toast from an old man who used to be hunched over on a street corner near where I
+                                stayed – he would make toast for some reason, and you could buy it for a penny. Little
+                                images have added to the roles that I play – you have, in your games, a lot of those
+                                dark images that are in my memory.
+                            </p>
+                            <p>Education in the Chinese grade school was great – not the most pleasant thing, but
+                                certainly it becomes your background, it enriches who you are. I think everybody should
+                                open themselves to travel and experience. Don’t you?
+                            </p>
+                            <p>
+                                <strong>BLIZZARD:</strong>
+                                Yeah, absolutely. Do you still go back pretty often?
+                            </p>
+                            <p>
+                                <strong>JAMES:</strong>
+                                Yes, I’ve been back there. When China was just opening up, “taking off their uniforms,”
+                                so to say, I was there for months, making “Marco Polo.” This is when China was still
+                                China, and not full of hotels. Most of what I saw in Beijing – not most, but half of it
+                                is just razed and modernized now. American fast food is all over the place. It’s kind of
+                                sad to see all of that go, but, again, that’s become part of my background.
+                            </p>
+                            <p><strong>BLIZZARD:</strong>Can you tell us a bit about how you got your start with acting
+                                in general?
+                            </p>
+                            <p>
+                                <strong>JAMES:</strong>
+                                The start of my career was in 1953. I got on a quiz show with Groucho Marx. I did some
+                                impersonations, including Groucho, Peter Lorrie, Jimmy Stewart. That got out to the
+                                United States audience, and I got a huge reaction – they said the 2
+                                <sup>nd</sup>
+                                biggest fan-mail Groucho ever got on that program. That started the ball rolling. I got
+                                an agent, and my first role was in
+                                <em>Soldier of Fortune</em>
+                                with Clark Gable.
+                            </p>
+                            <p>
+                                <strong>BLIZZARD:</strong>
+                                You’ve had an amazingly broad career since then. You’ve done a lot of film and
+                                animation; I know you personally from<em>Mulan</em>,<em>Kung Fu Panda</em>,<em>Big
+                                Trouble [in Little China]</em>, and you’ve started doing video games.
+                            </p>
+                            <p><strong>JAMES:</strong>I’d like to see if one of these days if I could put my name in the
+                                almanac as the actor with the most character roles. I think I hold that record, though
+                                I’m not sure.
+                            </p>
+                            <p>
+                                <strong>BLIZZARD:</strong>
+                                If you don’t hold that record, you’re definitely in the running. Yeah, you should see
+                                about that.
+                            </p>
+                            <p>So, I was curious – with all the film and animation work in your background, do you do
+                                anything different to prepare for working on a video game?
+                            </p>
+                            <p>
+                                <strong>JAMES:</strong>
+                                A little bit. Video games are a separate entity – the biggest entertainment industry of
+                                late. So you do have to approach it differently, certainly differently from an on-camera
+                                job. On camera, you have to fuss around with wardrobe, makeup, get into character – I
+                                think of all the work I did for “Big Trouble in Little China,” for Lo Pan, with
+                                different makeup, months studying the role. Now, with video games, you don’t have all
+                                that trouble getting into a role physically, but it’s a different approach – you read
+                                the script, study the character, and find out what the<em>purpose</em>of the character
+                                is, his history and mission, what he’s trying to accomplish, and then you go in and do
+                                the voice, and from that point the voice director takes over. You can go in in your
+                                pajamas and do the lines, and it’s okay.
+                            </p>
+                            <p><strong>BLIZZARD:</strong>Tell us about your time in the studio recording for Covetous
+                                Shen on Diablo III.
+                            </p>
+                            <p>
+                                <strong>JAMES:</strong>
+                                We went down to the LA studio – it was always the same studio, I remember it well.
+                                Andrea Toyias was always behind the booth giving me direction, and she’s a great voice
+                                director. I remember that I had to do a LOT of takes. The director was very meticulous –
+                                it was one try after another until we nailed it down, because I didn’t exactly have a
+                                picture of what was happening in the game. I had a vague idea, but have to I rely on the
+                                director to guide me through the scene with clues.
+                            </p>
+                            <p>I remember goofing around and doing voices from
+                                <em>Big Trouble</em>
+                                to make everybody laugh, and then moving right back into the game voice. One has to have
+                                some fun with it, obviously. I think you see that; hopefully the player gets to see the
+                                sense of humor we put into Covetous Shen.
+                            </p>
+                            <p><strong>BLIZZARD:</strong>I think they absolutely have. You’ve got what’s probably the
+                                quirkiest voice in the game – it’s super idiosyncratic, and I don’t think anyone else
+                                sounds like you. When you did the voice for Shen, did you do any ad-libbing, or was that
+                                entirely pre-planned?
+                            </p>
+                            <p><strong>JAMES</strong>: I tried to do some ad-libs. I kind of snuck it up on them – I’d
+                                do a few lines that Andrea thought would be good for the game, and then throw in a few
+                                ad-libs, whether it’s a laugh or a quirky comment that I think Covetous might do,
+                                because he’s a sneaky little character, you know? He kind of gets under your skin one
+                                way or another. By the time I’ve done a voice three or four times, I know what I want
+                                the player to feel, and that’s the whole gist of the game. That’s the craft with games –
+                                just through your voice, to draw the player into a situation that he possibly has not
+                                thought about, and lead him in a direction to solve problems.
+                            </p>
+                            <center>
+                                <img src="http://us.media5.battle.net/cms/gallery/IDBUN0LSDOHM1347387544212.jpg?v=0"/>
+                                <img src="http://us.media1.battle.net/cms/gallery/K5EZR46RPZCA1347387543385.jpg?v=1"/>
+                            </center>
+                            <p><strong>BLIZZARD</strong>: Your character in Diablo III is very wise, but, as you pointed
+                                out, he’s also a bit silly, kind of a trickster-style character. How do you balance
+                                those two qualities? They seem almost like they’d be a little opposed.
+                            </p>
+                            <p><strong>JAMES</strong>: In a way, it’s tough; in a way it’s not. I’m that kind of person
+                                – I love to poke fun and stimulate other people to action. I hate the status quo. With
+                                food, like Covetous, I like to taste different things. When I sit down to a dinner, I
+                                try to get other people to order something that I like too, so I can eat off of their
+                                plate. When I eat Chinese food, I order more dishes than I can possibly eat so that I
+                                can try each one of them. In that sense, Covetous is not too different from the real
+                                James Hong – we’re just out to grab some fun out of life.
+                            </p>
+                            <p><strong>BLIZZARD</strong>: Do you remember how long your recording sessions were? Were
+                                they 4-hour long marathon sessions, or shorter sessions?
+                            </p>
+                            <p><strong>JAMES</strong>: They averaged between 1 and 2 hours – sometimes a little longer,
+                                sometimes shorter. I like variety, and I can only be really good in a period of 2 hours.
+                                After that, I start fading. I worked with Frank Sinatra on a film called<em>Never So
+                                    Few</em>. I’ll always remember that, because we’d rehearse a little bit – Frank
+                                didn’t like to rehearse too much – and then when the camera was ready, Frank shouted, [
+                                <em>imitating Sinatra perfectly</em>] “All right, you got one take, and that’s it!”
+                                Everybody’s trembling and shaking because they’ve gotta get things perfect in one take.
+                                That’s what Frank did – he was a great one-taker.
+                            </p>
+                            <p><strong>BLIZZARD</strong>: Knowing that as a series, Diablo can be a bit on the dark side
+                                – hacking up zombies, violence, etc. – how do you keep it fun or light? How do you have
+                                a good time with it?
+                            </p>
+                            <p><strong>JAMES</strong>: It’s a very important question – throughout my career, I’ve done
+                                some ‘heavy’ roles, serious roles in
+                                <em>Chinatown</em>
+                                and so forth. It’s very important that you get into doing a voice, making a game work
+                                for yourself and for players, but once you’re through acting – or through playing –
+                                you’ve really gotta divorce yourself from [it], and find your own self again. I find
+                                myself, when I’ve done a role, naturally repeating lines over in my head as I’m driving
+                                home – and I’ve got to get out of that, get back to reality and my real relationship
+                                with people and what I’m doing. Do something else – play baseball, go dancing – and get
+                                back into your real life. I don’t know how else to put it, but it’s very important to
+                                keep a yin and yang balance.
+                            </p>
+                            <p><strong>BLIZZARD</strong>: What was the most fun part of portraying Covetous Shen?
+                            </p>
+                            <p><strong>JAMES</strong>: He’s a jeweler. He makes jewelry. He takes bits of gems and makes
+                                a better whole out of them, and crafts for the player. Though he would like to find a
+                                particular gem for himself – he is very greedy and very selfish in a sense – in the
+                                meantime, he does a great service, helping the player add gems to weapons or equipment.
+                                It gave me a thrill to know that I’m actually helping the player. Hopefully that comes
+                                through in my role.
+                            </p>
+                            <p><strong>BLIZZARD</strong>: Do you think there's more to Covetous? That maybe he’s a
+                                deity? Do you think he’s just messing with the player?
+                            </p>
+                            <p><strong>JAMES</strong>: I like to think that he’s a deity of some kind. To me, he’s
+                                probably an outcast among the deities, who was thrown onto [Sanctuary] because he was
+                                naughty. Now, he’s just doing his deeds. He’s a scrounger. He looks for little pieces of
+                                jewelry, and tries to make something out of everything that he finds. He looks like a
+                                bag man, and he’s very sarcastic, but his knowledge is great. So there’s something
+                                behind that knowledge – how he got it, and how he became a maker of jewels is a big
+                                mystery.
+                            </p>
+                            <p><strong>BLIZZARD</strong>: One thing that I hear quite a lot from players of Blizzard
+                                games is a general interest in the craft of voice acting, so I wanted to ask you about
+                                that. Do you think that it’s possible for anybody who’s determined and hardworking
+                                enough to get into acting or animation for games, or do you think that you need to have
+                                a certain talent, that your voice has to sound a certain way or you have to meet a
+                                particular niche, a voice that people identify with a certain build or nationality?
+                            </p>
+                            <p><strong>JAMES</strong>: I think it’s both. How I more or less got into this is that I
+                                used to talk to myself a lot, as a lonely child, mimicking this and that, and that
+                                became sort of the training grounds for being a voice actor. I never thought of it as
+                                that, but it became very valuable. Changing their voice is something most young people
+                                do, whether in their childhood or later in life. You simply take that innate talent and
+                                train it. There are voiceover teachers here in Hollywood, because doing voice work is a
+                                different craft than just acting on stage. When you do a voiceover, you’re sitting in
+                                that chair alone with a microphone – that’s your whole surrounding. You have nothing
+                                else but your innate talent and imagination to rely on. You have to know how to apply
+                                your training, your surroundings, your spirit, your soul, and what your imagination can
+                                create. Some people that I’ve heard do voices, I sit there and I’m amazed, totally
+                                amazed by what they can do. There are so many good actors around. There’s no easy way to
+                                do it – it’s a crowded field – but once you get into it, and directors and producers
+                                come to rely on you, you’re gonna get a lot of work, whether it’s doing characters or
+                                just doing announcing.
+                            </p>
+                            <p><strong>BLIZZARD</strong>: Are you into jewelry at all, or was that just acting?
+                            </p>
+                            <p><strong>JAMES</strong>: Into actual jewelry, no, into crafting, yes. As a young child, I
+                                loved woodwork, metalwork, making go-carts. I still love to create things and draw. As
+                                far as helping the player as Covetous Shen . . . I do wish I’d get a tip from time to
+                                time. At the least, I hope the players can give me a ‘thank you.’ Maybe they can go to
+                                my
+                                <a href="http://www.facebook.com/JamesHongPage">Facebook page</a>
+                                and thank me for showing them a good time as Covetous Shen. It’s a fun page.
+                            </p>
+                            <p><strong>BLIZZARD</strong>: I know you’re really busy; thanks for spending all this time
+                                talking with us, James!
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <p>
+                    <script language="javascript">
+                        function osTabSelect(thisElement, divNum) {
+                            document.getElementsByClassName("goose")[0].className = "duck";
+                            thisElement.className = "goose";
+                            document.getElementById("osContentDiv").innerHTML = document.getElementById("osContainer" + divNum).innerHTML;
+                        }
+                    </script>
+                    <style type="text/css">
+                        #blog .table2 {
+                            margin: 0 auto;
+                        }
+
+                        #blog .table2 th div {
+                            font-family: Georgia, "Times New Roman", Times, serif;
+                            font-size: 12px;
+                            color: #D96500;
+                            -moz-border-radius: 4px;
+                            -webkit-border-radius: 4px;
+                            border-radius: 4px;
+                            border-bottom-left-radius: 0;
+                            border-bottom-right-radius: 0;
+                            -moz-box-shadow: 0 0 20px #000000;
+                            -webkit-box-shadow: 0 0 20px #000000;
+                            box-shadow: 0 0 20px #000000;
+                            border: 1px solid #483d2b;
+                            border-bottom-width: 0px;
+                            float: left;
+                            cursor: pointer;
+                        }
+
+                        #blog .table2 th div:hover {
+                            color: #FC9;
+                            text-decoration: underline
+                        }
+
+                        .duck {
+                            padding: 7px 14px 2px 14px;
+                            margin-top: 5px
+                        }
+
+                        .goose {
+                            padding: 7px 14px 7px 14px;
+                            margin-top: 0px
+                        }
+
+                        .fancyTitle {
+                            font-family: Georgia, "Times New Roman", Times, serif;
+                            font-size: 15px;
+                            color: #efc9a0;
+                        }
+
+                        .sorTable {
+                            -moz-border-radius: 4px;
+                            -webkit-border-radius: 4px;
+                            border-radius: 4px;
+                            -moz-box-shadow: 0 0 20px #000000;
+                            -webkit-box-shadow: 0 0 20px #000000;
+                            box-shadow: 0 0 20px #000000;
+                            border: 1px solid #483d2b;
+                            padding: 20px;
+                            line-height: 1.5em;
+                            background-color: #12110f;
+                            background-position: top right;
+                            background-repeat: no-repeat;
+                            margin-bottom: 3px;
+                        }
+
+                        .sorTable i {
+                            font-size: 10px;
+                            color: #C96;
+                        }
+
+                        .sorTable img {
+                            -moz-border-radius: 4px;
+                            -webkit-border-radius: 4px;
+                            border-radius: 4px;
+                            -moz-box-shadow: 0 0 20px #000000;
+                            -webkit-box-shadow: 0 0 20px #000000;
+                            box-shadow: 0 0 20px #000000;
+                            padding: 1px;
+                            border: 1px solid #483d2b;
+                            margin: 4px 0px 12px 7px;
+                        }
+
+                        .sorNoTable {
+                            display: none;
+                        }</style>
+                </p>
+            </div>
+        </content>
+    </entry>
+    <entry>
+        <title type="text">Battle.net SMS Protect: Have You Heard?</title>
+        <published>2012-09-13T17:00:00.000Z</published>
+        <updated>2012-09-12T22:25:50.643Z</updated>
+        <id>7206800</id>
+        <link href="http://us.battle.net//d3/en/blog/7206800"/>
+        <summary type="xhtml">
+            <div xmlns="http://www.w3.org/1999/xhtml">
+                <p>
+                    <span style="font-size: 12px; ">You’ve probably heard about the benefits of using a Battle.net
+                        Authenticator or Battle.net Mobile Authenticator app by now. But did you know that a few months
+                        ago, we introduced a new, optional security measure called 
+                    </span>
+                    <strong style="font-size: 12px; ">Battle.net SMS Protect</strong>
+                    <span style="font-size: 12px; "> that works in tandem with the Authenticator to help safeguard your
+                        account?</span> 
+                </p>
+            </div>
+        </summary>
+        <content type="xhtml">
+            <div xmlns="http://www.w3.org/1999/xhtml">
+                <p>You’ve probably heard about the benefits of using a Battle.net Authenticator or Battle.net Mobile
+                    Authenticator app by now. But did you know that a few months ago, we introduced a new, optional
+                    security measure called
+                    <strong>Battle.net SMS Protect</strong>
+                    that works in tandem with the Authenticator to help safeguard your account?
+                </p>
+                <p>Battle.net SMS Protect lets you perform certain account actions, such as removing your Authenticator
+                    from your mobile phone, and can be set up to provide you with account-activity notifications. All
+                    you need is a supported text-enabled cell phone to get started.
+                </p>
+                <p>What can Battle.net SMS Protect do for you?</p>
+                <ul>
+                    <li>Unlock your Battle.net account</li>
+                    <li>Remove a damaged or lost Authenticator</li>
+                    <li>Recover your account name</li>
+                    <li>Reset your password</li>
+                </ul>
+                <p>In addition, you can turn on alerts to have text messages sent directly to your phone notifying you
+                    of certain kinds of account activity, such as password changes and security feature additions or
+                    removals.
+                </p>
+                <p>These text messages are a free* and easy way to help protect your account from unauthorized access
+                    and changes.
+                </p>
+                <p>Remember, you can help further safeguard your Battle.net account by never sharing your password,
+                    using unique passwords on each site you visit, and being aware of potential email and phishing
+                    scams.
+                </p>
+                <p>For more information on Battle.net SMS Protect and instructions on how to set it up, visit the
+                    Battle.net SMS Protect<a href="http://battle.net/support/article/3300033" target="_blank">FAQ</a>.  
+                </p>
+                <p style="text-align: center; ">
+                    <iframe allowfullscreen="" frameborder="0" height="315"
+                            src="http://www.youtube.com/embed/jkU6BpbEnt0" width="560"/>
+                </p>
+                <p>We also encourage you to learn more about what you can do to help safeguard your account by reviewing
+                    the various resources available on our<a href="http://battle.net/security/checklist"
+                                                             target="_blank">security checklist</a>.
+                </p>
+                <p>
+                    <em>*Your phone carrier's standard rate for received text messages may apply.</em>
+                </p>
+            </div>
+        </content>
+    </entry>
+    <entry>
+        <title type="text">Patch 1.0.5 Sneak Peek</title>
+        <published>2012-09-13T14:00:00.000Z</published>
+        <updated>2012-09-13T03:08:01.008Z</updated>
+        <id>7155880</id>
+        <link href="http://us.battle.net//d3/en/blog/7155880"/>
+        <summary type="xhtml">
+            <div xmlns="http://www.w3.org/1999/xhtml">
+                <p>
+                    <span style="font-size: 12px; ">We’ll have articles in the coming days providing all the details on
+                        the upcoming patch, but we wanted to give you a sneak peek at what major features to expect.
+                    </span>
+                </p>
+            </div>
+        </summary>
+        <content type="xhtml">
+            <div xmlns="http://www.w3.org/1999/xhtml">
+                <p>We’ll have articles in the coming days providing all the details on the upcoming patch, but we wanted
+                    to give you a sneak peek at what major features to expect.
+                    <br/>
+                     
+                </p>
+                <p style="margin-left: 40px; ">
+                    <strong>Defensive Skill Changes</strong>
+                    <br/>
+                    In our eternal quest to promote build diversity; we’ll be making changes to defensive skills across
+                    the board while simultaneously reducing incoming damage. The net result is a survivability buff for
+                    players, and an increase in build options as defensive abilities become less “mandatory.”
+                    <br/>
+                    <br/>
+                    <strong>New Event: Infernal Machine</strong>
+                    <br/>
+                    The Infernal Machine is a device that will allow level-60 players to battle “uber” versions of some
+                    of Sanctuary’s most nefarious bosses. While the rewards for defeating these bosses will be great,
+                    some assembly is required.
+                    <br/>
+                    <br/>
+                    <strong>New System: Monster Power</strong>
+                    <br/>
+                    Similar to the “Players 8” command in Diablo II, the Monster Power system is designed to give
+                    players more control over how challenging enemies are in each difficulty.
+                </p>
+                <p>
+                    <br/>
+                    This and more is coming in Patch 1.0.5! Stay tuned for all the gory details.
+                </p>
+                <style type="text/css">
+                    #blog .detail img {
+                        -moz-border-radius: 4px;
+                        -webkit-border-radius: 4px;
+                        border-radius: 4px;
+                        -moz-box-shadow: 0 0 20px #000000;
+                        -webkit-box-shadow: 0 0 20px #000000;
+                        box-shadow: 0 0 20px #000000;
+                        border: 1px solid #372511;
+                        max-width: 570px !important;
+                        padding: 1px;
+                    }
+
+                    #blog .detail #center {
+                        width: 590px;
+                        margin: 0px auto;
+                    }
+
+                    #blog .divider-down {
+                        width: 100%;
+                        height: 18px;
+                        background: url('http://us.media3.battle.net/cms/gallery/KKZW0YDVPDT91334191716743.png?v=2') center center no-repeat;
+                    }
+
+                    #blog .divider-up {
+                        width: 100%;
+                        height: 18px;
+                        background: url('http://us.media1.battle.net/cms/gallery/MO010OF9ESV11334191716770.png?v=2') center center no-repeat;
+                    }</style>
+            </div>
+        </content>
+    </entry>
+    <entry>
+        <title type="text">Final Issue of Sword of Justice Now Available</title>
+        <published>2012-09-07T01:00:00.000Z</published>
+        <updated>2012-09-07T00:48:59.366Z</updated>
+        <id>7155883</id>
+        <link href="http://us.battle.net//d3/en/blog/7155883"/>
+        <summary type="xhtml">
+            <div xmlns="http://www.w3.org/1999/xhtml">
+                <p>The fifth and final issue of
+                    <em>
+                        <strong>Diablo: Sword of Justice</strong>
+                    </em>
+                    is now available in stores and online!
+                </p>
+                <p> </p>
+            </div>
+        </summary>
+        <content type="xhtml">
+            <div xmlns="http://www.w3.org/1999/xhtml">
+                <p>From the explosive team of Aaron Williams (<em>North 40</em>) and famed French artist Joseph Lacroix
+                    (<em>L'Encyclopédie du mal</em>) comes
+                    <strong>
+                        <em>Diablo: Sword of Justice</em>
+                    </strong>
+                    .
+                </p>
+                <p>A horrific plague of madness is spreading throughout the Dreadlands, transforming its victims into
+                    bloodthirsty savages. The only hope of stopping the affliction before it consumes humanity may lie
+                    with Jacob, a wanted fugitive whose destiny is bound up with Archangel Tyrael's legendary Sword of
+                    Justice.
+                </p>
+                <p>In this final issue, Jacob and the wizard Shanar gain a new ally in their quest to save Staalbreak.
+                    Their journey takes them to the depths of the demonic infestation in the ruins of Mount Arreat.
+                </p>
+                <p style="text-align: center; ">
+                    <a class="lightbox"
+                       href="http://us.media5.battle.net/cms/gallery/GVJOMF8IDA0Y1346978150958.jpg?v=1">
+                        <img alt="" src="http://us.media1.battle.net/cms/gallery/YX1N7UC15U021346978129639.jpg?v=1"
+                             style="width: 600px; height: 250px; "/>
+                    </a>
+                </p>
+                <p style="text-align: center; ">
+                    <a class="lightbox"
+                       href="http://us.media1.battle.net/cms/gallery/GZ0419LHOMF41346978104055.jpg?v=1">
+                        <img alt="" src="http://us.media3.battle.net/cms/gallery/69OEOOYYNGN41346978078720.jpg?v=1"
+                             style="width: 600px; height: 250px; "/>
+                    </a>
+                </p>
+                <p>Pick up a copy to see how this series ends, as Staalbreak's future is in Jacob's hands:</p>
+                <p>
+                    <a href="https://read.dccomics.com/comixology/#" target="_blank">DC Comics on Comixology</a>
+                    <br/>
+                    <a href="http://www.comicshoplocator.com/" target="_blank">Local Comic Retailers</a>
+                </p>
+                <p> </p>
+                <style type="text/css">
+                    #blog .detail #center {
+                        width: 590px;
+                        margin: 0px auto;
+                    }
+
+                    #blog .divider-down {
+                        width: 100%;
+                        height: 18px;
+                        background: url('http://us.media3.battle.net/cms/gallery/KKZW0YDVPDT91334191716743.png?v=2') center center no-repeat;
+                    }
+
+                    #blog .divider-up {
+                        width: 100%;
+                        height: 18px;
+                        background: url('http://us.media1.battle.net/cms/gallery/MO010OF9ESV11334191716770.png?v=2') center center no-repeat;
+                    }
+
+                    #blog .detail div.ctextheadline {
+                        position: relative;
+                        display: block;
+                        text-decoration: none;
+                        line-height: 1 !important;
+                        font-family: Georgia !important;
+                        margin-left: 3px;
+                    }
+
+                    #blog .detail div.ctextheadline h1 {
+                        position: absolute;
+                        top: 17px;
+                        left: 30px;
+                        color: #FFBF55 !important;
+                        font-size: 23px !important;
+                    }
+
+                    #blog .detail div.cteaser, #blog .detail img, #blog .detail div.cteaserg {
+                        -moz-border-radius: 4px;
+                        -webkit-border-radius: 4px;
+                        border-radius: 4px;
+                        -moz-box-shadow: 0 0 20px #000000;
+                        -webkit-box-shadow: 0 0 20px #000000;
+                        box-shadow: 0 0 20px #000000;
+                        border: 1px solid #372511;
+                        padding: 1px;
+                    }
+
+                    #blog .detail div.cteaser, #blog .detail div.cteaserg {
+                        width: 285px;
+                        height: 144px;
+                        margin: 8px 3px 0px 3px;
+                        padding-top: 5px;
+                        background-color: #1D100A;
+                        float: left;
+                    }
+
+                    #blog .detail div.cteaser:hover {
+                        border: 1px solid #CD9000;
+                        background-color: #40200d;
+                    }
+
+                    #blog .detail .cteaser a.cteaserimg, #blog .detail .cteaserg div.cteaserimg {
+                        display: block;
+                        width: 125px;
+                        height: 140px;
+                        text-align: center;
+                        float: left;
+                    }
+
+                    #blog .detail .cteaser a.cteaserimg img, #blog .detail .cteaserg div.cteaserimg img {
+                        -moz-border-radius: 10px;
+                        -webkit-border-radius: 10px;
+                        border-radius: 10px;
+                        -moz-box-shadow: 0 0 20px #000000;
+                        -webkit-box-shadow: 0 0 20px #000000;
+                        box-shadow: 0 0 20px #000000;
+                        border: 1px solid #1D100A;
+                        vertical-align: middle;
+                        width: 109px;
+                        height: 109px;
+                        margin-top: 10px;
+                        padding: 1px;
+                    }
+
+                    #blog .detail .cteaser a.cteasersummary, #blog .detail .cteaserg div.cteasersummary {
+                        display: block;
+                        padding-right: 3px;
+                        line-height: 1.4 !important;
+                        width: 157px;
+                        height: 140px;
+                        float: left;
+                    }
+
+                    #blog .detail .cteaser a.cteasersummary span.headline, #blog .detail .cteaserg div.cteasersummary span.headline {
+                        color: #d19205 !important;
+                        font-size: 17px !important;
+                        text-weight: bold !important;
+                    }
+
+                    #blog .detail .cteaser a.cteasersummary span.summarytext, #blog .detail .cteaserg div.cteasersummary span.summarytext {
+                        color: #ad8460 !important;
+                        font-size: 12px !important;
+                    }
+
+                    .top-list tr:nth-child(2) td {
+                        color: #F0E29A;
+                        background-color: transparent;
+                    }
+
+                    .top-list-interior table tbody tr td {
+                        background-color: none !important;
+                        color: #EFC9A0 !important;
+                        font-weight: normal !important;
+                        vertical-align: top;
+                    }
+
+                    .top-list-interior table tbody tr:hover td {
+                        color: #fff !important;
+                    }
+
+                    #blog .detail a img:hover {
+                        border: 1px solid #CD9000;
+                    }</style>
+                <style type="text/css">
+                    .pullquote:before {
+                        content: "\201C" attr(title) "\201D";
+                        font-size: 1.2em;
+                        display: block;
+                        float: right;
+                        width: 8em;
+                        margin: 0.25em 1em 0.5em 0;
+                        padding: 1em;
+                    }</style>
+            </div>
+        </content>
+    </entry>
+    <entry>
+        <title type="text">Developer Journal: Crowd Control Changes</title>
+        <published>2012-09-05T16:00:00.000Z</published>
+        <updated>2012-09-05T17:19:24.966Z</updated>
+        <id>7100052</id>
+        <link href="http://us.battle.net//d3/en/blog/7100052"/>
+        <summary type="xhtml">
+            <div xmlns="http://www.w3.org/1999/xhtml">
+                <p>
+                    <span style="font-size: 12px; ">As a team, we're not really a fan of the way CC skills become less
+                        powerful as a result of diminishing effects. While we know that a system to limit CC was
+                        required to add challenge at higher difficulties, we've wanted to improve CC for some time now.
+                        We had bigger fish to fry first (like adding the Paragon System and improving Legendary items),
+                        so we made a note to revisit CC effects in patch 1.0.5. Here's our plan. 
+                    </span>
+                </p>
+            </div>
+        </summary>
+        <content type="xhtml">
+            <div xmlns="http://www.w3.org/1999/xhtml">
+                <p>Shortly after Diablo III launched, I remember watching Jay play his barbarian. He was having a blast,
+                    killing monsters left and right, but something was bothering him. He was annoyed because Ground
+                    Stomp -- one of his favorite abilities -- got worse as he progressed to higher difficulty levels,
+                    and that his character felt weaker despite having better gear and more stat points.
+                </p>
+                <p>We all agreed that the game needed to get harder at higher difficulty levels, but Jay didn't like
+                    this<em>particular way </em>that it was getting harder. Specifically, he didn't like that we
+                    diminished crowd control (CC) effects.  We had discussed CC effects many times during development,
+                    and we felt the system we had got the job done, but Jay felt we could do better.
+                </p>
+                <p>Before release, we'd designed the game so that CC skills would have diminished durations at higher
+                    difficulties -- for example, most CC skills have their effectiveness reduced by 65% in Hell and
+                    Inferno. Jay has never been a fan of the way Ground Stomp and other CC skills become less powerful
+                    as a result of diminishing effects, but he also knew that a system to limit CC was required to add
+                    challenge at higher difficulties.  While we've wanted to improve CC for some time now, we had bigger
+                    fish to fry first (like adding the Paragon System and improving Legendary items), so we made a note
+                    to revisit CC effects in a future patch.
+                    <br/>
+                     
+                </p>
+                <div class="ctextheadline">
+                    <img src="http://us.media2.battle.net/cms/content_folder_media/68QM1Z2BEQ7P1346202513108.jpg?v=0"
+                         style="width: 590px; height: 56px; "/>
+                    <h1>
+                        Why We Reduce CC
+                    </h1>
+                </div>
+                <p>Fast forward to present day as we prepare for patch 1.0.5.  Before I talk about what we're doing to
+                    buff CC skills while still allowing the game to get harder, first, let's go over some of the reasons
+                    why we diminish the effects of CC in Diablo III:
+                </p>
+                <ul>
+                    <li>Monsters need time to do their thing to threaten you.</li>
+                    <li>While infinite CC rotations can feel make players feel awesome, it's fleeting. If CC becomes too
+                        powerful, it can trivialize most major mechanics and the game can become boring.
+                    </li>
+                    <li>Players in co-op have the potential to synchronize CC.</li>
+                </ul>
+                <p>Of course, there are side effects to reducing CC to increase difficulty. One of the bigger issues
+                    we've seen is that, when it comes to mitigating incoming damage, CC skills rarely hold up against
+                    other options as you progress through Nightmare, Hell, and Inferno. While a skill like Ground Stomp
+                    mitigates damage, let's you control the battlefield, and is really fun to use, the duration
+                    reduction at higher difficulties is really noticeable, making the skill far less effective. Ignore
+                    Pain, on the other hand, mitigates damage by reducing how much of it you take, regardless of
+                    difficulty level. It may not be as exciting to trigger, but it's more reliable in those later levels
+                    since its power isn't diminished.
+                </p>
+                <p>The following graphs show a few examples of how CC skills become less widely used as players progress
+                    from levels 25, 47, and 59 
+                    <strong>*</strong>
+                    (the levels you're likely to be at Act III Normal, Act III Nightmare, and Act III Hell):
+                </p>
+                <p style="text-align: center; ">
+                    <a class="lightbox"
+                       href="http://us.media4.battle.net/cms/content_folder_media/QPH4B2VJSTIL1346800728537.jpg?v=0">
+                        <img alt=""
+                             src="http://us.media4.battle.net/cms/content_folder_media/QPH4B2VJSTIL1346800728537.jpg?v=0"
+                             style="width: 250px; height: 140px; "/>
+                    </a>
+                    <a class="lightbox"
+                       href="http://us.media3.battle.net/cms/content_folder_media/PNRQ1DO26FGR1346800728537.jpg?v=0">
+                        <img alt=""
+                             src="http://us.media3.battle.net/cms/content_folder_media/PNRQ1DO26FGR1346800728537.jpg?v=0"
+                             style="width: 250px; height: 140px; margin-left: 15px; margin-right: 15px; "/>
+                    </a>
+                </p>
+                <p style="text-align: center; ">
+                    <a class="lightbox"
+                       href="http://us.media2.battle.net/cms/content_folder_media/BMCZ1QGXIW0Q1346800728528.jpg?v=0">
+                        <img alt=""
+                             src="http://us.media2.battle.net/cms/content_folder_media/BMCZ1QGXIW0Q1346800728528.jpg?v=0"
+                             style="width: 250px; height: 140px; "/>
+                    </a>
+                </p>
+                <p>It's no surprise that as the effectiveness of a CC skill starts to diminish, its relative value
+                    (especially against skills that provide self-buffs) starts to diminish as well. This can make you
+                    feel less powerful as a player, but it also starts to push people into a narrower set of builds.
+                    After all, if one skill's power depreciates over time and another skill's power doesn't, the skill
+                    that retains its power can become much more appealing.
+                </p>
+                <p>
+                    <span style="font-size: 12px; text-align: center; ">
+                        <strong style="font-size: 10px; ">*</strong>
+                    </span>
+                    <em style="font-size: 10px; text-align: center; ">T
+                        <span style="font-size: 11px; ">hese graphs illustrate the general trend of how, as players
+                            level up, CC skills become less popular, while skills that provide self-buffs become more
+                            popular. We opted to not include level 60 data in these graphs because there are many builds
+                            in Inferno that use CC skills successfully (for example, Frost Nova with Critical Mass).
+                            While we think these synergy-based builds are awesome, they’re still outliers and would
+                            ultimately skew the graph data from the overall trend.
+                        </span>
+                    </em>
+                    <span style="font-size: 12px; text-align: center; "> </span>
+                    <span style="font-size: 12px; "> </span>
+                    <span style="font-size: 12px; "> </span>
+                    <span style="font-size: 12px; "> </span> 
+                    <br/>
+                     
+                </p>
+                <div class="ctextheadline">
+                    <img src="http://us.media1.battle.net/cms/content_folder_media/XGMM6ZO353Q61346202513002.jpg?v=0"
+                         style="width: 590px; height: 56px; "/>
+                    <h1>
+                        Trial and Error
+                    </h1>
+                </div>
+                <p>Crowd controlling monsters is not only tactically valuable, but we think it's really fun, too. Our
+                    goal was to recapture that feeling in the higher difficulties. We wanted players to feel strong and
+                    heroic when using their CC skills, no matter what level they are, and we came up with a few ideas on
+                    how to accomplish that.
+                </p>
+                <div class="divider-up">
+                     
+                </div>
+                <p>
+                    <strong>Idea #1: Reduce the Duration of CC effects in Co-Op Games</strong>
+                    <br/>
+                    The first solution we came up with was to reduce the duration of CC effects in co-op games only, and
+                    allow full durations in single-player. While this would provide a great experience for solo players
+                    and help prevent the issue of infinite CC rotations in group play, the obvious downside is that CC
+                    skills would still feel weak in co-op games.
+                </p>
+                <p>There are already a few mechanics (such as On Kill triggers) that discourage players from teaming up
+                    with their friends, and we don’t want to pile on "my CC is less effective" as yet another reason to
+                    avoid co-op. So, we tossed that idea out and went back to the drawing board.
+                </p>
+                <p>
+                    <strong>Idea # 2: Make Diminishing Effects Not as Strong</strong>
+                    <br/>
+                    We also discussed making all CC effects shorter from the start, but make them not diminish (this
+                    would apply for both single-player and co-op games).  For example, we talked about making Ground
+                    Stomp always last for 2 seconds, even when you first get it at level 1.  Sure, it's not as good at
+                    first, but at least it doesn't get worse with time.
+                </p>
+                <p>Of course, this means that we’d have to make CC less powerful across the board. Although it solves
+                    the original problem of CC skills feeling weaker over time, it creates the new problem of "my CC
+                    skills never feel powerful," which is arguably worse.
+                </p>
+                <p>
+                    <strong>Idea #3: Diminishing Returns</strong>
+                    <br/>
+                    Another idea we considered was implementing diminishing returns the way World of Warcraft does. So,
+                    your first stun gets full duration, the second stun is cut in half, the third stun is cut by 75%,
+                    and for the fourth stun and beyond you get "IMMUNE." 
+                </p>
+                <p>While this works for WoW, it just doesn't seem like a good fit for Diablo III. Not only does it feel
+                    really weird to get an "IMMUNE" message, but it also puts a lot of limitations on you in co-op games
+                    when the order in which you and your teammate use CC can matter a great deal. 
+                </p>
+                <p>Let's say you have a 5 second stun and your partner has a 1.5 second stun.  If you go first, the
+                    monster is stunned for 5 + 0.75 seconds = 5.75 seconds total.  If your partner goes first, the
+                    monster is stunned for 1.5 + 2.5 seconds = 4 seconds total.  That seems like more micromanagement
+                    than we want to place in a fast-paced action game like Diablo III.  
+                </p>
+                <p>Additionally, there are currently a few methods of CC which are already very potent.  For example,
+                    certain wizard and monk builds can maintain extremely heavy CC on enemies. As we examined CC, we
+                    realized we wanted to make CC skills feel good on their own, while still allowing these dedicated
+                    builds and combinations to be successful. In effect, we want to buff the baseline usage without
+                    hurting the players who have figured out certain potent combinations (though in the big picture we
+                    are still keeping an eye on that).  This was yet another reason not to adopt the WoW diminishing
+                    returns system.
+                </p>
+                <div class="divider-down">
+                     
+                </div>
+                <p>As you can see, every one of the solutions we discussed had a pretty noticeable downside, and we were
+                    kind of left hanging.  We went over the reasons together and Jay basically said, "I know WHY we
+                    reduce the durations, but I still don't like it. Keep working on it."
+                </p>
+                <p> </p>
+                <div class="ctextheadline">
+                    <img src="http://us.media2.battle.net/cms/content_folder_media/PXUGPR27D8TR1346202513000.jpg?v=0"
+                         style="width: 590px; height: 56px; "/>
+                    <h1>
+                        Developers, Assemble!
+                    </h1>
+                </div>
+                <p>As we started to wrap up development for patch 1.0.4, I decided to get a fresh perspective on the
+                    situation and hit up some designers on World of Warcraft and StarCraft II.  One of the great things
+                    about working at Blizzard is being able to tap the creativity of other development teams, while
+                    still being able to do what is right for the Diablo franchise. Although they work on a different
+                    game, many of the designers around the company have been playing the heck out of Diablo III, and I
+                    figured they would be able to offer me some deeper insight into what they thought worked and what
+                    didn't.
+                </p>
+                <p>After tossing out ideas for a while, we had a small epiphany:
+                    <em>What if we used diminishing returns, but developed a different set of rules for Diablo III?</em>
+                </p>
+                <p>What if monsters just never went immune? And what if, instead of reduced % durations, the durations
+                    were reduced based on the length of the CC, so that it didn’t matter which order the CC effects were
+                    applied when playing co-op?
+                </p>
+                <p>Here's the system we arrived at:</p>
+                <p>
+                    <strong>How It Works:</strong>
+                </p>
+                <ul>
+                    <li>Monsters have a "CC resistance" that is stored on a per-monster basis.</li>
+                    <li>The CC resistance starts at 0%.  For every 1 second CC that is applied to the monster, the
+                        monster receives 10% CC resistance.
+                    </li>
+                    <li>Monsters lose 10% of their CC resistance every second that they are not CC’d.</li>
+                    <li>Elite monster CC resistance is capped at the current reduction values already active for
+                        Elites.  In other words, CC resistance on most Elite monsters is capped to:
+                        <ul style="margin-left: 40px; ">
+                            <li>35% in Normal</li>
+                            <li>50% in Nightmare</li>
+                            <li>65% in Hell</li>
+                            <li>65% in Inferno</li>
+                        </ul>
+                    </li>
+                </ul>
+                <p>
+                    <strong>What This Means For the Player:</strong>
+                </p>
+                <ul>
+                    <li>From a high level, diminishing returns are applied on consecutive stuns to reduce their
+                        effectiveness.
+                    </li>
+                    <li>You will never get an "Immune" message due to diminishing returns.</li>
+                    <li>Diminishing returns on Elite monsters cap out at the same values that are currently applied to
+                        Elite reductions.
+                        <ul>
+                            <li>As previous mentioned, this means that near-infinite CC strategies will still work. 
+                                We're okay with these strategies remaining viable, as we love how powerful it makes
+                                players feel. (That said, we will continue to keep an eye on these strategies and may
+                                make some changes in the future if we feel it will be better for the health of the
+                                game.)
+                            </li>
+                        </ul>
+                    </li>
+                    <li>If two players are in a co-op game, the order in which they apply their stuns doesn't generally
+                        matter, so you shouldn't feel totally "screwed over" by the other person applying their stun
+                        before yours.
+                    </li>
+                    <li>A character using only the occasional CC every 10-15 seconds will always get the full duration
+                        in all difficulty levels.
+                    </li>
+                </ul>
+                <p> </p>
+                <div class="ctextheadline">
+                    <img src="http://us.media4.battle.net/cms/content_folder_media/GYIG86CD1S091346202513358.jpg?v=0"
+                         style="width: 590px; height: 56px; "/>
+                    <h1>
+                        A Free Demonstration
+                    </h1>
+                </div>
+                <p>Let's provide some examples to show how this new system can play out in real scenarios.</p>
+                <p>
+                    <strong>Example 1:</strong>
+                </p>
+                <ol>
+                    <li>A wizard freezes an Elite monster in Inferno difficulty for three seconds using Frost Nova. The
+                        monster is frozen for the full 3 seconds and now has 30% CC resistance (+10% resistance per
+                        second for 3 seconds = 30% CC resistance).
+                    </li>
+                    <li>The moment the freeze ends, a witch doctor casts Horrify which fears the monster for 4
+                        seconds. Since the monster has 30% CC resistance, it’s actually only feared for 2.8 seconds
+                        (4 seconds * 70% CC effectiveness = 2.8 seconds). The monster now has 58% CC resistance (30%
+                        from the first 3 second freeze + 28% from the 2.8 second fear).
+                    </li>
+                    <li>After 5.8 seconds (freeze + fear duration), the monster is no longer CC’d. Suppose nothing
+                        happens for 5 seconds.  During this time, the monster loses 50% of its CC resistance and is now
+                        at 8% CC resistance (58% - 50% = 8% CC resistance).
+                    </li>
+                    <li>A monk casts Blinding Flash, applying a 3 second blind.  The monster is blinded for 2.76 seconds
+                        (8% CC resistance off of 3 seconds) and the monster now has 35.6% CC resistance (which we could
+                        round off as necessary). 
+                    </li>
+                </ol>
+                <p>
+                    <strong>Example 2:</strong>
+                </p>
+                <ol>
+                    <li>A monk with the Pandemonium rune is in Nightmare difficulty and casts Seven-Sided Strike on a
+                        single enemy, resulting in a lot of possible 7-second stuns.
+                    </li>
+                    <li>The first hit stuns the monster and lasts for a full 7 seconds, but adds 70% CC resistance.</li>
+                    <li>The second hit also successfully stuns the monster, and lands 0.4 seconds later after the first
+                        hit. The 70% CC resistance is lowered to 50% because the game is currently on Nightmare
+                        difficulty, and Nightmare difficulty has a CC resistance cap of 50% -- so the stun is 3.5
+                        seconds long.  The 3.5-second stun gets applied, even though it is fully redundant with the
+                        existing 7-second stun.  Since the new stun is shorter than the amount of time left on the
+                        current stun, no additional CC resistance is added.  In effect, this second stun has no effect
+                        at all..&lt;</li>
+                </ol>
+                <p>
+                    <strong>Example 3:</strong>
+                </p>
+                <ol>
+                    <li>A party of four monks attempts to stun-lock an Elite monster in Inferno difficulty. They are all
+                        using Blinding Flash with the Self-Reflection rune, which blinds an enemy for 4 seconds.
+                    </li>
+                    <li>The first monk casts Blinding Flash and the monster is blinded for 4 seconds. It also now has
+                        40% CC resistance.
+                    </li>
+                    <li>The second monk also casts Blinding Flash, but times it to land the instant the first one
+                        ends. It lasts 2.4 seconds and increases the CC resistance to 64%.
+                    </li>
+                    <li>Both blinds wear off 6.4 seconds later. The third monk lands his Blinding Flash immediately
+                        afterwards, which lasts 1.44 seconds. This increases the monster’s CC resistance to 78.4%.
+                    </li>
+                    <li>It's now been 7.84 seconds, and the fourth monk wants in on the action. She uses her Blinding
+                        Flash. Even though the monster’s CC resistance is technically at 78.4% by now, it's capped at
+                        65% because of the CC resistance caps in Inferno. So, the 4 second blind actually lasts for 1.4
+                        seconds. This adds another 14% CC resistance, bringing the final to 92.4%. (The effective
+                        resistance is still at the 65% cap, but the 92.4% is tracked under the hood for the stun
+                        resistance to wear off.)
+                    </li>
+                    <li>The poor monster has now been blinded for a total of 9.24 seconds, and the monks are out of
+                        Blinding Flashes. :(
+                    </li>
+                    <li>The next blind will occur when the first monk’s Blinding Flash comes off cooldown. Since
+                        Blinding Flash has a 15 second cooldown, and only 9.24 seconds have passed, the party has to
+                        wait for another 5.76 seconds. During this time, the monster loses 57.6% CC resistance, leaving
+                        it at 34.8%. 
+                    </li>
+                    <li>The first monk uses his Blinding Flash as soon as it comes off cooldown. The 4 second blind is
+                        reduced to 2.61 seconds thanks to 34.8% CC resistance, and the monster’s CC resistance goes up
+                        another 26.1% to 60.9%.
+                    </li>
+                </ol>
+                <p>
+                    <strong>Example 4:</strong>
+                </p>
+                <p>Scenario 1</p>
+                <ul>
+                    <li>Player 1 applies a 1 second stun, it lasts 1 second.  Monster has 10% CC resistance.</li>
+                    <li>Player 2 applies a 6 second stun, it lasts 5.4 seconds.  Monster now has 64% CC resistance.</li>
+                </ul>
+                <p>Scenario 2</p>
+                <ul>
+                    <li>Player 1 applies a 6 second stun, it lasts 6 seconds.  Monster now has 60% CC resistance.</li>
+                    <li>Player 2 applies a 1 second stun, it lasts 0.4 seconds.  Monster now has 64% CC resistance.</li>
+                </ul>
+                <p>(Scenario 1 &amp; 2 demonstrate that this system allows consecutively chained CC effects to be
+                    applied in any order.  In other words, the math is commutative.)
+                </p>
+                <p> </p>
+                <p>We feel these changes should make CC abilities much more appealing (especially in those later
+                    difficulty levels), and are currently targeting them to go out with patch 1.0.5. While that patch is
+                    still a ways away, we encourage you to experiment with the math in the meantime, ask us any
+                    questions you may have about how the new diminishing returns system will work, and share your
+                    feedback!
+                </p>
+                <p> </p>
+                <p>
+                    <em>Wyatt Cheng is a Senior Technical Game Designer for Diablo III. His favorite Iron Chef is
+                        Hiroyuki Sakai. A la cuisine!<span style="font-size: 12px; "> </span> 
+                    </em>
+                    <br/>
+                    <style type="text/css">
+                        #blog .detail #center {
+                            width: 590px;
+                            margin: 0px auto;
+                        }
+
+                        #blog .divider-down {
+                            width: 100%;
+                            height: 18px;
+                            background: url('http://us.media3.battle.net/cms/gallery/KKZW0YDVPDT91334191716743.png?v=2') center center no-repeat;
+                        }
+
+                        #blog .divider-up {
+                            width: 100%;
+                            height: 18px;
+                            background: url('http://us.media1.battle.net/cms/gallery/MO010OF9ESV11334191716770.png?v=2') center center no-repeat;
+                        }
+
+                        #blog .detail div.ctextheadline {
+                            position: relative;
+                            display: block;
+                            text-decoration: none;
+                            line-height: 1 !important;
+                            font-family: Georgia !important;
+                            margin-left: 3px;
+                        }
+
+                        #blog .detail div.ctextheadline h1 {
+                            position: absolute;
+                            top: 17px;
+                            left: 30px;
+                            color: #FFBF55 !important;
+                            font-size: 23px !important;
+                        }
+
+                        #blog .detail div.cteaser, #blog .detail img, #blog .detail div.cteaserg {
+                            -moz-border-radius: 4px;
+                            -webkit-border-radius: 4px;
+                            border-radius: 4px;
+                            -moz-box-shadow: 0 0 20px #000000;
+                            -webkit-box-shadow: 0 0 20px #000000;
+                            box-shadow: 0 0 20px #000000;
+                            border: 1px solid #372511;
+                            padding: 1px;
+                        }
+
+                        #blog .detail div.cteaser, #blog .detail div.cteaserg {
+                            width: 285px;
+                            height: 144px;
+                            margin: 8px 3px 0px 3px;
+                            padding-top: 5px;
+                            background-color: #1D100A;
+                            float: left;
+                        }
+
+                        #blog .detail div.cteaser:hover {
+                            border: 1px solid #CD9000;
+                            background-color: #40200d;
+                        }
+
+                        #blog .detail .cteaser a.cteaserimg, #blog .detail .cteaserg div.cteaserimg {
+                            display: block;
+                            width: 125px;
+                            height: 140px;
+                            text-align: center;
+                            float: left;
+                        }
+
+                        #blog .detail .cteaser a.cteaserimg img, #blog .detail .cteaserg div.cteaserimg img {
+                            -moz-border-radius: 10px;
+                            -webkit-border-radius: 10px;
+                            border-radius: 10px;
+                            -moz-box-shadow: 0 0 20px #000000;
+                            -webkit-box-shadow: 0 0 20px #000000;
+                            box-shadow: 0 0 20px #000000;
+                            border: 1px solid #1D100A;
+                            vertical-align: middle;
+                            width: 109px;
+                            height: 109px;
+                            margin-top: 10px;
+                            padding: 1px;
+                        }
+
+                        #blog .detail .cteaser a.cteasersummary, #blog .detail .cteaserg div.cteasersummary {
+                            display: block;
+                            padding-right: 3px;
+                            line-height: 1.4 !important;
+                            width: 157px;
+                            height: 140px;
+                            float: left;
+                        }
+
+                        #blog .detail .cteaser a.cteasersummary span.headline, #blog .detail .cteaserg div.cteasersummary span.headline {
+                            color: #d19205 !important;
+                            font-size: 17px !important;
+                            text-weight: bold !important;
+                        }
+
+                        #blog .detail .cteaser a.cteasersummary span.summarytext, #blog .detail .cteaserg div.cteasersummary span.summarytext {
+                            color: #ad8460 !important;
+                            font-size: 12px !important;
+                        }
+
+                        .top-list tr:nth-child(2) td {
+                            color: #F0E29A;
+                            background-color: transparent;
+                        }
+
+                        .top-list-interior table tbody tr td {
+                            background-color: none !important;
+                            color: #EFC9A0 !important;
+                            font-weight: normal !important;
+                            vertical-align: top;
+                        }
+
+                        .top-list-interior table tbody tr:hover td {
+                            color: #fff !important;
+                        }
+
+                        #blog .detail a img:hover {
+                            border: 1px solid #CD9000;
+                        }</style>
+                    <style type="text/css">
+                        .pullquote:before {
+                            content: "\201C" attr(title) "\201D";
+                            font-size: 1.2em;
+                            display: block;
+                            float: right;
+                            width: 8em;
+                            margin: 0.25em 1em 0.5em 0;
+                            padding: 1em;
+                        }</style>
+                </p>
+            </div>
+        </content>
+    </entry>
+    <entry>
+        <title type="text">Diablo III Web APIs</title>
+        <published>2012-08-31T18:39:22.942Z</published>
+        <updated>2012-09-05T17:18:47.688Z</updated>
+        <id>7118938</id>
+        <link href="http://us.battle.net//d3/en/blog/7118938"/>
+        <summary type="xhtml">
+            <div xmlns="http://www.w3.org/1999/xhtml">
+                <p>With the recent release of character profiles on the Diablo III community website, we’ve also
+                    introduced new Diablo III Community Platform APIs. These APIs allow fansite creators and other
+                    community developers to access the same sort of game data available on our profile pages – along
+                    with a little extra.
+                </p>
+            </div>
+        </summary>
+        <content type="xhtml">
+            <div xmlns="http://www.w3.org/1999/xhtml">
+                <p>With the recent release of character profiles on the Diablo III community website, we’ve also
+                    introduced new Diablo III Community Platform APIs. These APIs allow fansite creators and other
+                    community developers to access the same sort of game data available on our profile pages – along
+                    with a little extra.
+                </p>
+                <div class="divider-up">
+                     
+                </div>
+                <h2>
+                    What’s New?
+                </h2>
+                <p>The new APIs we've released fall into two categories: dynamic data and static game data.</p>
+                <p>
+                    <b style=" color:#F3E6D0;">Dynamic Data</b>
+                    <br/>
+                    The new dynamic data APIs include Career Profiles and Hero Profiles, which cover information that
+                    changes regularly as people play the game.
+                </p>
+                <ul>
+                    <li>Career Profiles are high-level summaries of a player’s accomplishments, and are associated with
+                        a game account. Here, you’ll find a hero list, fallen hero list, details on the player’s
+                        artisans, and information on game progress (such as overall quest completion).
+                    </li>
+                    <li>Hero Profiles contain hero-specific information, such as equipped items, skills, base
+                        attributes, game progression information, and follower details.
+                    </li>
+                </ul>
+                <p>
+                    <b style=" color:#F3E6D0;">Static Game Data</b>
+                    <br/>
+                    The second category of APIs – static game data – includes Item, Follower, and Artisan APIs. Data
+                    provided by these APIs doesn't generally change, and when it does, it’s generally accompanied with a
+                    game patch.
+                </p>
+                <ul>
+                    <li>Item information contains everything you need to know about an item. At this time, we are
+                        providing information for generated items – items that are dropped or crafted in-game.
+                    </li>
+                    <li>Follower information allows you to get detailed skill information.</li>
+                    <li>Artisan information allows you to get detailed information on what an Artisan has available at
+                        each tier, including the recipes that can be learned and information about the recipes’
+                        requirements.
+                    </li>
+                </ul>
+                <div class="divider-down">
+                     
+                </div>
+                <p>Check out the
+                    <a href="http://us.battle.net/d3/en/forum/6916195/">DIII Community Platform API forum</a>
+                    for more information, including API documentation and examples of how to reference them.
+                </p>
+                <script language="javascript">
+                    document.getElementsByClassName("header-image")[0].title = "See? I TOLD you the servers needed better cooling!";
+                </script>
+                <style type="text/css">
+                    #page-comments {
+                        display: none;
+                    }
+
+                    #blog h2 {
+                        font: normal 20px "Palatino Linotype", "Times", serif;
+                        color: #F3E6D0;
+                    }
+
+                    #blog .divider-down {
+                        width: 100%;
+                        height: 72px;
+                        background: url('http://us.media3.battle.net/cms/gallery/KKZW0YDVPDT91334191716743.png?v=2') center center no-repeat;
+                    }
+
+                    #blog .divider-up {
+                        width: 100%;
+                        height: 72px;
+                        background: url('http://us.media1.battle.net/cms/gallery/MO010OF9ESV11334191716770.png?v=2') center center no-repeat;
+                    }</style>
+            </div>
+        </content>
+    </entry>
+    <entry>
+        <title type="text">Meet Svetlana Quindt, the Female Barbarian</title>
+        <published>2012-08-29T03:00:00.000Z</published>
+        <updated>2012-09-05T17:18:58.971Z</updated>
+        <id>7100053</id>
+        <link href="http://us.battle.net//d3/en/blog/7100053"/>
+        <summary type="xhtml">
+            <div xmlns="http://www.w3.org/1999/xhtml">
+                <p>
+                    <span style="font-size: 12px; ">At gamescom 2012 hosted earlier this month in Cologne, Germany, we
+                        crowned Svetlana Quindt the winner of our Blizzard Costume Contest for her stunning cosplay of
+                        the female barbarian from Diablo III. Check out a few snapshots of her costume 
+                    </span>
+                    <a href="http://eu.blizzard.com/en-gb/company/events/gamescom2012.html#gamescom:gallery"
+                       target="_blank">at the event
+                    </a>
+                    <span style="font-size: 12px; "> and follow-up </span>
+                    <a href="http://www.flickr.com/photos/kamuicosplay/sets/72157631190384414/" target="_blank">studio
+                        session
+                    </a>
+                    <span style="font-size: 12px; "> below, and be sure to continue reading for a quick Q&amp;A!</span>
+                </p>
+            </div>
+        </summary>
+        <content type="xhtml">
+            <div xmlns="http://www.w3.org/1999/xhtml">
+                <p>At gamescom 2012 hosted earlier this month in Cologne, Germany, we crowned Svetlana Quindt the winner
+                    of our Blizzard Costume Contest for her stunning cosplay of the female barbarian from Diablo III.
+                    Check out a few snapshots of her costume
+                    <a href="http://eu.blizzard.com/en-gb/company/events/gamescom2012.html#gamescom:gallery"
+                       target="_blank">at the event
+                    </a>
+                    and follow-up
+                    <a href="http://www.flickr.com/photos/kamuicosplay/sets/72157631190384414/" target="_blank">studio
+                        session
+                    </a>
+                    below, and be sure to continue reading for a quick Q&amp;A!
+                </p>
+                <p style="text-align: center; ">
+                    <a class="lightbox"
+                       href="http://us.media1.battle.net/cms/content_folder_media/DEGZK67L8F9K1346209588355.jpg?v=1"
+                       style="width: 532px; height: 800px; ">
+                        <img alt=""
+                             src="http://media.wow-europe.com/events/gamescom-2012/gallery/gamescom-2012-photo0095.jpg"
+                             style="width: 255px; height: 383px; "/>
+                    </a>
+                    <a class="lightbox"
+                       href="http://us.media2.battle.net/cms/content_folder_media/3OLX38WEXRAZ1346209599137.jpg?v=1"
+                       style="width: 532px; height: 800px; ">
+                        <img alt=""
+                             src="http://media.wow-europe.com/events/gamescom-2012/gallery/gamescom-2012-photo0114.jpg"
+                             style="width: 255px; height: 383px; margin-left: 10px; margin-right: 10px; "/>
+                    </a>
+                </p>
+                <p style="text-align: center; ">
+                    <a class="lightbox" href="http://farm8.staticflickr.com/7115/7837324742_12f5a1627c_c.jpg">
+                        <img alt="" src="http://farm8.staticflickr.com/7115/7837324742_12f5a1627c_c.jpg"
+                             style="width: 255px; height: 364px; "/>
+                    </a>
+                    <a class="lightbox" href="http://farm9.staticflickr.com/8446/7837326108_0baa1131df_c.jpg">
+                        <img alt="" src="http://farm9.staticflickr.com/8446/7837326108_0baa1131df_c.jpg"
+                             style="width: 255px; height: 364px; margin-left: 10px; margin-right: 10px; "/>
+                    </a>
+                </p>
+                <div class="divider-up">
+                     
+                </div>
+                <div>
+                    <span style="font-family:georgia,serif;">
+                        <strong>Q. How long did this particular piece take to create?</strong>
+                    </span>
+                </div>
+                <div>
+                    It took about a month of full-time work to create the costume. Some years ago it took months to
+                    finish such a costume, but over the time I've learned a lot and knew this time just what to do and
+                    how to avoid mistakes. So, it was a pretty fast project.
+                </div>
+                <div>
+                     
+                </div>
+                <div>
+                    <span style="font-family:georgia,serif;">
+                        <strong>Q. What materials did you use for this costume?</strong>
+                    </span>
+                </div>
+                <div>
+                    The whole armor is made out of the thermoplastic materials Worbla and Wonderflex in a combination
+                    with craft form. For the fabric parts, I used a lot of fake fur, furniture leather, or some orange
+                    fabric. 
+                </div>
+                <div>
+                     
+                </div>
+                <div>
+                    <span style="font-family:georgia,serif;">
+                        <strong>Q. Why the barbarian? What made you decide to cosplay this particular class from Diablo
+                            III instead of one of the others?
+                        </strong>
+                    </span>
+                </div>
+                <div>
+                    Well, I play a barbarian and a wizard. Last year, I made a
+                    <a href="http://www.flickr.com/photos/kamuicosplay/sets/72157627318119863/" target="_blank">wizard
+                        costume
+                    </a>
+                    based on the amazing artwork of Wei Wang. I'm a pretty big fan of his work and he made an awesome
+                    painting of a kick-ass barbarian, too. I guess I have the right body shape for this class and just
+                    love to build armored, bulky, and very detailed costumes. And I just love the wild, aggressive, and
+                    very cool female barbarian in Diablo III. So, Wei Wang's barbarian artwork was just perfect for my
+                    next project. 
+                </div>
+                <div>
+                     
+                </div>
+                <div>
+                    <span style="font-family:georgia,serif;">
+                        <strong>Q. How long have you been an active cosplayer?</strong>
+                    </span>
+                </div>
+                <div>
+                    I started 2003 but only did it because everyone alse at the conventions in Germany did it. I really
+                    fell in love with cosplaying in 2005 when World of Warcraft was released and I had this really crazy
+                    idea of bringing my game character (the nightelf druid called Kamui) to "real" life. After five more
+                    handmade druid tier sets, I can say that 2005 and World of Warcraft were the real start of my
+                    cosplay carreer. 
+                </div>
+                <div>
+                     
+                </div>
+                <div>
+                    <span style="font-family:georgia,serif;">
+                        <strong>Q. What advice would you give to people who are interested in getting into cosplay, or
+                            are just starting out?
+                        </strong>
+                    </span>
+                </div>
+                <div>
+                    Over the years the cosplay scene developed a lot. People share their own costume progress on
+                    facebook or their blogs, make tutorials and are in many other ways very helpful. As a beginner it’s
+                    pretty easy to learn a lot just by following the work of others and then make your very first own
+                    steps in creating a costume. But besides doing your homework and research for some inspiration and
+                    help, it’s also important to plan well. Start early enough and expect problems and mistakes. No
+                    costume is done without some hard times full of frustration and desperation, but if you won’t give
+                    up and keep on fighting, you’ll be successful. 
+                </div>
+                <div>
+                     
+                </div>
+                <div>
+                    <span style="font-family:georgia,serif;">
+                        <strong>Q. What’s your favorite class in Diablo III, and why?</strong>
+                    </span>
+                </div>
+                <div>
+                    It's hard to decide between the wizard and the barbarian, but yeah, I guess it's the barbarian. I
+                    just love to jump into a group of blood-thirsty demons and kick them back to hell with my Whirlwind.
+                    I really like the wild and very aggressive style of the barbarian and the design of their huge and
+                    bulky armor. 
+                </div>
+                <div class="divider-down">
+                     
+                </div>
+                <p>Follow Svetlana's
+                    <a href="https://www.facebook.com/KamuiCosplay" target="_blank">official cosplay page on Facebook
+                    </a>
+                    for additional photos and updates, or learn more about her work over at <a
+                            href="http://www.kamuicosplay.com/" target="_blank">http://www.kamuicosplay.com/</a>.
+                </p>
+                <style type="text/css">
+                    #blog .detail img {
+                        -moz-border-radius: 4px;
+                        -webkit-border-radius: 4px;
+                        border-radius: 4px;
+                        -moz-box-shadow: 0 0 20px #000000;
+                        -webkit-box-shadow: 0 0 20px #000000;
+                        box-shadow: 0 0 20px #000000;
+                        border: 1px solid #372511;
+                        max-width: 570px !important;
+                        padding: 1px;
+                    }
+
+                    #blog .detail #center {
+                        width: 590px;
+                        margin: 0px auto;
+                    }
+
+                    #blog .divider-down {
+                        width: 100%;
+                        height: 18px;
+                        background: url('http://us.media3.battle.net/cms/gallery/KKZW0YDVPDT91334191716743.png?v=2') center center no-repeat;
+                    }
+
+                    #blog .divider-up {
+                        width: 100%;
+                        height: 18px;
+                        background: url('http://us.media1.battle.net/cms/gallery/MO010OF9ESV11334191716770.png?v=2') center center no-repeat;
+                    }</style>
+            </div>
+        </content>
+    </entry>
+    <entry>
+        <title type="text">New Diablo Fan Art</title>
+        <published>2012-08-24T17:00:00.000Z</published>
+        <updated>2012-08-24T21:04:32.827Z</updated>
+        <id>6986838</id>
+        <link href="http://us.battle.net//d3/en/blog/6986838"/>
+        <summary type="xhtml">
+            <div xmlns="http://www.w3.org/1999/xhtml">
+                <p>The<a href="http://us.battle.net/d3/en/media/fanart/" target="_blank">Diablo Fan Art Section</a>has
+                    been updated with two new pieces of fan artwork. Would you like to share your artistic talents with
+                    the community?<a href="http://us.blizzard.com/en-us/community/fanart/rules.html" target="_blank">
+                        Submit</a>your fan art today!
+                </p>
+            </div>
+        </summary>
+        <content type="xhtml">
+            <div xmlns="http://www.w3.org/1999/xhtml">
+                <p>The<a href="http://us.battle.net/d3/en/media/fanart/" target="_blank">Diablo Fan Art Section</a>has
+                    been updated with two new pieces of fan artwork.
+                </p>
+                <p> </p>
+                <center>
+                    <p>
+                        <a href="http://us.battle.net/d3/en/media/fanart/?view#/fanart-0097" target="_blank">
+                            <img alt=""
+                                 src="http://us.media4.battle.net/cms/content_folder_media/X2UXD35UG4RD1345066403792.jpg?v=1"
+                                 style="width: 188px; height: 118px;"/>
+                        </a>
+                        <a href="http://us.battle.net/d3/en/media/fanart/?view#/fanart-0096" target="_blank">
+                            <img alt=""
+                                 src="http://us.media4.battle.net/cms/content_folder_media/BG5I3PQW0PM71345066393260.jpg?v=1"
+                                 style="margin-left: 5px; margin-right: 5px; width: 188px; height: 118px;"/>
+                        </a>
+                    </p>
+                </center>
+                <p>
+                    <br/>
+                    Would you like to share your artistic talents with the community?<a
+                        href="http://us.blizzard.com/en-us/community/fanart/rules.html" target="_blank">Submit</a>your
+                    fan art today!
+                </p>
+                <style type="text/css">
+                    #blog .detail img {
+                        -moz-border-radius: 4px;
+                        -webkit-border-radius: 4px;
+                        border-radius: 4px;
+                        -moz-box-shadow: 0 0 20px #000000;
+                        -webkit-box-shadow: 0 0 20px #000000;
+                        box-shadow: 0 0 20px #000000;
+                        border: 1px solid #300E0D;
+                        padding: 1px;
+                    }
+
+                    #blog .detail td:hover > a img, #blog .detail a img:hover {
+                        border: 1px solid #BA5E0B;
+                    }</style>
+            </div>
+        </content>
+    </entry>
+    <entry>
+        <title type="text">Ahh, Fresh Meat!</title>
+        <published>2012-08-24T02:30:00.000Z</published>
+        <updated>2012-09-05T17:19:09.123Z</updated>
+        <id>7054208</id>
+        <link href="http://us.battle.net//d3/en/blog/7054208"/>
+        <summary type="xhtml">
+            <div xmlns="http://www.w3.org/1999/xhtml">
+                <p>
+                    <span style="font-size: 12px; ">Feast your eyes on the "Diablo Butcher", a visceral rendition of
+                        everyone's favorite cleaver-wielding brute 
+                    </span>
+                    <span style="font-size: 12px; ">by fan artist SeungHwan Jang</span>
+                    <span style="font-size: 12px; ">. It's gruesome, a little terrifying, and (most importantly) </span>
+                    <em style="font-size: 12px; ">bloody brilliant</em>
+                    <span style="font-size: 12px; ">.</span>
+                </p>
+                <p>Take a look!</p>
+            </div>
+        </summary>
+        <content type="xhtml">
+            <div xmlns="http://www.w3.org/1999/xhtml">
+                <p>Feast your eyes on the "Diablo Butcher", a visceral rendition of everyone's favorite cleaver-wielding
+                    brute <span style="font-size: 12px; ">by fan artist SeungHwan Jang</span>. It's gruesome, a little
+                    terrifying, and (most importantly) <em>bloody brilliant</em>.
+                </p>
+                <p style="text-align: center; ">
+                    <a class="lightbox"
+                       href="http://us.media1.battle.net/cms/content_entry_media/QYRZDVRR8LAQ1345774709180.jpg?v=1">
+                        <img alt="" src="http://cghub.com/files/Image/277001-278000/277438/122_max.jpg"
+                             style="width: 550px; height: 342px; "/>
+                    </a>
+                </p>
+                <p>To see more of SeungHwan's work, be sure to check out his page on
+                    <a href="http://flcl38.cghub.com/" target="_blank">CGHUB.com</a>
+                    or visit his personal website at<a href="http://www.sabzil.net/" target="_blank">
+                        http://sabzil.net</a>.You can also find out more about how this piece was made <a
+                            href="http://blog.naver.com/flcl38/20164393483" target="_blank">here</a>, on the artist's
+                    personal blog. 
+                </p>
+                <style type="text/css">
+                    #blog .detail img {
+                        -moz-border-radius: 4px;
+                        -webkit-border-radius: 4px;
+                        border-radius: 4px;
+                        -moz-box-shadow: 0 0 20px #000000;
+                        -webkit-box-shadow: 0 0 20px #000000;
+                        box-shadow: 0 0 20px #000000;
+                        border: 1px solid #372511;
+                        max-width: 570px !important;
+                        padding: 1px;
+                    }
+
+                    #blog .detail td:hover > a img, #blog .detail a img:hover {
+                        border: 1px solid #CD9000;
+                    }</style>
+            </div>
+        </content>
+    </entry>
+</feed>

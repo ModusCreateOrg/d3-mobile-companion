@@ -68713,7 +68713,7 @@ Ext.define('Ext.dataview.component.Container', {
  * Use DataView whenever you want to show sets of the same component many times, for examples in apps like these:
  *
  * - List of messages in an email app
- * - Showing latest news/tweets
+ * - Showing latest news.xml/tweets
  * - Tiled set of albums in an HTML5 music player
  *
  * # Creating a Simple DataView
