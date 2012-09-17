@@ -31,3 +31,16 @@
     }  
   }
 }
+
+.article-detail {
+  padding: 10px;
+  .article-header-title {
+    color: #f3e6d0;
+    margin: 0;
+    font-size: 22px;    
+    font-weight: 600;
+  }
+  .article-header-pub {
+    color: #A9986D;
+  }
+}
