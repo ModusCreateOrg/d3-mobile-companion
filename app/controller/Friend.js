@@ -70,11 +70,17 @@ Ext.define('D3Mobile.controller.Friend', {
     onFriendAccountLoad       : function (record) {
         console.log('record', record);
         if (record.get('heroes')) {
+            debugger;
             var battleTag    = localStorage.battleTag,
-                friendsStore = Ext.getStore("Friends");
+                friendsStore = Ext.getStore("Friends"),
+                localStorageFriends,
+                currentUserFriends;
 
-            if (!friendsStore.find('battleTag', record.get('battleTag'))) {
-                localStorage.friends[battleTag].push(record);
+            if (friendsStore.find('battleTag', record.get('battleTag')) == -1) {
+                localStorageFriends = JSON.parse(localStorage.friends);
+                currentUserFriends = localStorageFriends[battleTag];
+                currentUserFriends.push(record.getData());
+                localStorage.friends = JSON.stringify(localStorageFriends);
                 friendsStore.add(record);
                 this.getAddFriendModal().destroy();
             }

@@ -83,15 +83,19 @@ Ext.define('D3Mobile.controller.Main', {
     },
     loadLocalStorage              : function (battleTag) {
         localStorage.battleTag = battleTag;
-        if(!localStorage.friends) {
-            localStorage.friends = {};
+
+        var localStorageFriends = (localStorage.friends) ? JSON.parse(localStorage.friends) :  this.initLocalStorageFriends(battleTag),
+            userFriends         = localStorageFriends[battleTag];
+
+        if (userFriends.length > 0) {
+            Ext.getStore("Friends").add(userFriends);
         }
-        var localStorageFriends = localStorage.friends[battleTag];
-        if (!localStorageFriends) {
-            localStorage.friends[battleTag] = [];
-        } else {
-            Ext.getStore("Friends").add(localStorageFriends);
-        }
+    },
+    initLocalStorageFriends : function(battleTag) {
+        var friends = {};
+        friends[battleTag] = [];
+        localStorage.friends = JSON.stringify(friends);
+        return friends;
     },
     onMainActiveItemChange : function(main, newPanel, oldPanel) {
         if(newPanel.action == "logOut") {
