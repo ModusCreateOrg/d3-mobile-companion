@@ -9249,10 +9249,6 @@ html, body {
 }
 
 /* line 2, ../sass/_friends.scss */
-.friends .x-toolbar {
-  background: none;
-}
-/* line 5, ../sass/_friends.scss */
 .friends .x-title {
   text-transform: uppercase;
   color: #F3E6D0;
@@ -9264,17 +9260,12 @@ html, body {
   text-align: center;
   width: 200px;
 }
-/* line 19, ../sass/_friends.scss */
+/* line 16, ../sass/_friends.scss */
 .friends .friends-list-item.x-item-pressed .x-list-item-label h3 {
   background: rgba(255, 255, 255, 0.05);
   color: #c5ba9d;
 }
-/* line 24, ../sass/_friends.scss */
-.friends .friends-list-item .x-list-item-label h3 {
-  -webkit-transition: all 0.2s ease;
-  transition: all 0.2s ease;
-}
-/* line 28, ../sass/_friends.scss */
+/* line 22, ../sass/_friends.scss */
 .friends .friends-list-item .x-list-item-label h3 {
   color: #A9986D;
   border-bottom: 1px solid #272218;
@@ -9283,23 +9274,47 @@ html, body {
   font-size: 16px;
 }
 
-/* line 5, ../sass/_news.scss */
+/* line 2, ../sass/_news.scss */
+.news .x-title {
+  text-transform: uppercase;
+  color: #F3E6D0;
+  font-size: 26px;
+  border-bottom: 3px double #312A1E;
+  margin-bottom: 15px;
+  padding-bottom: 5px;
+  font-weight: 400;
+  text-align: center;
+  width: 200px;
+}
+
+/* line 19, ../sass/_news.scss */
 .news-list-item.x-item-pressed .x-list-item-label h3 {
   background: rgba(255, 255, 255, 0.05);
   color: #c5ba9d;
 }
-/* line 10, ../sass/_news.scss */
-.news-list-item .x-list-item-label h3 {
-  -webkit-transition: all 0.2s ease;
-  transition: all 0.2s ease;
-}
-/* line 14, ../sass/_news.scss */
+/* line 25, ../sass/_news.scss */
 .news-list-item .x-list-item-label h3 {
   color: #A9986D;
   border-bottom: 1px solid #272218;
   padding: 15px 10px;
   margin: 0;
   font-size: 16px;
+}
+
+/* line 35, ../sass/_news.scss */
+.article-detail {
+  padding: 10px;
+}
+/* line 37, ../sass/_news.scss */
+.article-detail .article-header-title {
+  color: #f3e6d0;
+  margin: 0;
+  font-size: 22px;
+  font-weight: 600;
+}
+/* line 43, ../sass/_news.scss */
+.article-detail .article-header-pub {
+  color: #A9986D;
 }
 
 /* line 1, ../sass/_tooltip.scss */
