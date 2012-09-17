@@ -1,7 +1,4 @@
 .friends {
-  .x-toolbar {
-    background: none;
-  }
   .x-title {
     text-transform: uppercase;
     color: #F3E6D0;
@@ -21,9 +18,6 @@
         color: lighten(#A9986D, 15);
       }
     }
-    .x-list-item-label h3 {
-      @include transition(all .2s ease);
-    }    
     .x-list-item-label {
       h3 { 
         color: #A9986D;

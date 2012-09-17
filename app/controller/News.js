@@ -44,10 +44,10 @@ Ext.define('D3Mobile.controller.News', {
                 data   : record.getData()
             });
 
-        newsContainer.setActiveItem(articleDetail);
+        newsContainer.animateActiveItem(articleDetail, { type: 'slide', direction: 'down' });
     },
     onArticleDetailCloseTap : function() {
-        console.log('wtf')
+        console.log('wtf');
         this.getNewsContainer().remove(this.getArticleDetail(),true);
     }
 });
