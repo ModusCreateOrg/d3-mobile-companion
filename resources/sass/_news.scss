@@ -4,6 +4,7 @@
   &.x-item-pressed {
     .x-list-item-label h3 {
       background: rgba(255, 255, 255, .05);
+      color: lighten(#A9986D, 15);
     }
   }
   .x-list-item-label h3 {
