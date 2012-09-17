@@ -9265,11 +9265,20 @@ html, body {
   width: 200px;
 }
 
-/* line 3, ../sass/_news.scss */
+/* line 5, ../sass/_news.scss */
+.news-list-item.x-item-pressed .x-list-item-label h3 {
+  background: rgba(255, 255, 255, 0.05);
+}
+/* line 9, ../sass/_news.scss */
+.news-list-item .x-list-item-label h3 {
+  -webkit-transition: all 0.2s ease;
+  transition: all 0.2s ease;
+}
+/* line 13, ../sass/_news.scss */
 .news-list-item .x-list-item-label h3 {
   color: #A9986D;
   border-bottom: 1px solid #272218;
-  padding: 15px 0;
+  padding: 15px 10px;
   margin: 0;
   font-size: 16px;
 }
