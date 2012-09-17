@@ -103,10 +103,9 @@ Ext.define('D3Mobile.controller.Friend', {
     showFriendsHeroes         : function (record) {
         var friendsContainer = this.getFriendsContainer(),
             heroesContainer  = friendsContainer.add({
-                xtype           : 'heroescontainer',
-                showCloseButton : true
+                xtype           : 'heroescontainer'
             });
-        heroesContainer.down('heroes').buildCards(record.get('battleTag').replace("#", '-'), record.get('heroes'));
+        heroesContainer.down('heroes').buildCards(record.get('battleTag').replace("#", '-'), record.get('heroes'), true);
         friendsContainer.setActiveItem(heroesContainer);
     }
 });

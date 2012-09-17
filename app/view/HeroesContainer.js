@@ -7,31 +7,17 @@
  */
 
 Ext.define("D3Mobile.view.HeroesContainer", {
-    extend           : 'Ext.Container',
-    xtype            : 'heroescontainer',
-    requires         : ['D3Mobile.view.Heroes'],
-    config           : {
+    extend      : 'Ext.Container',
+    xtype       : 'heroescontainer',
+    requires    : ['D3Mobile.view.Heroes'],
+    config      : {
         title           : 'Heroes',
         cls             : 'heroes-container',
         layout          : 'card',
-        showCloseButton : false,
         items           : [
             {
                 xtype : 'heroes'
             }
         ]
-    },
-    initialize       : function () {
-        var me = this;
-        me.getShowCloseButton() && me.add(me.buildCloseButton());
-        me.callParent();
-    },
-    buildCloseButton : function () {
-        return {
-            xtype  : 'component',
-            docked : 'top',
-            html   : '<div class="hero-detail-back"></div>',
-            height : 40
-        };
     }
 });

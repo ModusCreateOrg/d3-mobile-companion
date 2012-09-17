@@ -2,10 +2,13 @@ Ext.define('D3Mobile.view.Heroes', {
     extend     : 'Ext.Carousel',
     xtype      : 'heroes',
     config     : {
-        title   : 'Heroes',
-        cardTpl : ''.concat(
+        title           : 'Heroes',
+        cardTpl         : ''.concat(
             '<div class="hero-overview hero-overview-{class}_{gender}" data-id="{id}" data-battletag="{battleTag}">',
                 '<div class="hero-header">',
+                    '<tpl if="showCloseButton">',
+                        '<div class="hero-back hero-overview-back"></div>',
+                    '</tpl>',
                     '<div class="hero-header-name flex1">{name}</div>',
                     '<div class="hero-header-level flex1">{level}',
                         '<tpl if="paragonLevel &gt; 0">',
@@ -27,17 +30,27 @@ Ext.define('D3Mobile.view.Heroes', {
 
     },
     onHeroTap  : function(evtObj) {
-        var dataset = evtObj.delegatedTarget.dataset;
-        this.fireEvent('heroOverviewTap', dataset.battletag, dataset.id);
+        var me      = this,
+            dataset = evtObj.delegatedTarget.dataset;
+
+        if(evtObj.getTarget('.hero-back')) {
+            me.fireEvent('close', me);
+        } else {
+            me.fireEvent('heroOverviewTap', dataset.battletag, dataset.id);
+        }
+
     },
-    buildCards : function (battleTag, heroes) {
-        var me = this,
-            heroesCount = heroes.length,
+    buildCards : function (battleTag, heroes, showCloseButton) {
+        var me              = this,
+            heroesCount     = heroes.length,
+            hero,
             i;
         me.removeAll(true);
         for (i = 0; i < heroesCount; i++) {
-            heroes[i].battleTag = battleTag;
-            me.add(me.buildCard(heroes[i]));
+            hero = heroes[i];
+            hero.battleTag = battleTag;
+            hero.showCloseButton = showCloseButton;
+            me.add(me.buildCard(hero));
         }
         me.setActiveItem(0);
     },

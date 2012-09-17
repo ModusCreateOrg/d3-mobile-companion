@@ -75,7 +75,7 @@ Ext.define('D3Mobile.controller.Main', {
             Ext.Viewport.add({
                 xtype : 'main'
             });
-            me.getHeroes().buildCards(battleTag, record.get('heroes'));
+            me.getHeroes().buildCards(battleTag, record.get('heroes'), false);
         } else {
             Ext.Msg.alert("Invalid BattleTag", "BattleTag Not Found, please try again.", Ext.emptyFn);
         }

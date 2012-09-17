@@ -6,7 +6,7 @@ Ext.define('D3Mobile.view.HeroDetail', {
         attributesCardTpl : ''.concat(
             '<div class="hero-attributes">',
                 '<div class="header">',
-                    '<div class="hero-detail-back">Heros</div>',
+                    '<div class="hero-detail-back hero-back">Heros</div>',
                     'Attributes',
                     '<div class="sub">{name} {level} <span class="paragonLevel">({paragonLevel})</span> - {class}</div>',
                 '</div>',
@@ -138,7 +138,7 @@ Ext.define('D3Mobile.view.HeroDetail', {
         itemsCard : ''.concat(
             '<div class="hero-items">',
                 '<div class="header">',
-                    '<div class="hero-detail-back">Heros</div>',
+                    '<div class="hero-detail-back hero-back">Heros</div>',
                     'Items',
                     '<div class="sub">{name} {level} <span class="paragonLevel">({paragonLevel})</span> - {class}</div>',
                 '</div>',
@@ -218,7 +218,7 @@ Ext.define('D3Mobile.view.HeroDetail', {
         skillsCard : ''.concat(
             '<div class="hero-skills">',
                 '<div class="header">',
-                    '<div class="hero-detail-back">Heros</div>',
+                    '<div class="hero-detail-back hero-back">Heros</div>',
                     'Skills',
                     '<div class="sub">{name} {level} <span class="paragonLevel">({paragonLevel})</span> - {class}</div>',
                 '</div>',

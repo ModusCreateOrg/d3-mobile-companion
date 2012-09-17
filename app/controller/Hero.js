@@ -13,7 +13,8 @@ Ext.define('D3Mobile.controller.Hero', {
         },
         control : {
             'heroes'     : {
-                'heroOverviewTap' : 'onHeroOverviewTap'
+                'heroOverviewTap' : 'onHeroOverviewTap',
+                'close'           : 'onCloseHeroTap'
             },
             'herodetail' : {
                 'close'    : 'onCloseHeroDetailTap',
@@ -21,6 +22,9 @@ Ext.define('D3Mobile.controller.Hero', {
                 'itemTap'  : 'onItemTap'
             }
         }
+    },
+    onCloseHeroTap : function(panel) {
+        panel.up('container').destroy();
     },
     onHeroOverviewTap     : function (battleTag, heroId) {
         var me = this;
@@ -35,7 +39,7 @@ Ext.define('D3Mobile.controller.Hero', {
         });
     },
     onHeroLoadSuccess     : function (record) {
-        var heroesContainer = this.getHeroesContainer(),
+        var heroesContainer = this.getMain().getActiveItem().down('heroescontainer') || this.getHeroesContainer(),
             heroDetail;
         this.getMain().getTabBar().getActiveTab().setTitle(record.get('name'));
         heroDetail = heroesContainer.add({
@@ -51,7 +55,7 @@ Ext.define('D3Mobile.controller.Hero', {
         Ext.Viewport.setMasked(false);
     },
     onCloseHeroDetailTap  : function () {
-        var heroesContainer = this.getHeroesContainer();
+        var heroesContainer = this.getMain().getActiveItem().down('heroescontainer') || this.getHeroesContainer();
         this.getMain().getTabBar().getActiveTab().setTitle('Heroes');
         heroesContainer.animateActiveItem(0, { type : 'flip' });
         setTimeout(function () {
