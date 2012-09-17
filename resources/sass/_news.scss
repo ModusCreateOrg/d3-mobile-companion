@@ -1,0 +1,22 @@
+.news-list-item {
+
+
+  &.x-item-pressed {
+    .x-list-item-label h3 {
+      background: rgba(255, 255, 255, .05);
+      color: lighten(#A9986D, 15);
+    }
+  }
+  .x-list-item-label h3 {
+      @include transition(all .2s ease);
+    }  
+  .x-list-item-label {
+    h3 { 
+      color: #A9986D;
+      border-bottom: 1px solid #272218;
+      padding: 15px 10px;
+      margin: 0;
+      font-size: 16px;
+    }  
+  }
+}

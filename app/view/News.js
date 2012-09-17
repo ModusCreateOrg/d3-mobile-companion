@@ -7,7 +7,7 @@ Ext.define('D3Mobile.view.News', {
     config : {
         title            : 'News',
         store            : 'Articles',
-        itemTpl          : '<h3 style="color:pink;">{title}</h3>',
+        itemTpl          : '<h3>{title} <div class="disclosure"></div></h3>',
         itemCls          : 'news-list-item',
         styleHtmlContent : true,
         items            : [
