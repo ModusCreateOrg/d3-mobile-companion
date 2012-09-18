@@ -8,7 +8,7 @@ Ext.define('D3Mobile.view.HeroDetail', {
                 '<div class="header">',
                     '<div class="hero-detail-back hero-back">Heros</div>',
                     'Attributes',
-                    '<div class="sub">{name} {level} <span class="paragonLevel">({paragonLevel})</span> - {class}</div>',
+                    '<div class="sub">{name} {level} <tpl if="paragonLevel &gt; 0"><span class="paragonLevel">({paragonLevel})</span></tpl> - {class}</div>',
                 '</div>',
                 '<div class="base-stats">',
 
@@ -140,7 +140,7 @@ Ext.define('D3Mobile.view.HeroDetail', {
                 '<div class="header">',
                     '<div class="hero-detail-back hero-back">Heros</div>',
                     'Items',
-                    '<div class="sub">{name} {level} <span class="paragonLevel">({paragonLevel})</span> - {class}</div>',
+                    '<div class="sub">{name} {level} <tpl if="paragonLevel &gt; 0"><span class="paragonLevel">({paragonLevel})</span></tpl> - {class}</div>',
                 '</div>',
                 '<div class="items-container">',
                     '<tpl if="items.head">',
@@ -220,7 +220,7 @@ Ext.define('D3Mobile.view.HeroDetail', {
                 '<div class="header">',
                     '<div class="hero-detail-back hero-back">Heros</div>',
                     'Skills',
-                    '<div class="sub">{name} {level} <span class="paragonLevel">({paragonLevel})</span> - {class}</div>',
+                    '<div class="sub">{name} {level} <tpl if="paragonLevel &gt; 0"><span class="paragonLevel">({paragonLevel})</span></tpl> - {class}</div>',
                 '</div>',
                 // icons are located:
                 // 64x64 = http://us.media.blizzard.com/d3/icons/skills/64/{passive.skill.icon}.png
