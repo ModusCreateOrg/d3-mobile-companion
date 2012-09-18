@@ -23,9 +23,11 @@ Ext.define('D3Mobile.view.Heroes', {
         var me = this;
         me.callParent();
         me.element.on({
-            tap      : me.onHeroTap,
-            scope    : me,
-            delegate : '.hero-overview'
+            tap        : me.onHeroTap,
+            touchstart : me.onTouchStart,
+            touchend   : me.onTouchEnd,
+            scope      : me,
+            delegate   : '.hero-overview'
         });
 
     },
@@ -39,6 +41,19 @@ Ext.define('D3Mobile.view.Heroes', {
             me.fireEvent('heroOverviewTap', dataset.battletag, dataset.id);
         }
 
+    },
+    onTouchStart : function(evtObj) {
+        var target = evtObj.getTarget();
+        if (target) {
+            Ext.fly(target).addCls('tapped');
+        }
+    },
+
+    onTouchEnd : function(evtObj) {
+        var target = evtObj.getTarget();
+        if (target) {
+            Ext.fly(target).removeCls('tapped');
+        }
     },
     buildCards : function (battleTag, heroes, showCloseButton) {
         var me              = this,

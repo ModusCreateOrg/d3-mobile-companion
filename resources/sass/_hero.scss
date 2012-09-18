@@ -39,6 +39,11 @@
   background-position: 50% 50%;
   background-repeat: no-repeat;
   background-size: 55%;
+  &.tapped {
+    opacity: .75;
+    position: relative;
+    top: 2px;
+  }
 }
 
 .hero-header {
