@@ -33,14 +33,68 @@
 }
 
 .article-detail {
-  padding: 10px;
+  .inner {
+    padding: 15px;
+  }
+  .article-header {
+    overflow: hidden;
+  }
   .article-header-title {
     color: #f3e6d0;
     margin: 0;
     font-size: 22px;    
     font-weight: 600;
+    float: left;
+    padding-left: 45px;
   }
   .article-header-pub {
     color: #A9986D;
+    float: left;
+    padding-left: 45px;
+  }
+  .article-content {
+    margin-top: 40px;
+    clear: both;
+    .fancyTitle {
+      font-family: 'proxima-nova-condensed';
+    }
+    .sorTable {
+      padding: 0; margin: 0;
+      box-shadow: none;
+      border: none;
+    }
+    // overwrite the shitty embedded content
+    div {
+      color: #f3e6d0;
+    }
+    img {
+      max-width: 100%;
+      height: auto !important;
+    }
+    h2, h3, h4, h5 {
+      color: #eee;
+      font-weight: 600;
+      font-size: 24px;      
+    }
+    ul {
+      margin-left: 20px;
+    }
+    li {
+      list-style: disc;
+      padding-bottom: 15px;
+      color: #A9986D;
+    }
+    p {
+      margin-bottom: 15px;
+      color: #f3e6d0;
+    }
+    strong {
+      font-weight: 600;
+    }
+    a {
+      color: #01d701;
+      text-decoration: none;
+      border-bottom: 1px dotted rgb(86, 107, 86);
+    }
   }
 }

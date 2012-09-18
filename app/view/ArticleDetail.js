@@ -6,15 +6,17 @@ Ext.define('D3Mobile.view.ArticleDetail', {
             direction : 'vertical'
         },
         tpl        : ''.concat(
-            '<div class="article-detail" style="color:yellow;">',
-                '<div class="article-header">',
-                    '<div class="hero-detail-back hero-back"></div>',
-                    '<div class="article-header-title">{title}</div>',
-                    '<div class="article-header-pub">{published}</div>',
-                '</div>',
-                '<div class="article-content" data-articleid="{id}"></div>',
-                '<div class="article-footer>"',
-                    '<div class="article-source-btn" data-url="{link}">SOURCE</div>',
+            '<div class="article-detail">',
+                '<div class="inner">',
+                    '<div class="article-header">',
+                        '<div class="hero-detail-back hero-back"></div>',
+                        '<div class="article-header-title">{title}</div>',
+                        '<div class="article-header-pub">{published}</div>',
+                    '</div>',
+                    '<div class="article-content" data-articleid="{id}"></div>',
+                    '<div class="article-footer>"',
+                        '<div class="article-source-btn" data-url="{link}">SOURCE</div>',
+                    '</div>',
                 '</div>',
             '</div>'
         )

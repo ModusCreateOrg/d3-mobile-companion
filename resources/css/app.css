@@ -9301,20 +9301,84 @@ html, body {
   font-size: 16px;
 }
 
-/* line 35, ../sass/_news.scss */
-.article-detail {
-  padding: 10px;
+/* line 36, ../sass/_news.scss */
+.article-detail .inner {
+  padding: 15px;
 }
-/* line 37, ../sass/_news.scss */
+/* line 39, ../sass/_news.scss */
+.article-detail .article-header {
+  overflow: hidden;
+}
+/* line 42, ../sass/_news.scss */
 .article-detail .article-header-title {
   color: #f3e6d0;
   margin: 0;
   font-size: 22px;
   font-weight: 600;
+  float: left;
+  padding-left: 45px;
 }
-/* line 43, ../sass/_news.scss */
+/* line 50, ../sass/_news.scss */
 .article-detail .article-header-pub {
   color: #A9986D;
+  float: left;
+  padding-left: 45px;
+}
+/* line 55, ../sass/_news.scss */
+.article-detail .article-content {
+  margin-top: 40px;
+  clear: both;
+}
+/* line 58, ../sass/_news.scss */
+.article-detail .article-content .fancyTitle {
+  font-family: 'proxima-nova-condensed';
+}
+/* line 61, ../sass/_news.scss */
+.article-detail .article-content .sorTable {
+  padding: 0;
+  margin: 0;
+  box-shadow: none;
+  border: none;
+}
+/* line 67, ../sass/_news.scss */
+.article-detail .article-content div {
+  color: #f3e6d0;
+}
+/* line 70, ../sass/_news.scss */
+.article-detail .article-content img {
+  max-width: 100%;
+  height: auto !important;
+}
+/* line 74, ../sass/_news.scss */
+.article-detail .article-content h2, .article-detail .article-content h3, .article-detail .article-content h4, .article-detail .article-content h5 {
+  color: #eee;
+  font-weight: 600;
+  font-size: 24px;
+}
+/* line 79, ../sass/_news.scss */
+.article-detail .article-content ul {
+  margin-left: 20px;
+}
+/* line 82, ../sass/_news.scss */
+.article-detail .article-content li {
+  list-style: disc;
+  padding-bottom: 15px;
+  color: #A9986D;
+}
+/* line 87, ../sass/_news.scss */
+.article-detail .article-content p {
+  margin-bottom: 15px;
+  color: #f3e6d0;
+}
+/* line 91, ../sass/_news.scss */
+.article-detail .article-content strong {
+  font-weight: 600;
+}
+/* line 94, ../sass/_news.scss */
+.article-detail .article-content a {
+  color: #01d701;
+  text-decoration: none;
+  border-bottom: 1px dotted #566b56;
 }
 
 /* line 1, ../sass/_tooltip.scss */
