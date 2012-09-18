@@ -32,7 +32,7 @@ Ext.define('D3Mobile.controller.Friend', {
         }
     },
     onFriendsButtonTap             : function (button) {
-        var action = button.action,
+        var action  = button.config.action,
             friends = this.getFriends();
         if (action == "add") {
             Ext.Viewport.add({
@@ -54,7 +54,7 @@ Ext.define('D3Mobile.controller.Friend', {
         }
     },
     onAddFriendModalButtonTap      : function (button) {
-        var action = button.action,
+        var action = button.config.action,
             validBattleTag;
 
         if (action == "add") {
@@ -79,14 +79,14 @@ Ext.define('D3Mobile.controller.Friend', {
     },
     onFriendAccountLoad            : function (record) {
         if (record.get('heroes')) {
-            var battleTag = localStorage.battleTag,
+            var battleTag    = localStorage.battleTag,
                 friendsStore = Ext.getStore("Friends"),
                 localStorageFriends,
                 currentUserFriends;
 
             if (friendsStore.find('battleTag', record.get('battleTag')) == -1) {
                 localStorageFriends = JSON.parse(localStorage.friends);
-                currentUserFriends = localStorageFriends[battleTag];
+                currentUserFriends  = localStorageFriends[battleTag];
                 currentUserFriends.push(record.getData());
                 localStorage.friends = JSON.stringify(localStorageFriends);
                 friendsStore.add(record);
@@ -112,9 +112,9 @@ Ext.define('D3Mobile.controller.Friend', {
         }
     },
     removeLocalStorageFriendRecord : function (record) {
-        var battleTag = localStorage.battleTag,
-            localStorageFriends = JSON.parse(localStorage.friends),
-            currentUserFriends = localStorageFriends[battleTag],
+        var battleTag                = localStorage.battleTag,
+            localStorageFriends      = JSON.parse(localStorage.friends),
+            currentUserFriends       = localStorageFriends[battleTag],
             currentUserFriendsLength = currentUserFriends.length,
             removeIndex,
             i;
@@ -131,7 +131,7 @@ Ext.define('D3Mobile.controller.Friend', {
     },
     showFriendsHeroes              : function (record) {
         var friendsContainer = this.getFriendsContainer(),
-            heroesContainer = friendsContainer.add({
+            heroesContainer  = friendsContainer.add({
                 xtype : 'heroescontainer'
             });
         heroesContainer.down('heroes').buildCards(record.get('battleTag').replace("#", '-'), record.get('heroes'), true);

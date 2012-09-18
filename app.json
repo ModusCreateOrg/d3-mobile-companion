@@ -33,6 +33,9 @@
      */
     "js": [
         {
+            path : "cordova-2.0.0.js"
+        },
+        {
             "path": "sdk/sencha-touch.js"
         },
         {
@@ -90,7 +93,8 @@
     "resources": [
         "resources/images",
         "resources/icons",
-        "resources/startup"
+        "resources/startup",
+        "config.xml"
     ],
 
     /**
@@ -112,7 +116,7 @@
     "buildPaths": {
         "testing": "build/testing",
         "production": "build/production",
-        "package": "build/package",
+        "package": "build/phonegap/www",
         "native": "build/native"
     },
 

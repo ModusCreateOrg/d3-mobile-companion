@@ -13,8 +13,8 @@ Ext.define('D3Mobile.store.Articles', {
         autoLoad : true,
         proxy    : {
             type   : 'ajax',
-            url    : 'data/news.xml',
-//            url    : 'http://us.battle.net/d3/en/feed/news.xml',
+//            url    : 'data/news.xml',
+            url    : 'http://us.battle.net/d3/en/feed/news',
             reader : {
                 type         : 'xml',
                 record       : 'entry',
