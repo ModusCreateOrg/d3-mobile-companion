@@ -24,7 +24,11 @@ Ext.define('D3Mobile.controller.Hero', {
         }
     },
     onCloseHeroTap : function(panel) {
-        panel.up('container').destroy();
+        var parentContainer = panel.up('container');
+        parentContainer.up('container').animateActiveItem(0, {type : 'slide', direction: 'down'});
+        setTimeout(function() {
+            parentContainer.destroy();
+        }, 0);
     },
     onHeroOverviewTap     : function (battleTag, heroId) {
         var me = this;

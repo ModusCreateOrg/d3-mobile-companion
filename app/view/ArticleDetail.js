@@ -11,11 +11,11 @@ Ext.define('D3Mobile.view.ArticleDetail', {
                     '<div class="article-header">',
                         '<div class="hero-detail-back hero-back"></div>',
                         '<div class="article-header-title">{title}</div>',
-                        '<div class="article-header-pub">{published}</div>',
+                        '<div class="article-header-pub">{[Ext.Date.format(values.published,"F d, Y g:i A")]}</div>',
                     '</div>',
                     '<div class="article-content" data-articleid="{id}"></div>',
-                    '<div class="article-footer>"',
-                        '<div class="article-source-btn" data-url="{link}">SOURCE</div>',
+                    '<div class="article-footer">',
+                        '<div class="article-source-btn" data-url="">SOURCE</div>',
                     '</div>',
                 '</div>',
             '</div>'
@@ -33,19 +33,22 @@ Ext.define('D3Mobile.view.ArticleDetail', {
     loadArticleContent : function() {
         var content    = this.element.down('.article-content'),
             contentDom = content.dom,
-            article    = Ext.getStore("Articles").findRecord('id',contentDom.dataset['articleid']);
+            sourceDom  = this.element.down('.article-source-btn').dom,
+            article    = Ext.getStore("Articles").findRecord('id',contentDom.dataset.articleid),
+            node       = article.raw.getElementsByTagName("content")[0].cloneNode(true),
+            linkHref   = article.raw.getElementsByTagName("link")[0].getAttribute("href");
 
-        contentDom.appendChild(article.raw.getElementsByTagName("content")[0]);
+        contentDom.appendChild(node);
+        sourceDom.dataset.url = linkHref;
     },
     onTap      : function (evtObj) {
-        var backButton = evtObj.getTarget('.hero-back'),
+        var backButton   = evtObj.getTarget('.hero-back'),
             sourceButton = evtObj.getTarget('.article-source-btn');
 
         if (backButton) {
             this.fireEvent('close');
         } else if(sourceButton) {
-            debugger;
-            window.open(sourceButton.dom.dataset['link']);
+            this.fireEvent('openURL', sourceButton.dataset.url);
         }
     }
 });

@@ -18,6 +18,9 @@
         color: lighten(#A9986D, 15);
       }
     }
+    &.friends-item-remove {
+      background: rgba(170, 23, 17, .3);
+    }
     .x-list-item-label {
       h3 { 
         color: #A9986D;

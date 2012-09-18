@@ -29,14 +29,12 @@ Ext.define('D3Mobile.controller.News', {
                 itemtap : 'onNewsItemTap'
             },
             'articledetail' : {
-                close : 'onArticleDetailCloseTap'
+                close   : 'onArticleDetailCloseTap',
+                openURL : 'onArticleDetailSourceTap'
             }
         }
     },
     onNewsItemTap : function (list, index, target, record, evt) {
-        console.log(record);
-
-
         var newsContainer = this.getNewsContainer(),
             articleDetail = newsContainer.add({
                 xtype  : 'articledetail',
@@ -47,7 +45,15 @@ Ext.define('D3Mobile.controller.News', {
         newsContainer.animateActiveItem(articleDetail, { type: 'slide', direction: 'down' });
     },
     onArticleDetailCloseTap : function() {
-        console.log('wtf');
-        this.getNewsContainer().remove(this.getArticleDetail(),true);
+        var newsContainer = this.getNewsContainer(),
+            articleDetail = this.getArticleDetail();
+        newsContainer.animateActiveItem(0, { type: 'slide', direction: 'down' });
+        setTimeout(function() {
+            newsContainer.remove(articleDetail, true);
+        }, 0);
+    },
+    onArticleDetailSourceTap : function(url) {
+        // add Phonegap hook here
+        window.open(url);
     }
 });

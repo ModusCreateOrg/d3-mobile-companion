@@ -46,6 +46,7 @@
     font-weight: 600;
     float: left;
     padding-left: 45px;
+    width: 100%;
   }
   .article-header-pub {
     color: #A9986D;
@@ -95,6 +96,12 @@
       color: #01d701;
       text-decoration: none;
       border-bottom: 1px dotted rgb(86, 107, 86);
+      margin-left: 4px;
+    }
+  }
+  .article-footer {
+    .article-source-btn {
+      color: #01d701;
     }
   }
 }
