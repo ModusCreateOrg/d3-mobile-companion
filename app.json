@@ -33,7 +33,10 @@
      */
     "js": [
         {
-            path : "cordova-2.0.0.js"
+            "path" : "cordova-2.0.0.js"
+        },
+        {
+            "path" : "ChildBrowser.js"
         },
         {
             "path": "sdk/sencha-touch.js"

@@ -26,6 +26,7 @@
 //
 
 #import "MainViewController.h"
+#include "ChildBrowserViewController.h"
 
 @implementation MainViewController
 
@@ -144,7 +145,15 @@
 	// Intercept the external http requests and forward to Safari.app
 	// Otherwise forward to the PhoneGap WebView
 	if ([[url scheme] isEqualToString:@"http"] || [[url scheme] isEqualToString:@"https"]) {
-		[[UIApplication sharedApplication] openURL:url];
+        [theWebView sizeToFit];
+        ChildBrowserViewController* childBrowser = [ [ ChildBrowserViewController alloc ] initWithScale:FALSE ];
+        childBrowser.modalPresentationStyle = UIModalPresentationFormSheet;
+        childBrowser.modalTransitionStyle = UIModalTransitionStyleFlipHorizontal;
+        [super presentModalViewController:childBrowser animated:YES ];
+        NSString* urlString=[NSString stringWithFormat:@"%@",[url absoluteString]];
+        [childBrowser loadURL:urlString];
+        [childBrowser release];
+//		[[UIApplication sharedApplication] openURL:url];
 		return NO;
 	}
 	else {
