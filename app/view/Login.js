@@ -12,7 +12,7 @@ Ext.define('D3Mobile.view.Login', {
                 styleHtmlContent : true,
                 html             : ''.concat(
                     '<div class="login-container">',
-                        '<h1 class="d3-color-orange">Mobile Companion</h1>',
+                        '<h1>Mobile Companion</h1>',
                         '<div class="d3-logo"></div>',
                         '<div class="battle-tag-input">',
                             '<form>',

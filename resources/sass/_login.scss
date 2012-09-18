@@ -1,5 +1,5 @@
 .login {
-  background-image: inline-image('diablo-3-logo.jpg') !important;
+  background-image: inline-image('login.jpg') !important;
   background-color: black !important;
   background-size: contain;
   background-repeat: no-repeat;
@@ -17,6 +17,7 @@
     }
     // @include background(linear-gradient(left bottom, rgb(18, 17, 15), rgb(28, 24, 18)));
     h1 {
+      color: #eee;
       font-size: 2.1em;
       font-weight: 700;
       text-align: center;
@@ -25,6 +26,7 @@
     margin-top: 200px;
     input {
       @include border-radius(5px);
+      font-weight: 600;
       text-align: center;
       border-radius:0.3em;
       border:1px solid #91897e;
