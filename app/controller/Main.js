@@ -98,9 +98,22 @@ Ext.define('D3Mobile.controller.Main', {
         return friends;
     },
     onMainActiveItemChange : function(main, newPanel, oldPanel) {
-        if(newPanel.action == "logOut") {
+        var action = newPanel.config.action;
+        if(action == "logOut") {
             this.onLogOut();
+        } else if(action == "servers") {
+            this.loadServerStatus();
         }
+    },
+    loadServerStatus : function() {
+        Ext.Ajax.request({
+            url      : 'http://us.battle.net/d3/en/status',
+            callback : this.onLoadServerStatusCallback,
+            scope    : this
+        });
+    },
+    onLoadServerStatusCallback : function(request, success, response) {
+        this.getServers().setHtml(response.responseXML.getElementsByClassName("server-status")[0]);
     },
     onLogOut : function() {
         localStorage.clear();
