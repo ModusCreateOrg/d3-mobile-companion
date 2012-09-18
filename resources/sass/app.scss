@@ -46,10 +46,6 @@ $sansSerif: 'Lato', sans-serif;
 
 html, body {
   height: 100%;
-  background-image: inline-image('d3logo.jpg');
-  background-position: 50% 50%;
-  background-repeat: no-repeat;
-  background-size: cover;
   font-family: $sansSerif;
 }
 
