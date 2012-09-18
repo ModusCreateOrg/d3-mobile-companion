@@ -262,15 +262,10 @@ Ext.define('D3Mobile.view.HeroDetail', {
         me.add(me.buildSkillsCard());
 
         me.element.on({
-            tap   : me.onTap,
-            scope : me
-        });
-
-        me.element.on({
+            tap        : me.onTap,
             touchstart : me.onTouchStart,
             touchend   : me.onTouchEnd,
-            delegate   : '.item',
-            scope: me
+            scope      : me
         });
 
         me.callParent();
@@ -291,14 +286,14 @@ Ext.define('D3Mobile.view.HeroDetail', {
     },
 
     onTouchStart : function(evtObj) {
-        var target = evtObj.getTarget();
+        var target = evtObj.getTarget('.item');
         if (target) {
             Ext.fly(target).addCls('tapped');
         }
     },
 
     onTouchEnd : function(evtObj) {
-        var target = evtObj.getTarget();
+        var target = evtObj.getTarget('.item');
         if (target) {
             Ext.fly(target).removeCls('tapped');
         }
