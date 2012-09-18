@@ -11,6 +11,7 @@ Ext.define('D3Mobile.view.AddFriendModal', {
     config : {
         modal    : true,
         centered : true,
+        cls      : 'add-friend-modal',
         defaults : {
             styleHtmlContent : true
         },
@@ -38,14 +39,16 @@ Ext.define('D3Mobile.view.AddFriendModal', {
                 cls    : 'loginBtn',
                 ui     : 'loginButton',
                 text   : 'Add Friend',
-                action : 'add'
+                action : 'add',
+                style   : 'margin-bottom: 10px;'
             },
             {
                 xtype  : 'button',
                 cls    : 'loginBtn',
                 ui     : 'loginButton',
                 text   : 'Cancel',
-                action : 'cancel'
+                action : 'cancel',
+                ui     : 'decline'
             }
         ]
     },

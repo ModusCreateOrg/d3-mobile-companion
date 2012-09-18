@@ -29,3 +29,49 @@
     }    
   }
 }
+
+.add-friend-modal {
+  &.x-floating {
+    @include border-radius(5px);
+    box-shadow: none;
+    background-image: none;
+    background: none !important;
+    padding: 20px;  
+  }
+  .x-body {
+    background: none !important;
+  }
+  .battle-tag-input {
+    text-align: center;
+  }
+  input {
+    @include border-radius(5px);
+    font-size: 20px;
+    text-align: center;
+    display: inline-block;
+    border-radius:0.3em;
+    border:1px solid #91897e;
+    box-shadow:inset 0 0 4px rgba(25,0,0,0.4);
+    padding:15px 5px;
+    margin:5px 0;
+    transition:all 0.3s ease-out;
+    width:100%;
+    color: #333;
+    font-weight: 600;
+    &.invalid {
+      border: 3px solid #aa1711;
+    }
+    &[name=battleTag] {
+      width: 60%;
+      margin-right: 10px;
+    }   
+    &[name=battleTagNum] {
+      width: 25%;
+    }    
+  }
+  .loginBtn {
+    width: 80%;
+    margin: 0px auto;
+    padding: 12px;    
+  }
+}
