@@ -110,7 +110,7 @@ Ext.define('D3Mobile.controller.Hero', {
         Ext.Viewport.setMasked(false);
     },
     onHeroLoadFailure     : function (error) {
-        console.log('fail', arguments);
+        Ext.Msg.alert('Error', 'Error Loading Hero, please try again.', Ext.emptyFn);
         Ext.Viewport.setMasked(false);
     },
     onCloseHeroDetailTap  : function () {
