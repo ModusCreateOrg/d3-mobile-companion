@@ -53,6 +53,17 @@ html, body {
   padding: .3em 1.2em; 
 }
 
+.x-title .x-innerhtml {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  padding: 0 .3em;
+  font-size: 18px;
+  position: relative;
+  top: -5px;
+}
+
+
 .navBar {
   .x-tabbar {
     background-image: inline-image('nav-bg.png');
