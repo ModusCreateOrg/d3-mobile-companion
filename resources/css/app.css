@@ -9604,24 +9604,36 @@ html, body {
   font-weight: 600;
 }
 
-/* line 1, ../sass/_servers.scss */
-.server-status {
-  margin-top: 20px;
+/* line 2, ../sass/_servers.scss */
+.server-status .x-title {
+  text-transform: uppercase;
+  color: #F3E6D0;
+  font-size: 26px;
+  border-bottom: 3px double #312A1E;
+  margin-bottom: 15px;
+  padding-bottom: 5px;
+  font-weight: 400;
+  text-align: center;
+  width: 200px;
 }
-/* line 3, ../sass/_servers.scss */
+/* line 13, ../sass/_servers.scss */
+.server-status .db-directory {
+  margin-top: 25px;
+}
+/* line 16, ../sass/_servers.scss */
 .server-status .category, .server-status .category a {
   color: #F3E6D0;
   font-size: 16px;
   font-weight: 600;
   text-transform: uppercase;
 }
-/* line 9, ../sass/_servers.scss */
+/* line 22, ../sass/_servers.scss */
 .server-status .subcategory {
   color: #F3E6D0;
   margin-top: 20px;
   font-size: 14px;
 }
-/* line 17, ../sass/_servers.scss */
+/* line 30, ../sass/_servers.scss */
 .server-status .server {
   background: #12110F;
   border: 1px solid #28241D;
@@ -9630,7 +9642,7 @@ html, body {
   padding: 7px 12px;
   overflow: hidden;
 }
-/* line 25, ../sass/_servers.scss */
+/* line 38, ../sass/_servers.scss */
 .server-status .status-icon {
   -webkit-border-radius: 5px;
   border-radius: 5px;
@@ -9638,19 +9650,19 @@ html, body {
   height: 20px;
   width: 20px;
 }
-/* line 30, ../sass/_servers.scss */
+/* line 43, ../sass/_servers.scss */
 .server-status .status-icon.up {
   background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #01d701), color-stop(100%, #009a00));
   background-image: -webkit-linear-gradient(top, #01d701, #009a00);
   background-image: linear-gradient(top, #01d701, #009a00);
 }
-/* line 33, ../sass/_servers.scss */
+/* line 46, ../sass/_servers.scss */
 .server-status .status-icon.down {
   background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #b7070d), color-stop(100%, #6c0906));
   background-image: -webkit-linear-gradient(top, #b7070d, #6c0906);
   background-image: linear-gradient(top, #b7070d, #6c0906);
 }
-/* line 37, ../sass/_servers.scss */
+/* line 50, ../sass/_servers.scss */
 .server-status .server-name {
   color: #7b6d55;
   line-height: 26px;

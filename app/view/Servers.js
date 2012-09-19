@@ -7,6 +7,11 @@ Ext.define('D3Mobile.view.Servers', {
         styleHtmlContent : true,
         scrollable       : {
             direction : 'vertical'
-        }
+        },
+        items : [{
+            xtype  : 'titlebar',
+            title  : 'Servers',
+            docked : 'top'
+        }]
     }
 });
