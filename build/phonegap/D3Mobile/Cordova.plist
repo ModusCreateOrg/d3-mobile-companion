@@ -24,6 +24,7 @@
 	<true/>
 	<key>ExternalHosts</key>
 	<array>
+		<string>*.youtube.com</string>
 		<string>*.typekit.net</string>
 		<string>*.battle.net</string>
 		<string>*</string>
