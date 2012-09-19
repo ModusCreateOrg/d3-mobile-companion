@@ -17,15 +17,15 @@ Ext.define('D3Mobile.view.Main', {
         },
         items          : [
             {
-                iconCls : 'heart',
+                iconCls : 'd3-heroes',
                 xtype   : 'heroescontainer'
             },
             {
-                iconCls : 'user_fave',
+                iconCls : 'd3-friends',
                 xtype   : 'friendscontainer'
             },
             {
-                iconCls : 'list',
+                iconCls : 'd3-news',
                 xtype   : 'newscontainer'
             },
             // {
@@ -33,12 +33,12 @@ Ext.define('D3Mobile.view.Main', {
             //     xtype: 'itemmaxstats'
             // },
             {
-                iconCls : 'cloud_black',
+                iconCls : 'd3-servers',
                 xtype   : 'servers',
                 action  : 'servers'
             },
             {
-                iconCls : 'power_on',
+                iconCls : 'd3-logout',
                 xtype   : 'component',
                 title   : 'Log Out',
                 action  : 'logOut'

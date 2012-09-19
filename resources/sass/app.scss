@@ -30,11 +30,7 @@ $sansSerif: 'Lato', sans-serif;
 @include sencha-tabbar-ui('mainTabBar', #472a20, 'matte', #FFFFFF);
 @include sencha-button-ui('loginButton', #333, 'matte');
 
-@include pictos-iconmask(cloud_black);
-@include pictos-iconmask(heart);
-@include pictos-iconmask(power_on);
 @include pictos-iconmask(user);
-@include pictos-iconmask(list);
 @include pictos-iconmask(user_fave);
 @include pictos-iconmask(user_add);
 @include pictos-iconmask(user_remove2);
@@ -45,6 +41,22 @@ $sansSerif: 'Lato', sans-serif;
 @import 'news';
 @import 'tooltip';
 @import 'servers';
+
+@mixin modus-pictos-iconmask($name) {
+  .x-tab .x-button-icon.#{$name},
+  .x-button .x-button-icon.x-icon-mask.#{$name} {
+    -webkit-mask-image: theme_image('', '../../../../resources/images/pictos/' + $name + ".png");
+  }
+}
+
+// include more pictos icons
+@include modus-pictos-iconmask(d3-heroes);
+@include modus-pictos-iconmask(d3-news);
+@include modus-pictos-iconmask(d3-servers);
+@include modus-pictos-iconmask(d3-logout);
+@include modus-pictos-iconmask(d3-friends);
+
+
 
 html, body {
   height: 100%;
