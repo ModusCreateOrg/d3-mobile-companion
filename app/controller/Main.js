@@ -29,7 +29,8 @@ Ext.define('D3Mobile.controller.Main', {
             'main' : {
                 activeitemchange : 'onMainActiveItemChange'
             }
-        }
+        },
+        previousPanel : null
     },
     launch                    : function () {
         var battleTag = localStorage.battleTag;
@@ -100,7 +101,7 @@ Ext.define('D3Mobile.controller.Main', {
     onMainActiveItemChange : function(main, newPanel, oldPanel) {
         var action = newPanel.config.action;
         if(action == "logOut") {
-            this.onLogOut();
+            this.onLogOut(oldPanel);
         } else if(action == "servers") {
             this.loadServerStatus();
         }
@@ -115,9 +116,17 @@ Ext.define('D3Mobile.controller.Main', {
     onLoadServerStatusCallback : function(request, success, response) {
         this.getServers().setHtml(response.responseXML.getElementsByClassName("server-status")[0]);
     },
-    onLogOut : function() {
-        localStorage.clear();
-        window.location.reload();
+    onLogOut : function(oldPanel) {
+        this.setPreviousPanel(oldPanel);
+        Ext.Msg.confirm('Log Out', 'Are you sure you want to log out?', this.onLogOutConfirm, this);
+    },
+    onLogOutConfirm : function(button, value, scope) {
+        if(button == "yes" ) {
+            localStorage.clear();
+            window.location.reload();
+        } else if(button == "no") {
+            this.getMain().setActiveItem(this.getPreviousPanel());
+        }
     }
 
 });
