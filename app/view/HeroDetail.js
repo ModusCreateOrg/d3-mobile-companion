@@ -5,11 +5,11 @@ Ext.define('D3Mobile.view.HeroDetail', {
         hero              : null,
         attributesCardTpl : ''.concat(
             '<div class="hero-attributes">',
-                '<div class="header">',
-                    '<div class="hero-detail-back hero-back">Heros</div>',
-                    'Attributes',
-                    '<div class="sub">{name} - {level} <tpl if="paragonLevel &gt; 0"><span class="paragonLevel">({paragonLevel})</span></tpl> - {class}</div>',
-                '</div>',
+//                '<div class="header">',
+//                    '<div class="hero-detail-back hero-back">Heros</div>',
+//                    'Attributes',
+//                    '<div class="sub">{name} - {level} <tpl if="paragonLevel &gt; 0"><span class="paragonLevel">({paragonLevel})</span></tpl> - {class}</div>',
+//                '</div>',
                 '<tpl if="statDeltas.lastUpdated">',
                     '<div class="last-updated">',
                         'Stat changes since {statDeltas.lastUpdated}',
@@ -506,6 +506,21 @@ Ext.define('D3Mobile.view.HeroDetail', {
             cls              : 'hero-detail-card',
             tpl              : this.getAttributesCardTpl(),
             data             : this.getHero(),
+            items            : [
+                {
+                    xtype  : 'component',
+                    cls    : 'hero-detail-header',
+                    tpl    : ''.concat(
+                        '<div class="header">',
+                            '<div class="hero-detail-back hero-back">Heros</div>',
+                            'Attributes',
+                            '<div class="sub">{name} - {level} <tpl if="paragonLevel &gt; 0"><span class="paragonLevel">({paragonLevel})</span></tpl> - {class}</div>',
+                        '</div>'
+                    ),
+                    data   : this.getHero(),
+                    docked : 'top'
+                }
+            ],
             styleHtmlContent : true
         };
     },

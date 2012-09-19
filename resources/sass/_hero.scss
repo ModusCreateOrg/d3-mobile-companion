@@ -76,6 +76,9 @@
 .hero-detail-card > div > div {
   height: 100%
 }
+.hero-detail-header {
+  height: auto !important;
+}
 
 /* attributes */
 .header {
@@ -94,6 +97,7 @@
     margin-top: -8px;
   }
 }
+
 .hero-back {
   -webkit-mask-image: theme_image($theme-name, "pictos/" + "delete_black2" + ".png");
   -webkit-mask-size: contain;
