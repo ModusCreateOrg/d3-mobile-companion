@@ -10,8 +10,10 @@ Ext.define('D3Mobile.view.HeroDetail', {
                     'Attributes',
                     '<div class="sub">{name} - {level} <tpl if="paragonLevel &gt; 0"><span class="paragonLevel">({paragonLevel})</span></tpl> - {class}</div>',
                 '</div>',
+                '<div class="last-updated">',
+                    'Stat changes since 09/19 @ 8:00pm',
+                '</div>',
                 '<div class="base-stats">',
-
                     '<div class="stats-group">',
                         '<div class="stats-row highlight">',
                             '<div class="attribute-label">Elite Kills</div>',
