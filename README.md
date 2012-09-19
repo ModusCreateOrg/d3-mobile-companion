@@ -16,5 +16,5 @@ You must have the Sencha SDK tools installed.
 `sencha app build package`
 
 ## Authors
-- Stan Bershadskiy [@stan229](http://twitter.com/stan229)
-- Dave Ackerman[@dmackerman](http://twitter.com/dmackerman)
+- Stan Bershadskiy ([@stan229](http://twitter.com/stan229))
+- Dave Ackerman ([@dmackerman](http://twitter.com/dmackerman))
