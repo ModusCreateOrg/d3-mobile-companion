@@ -98,16 +98,38 @@ Ext.define('D3Mobile.controller.Hero', {
         });
     },
     onHeroLoadSuccess     : function (record) {
-        var heroesContainer = this.getMain().getActiveItem().down('heroescontainer') || this.getHeroesContainer(),
+        var me              = this,
+            main            = this.getMain(),
+            heroesContainer = main.getActiveItem().down('heroescontainer') || me.getHeroesContainer(),
             heroDetail;
-        this.getMain().getTabBar().getActiveTab().setTitle(record.get('name'));
+        main.getTabBar().getActiveTab().setTitle(record.get('name'));
         heroDetail = heroesContainer.add({
             xtype : 'herodetail',
-            hero  : record.getData()
+            hero  : me.checkPreviousHero(record.getData())
         });
         // since these are 'cards', we flip them around to see the details
         heroesContainer.animateActiveItem(heroDetail, { type : 'flip' });
         Ext.Viewport.setMasked(false);
+    },
+    checkPreviousHero : function(recordData) {
+        var heroId           = recordData.id,
+            previousHero     = localStorage[heroId],
+            previousHeroData = previousHero && JSON.parse(previousHero);
+
+        if(previousHeroData && previousHeroData.lastUpdated < recordData.lastUpdated ) {
+            recordData = this.calculateStatDeltas(recordData, previousHeroData);
+        }
+        localStorage[heroId] = JSON.stringify(recordData);
+        return recordData;
+
+    },
+    calculateStatDeltas   : function(newRecord, oldRecord) {
+        var deltas = newRecord.statDeltas = {},
+            key;
+        for(key in newRecord.stats) {
+            deltas[key] = newRecord.stats[key] - oldRecord.stats[key];
+        }
+        return newRecord;
     },
     onHeroLoadFailure     : function (error) {
         Ext.Msg.alert('Error', 'Error Loading Hero, please try again.', Ext.emptyFn);

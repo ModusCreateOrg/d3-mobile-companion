@@ -53,6 +53,15 @@ Ext.define('D3Mobile.model.Hero', {
             {
                 name : 'progress',
                 type : 'auto'
+            },
+            {
+                name : 'dead',
+                type : 'boolean'
+            },
+            {
+                name    : 'lastUpdated',
+                type    : 'integer',
+                mapping : 'last-updated'
             }
         ],
         proxy  : {
