@@ -5,11 +5,6 @@ Ext.define('D3Mobile.view.HeroDetail', {
         hero              : null,
         attributesCardTpl : ''.concat(
             '<div class="hero-attributes">',
-//                '<div class="header">',
-//                    '<div class="hero-detail-back hero-back">Heros</div>',
-//                    'Attributes',
-//                    '<div class="sub">{name} - {level} <tpl if="paragonLevel &gt; 0"><span class="paragonLevel">({paragonLevel})</span></tpl> - {class}</div>',
-//                '</div>',
                 '<tpl if="statDeltas.lastUpdated">',
                     '<div class="last-updated">',
                         'Stat changes since {statDeltas.lastUpdated}',
@@ -334,11 +329,6 @@ Ext.define('D3Mobile.view.HeroDetail', {
         ),
         itemsCard : ''.concat(
             '<div class="hero-items">',
-                '<div class="header">',
-                    '<div class="hero-detail-back hero-back">Heros</div>',
-                    'Items',
-                    '<div class="sub">{name} {level} <tpl if="paragonLevel &gt; 0"><span class="paragonLevel">({paragonLevel})</span></tpl> - {class}</div>',
-                '</div>',
                 '<div class="items-container">',
                     '<tpl if="items.head">',
                         '<div class="item helm {items.head.displayColor}" data-tooltipparams="{items.head.tooltipParams}">',
@@ -414,11 +404,6 @@ Ext.define('D3Mobile.view.HeroDetail', {
         ),
         skillsCard : ''.concat(
             '<div class="hero-skills">',
-                '<div class="header">',
-                    '<div class="hero-detail-back hero-back">Heros</div>',
-                    'Skills',
-                    '<div class="sub">{name} {level} <tpl if="paragonLevel &gt; 0"><span class="paragonLevel">({paragonLevel})</span></tpl> - {class}</div>',
-                '</div>',
                 // icons are located:
                 // 64x64 = http://us.media.blizzard.com/d3/icons/skills/64/{passive.skill.icon}.png
                 // 21x21 = http://us.media.blizzard.com/d3/icons/skills/21/{passive.skill.icon}.png
@@ -507,19 +492,7 @@ Ext.define('D3Mobile.view.HeroDetail', {
             tpl              : this.getAttributesCardTpl(),
             data             : this.getHero(),
             items            : [
-                {
-                    xtype  : 'component',
-                    cls    : 'hero-detail-header',
-                    tpl    : ''.concat(
-                        '<div class="header">',
-                            '<div class="hero-detail-back hero-back">Heros</div>',
-                            'Attributes',
-                            '<div class="sub" style="margin-top: 0;">{name} - {level} <tpl if="paragonLevel &gt; 0"><span class="paragonLevel">({paragonLevel})</span></tpl> - {class}</div>',
-                        '</div>'
-                    ),
-                    data   : this.getHero(),
-                    docked : 'top'
-                }
+                this.buildHeader('Attributes')
             ],
             styleHtmlContent : true
         };
@@ -534,6 +507,9 @@ Ext.define('D3Mobile.view.HeroDetail', {
             cls              : 'hero-detail-card',
             tpl              : this.getItemsCard(),
             data             : this.getHero(),
+            items            : [
+                this.buildHeader('Items')
+            ],
             styleHtmlContent : true
         };
     },
@@ -547,7 +523,25 @@ Ext.define('D3Mobile.view.HeroDetail', {
             cls              : 'hero-detail-card',
             tpl              : this.getSkillsCard(),
             data             : this.getHero(),
+            items            : [
+                this.buildHeader('Skills')
+            ],
             styleHtmlContent : true
+        };
+    },
+    buildHeader : function(type) {
+        return {
+                    xtype  : 'component',
+                    cls    : 'hero-detail-header',
+                    tpl    : ''.concat(
+                        '<div class="header">',
+                            '<div class="hero-detail-back hero-back">Heros</div>',
+                            type,
+                            '<div class="sub" style="margin-top: 0;">{name} - {level} <tpl if="paragonLevel &gt; 0"><span class="paragonLevel">({paragonLevel})</span></tpl> - {class}</div>',
+                        '</div>'
+                    ),
+                    data   : this.getHero(),
+                    docked : 'top'
         };
     }
 });
