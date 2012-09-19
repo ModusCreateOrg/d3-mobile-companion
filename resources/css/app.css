@@ -8894,23 +8894,37 @@ html, body {
 }
 /* line 160, ../sass/_hero.scss */
 .attribute-value .change {
-  font-size: 13px;
-  padding-left: 5px;
+  font-size: 11px;
+  width: 45px;
+  display: inline-block;
+  vertical-align: middle;
 }
 
 /* items */
+<<<<<<< HEAD
 /* line 167, ../sass/_hero.scss */
 .hero-items {
   text-align: center;
 }
 /* line 169, ../sass/_hero.scss */
+=======
+/* line 165, ../sass/_hero.scss */
+.hero-items {
+  text-align: center;
+}
+/* line 167, ../sass/_hero.scss */
+>>>>>>> 5f1e3a68d360ab8f2f9d575613f0db2e6d7cbce9
 .hero-items .items-container {
   margin: 0px auto;
   width: 286px;
   height: 438px;
   position: relative;
 }
+<<<<<<< HEAD
 /* line 175, ../sass/_hero.scss */
+=======
+/* line 173, ../sass/_hero.scss */
+>>>>>>> 5f1e3a68d360ab8f2f9d575613f0db2e6d7cbce9
 .hero-items .items-container .item {
   -webkit-border-radius: 5px;
   border-radius: 5px;
@@ -8919,11 +8933,19 @@ html, body {
   height: 20px;
   border: 1px solid white;
 }
+<<<<<<< HEAD
 /* line 181, ../sass/_hero.scss */
 .hero-items .items-container .item img {
   position: relative;
 }
 /* line 183, ../sass/_hero.scss */
+=======
+/* line 179, ../sass/_hero.scss */
+.hero-items .items-container .item img {
+  position: relative;
+}
+/* line 181, ../sass/_hero.scss */
+>>>>>>> 5f1e3a68d360ab8f2f9d575613f0db2e6d7cbce9
 .hero-items .items-container .item.yellow {
   border-color: #b1a73c;
   background-color: #322a0d;
@@ -8931,13 +8953,21 @@ html, body {
   background-image: -webkit-linear-gradient(top, #322a0d, #605018);
   background-image: linear-gradient(top, #322a0d, #605018);
 }
+<<<<<<< HEAD
 /* line 187, ../sass/_hero.scss */
+=======
+/* line 185, ../sass/_hero.scss */
+>>>>>>> 5f1e3a68d360ab8f2f9d575613f0db2e6d7cbce9
 .hero-items .items-container .item.yellow.tapped {
   background-image: none;
   border-color: #dad492;
   background-color: #5a4c18;
 }
+<<<<<<< HEAD
 /* line 193, ../sass/_hero.scss */
+=======
+/* line 191, ../sass/_hero.scss */
+>>>>>>> 5f1e3a68d360ab8f2f9d575613f0db2e6d7cbce9
 .hero-items .items-container .item.blue {
   border-color: #6ba9ba;
   background-color: #131b27;
@@ -8945,13 +8975,21 @@ html, body {
   background-image: -webkit-linear-gradient(top, #131b27, #273850);
   background-image: linear-gradient(top, #131b27, #273850);
 }
+<<<<<<< HEAD
 /* line 197, ../sass/_hero.scss */
+=======
+/* line 195, ../sass/_hero.scss */
+>>>>>>> 5f1e3a68d360ab8f2f9d575613f0db2e6d7cbce9
 .hero-items .items-container .item.blue.tapped {
   background-image: none;
   border-color: #c2dce3;
   background-color: #243349;
 }
+<<<<<<< HEAD
 /* line 203, ../sass/_hero.scss */
+=======
+/* line 201, ../sass/_hero.scss */
+>>>>>>> 5f1e3a68d360ab8f2f9d575613f0db2e6d7cbce9
 .hero-items .items-container .item.orange {
   border-color: #c29337;
   background-color: #39240f;
@@ -8959,13 +8997,21 @@ html, body {
   background-image: -webkit-linear-gradient(top, #39240f, #69421c);
   background-image: linear-gradient(top, #39240f, #69421c);
 }
+<<<<<<< HEAD
 /* line 207, ../sass/_hero.scss */
+=======
+/* line 205, ../sass/_hero.scss */
+>>>>>>> 5f1e3a68d360ab8f2f9d575613f0db2e6d7cbce9
 .hero-items .items-container .item.orange.tapped {
   background-image: none;
   border-color: #e2c897;
   background-color: #613e1a;
 }
+<<<<<<< HEAD
 /* line 213, ../sass/_hero.scss */
+=======
+/* line 211, ../sass/_hero.scss */
+>>>>>>> 5f1e3a68d360ab8f2f9d575613f0db2e6d7cbce9
 .hero-items .items-container .item.green {
   border-color: #87a73d;
   background-color: #20300d;
@@ -8973,164 +9019,276 @@ html, body {
   background-image: -webkit-linear-gradient(top, #20300d, #3f6019);
   background-image: linear-gradient(top, #20300d, #3f6019);
 }
+<<<<<<< HEAD
 /* line 217, ../sass/_hero.scss */
+=======
+/* line 215, ../sass/_hero.scss */
+>>>>>>> 5f1e3a68d360ab8f2f9d575613f0db2e6d7cbce9
 .hero-items .items-container .item.green.tapped {
   background-image: none;
   border-color: #c0d68e;
   background-color: #3b5818;
 }
+<<<<<<< HEAD
 /* line 224, ../sass/_hero.scss */
+=======
+/* line 222, ../sass/_hero.scss */
+>>>>>>> 5f1e3a68d360ab8f2f9d575613f0db2e6d7cbce9
 .hero-items .items-container .item.helm {
   top: 25px;
   left: 108px;
   width: 66px;
   height: 66px;
 }
+<<<<<<< HEAD
 /* line 229, ../sass/_hero.scss */
 .hero-items .items-container .item.helm img {
   top: -31px;
 }
 /* line 233, ../sass/_hero.scss */
+=======
+/* line 227, ../sass/_hero.scss */
+.hero-items .items-container .item.helm img {
+  top: -31px;
+}
+/* line 231, ../sass/_hero.scss */
+>>>>>>> 5f1e3a68d360ab8f2f9d575613f0db2e6d7cbce9
 .hero-items .items-container .item.shoulders {
   top: 49px;
   left: 26px;
   width: 66px;
   height: 88px;
 }
+<<<<<<< HEAD
 /* line 238, ../sass/_hero.scss */
 .hero-items .items-container .item.shoulders img {
   top: -20px;
 }
 /* line 242, ../sass/_hero.scss */
+=======
+/* line 236, ../sass/_hero.scss */
+.hero-items .items-container .item.shoulders img {
+  top: -20px;
+}
+/* line 240, ../sass/_hero.scss */
+>>>>>>> 5f1e3a68d360ab8f2f9d575613f0db2e6d7cbce9
 .hero-items .items-container .item.neck {
   top: 69px;
   left: 192px;
   width: 55px;
   height: 56px;
 }
+<<<<<<< HEAD
 /* line 247, ../sass/_hero.scss */
+=======
+/* line 245, ../sass/_hero.scss */
+>>>>>>> 5f1e3a68d360ab8f2f9d575613f0db2e6d7cbce9
 .hero-items .items-container .item.neck img {
   width: 52px;
   height: 52px;
   top: 1px;
 }
+<<<<<<< HEAD
 /* line 253, ../sass/_hero.scss */
+=======
+/* line 251, ../sass/_hero.scss */
+>>>>>>> 5f1e3a68d360ab8f2f9d575613f0db2e6d7cbce9
 .hero-items .items-container .item.chest {
   top: 95px;
   left: 100px;
   width: 82px;
   height: 115px;
 }
+<<<<<<< HEAD
 /* line 258, ../sass/_hero.scss */
 .hero-items .items-container .item.chest img {
   top: -25px;
 }
 /* line 262, ../sass/_hero.scss */
+=======
+/* line 256, ../sass/_hero.scss */
+.hero-items .items-container .item.chest img {
+  top: -25px;
+}
+/* line 260, ../sass/_hero.scss */
+>>>>>>> 5f1e3a68d360ab8f2f9d575613f0db2e6d7cbce9
 .hero-items .items-container .item.hands {
   top: 148px;
   left: 0px;
   width: 66px;
   height: 88px;
 }
+<<<<<<< HEAD
 /* line 267, ../sass/_hero.scss */
 .hero-items .items-container .item.hands img {
   top: -20px;
 }
 /* line 271, ../sass/_hero.scss */
+=======
+/* line 265, ../sass/_hero.scss */
+.hero-items .items-container .item.hands img {
+  top: -20px;
+}
+/* line 269, ../sass/_hero.scss */
+>>>>>>> 5f1e3a68d360ab8f2f9d575613f0db2e6d7cbce9
 .hero-items .items-container .item.wrist {
   top: 148px;
   left: 216px;
   width: 66px;
   height: 88px;
 }
+<<<<<<< HEAD
 /* line 276, ../sass/_hero.scss */
 .hero-items .items-container .item.wrist img {
   top: -20px;
 }
 /* line 280, ../sass/_hero.scss */
+=======
+/* line 274, ../sass/_hero.scss */
+.hero-items .items-container .item.wrist img {
+  top: -20px;
+}
+/* line 278, ../sass/_hero.scss */
+>>>>>>> 5f1e3a68d360ab8f2f9d575613f0db2e6d7cbce9
 .hero-items .items-container .item.ringL {
   top: 248px;
   left: 12px;
   width: 42px;
   height: 42px;
 }
+<<<<<<< HEAD
 /* line 285, ../sass/_hero.scss */
+=======
+/* line 283, ../sass/_hero.scss */
+>>>>>>> 5f1e3a68d360ab8f2f9d575613f0db2e6d7cbce9
 .hero-items .items-container .item.ringL img {
   top: -12px;
   left: -12px;
 }
+<<<<<<< HEAD
 /* line 290, ../sass/_hero.scss */
+=======
+/* line 288, ../sass/_hero.scss */
+>>>>>>> 5f1e3a68d360ab8f2f9d575613f0db2e6d7cbce9
 .hero-items .items-container .item.belt {
   top: 214px;
   left: 100px;
   width: 82px;
   height: 34px;
 }
+<<<<<<< HEAD
 /* line 295, ../sass/_hero.scss */
 .hero-items .items-container .item.belt img {
   top: -15px;
 }
 /* line 299, ../sass/_hero.scss */
+=======
+/* line 293, ../sass/_hero.scss */
+.hero-items .items-container .item.belt img {
+  top: -15px;
+}
+/* line 297, ../sass/_hero.scss */
+>>>>>>> 5f1e3a68d360ab8f2f9d575613f0db2e6d7cbce9
 .hero-items .items-container .item.ringR {
   top: 248px;
   left: 228px;
   width: 42px;
   height: 42px;
 }
+<<<<<<< HEAD
 /* line 304, ../sass/_hero.scss */
+=======
+/* line 302, ../sass/_hero.scss */
+>>>>>>> 5f1e3a68d360ab8f2f9d575613f0db2e6d7cbce9
 .hero-items .items-container .item.ringR img {
   top: -12px;
   left: -12px;
 }
+<<<<<<< HEAD
 /* line 309, ../sass/_hero.scss */
+=======
+/* line 307, ../sass/_hero.scss */
+>>>>>>> 5f1e3a68d360ab8f2f9d575613f0db2e6d7cbce9
 .hero-items .items-container .item.legs {
   top: 252px;
   left: 108px;
   width: 66px;
   height: 88px;
 }
+<<<<<<< HEAD
 /* line 314, ../sass/_hero.scss */
 .hero-items .items-container .item.legs img {
   top: -20px;
 }
 /* line 318, ../sass/_hero.scss */
+=======
+/* line 312, ../sass/_hero.scss */
+.hero-items .items-container .item.legs img {
+  top: -20px;
+}
+/* line 316, ../sass/_hero.scss */
+>>>>>>> 5f1e3a68d360ab8f2f9d575613f0db2e6d7cbce9
 .hero-items .items-container .item.feet {
   bottom: 5px;
   left: 108px;
   width: 66px;
   height: 89px;
 }
+<<<<<<< HEAD
 /* line 323, ../sass/_hero.scss */
 .hero-items .items-container .item.feet img {
   top: -20px;
 }
 /* line 327, ../sass/_hero.scss */
+=======
+/* line 321, ../sass/_hero.scss */
+.hero-items .items-container .item.feet img {
+  top: -20px;
+}
+/* line 325, ../sass/_hero.scss */
+>>>>>>> 5f1e3a68d360ab8f2f9d575613f0db2e6d7cbce9
 .hero-items .items-container .item.mainHand {
   bottom: 5px;
   left: 0px;
   width: 66px;
   height: 130px;
 }
+<<<<<<< HEAD
 /* line 333, ../sass/_hero.scss */
+=======
+/* line 331, ../sass/_hero.scss */
+>>>>>>> 5f1e3a68d360ab8f2f9d575613f0db2e6d7cbce9
 .hero-items .items-container .item.offHand {
   bottom: 5px;
   left: 216px;
   width: 66px;
   height: 130px;
 }
+<<<<<<< HEAD
 /* line 338, ../sass/_hero.scss */
+=======
+/* line 336, ../sass/_hero.scss */
+>>>>>>> 5f1e3a68d360ab8f2f9d575613f0db2e6d7cbce9
 .hero-items .items-container .item.offHand.repeat {
   opacity: .5;
 }
 
 /* skills */
+<<<<<<< HEAD
 /* line 352, ../sass/_hero.scss */
+=======
+/* line 350, ../sass/_hero.scss */
+>>>>>>> 5f1e3a68d360ab8f2f9d575613f0db2e6d7cbce9
 .hero-skills .actives {
   overflow: hidden;
   border-bottom: 1px solid #252018;
   padding-bottom: 20px;
 }
+<<<<<<< HEAD
 /* line 356, ../sass/_hero.scss */
+=======
+/* line 354, ../sass/_hero.scss */
+>>>>>>> 5f1e3a68d360ab8f2f9d575613f0db2e6d7cbce9
 .hero-skills .actives .skill {
   position: relative;
   margin: 5px;
@@ -9138,7 +9296,11 @@ html, body {
   width: 30%;
   text-align: center;
 }
+<<<<<<< HEAD
 /* line 362, ../sass/_hero.scss */
+=======
+/* line 360, ../sass/_hero.scss */
+>>>>>>> 5f1e3a68d360ab8f2f9d575613f0db2e6d7cbce9
 .hero-skills .actives .skill .number {
   font-size: .65em;
   color: #ad835a;
@@ -9152,31 +9314,51 @@ html, body {
   left: 15px;
   top: -4px;
 }
+<<<<<<< HEAD
 /* line 375, ../sass/_hero.scss */
+=======
+/* line 373, ../sass/_hero.scss */
+>>>>>>> 5f1e3a68d360ab8f2f9d575613f0db2e6d7cbce9
 .hero-skills .actives .skill .name {
   font-size: .9em;
   color: #f3e6d0;
   font-weight: 600;
   line-height: 1.1;
 }
+<<<<<<< HEAD
 /* line 376, ../sass/_hero.scss */
+=======
+/* line 374, ../sass/_hero.scss */
+>>>>>>> 5f1e3a68d360ab8f2f9d575613f0db2e6d7cbce9
 .hero-skills .actives .skill .rune {
   font-size: .8em;
   color: #796d55;
 }
+<<<<<<< HEAD
 /* line 379, ../sass/_hero.scss */
+=======
+/* line 377, ../sass/_hero.scss */
+>>>>>>> 5f1e3a68d360ab8f2f9d575613f0db2e6d7cbce9
 .hero-skills .passives {
   overflow: hidden;
   margin-top: 10px;
 }
+<<<<<<< HEAD
 /* line 382, ../sass/_hero.scss */
+=======
+/* line 380, ../sass/_hero.scss */
+>>>>>>> 5f1e3a68d360ab8f2f9d575613f0db2e6d7cbce9
 .hero-skills .passives .skill {
   margin: 5px;
   float: left;
   width: 30%;
   text-align: center;
 }
+<<<<<<< HEAD
 /* line 387, ../sass/_hero.scss */
+=======
+/* line 385, ../sass/_hero.scss */
+>>>>>>> 5f1e3a68d360ab8f2f9d575613f0db2e6d7cbce9
 .hero-skills .passives .skill .name {
   font-size: .9em;
   color: #f3e6d0;
