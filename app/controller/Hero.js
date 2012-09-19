@@ -126,7 +126,7 @@ Ext.define('D3Mobile.controller.Hero', {
     calculateStatDeltas   : function(newRecord, oldRecord) {
         var deltas = newRecord.statDeltas = {},
             key;
-        newRecord.statDeltas.lastUpdated = Ext.Date.format(oldRecord.lastUpdated,'n/j/Y \\a\\t h:i A');
+        newRecord.statDeltas.lastUpdated = Ext.Date.format(Ext.Date.parse(oldRecord.lastUpdated, 'U'), 'n/j/Y \\a\\t h:i A');
         for(key in newRecord.stats) {
             deltas[key] = newRecord.stats[key] - oldRecord.stats[key];
         }
