@@ -3,6 +3,7 @@ Ext.define('D3Mobile.view.Servers', {
     xtype  : 'servers',
     config : {
         title            : 'Servers',
+        cls              : 'server-status',
         styleHtmlContent : true,
         scrollable       : {
             direction : 'vertical'
