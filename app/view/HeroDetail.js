@@ -514,6 +514,7 @@ Ext.define('D3Mobile.view.HeroDetail', {
         };
     },
     buildSkillsCard     : function () {
+        
         return {
             xtype            : 'container',
             scrollable       : {
