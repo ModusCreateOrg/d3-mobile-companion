@@ -38,6 +38,10 @@ Ext.define('D3Mobile.view.ArticleDetail', {
             node       = article.raw.getElementsByTagName("content")[0].cloneNode(true),
             linkHref   = article.raw.getElementsByTagName("link")[0].getAttribute("href");
 
+        if(article.raw.getElementsByTagName("iframe").length > 0) {
+            node.getElementsByTagName("iframe")[0].width = "280";
+        }
+
         contentDom.appendChild(node);
         sourceDom.dataset.url = linkHref;
     },
