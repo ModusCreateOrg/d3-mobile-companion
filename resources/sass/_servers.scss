@@ -1,17 +1,42 @@
 .server-status {
+  margin-top: 20px;
   .category, .category a {
     color: #F3E6D0;
+    font-size: 16px;
+    font-weight: 600;
+    text-transform: uppercase;
   }
-  .status .server {
+  .subcategory {
+    color: #F3E6D0;
+    margin-top: 20px;
+    font-size: 14px;
+  }
+  .server-list {
+
+  }
+  .server {
     background: #12110F;
     border: 1px solid #28241D;
     border-width: 0px 0 1px;
     color: #7B6D55;
     padding: 7px 12px;
+    overflow: hidden;
   }  
-  .status .server-name {
-    color: #f3e6d0;
-    float: left;
+  .status-icon {
+    @include border-radius(5px);
+    float: right;
+    height: 20px;
+    width: 20px;
+    &.up {
+      @include background-image(linear-gradient(top, rgb(1, 215, 1), rgb(0, 154, 0)));
+    }    
+    &.down {
+      @include background-image(linear-gradient(top, rgb(183, 7, 13), rgb(108, 9, 6)));      
+    }
+  }
+  .server-name {
+    color: #7b6d55;
     line-height: 26px;
+    float: left;
   }  
 }
