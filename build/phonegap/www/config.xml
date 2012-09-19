@@ -44,4 +44,5 @@
     <preference name="orientation"      value="portrait" />
     <preference name="target-device"    value="universal" />
     <preference name="fullscreen"       value="false" />
+    <preference name="stay-in-webview" value="true" />
 </widget>

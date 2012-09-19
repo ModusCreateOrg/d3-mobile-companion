@@ -36,12 +36,12 @@ Ext.define('D3Mobile.controller.News', {
     },
     onNewsItemTap : function (list, index, target, record, evt) {
         var newsContainer = this.getNewsContainer(),
+            viewport      = Ext.Viewport,
             articleDetail = newsContainer.add({
                 xtype  : 'articledetail',
                 record : record,
                 data   : record.getData()
             });
-
         newsContainer.animateActiveItem(articleDetail, { type: 'slide', direction: 'down' });
     },
     onArticleDetailCloseTap : function() {
@@ -53,7 +53,6 @@ Ext.define('D3Mobile.controller.News', {
         }, 0);
     },
     onArticleDetailSourceTap : function(url) {
-        // add Phonegap hook here
         window.open(url);
     }
 });
