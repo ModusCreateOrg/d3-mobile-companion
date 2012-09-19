@@ -2,7 +2,7 @@
 This a Diablo 3 companion app which allows users to:
 - See their characters attributes, items, and skills.
 - Check deltas on attribute changes from last login.
-- Add friends by RealID and Battle Tag and view their characters.
+- Add friends by BattleTag and view their characters.
 - Read latest news from the Diablo website.
 - Check server and auction house status.
 
