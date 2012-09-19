@@ -514,7 +514,7 @@ Ext.define('D3Mobile.view.HeroDetail', {
                         '<div class="header">',
                             '<div class="hero-detail-back hero-back">Heros</div>',
                             'Attributes',
-                            '<div class="sub">{name} - {level} <tpl if="paragonLevel &gt; 0"><span class="paragonLevel">({paragonLevel})</span></tpl> - {class}</div>',
+                            '<div class="sub" style="margin-top: 0;">{name} - {level} <tpl if="paragonLevel &gt; 0"><span class="paragonLevel">({paragonLevel})</span></tpl> - {class}</div>',
                         '</div>'
                     ),
                     data   : this.getHero(),
