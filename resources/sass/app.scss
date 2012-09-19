@@ -1,8 +1,8 @@
 $page-bg-color: #1a1914;
-$serif: "chaparral-pro", serif;
-$sansSerif: "proxima-nova-condensed", sans-serif;
+$sansSerif: 'Lato', sans-serif;
 
 .d3-color-yellow { color: #f8de07 !important; }
+.d3-color-red { color: #b7070d !important; }
 .d3-color-blue { color: #6969ff !important; }
 .d3-color-orange { color: #bf642f !important; }
 .d3-color-green { color: #01d701 !important; }
@@ -47,16 +47,23 @@ $sansSerif: "proxima-nova-condensed", sans-serif;
 
 html, body {
   height: 100%;
-  background-image: inline-image('d3logo.jpg');
-  background-position: 50% 50%;
-  background-repeat: no-repeat;
-  background-size: cover;
   font-family: $sansSerif;
 }
 
 .x-html {
   padding: .3em 1.2em; 
 }
+
+.x-title .x-innerhtml {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  padding: 0 .3em;
+  font-size: 18px;
+  position: relative;
+  top: -5px;
+}
+
 
 .navBar {
   .x-tabbar {

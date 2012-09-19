@@ -53,7 +53,7 @@
 
 .hero-header-name {
   text-align: left;
-  font-size: 2.3em;
+  font-size: 1.65em;
   text-shadow: 0px 4px #1E1B16;
   font-weight: 800;
   color: #eee;
@@ -61,7 +61,7 @@
 
 .hero-header-level {
   text-align: right;
-  font-size: 2em;
+  font-size: 1.65em;
   color: #eee;
   .hero-header-paragon_level {
     color: #5789ff;
@@ -121,6 +121,7 @@
 }
 .stats-group {
   margin-bottom: 15px;
+  padding-bottom: 15px;
   border-bottom: 1px solid #272218;
   &:last-child {
     border: none;
@@ -141,10 +142,13 @@
   color: #a9986d;
 }
 .attribute-value {
-  font-size: 1.3em;
+  font-weight: 600;
   text-align: right;
   -webkit-box-flex: 1;
   color: #f3e6d0;
+  .change {
+    font-size: 13px;
+  }
 }
 
 /* items */
@@ -356,8 +360,8 @@
         left: 15px;
         top: -4px;
        }
-      .name { color: #f3e6d0; font-weight: 600; line-height: 1.1; }
-      .rune { color: #796d55; }
+      .name { font-size: .9em; color: #f3e6d0; font-weight: 600; line-height: 1.1; }
+      .rune { font-size: .8em; color: #796d55; }
     }
   }
   .passives {
@@ -368,7 +372,7 @@
       float: left;
       width: 30%;
       text-align: center;
-      .name { color: #f3e6d0; font-weight: 600; line-height: 1.1; }
+      .name { font-size: .9em; color: #f3e6d0; font-weight: 600; line-height: 1.1; }
     }
   }
 }
