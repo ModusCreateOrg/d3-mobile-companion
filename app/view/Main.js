@@ -5,7 +5,7 @@ Ext.define('D3Mobile.view.Main', {
         'D3Mobile.view.HeroesContainer',
         'D3Mobile.view.FriendsContainer',
         'D3Mobile.view.NewsContainer',
-        'D3Mobile.view.ServersContainer'
+        'D3Mobile.view.Servers'
     ],
     config   : {
         fullscreen     : true,
@@ -34,7 +34,7 @@ Ext.define('D3Mobile.view.Main', {
             // },
             {
                 iconCls : 'cloud_black',
-                xtype   : 'serverscontainer',
+                xtype   : 'servers',
                 action  : 'servers'
             },
             {
