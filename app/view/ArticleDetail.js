@@ -31,12 +31,17 @@ Ext.define('D3Mobile.view.ArticleDetail', {
         });
     },
     loadArticleContent : function() {
-        var content    = this.element.down('.article-content'),
-            contentDom = content.dom,
-            sourceDom  = this.element.down('.article-source-btn').dom,
+        var el         = this.element,
+            contentDom = el.down('.article-content').dom,
+            sourceDom  = el.down('.article-source-btn').dom,
             article    = Ext.getStore("Articles").findRecord('id',contentDom.dataset.articleid),
-            node       = article.raw.getElementsByTagName("content")[0].cloneNode(true),
-            linkHref   = article.raw.getElementsByTagName("link")[0].getAttribute("href");
+            artlcleRaw = article.raw,
+            node       = artlcleRaw.getElementsByTagName("content")[0].cloneNode(true),
+            linkHref   = artlcleRaw.getElementsByTagName("link")[0].getAttribute("href");
+
+        if(artlcleRaw.getElementsByTagName("iframe").length > 0) {
+            node.getElementsByTagName("iframe")[0].width = "280";
+        }
 
         contentDom.appendChild(node);
         sourceDom.dataset.url = linkHref;

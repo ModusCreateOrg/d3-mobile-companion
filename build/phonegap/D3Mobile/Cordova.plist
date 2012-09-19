@@ -17,13 +17,14 @@
 	<key>MediaPlaybackRequiresUserAction</key>
 	<false/>
 	<key>AllowInlineMediaPlayback</key>
-	<false/>
+	<true/>
 	<key>OpenAllWhitelistURLsInWebView</key>
-	<false/>
+	<true/>
 	<key>BackupWebStorage</key>
 	<true/>
 	<key>ExternalHosts</key>
 	<array>
+		<string>*.youtube.com</string>
 		<string>*.typekit.net</string>
 		<string>*.battle.net</string>
 		<string>*</string>

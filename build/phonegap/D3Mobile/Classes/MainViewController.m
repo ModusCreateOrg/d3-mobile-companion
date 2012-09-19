@@ -141,9 +141,10 @@
 - (BOOL)webView:(UIWebView *)theWebView shouldStartLoadWithRequest:(NSURLRequest *)request navigationType:(UIWebViewNavigationType)navigationType
 {
 	NSURL *url = [request URL];
-    
-	// Intercept the external http requests and forward to Safari.app
-	// Otherwise forward to the PhoneGap WebView
+    // Override for YouTube iframe
+    if([[url host] isEqualToString:@"www.youtube.com"]) {
+        return [ super webView:theWebView shouldStartLoadWithRequest:request navigationType:navigationType ];;
+    }
 	if ([[url scheme] isEqualToString:@"http"] || [[url scheme] isEqualToString:@"https"]) {
         [theWebView sizeToFit];
         ChildBrowserViewController* childBrowser = [ [ ChildBrowserViewController alloc ] initWithScale:FALSE ];
