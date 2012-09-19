@@ -529,19 +529,19 @@ Ext.define('D3Mobile.view.HeroDetail', {
             styleHtmlContent : true
         };
     },
-    buildHeader : function(type) {
+    buildHeader : function (type) {
         return {
-                    xtype  : 'component',
-                    cls    : 'hero-detail-header',
-                    tpl    : ''.concat(
-                        '<div class="header">',
-                            '<div class="hero-detail-back hero-back">Heros</div>',
-                            type,
-                            '<div class="sub" style="margin-top: 0;">{name} - {level} <tpl if="paragonLevel &gt; 0"><span class="paragonLevel">({paragonLevel})</span></tpl> - {class}</div>',
-                        '</div>'
-                    ),
-                    data   : this.getHero(),
-                    docked : 'top'
+            xtype  : 'component',
+            cls    : 'hero-detail-header',
+            tpl    : ''.concat(
+                '<div class="header">',
+                    '<div class="hero-detail-back hero-back">Heros</div>',
+                        type,
+                    '<div class="sub" style="margin-top: 0;">{name} - {level} <tpl if="paragonLevel &gt; 0"><span class="paragonLevel">({paragonLevel})</span></tpl> - {class}</div>',
+                '</div>'
+            ),
+            data   : this.getHero(),
+            docked : 'top'
         };
     }
 });
