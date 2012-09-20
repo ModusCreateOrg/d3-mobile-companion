@@ -41,14 +41,14 @@ Ext.define('D3Mobile.view.HeroDetail', {
     },
 
     onTouchStart : function(evtObj) {
-        var target = evtObj.getTarget('.item');
+        var target = evtObj.getTarget('.item') || evtObj.getTarget('.skill img');
         if (target) {
             Ext.fly(target).addCls('tapped');
         }
     },
 
     onTouchEnd : function(evtObj) {
-        var target = evtObj.getTarget('.item');
+        var target = evtObj.getTarget('.item') || evtObj.getTarget('.skill img');
         if (target) {
             Ext.fly(target).removeCls('tapped');
         }

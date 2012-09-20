@@ -348,7 +348,13 @@
       float: left;
       width: 30%;
       text-align: center;
+      img {
+        &.tapped {
+          opacity: .55;
+        }
+      }
       .number { 
+        z-index: 5;
         font-size: .65em;
         color: #ad835a;
         font-weight: 600;
@@ -360,6 +366,7 @@
         padding: 0px 7px;
         left: 15px;
         top: -4px;
+        
        }
       .name { font-size: .9em; color: #f3e6d0; font-weight: 600; line-height: 1.1; }
       .rune { font-size: .8em; color: #796d55; }
@@ -373,6 +380,11 @@
       float: left;
       width: 30%;
       text-align: center;
+      img {
+        &.tapped {
+          opacity: .55;
+        }        
+      }
       .name { font-size: .9em; color: #f3e6d0; font-weight: 600; line-height: 1.1; }
     }
   }
