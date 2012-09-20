@@ -51,6 +51,7 @@
 		8878B7D1160909D400B7B0FB /* Cordova.plist.png in Resources */ = {isa = PBXBuildFile; fileRef = 8878B7C9160909D400B7B0FB /* Cordova.plist.png */; };
 		8878B7D2160909D400B7B0FB /* index.html in Resources */ = {isa = PBXBuildFile; fileRef = 8878B7CA160909D400B7B0FB /* index.html */; };
 		8878B7D3160909D400B7B0FB /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 8878B7CB160909D400B7B0FB /* README.md */; };
+		88A3BD69160A9D2000C1A49C /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 88A3BD68160A9D2000C1A49C /* Default-568h@2x.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -136,6 +137,7 @@
 		8878B7C9160909D400B7B0FB /* Cordova.plist.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Cordova.plist.png; sourceTree = "<group>"; };
 		8878B7CA160909D400B7B0FB /* index.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = index.html; sourceTree = "<group>"; };
 		8878B7CB160909D400B7B0FB /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = README.md; sourceTree = "<group>"; };
+		88A3BD68160A9D2000C1A49C /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 		8D1107310486CEB800E47090 /* D3Mobile-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "D3Mobile-Info.plist"; path = "../D3Mobile-Info.plist"; plistStructureDefinitionIdentifier = "com.apple.xcode.plist.structure-definition.iphone.info-plist"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -308,6 +310,7 @@
 		308D05311370CCF300D202BF /* splash */ = {
 			isa = PBXGroup;
 			children = (
+				88A3BD68160A9D2000C1A49C /* Default-568h@2x.png */,
 				3088BBB7154F3926009F9C59 /* Default-Landscape@2x~ipad.png */,
 				3088BBB8154F3926009F9C59 /* Default-Landscape~ipad.png */,
 				3088BBB9154F3926009F9C59 /* Default-Portrait@2x~ipad.png */,
@@ -445,6 +448,7 @@
 				8878B7D1160909D400B7B0FB /* Cordova.plist.png in Resources */,
 				8878B7D2160909D400B7B0FB /* index.html in Resources */,
 				8878B7D3160909D400B7B0FB /* README.md in Resources */,
+				88A3BD69160A9D2000C1A49C /* Default-568h@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
