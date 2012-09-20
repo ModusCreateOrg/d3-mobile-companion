@@ -13,6 +13,19 @@
   .db-directory {
     margin-top: 25px;
   }
+  .column-link-header {
+    color: #7b6d55;
+  }
+  .links {
+    margin-top: 20px;
+    a {
+      color: #F3E6D0;
+      font-size: 12px;
+      font-weight: 600;
+      margin-right: 10px;
+      text-decoration: none;      
+    }    
+  }
   .category, .category a {
     color: #F3E6D0;
     font-size: 16px;
