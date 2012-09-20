@@ -107,6 +107,9 @@ Ext.define('D3Mobile.controller.Main', {
         }
     },
     loadServerStatus : function() {
+        Ext.Viewport.setMasked({
+            xtype : 'loadmask'
+        });
         Ext.Ajax.request({
             url      : 'http://us.battle.net/d3/en/status',
             callback : this.onLoadServerStatusCallback,
@@ -114,6 +117,7 @@ Ext.define('D3Mobile.controller.Main', {
         });
     },
     onLoadServerStatusCallback : function(request, success, response) {
+        Ext.Viewport.setMasked(false);
         this.getServers().setHtml(response.responseXML.getElementsByClassName("server-status")[0]);
     },
     onLogOut : function(oldPanel) {
