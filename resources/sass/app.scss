@@ -63,6 +63,13 @@ html, body {
   font-family: $sansSerif;
 }
 
+.x-carousel-indicator {
+  background: rgba(0, 0, 0, .25);
+}
+.x-carousel-indicator-dark span.x-carousel-indicator-active {
+  background-color: #f5e9d6;
+}
+
 .x-html {
   padding: .3em 1.2em; 
 }
