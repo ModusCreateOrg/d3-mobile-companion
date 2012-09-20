@@ -34,6 +34,9 @@
     color: #7B6D55;
     padding: 7px 12px;
     overflow: hidden;
+    &.empty {
+      display: none;
+    }
   }  
   .status-icon {
     @include border-radius(5px);
@@ -51,5 +54,8 @@
     color: #7b6d55;
     line-height: 26px;
     float: left;
-  }  
+  }
+  .links {
+    margin-bottom: 20px;
+  }
 }
