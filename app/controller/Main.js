@@ -58,7 +58,6 @@ Ext.define('D3Mobile.controller.Main', {
     },
     loadUser                  : function (battleTag) {
         var me = this;
-//        battleTag = "stan229-1441";
         Ext.getStore("CurrentUser").load({
             url      : 'http://us.battle.net/api/d3/profile/' + battleTag + '/',
             callback : me.onCurrentUserLoadCallback,

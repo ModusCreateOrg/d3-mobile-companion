@@ -39,8 +39,8 @@ Ext.define('D3Mobile.controller.Friend', {
                 xtype : 'addfriendmodal'
             });
         } else if (action == "remove") {
-            var pressingCls = 'x-button-pressing',
-                baseItemCls = 'friends-list-item',
+            var pressingCls   = 'x-button-pressing',
+                baseItemCls   = 'friends-list-item',
                 itemRemoveCls = 'friends-item-remove';
             if (button.getCls()) {
                 button.removeCls(pressingCls);
