@@ -32,25 +32,31 @@ Ext.define('D3Mobile.controller.Friend', {
         }
     },
     onFriendsButtonTap             : function (button) {
-        var action  = button.config.action,
-            friends = this.getFriends();
+        var action     = button.config.action,
+            friends    = this.getFriends(),
+            hasFriends = Ext.getStore("Friends").getCount() > 0;
         if (action == "add") {
             Ext.Viewport.add({
                 xtype : 'addfriendmodal'
             });
-        } else if (action == "remove") {
-            var pressingCls   = 'x-button-pressing',
-                baseItemCls   = 'friends-list-item',
-                itemRemoveCls = 'friends-item-remove';
-            if (button.getCls()) {
-                button.removeCls(pressingCls);
-                friends.setStatus('default');
-                friends.setItemCls(baseItemCls);
-            } else {
-                button.addCls(pressingCls);
-                friends.setStatus('remove');
-                friends.setItemCls(baseItemCls + ' ' + itemRemoveCls);
-            }
+        } else if (action == "remove" && hasFriends) {
+            this.toggleFriendsRemoveButtonPressed(button);
+        }
+    },
+    toggleFriendsRemoveButtonPressed : function (button) {
+        var friends       = this.getFriends(),
+            pressingCls   = 'x-button-pressing',
+            baseItemCls   = 'friends-list-item',
+            itemRemoveCls = 'friends-item-remove';
+
+        if (button.getCls()) {
+            button.removeCls(pressingCls);
+            friends.setStatus('default');
+            friends.setItemCls(baseItemCls);
+        } else {
+            button.addCls(pressingCls);
+            friends.setStatus('remove');
+            friends.setItemCls(baseItemCls + ' ' + itemRemoveCls);
         }
     },
     onAddFriendModalButtonTap      : function (button) {
@@ -101,14 +107,20 @@ Ext.define('D3Mobile.controller.Friend', {
 
     },
     onFriendsItemTap               : function (list, index, target, record, evt) {
+        var me = this;
         if (list.getStatus() == "default") {
-            this.showFriendsHeroes(record);
+            me.showFriendsHeroes(record);
         } else if (list.getStatus() == "remove") {
-            var battleTag = localStorage.battleTag,
+            var battleTag           = localStorage.battleTag,
                 localStorageFriends = JSON.parse(localStorage.friends),
-                currentUserFriends = localStorageFriends[battleTag];
+                currentUserFriends  = localStorageFriends[battleTag],
+                friendsStore        = Ext.getStore("Friends");
+
             Ext.getStore("Friends").remove(record);
-            this.removeLocalStorageFriendRecord(record.getData());
+            me.removeLocalStorageFriendRecord(record.getData());
+            if(friendsStore.getCount() == 0) {
+                me.toggleFriendsRemoveButtonPressed(list.down('button[action="remove"]'));
+            }
         }
     },
     removeLocalStorageFriendRecord : function (record) {
