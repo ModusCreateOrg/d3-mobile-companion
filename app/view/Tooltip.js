@@ -9,7 +9,18 @@ Ext.define('D3Mobile.view.Tooltip', {
         styleHtmlContent : true,
         scrollable       : {
             direction : 'vertical'
-        }
+        },
+        showAnimation    : {
+            type     : 'popIn',
+            duration : 250,
+            easing   : 'ease-out'
+        },
+        hideAnimation    : {
+            type     : 'popOut',
+            duration : 250,
+            easing   : 'ease-out'
+        },
+        hidden           : true
     },
     initialize : function () {
         var me = this;

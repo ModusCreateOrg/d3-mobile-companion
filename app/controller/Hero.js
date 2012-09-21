@@ -132,13 +132,14 @@ Ext.define('D3Mobile.controller.Hero', {
         Ext.Viewport.add({
             xtype : 'itemtooltip',
             data  : itemInfo
-        });
+        }).show();
 
     },
     showTooltip           : function (tooltipHtml) {
         Ext.Viewport.add({
             xtype : 'tooltip',
             html  : tooltipHtml
-        });
+        }).show();
+
     }
 });
