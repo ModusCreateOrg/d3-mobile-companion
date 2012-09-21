@@ -557,7 +557,7 @@ input, textarea {
   box-align: center;
   -webkit-box-pack: center;
   box-pack: center;
-  background: rgba(0, 0, 0, 0.8) center center no-repeat;
+  background: rgba(0, 0, 0, 0.7) center center no-repeat;
 }
 /* line 100, ../../sdk/resources/themes/stylesheets/sencha-touch/default/core/_core.scss */
 .x-mask.x-mask-gray {

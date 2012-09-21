@@ -95,7 +95,7 @@ input, textarea {
   @include box-align(center);
   @include box-pack(center);
 
-  background: rgba(0,0,0,.8) center center no-repeat; // stan made mask darker
+  background: rgba(0,0,0,.7) center center no-repeat; // stan made mask darker
 
   &.x-mask-gray {
     background-color: rgba(0, 0, 0, 0.5);
