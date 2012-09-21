@@ -102,7 +102,6 @@
         NSLog(@"AppDelegate forcing status bar to: %d from: %d", newOrient, curDevOrientation);
         [[UIApplication sharedApplication] setStatusBarOrientation:newOrient];
     }
-    
     [self.window addSubview:self.viewController.view];
     [self.window makeKeyAndVisible];
     

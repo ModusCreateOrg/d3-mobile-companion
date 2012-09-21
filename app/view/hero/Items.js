@@ -6,15 +6,18 @@
  * To change this template use File | Settings | File Templates.
  */
 Ext.define('D3Mobile.view.hero.Items', {
-    extend : 'Ext.Container',
-    xtype  : 'items',
-    config : {
+    extend   : 'Ext.Container',
+    xtype    : 'items',
+    requires : ['D3Mobile.view.hero.Header'],
+    config   : {
         cls              : 'hero-detail-card',
         scrollable       : {
             direction     : 'vertical',
             directionLock : true
         },
         styleHtmlContent : true,
+        header           : {},
+        headerLabel      : 'Items',
         tpl              : ''.concat(
             '<div class="hero-items">',
                 '<div class="items-container">',
@@ -90,5 +93,23 @@ Ext.define('D3Mobile.view.hero.Items', {
                 '</div>',
             '</div>'
         )
+    },
+    initialize : function() {
+        var me = this;
+        me.add(me.getHeader());
+        me.setData(me.getData());
+        me.callParent();
+    },
+    applyHeader : function(cfg, inst) {
+        if (!inst) {
+            Ext.apply(cfg,
+                {
+                    data : Ext.apply(this.getData(), {
+                            headerLabel : this.getHeaderLabel()
+                        })
+                }
+            );
+        }
+        return Ext.factory(cfg, D3Mobile.view.hero.Header, inst);
     }
 });

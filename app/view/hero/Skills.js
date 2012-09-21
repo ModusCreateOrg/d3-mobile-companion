@@ -6,15 +6,18 @@
  * To change this template use File | Settings | File Templates.
  */
 Ext.define('D3Mobile.view.hero.Skills', {
-    extend : 'Ext.Container',
-    xtype  : 'skills',
-    config : {
+    extend   : 'Ext.Container',
+    xtype    : 'skills',
+    requires : ['D3Mobile.view.hero.Header'],
+    config   : {
         cls              : 'hero-detail-card',
         scrollable       : {
             direction     : 'vertical',
             directionLock : true
         },
         styleHtmlContent : true,
+        header           : {},
+        headerLabel      : 'Skills',
         tpl              : ''.concat(
             '<div class="hero-skills">',
                 '<div class="skills">',
@@ -45,5 +48,23 @@ Ext.define('D3Mobile.view.hero.Skills', {
                 '</div>',
             '</div>'
         )
+    },
+    initialize : function() {
+        var me = this;
+        me.add(me.getHeader());
+        me.setData(me.getData());
+        me.callParent();
+    },
+    applyHeader : function(cfg, inst) {
+        if (!inst) {
+            Ext.apply(cfg,
+                {
+                    data : Ext.apply(this.getData(), {
+                            headerLabel : this.getHeaderLabel()
+                        })
+                }
+            );
+        }
+        return Ext.factory(cfg, D3Mobile.view.hero.Header, inst);
     }
 });

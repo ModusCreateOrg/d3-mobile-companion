@@ -1,20 +1,27 @@
 Ext.define('D3Mobile.view.HeroDetail', {
-    extend              : 'Ext.Carousel',
-    xtype               : 'herodetail',
-    requires            : [
+    extend     : 'Ext.Carousel',
+    xtype      : 'herodetail',
+    requires   : [
         'D3Mobile.view.hero.Attributes',
         'D3Mobile.view.hero.Items',
         'D3Mobile.view.hero.Skills'
     ],
-    config              : {
-        hero              : null
+    config     : {
+        hero       : null,
+        attributes : {},
+        heroItems  : {},
+        skills     : {}
     },
-    initialize          : function () {
+    initialize : function () {
         var me = this;
         me.config.title = this.getHero().name;
-        me.add(me.buildAttributesCard());
-        me.add(me.buildItemsCard());
-        me.add(me.buildSkillsCard());
+        me.add(
+            [
+                me.getAttributes(),
+                me.getHeroItems(),
+                me.getSkills()
+            ]
+        );
 
         me.element.on({
             tap        : me.onTap,
@@ -27,73 +34,45 @@ Ext.define('D3Mobile.view.HeroDetail', {
     },
 
 
-    onTap : function(evtObj) {
+    onTap : function (evtObj) {
         var backButton = evtObj.getTarget('.hero-detail-back'),
             skill      = evtObj.getTarget('.skill'),
             item       = evtObj.getTarget('.item');
-        if(backButton) {
+        if (backButton) {
             this.fireEvent('close');
-        } else if(skill) {
+        } else if (skill) {
             this.fireEvent('skillTap', skill.dataset.tooltipurl, skill.dataset.runetype);
-        } else if(item) {
+        } else if (item) {
             this.fireEvent('itemTap', item.dataset.tooltipparams);
         }
     },
 
-    onTouchStart : function(evtObj) {
+    onTouchStart : function (evtObj) {
         var target = evtObj.getTarget('.item') || evtObj.getTarget('.skill img');
         if (target) {
             Ext.fly(target).addCls('tapped');
         }
     },
 
-    onTouchEnd : function(evtObj) {
+    onTouchEnd      : function (evtObj) {
         var target = evtObj.getTarget('.item') || evtObj.getTarget('.skill img');
         if (target) {
             Ext.fly(target).removeCls('tapped');
         }
     },
-
-    buildAttributesCard : function () {
-        return {
-            xtype : 'attributes',
-            data  : this.getHero(),
-            items : [
-                this.buildHeader('Attributes')
-            ]
-        };
+    applyAttributes : function (cfg, inst) {
+        return Ext.factory(this.buildCfg(cfg, inst), D3Mobile.view.hero.Attributes, inst);
     },
-    buildItemsCard      : function () {
-        return {
-            xtype : 'items',
-            data  : this.getHero(),
-            items : [
-                this.buildHeader('Items')
-            ]
-        };
+    applyHeroItems  : function (cfg, inst) {
+        return Ext.factory(this.buildCfg(cfg, inst), D3Mobile.view.hero.Items, inst);
     },
-    buildSkillsCard     : function () {
-        return {
-            xtype : 'skills',
-            data  : this.getHero(),
-            items : [
-                this.buildHeader('Skills')
-            ]
-        };
+    applySkills     : function (cfg, inst) {
+        return Ext.factory(this.buildCfg(cfg, inst), D3Mobile.view.hero.Skills, inst);
     },
-    buildHeader : function (type) {
-        return {
-            xtype  : 'component',
-            cls    : 'hero-detail-header',
-            tpl    : ''.concat(
-                '<div class="header">',
-                    '<div class="hero-detail-back hero-back">Heros</div>',
-                        type,
-                    '<div class="sub" style="margin-top: 0;">{name} - {level} <tpl if="paragonLevel &gt; 0"><span class="paragonLevel">({paragonLevel})</span></tpl> - {class}</div>',
-                '</div>'
-            ),
-            data   : this.getHero(),
-            docked : 'top'
-        };
+    buildCfg        : function (cfg, inst) {
+        if (!inst) {
+            Ext.apply(cfg, {data : this.getHero()});
+        }
+        return cfg;
     }
 });

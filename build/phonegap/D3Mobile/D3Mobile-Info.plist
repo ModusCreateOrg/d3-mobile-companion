@@ -58,11 +58,11 @@
 			<key>TintColor</key>
 			<dict>
 				<key>Blue</key>
-				<real>0.19980117561916408</real>
+				<real>0.16830519642566316</real>
 				<key>Green</key>
-				<real>0.24533626118234667</real>
+				<real>0.21061198122130753</real>
 				<key>Red</key>
-				<real>0.28394052933673475</real>
+				<real>0.3203125</real>
 			</dict>
 			<key>Translucent</key>
 			<false/>

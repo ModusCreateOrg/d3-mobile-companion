@@ -6,15 +6,18 @@
  * To change this template use File | Settings | File Templates.
  */
 Ext.define('D3Mobile.view.hero.Attributes', {
-    extend : 'Ext.Container',
-    xtype  : 'attributes',
-    config : {
+    extend   : 'Ext.Container',
+    xtype    : 'attributes',
+    requires : ['D3Mobile.view.hero.Header'],
+    config   : {
         cls              : 'hero-detail-card',
         scrollable       : {
             direction     : 'vertical',
             directionLock : true
         },
         styleHtmlContent : true,
+        header           : {},
+        headerLabel      : 'Attributes',
         tpl              : ''.concat(
             '<div class="hero-attributes">',
                 '<tpl if="statDeltas.lastUpdated">',
@@ -338,7 +341,25 @@ Ext.define('D3Mobile.view.hero.Attributes', {
                 '</div>',
             '</div>'
         )
-
+    },
+    initialize : function() {
+        var me = this;
+        me.add(me.getHeader());
+        me.setData(me.getData());
+        me.callParent();
+    },
+    applyHeader : function(cfg, inst) {
+        if (!inst) {
+            Ext.apply(cfg,
+                {
+                    data : Ext.apply(this.getData(), {
+                            headerLabel : this.getHeaderLabel()
+                        })
+                }
+            );
+        }
+        return Ext.factory(cfg, D3Mobile.view.hero.Header, inst);
     }
+
 
 });
