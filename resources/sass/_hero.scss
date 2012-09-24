@@ -393,6 +393,7 @@
       margin: 5px;
       float: left;
       width: 29%;
+      min-height: 115px;
       text-align: center;
       img {
         &.tapped {
@@ -415,7 +416,7 @@
         
        }
       .name { font-size: .9em; color: #f3e6d0; font-weight: 600; line-height: 1.1; }
-      .rune { font-size: .8em; color: #796d55; }
+      .rune { font-size: .8em; color: #796d55; line-height: 14px; }
     }
   }
   .passives {
