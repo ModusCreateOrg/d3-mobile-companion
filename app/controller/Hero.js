@@ -28,7 +28,7 @@ Ext.define('D3Mobile.controller.Hero', {
     },
     onCloseHeroTap : function(panel) {
         var parentContainer = panel.up('container');
-        parentContainer.up('container').animateActiveItem(0, {type : 'slide', direction: 'down'});
+        parentContainer.up('container').animateActiveItem(0, {type : 'slide', direction : 'down'});
         setTimeout(function() {
             parentContainer.destroy();
         }, 0);
@@ -56,7 +56,7 @@ Ext.define('D3Mobile.controller.Hero', {
             hero  : me.checkPreviousHero(record.getData())
         });
         // since these are 'cards', we flip them around to see the details
-        heroesContainer.animateActiveItem(heroDetail, { type : 'slide', direction: 'left' });
+        heroesContainer.animateActiveItem(heroDetail, { type : 'slide', direction : 'left' });
         Ext.Viewport.setMasked(false);
     },
     checkPreviousHero : function(recordData) {
@@ -87,7 +87,7 @@ Ext.define('D3Mobile.controller.Hero', {
     onCloseHeroDetailTap  : function () {
         var heroesContainer = this.getMain().getActiveItem().down('heroescontainer') || this.getHeroesContainer();
         this.getMain().getTabBar().getActiveTab().setTitle('Heroes');
-        heroesContainer.animateActiveItem(0, { type : 'flip' });
+        heroesContainer.animateActiveItem(0, { type : 'slide', direction : 'right' });
         setTimeout(function () {
             heroesContainer.remove(heroesContainer.down('herodetail'), true);
         }, 0);
