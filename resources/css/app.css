@@ -9540,42 +9540,61 @@ html, body {
 }
 
 /* line 1, ../sass/_tooltip.scss */
+.close-button {
+  -webkit-border-bottom-right-radius: 5px;
+  border-bottom-right-radius: 5px;
+  color: #E9E9E9;
+  font-weight: 700;
+  position: absolute;
+  left: -1px;
+  top: -11px;
+  font-size: 15px;
+  z-index: 10000;
+  background: #322A20;
+  padding: 10px 10px 6px 10px;
+}
+/* line 12, ../sass/_tooltip.scss */
+.close-button.pressed {
+  background: #211c15;
+}
+
+/* line 16, ../sass/_tooltip.scss */
 .skill-tooltip {
   min-height: 420px;
   width: 280px;
 }
 @media only screen and (orientation: landscape) {
-  /* line 1, ../sass/_tooltip.scss */
+  /* line 16, ../sass/_tooltip.scss */
   .skill-tooltip {
     height: 260px;
     width: 440px;
   }
 }
-/* line 8, ../sass/_tooltip.scss */
+/* line 23, ../sass/_tooltip.scss */
 .skill-tooltip.x-panel.x-floating, .skill-tooltip .x-msgbox.x-floating, .skill-tooltip .x-form.x-floating {
   background: none !important;
   padding: 0 !important;
 }
-/* line 12, ../sass/_tooltip.scss */
+/* line 27, ../sass/_tooltip.scss */
 .skill-tooltip .x-body {
   background: #010101 !important;
   border: 2px solid #322A20 !important;
 }
-/* line 16, ../sass/_tooltip.scss */
+/* line 31, ../sass/_tooltip.scss */
 .skill-tooltip .x-html {
   padding: 1.2em 1.2em;
 }
-/* line 20, ../sass/_tooltip.scss */
+/* line 35, ../sass/_tooltip.scss */
 .skill-tooltip .tooltip-head h3 {
   color: #fefefe;
   text-align: center;
   text-transform: none;
-  font-size: 1.7em;
+  font-size: 1.5em;
   border-bottom: 3px double #322A20;
   padding-bottom: 10px;
   margin-bottom: 10px;
 }
-/* line 31, ../sass/_tooltip.scss */
+/* line 46, ../sass/_tooltip.scss */
 .skill-tooltip .tooltip-extension .flavor {
   color: #A7835A;
   font-style: italic;
@@ -9583,7 +9602,7 @@ html, body {
   border-top: 1px solid #322A20;
   padding-top: 15px;
 }
-/* line 41, ../sass/_tooltip.scss */
+/* line 56, ../sass/_tooltip.scss */
 .skill-tooltip .d3-item-properties .full-socket {
   color: white;
   list-style: none;
@@ -9591,90 +9610,90 @@ html, body {
   position: relative;
   font-weight: 400;
 }
-/* line 47, ../sass/_tooltip.scss */
+/* line 62, ../sass/_tooltip.scss */
 .skill-tooltip .d3-item-properties .full-socket .socket-effect {
   top: -6px;
   position: relative;
   left: 3px;
 }
-/* line 52, ../sass/_tooltip.scss */
+/* line 67, ../sass/_tooltip.scss */
 .skill-tooltip .d3-item-properties .full-socket img {
   width: 24px;
 }
-/* line 54, ../sass/_tooltip.scss */
+/* line 69, ../sass/_tooltip.scss */
 .skill-tooltip .d3-item-properties .full-socket:first-child {
   margin-top: 15px;
 }
-/* line 57, ../sass/_tooltip.scss */
+/* line 72, ../sass/_tooltip.scss */
 .skill-tooltip .d3-item-properties .item-armor-weapon {
   color: #878b83;
 }
-/* line 59, ../sass/_tooltip.scss */
+/* line 74, ../sass/_tooltip.scss */
 .skill-tooltip .d3-item-properties .item-armor-weapon li {
   list-style: none;
 }
-/* line 61, ../sass/_tooltip.scss */
+/* line 76, ../sass/_tooltip.scss */
 .skill-tooltip .d3-item-properties .item-type {
   margin-bottom: 0;
 }
-/* line 63, ../sass/_tooltip.scss */
+/* line 78, ../sass/_tooltip.scss */
 .skill-tooltip .d3-item-properties .item-type li {
   list-style: none;
 }
-/* line 65, ../sass/_tooltip.scss */
+/* line 80, ../sass/_tooltip.scss */
 .skill-tooltip .d3-item-properties .item-extras {
   border-top: 1px solid #322A20;
   margin: 5px 0 0 0;
   padding: 5px 0 0 0;
 }
-/* line 69, ../sass/_tooltip.scss */
+/* line 84, ../sass/_tooltip.scss */
 .skill-tooltip .d3-item-properties .item-extras .value {
   color: white;
 }
-/* line 70, ../sass/_tooltip.scss */
+/* line 85, ../sass/_tooltip.scss */
 .skill-tooltip .d3-item-properties .item-extras .item-reqlevel {
   list-style: none;
   float: left;
 }
-/* line 74, ../sass/_tooltip.scss */
+/* line 89, ../sass/_tooltip.scss */
 .skill-tooltip .d3-item-properties .item-extras .item-ilvl {
   list-style: none;
   float: right;
   text-align: right;
 }
-/* line 81, ../sass/_tooltip.scss */
+/* line 96, ../sass/_tooltip.scss */
 .skill-tooltip .d3-item-properties .big {
   font-size: 3.2em;
   line-height: 1.1;
   color: white;
   list-style-type: none;
 }
-/* line 87, ../sass/_tooltip.scss */
+/* line 102, ../sass/_tooltip.scss */
 .skill-tooltip .d3-item-properties li p {
   margin: 0;
 }
-/* line 89, ../sass/_tooltip.scss */
+/* line 104, ../sass/_tooltip.scss */
 .skill-tooltip .d3-tooltip-rune {
   border-top: 2px solid #322A20;
   padding-top: 20px;
 }
-/* line 94, ../sass/_tooltip.scss */
+/* line 109, ../sass/_tooltip.scss */
 .skill-tooltip .description p {
   color: #c7b377;
 }
-/* line 95, ../sass/_tooltip.scss */
+/* line 110, ../sass/_tooltip.scss */
 .skill-tooltip .description .d3-color-green {
   font-weight: 600;
 }
-/* line 98, ../sass/_tooltip.scss */
+/* line 113, ../sass/_tooltip.scss */
 .skill-tooltip .description .special {
   color: #ad8332;
 }
-/* line 101, ../sass/_tooltip.scss */
+/* line 116, ../sass/_tooltip.scss */
 .skill-tooltip .description .subtle {
   color: #7b6d55;
 }
-/* line 103, ../sass/_tooltip.scss */
+/* line 118, ../sass/_tooltip.scss */
 .skill-tooltip .description .subtle em {
   font-style: normal;
   color: #ad835a;

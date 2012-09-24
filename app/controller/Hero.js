@@ -141,7 +141,7 @@ Ext.define('D3Mobile.controller.Hero', {
         Ext.Viewport.add({
             xtype : 'tooltip',
             html  : ''.concat(
-                '<div class="x-button">x</div>',
+                '<div class="close-button">x</div>',
                 tooltipHtml
             )
         }).show();
