@@ -75,6 +75,22 @@ html, body {
   padding: .3em 1.2em; 
 }
 
+.x-msgbox-dark {
+  background: none !important;
+  .x-toolbar {
+    background: none !important;
+    .x-innerhtml {
+      color: #f0e3cd;  
+    }
+  }
+  .x-body {
+    padding-bottom: 15px;
+    background: none !important;
+    color: #a9986d;
+    font-size: 16px;    
+  }
+}
+
 .x-title .x-innerhtml {
   white-space: nowrap;
   overflow: hidden;

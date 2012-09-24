@@ -1,11 +1,11 @@
 .login {
-  background-image: inline-image('login.jpg');
+  background-image: inline-image('login.jpg') !important;
   background-color: black !important;
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center top;
   @media only screen and (min-device-width: 640px) and (max-device-width: 1136px) and (-webkit-min-device-pixel-ratio: 2) {
-      background-image: inline-image('login-iphone5.jpg');
+      background-image: inline-image('login-iphone5.jpg') !important;
   }
   
   .loginBtn {
