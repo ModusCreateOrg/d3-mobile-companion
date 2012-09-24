@@ -10,20 +10,25 @@ Ext.define('D3Mobile.controller.Hero', {
             main            : 'main',
             heroes          : 'heroes',
             heroesContainer : 'heroescontainer',
-            heroDetail      : 'herodetail'
+            heroDetail      : 'herodetail',
+            tooltip         : 'tooltip'
         },
         control : {
-            'heroes'           : {
+            'heroes'                  : {
                 'heroOverviewTap' : 'onHeroOverviewTap',
                 'close'           : 'onCloseHeroTap'
             },
-            'herodetail'       : {
+            'herodetail'              : {
                 'skillTap' : 'onSkillTap',
                 'itemTap'  : 'onItemTap'
             },
             'herodetailheader button' : {
                 'tap' : 'onCloseHeroDetailTap'
+            },
+            'tooltip'                 : {
+                'close' : 'onTooltipCloseTap'
             }
+
         }
     },
     onCloseHeroTap : function(panel) {
@@ -147,6 +152,8 @@ Ext.define('D3Mobile.controller.Hero', {
                 tooltipHtml
             )
         }).show();
-
+    },
+    onTooltipCloseTap : function() {
+        this.getTooltip().hide();
     }
 });
