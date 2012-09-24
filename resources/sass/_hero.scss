@@ -4,8 +4,26 @@
 }
 
 .class-icon {
-  background-image: inline-url('hero-nav-portraits.jpg');
+  background-image: inline-image('hero-nav-portraits.jpg');
   background-size: 83px 165px;
+  width: 41px;
+  height: 33px;
+  display: inline-block;
+  text-indent: -9999px;
+  vertical-align: middle;
+  border-radius: 10px;  
+  &.barbarian {
+    background-position: 0 33px;
+    // female
+    &.1 { background-position: 42px 0; }
+  }
+  &.monk {}
+  &.wizard {
+    background-position: 0 42px;
+  }
+  &.witch-doctor {}
+  &.demon-hunter {}
+
 }
 
 .header {
