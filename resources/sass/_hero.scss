@@ -3,6 +3,20 @@
   color: #5789ff;
 }
 
+.back-button {
+  background-image: -webkit-linear-gradient(top, #4B4B4B, #422B1B) !important;
+  border: radius;
+  height: 20px !important;
+  border-color: #2B1503 !important;
+  padding: 4px 7px !important;  
+}
+
+.levels {
+  font-weight: 300;
+  font-size: 18px;
+  padding-left: 5px;
+}
+
 .class-icon {
   background-image: inline-image('hero-nav-portraits.jpg');
   background-size: 83px 165px;
@@ -26,7 +40,7 @@
 
   &.wizard_0 { background-position: 0 -132px; }
   &.wizard_1 { background-position: 41px -132px; }  
-  
+
 }
 
 .header {
