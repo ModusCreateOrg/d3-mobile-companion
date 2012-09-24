@@ -12,18 +12,21 @@
   text-indent: -9999px;
   vertical-align: middle;
   border-radius: 10px;  
-  &.barbarian {
-    background-position: 0 33px;
-    // female
-    &.1 { background-position: 42px 0; }
-  }
-  &.monk {}
-  &.wizard {
-    background-position: 0 42px;
-  }
-  &.witch-doctor {}
-  &.demon-hunter {}
+  &.barbarian_0 { background-position: 0px 0px; }
+  &.barbarian_1 { background-position: 41px 0; }
 
+  &.demon-hunter_0 { background-position: 0px -33px; }
+  &.demon-hunter_1 { background-position: 41px -33px; }
+
+  &.witch-doctor_0 { background-position: 0px -99px; }
+  &.witch-doctor_1 { background-position: 41px -99px; }  
+
+  &.monk_0 { background-position: 0px -66px; }
+  &.monk_1 { background-position: 41px -66px; }    
+
+  &.wizard_0 { background-position: 0 -132px; }
+  &.wizard_1 { background-position: 41px -132px; }  
+  
 }
 
 .header {
