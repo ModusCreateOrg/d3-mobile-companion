@@ -2,6 +2,7 @@ Ext.define('D3Mobile.view.HeroDetail', {
     extend     : 'Ext.Carousel',
     xtype      : 'herodetail',
     requires   : [
+        'D3Mobile.view.HeroDetailHeader',
         'D3Mobile.view.hero.Attributes',
         'D3Mobile.view.hero.Items',
         'D3Mobile.view.hero.Skills'
@@ -10,13 +11,15 @@ Ext.define('D3Mobile.view.HeroDetail', {
         hero       : null,
         attributes : {},
         heroItems  : {},
-        skills     : {}
+        skills     : {},
+        headerBar  : {}
     },
     initialize : function () {
         var me = this;
         me.config.title = this.getHero().name;
         me.add(
             [
+                me.getHeaderBar(),
                 me.getAttributes(),
                 me.getHeroItems(),
                 me.getSkills()
@@ -36,8 +39,8 @@ Ext.define('D3Mobile.view.HeroDetail', {
 
     onTap : function (evtObj) {
         var backButton = evtObj.getTarget('.hero-detail-back'),
-            skill      = evtObj.getTarget('.skill'),
-            item       = evtObj.getTarget('.item');
+            skill = evtObj.getTarget('.skill'),
+            item = evtObj.getTarget('.item');
         if (backButton) {
             this.fireEvent('close');
         } else if (skill) {
@@ -68,6 +71,9 @@ Ext.define('D3Mobile.view.HeroDetail', {
     },
     applySkills     : function (cfg, inst) {
         return Ext.factory(this.buildCfg(cfg, inst), D3Mobile.view.hero.Skills, inst);
+    },
+    applyHeaderBar  : function (cfg, inst) {
+        return Ext.factory(this.buildCfg(cfg, inst), D3Mobile.view.HeroDetailHeader, inst);
     },
     buildCfg        : function (cfg, inst) {
         if (!inst) {

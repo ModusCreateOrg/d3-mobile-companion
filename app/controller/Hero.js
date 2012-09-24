@@ -13,14 +13,16 @@ Ext.define('D3Mobile.controller.Hero', {
             heroDetail      : 'herodetail'
         },
         control : {
-            'heroes'     : {
+            'heroes'           : {
                 'heroOverviewTap' : 'onHeroOverviewTap',
                 'close'           : 'onCloseHeroTap'
             },
-            'herodetail' : {
-                'close'    : 'onCloseHeroDetailTap',
+            'herodetail'       : {
                 'skillTap' : 'onSkillTap',
                 'itemTap'  : 'onItemTap'
+            },
+            'herodetailheader button' : {
+                'tap' : 'onCloseHeroDetailTap'
             }
         }
     },

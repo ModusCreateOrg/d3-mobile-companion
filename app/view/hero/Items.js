@@ -96,7 +96,7 @@ Ext.define('D3Mobile.view.hero.Items', {
     },
     initialize : function() {
         var me = this;
-        me.add(me.getHeader());
+//        me.add(me.getHeader());
         me.setData(me.getData());
         me.callParent();
     },

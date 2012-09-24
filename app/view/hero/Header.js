@@ -13,9 +13,7 @@ Ext.define('D3Mobile.view.hero.Header', {
         docked : 'top',
         tpl    : ''.concat(
             '<div class="header">',
-                '<div class="hero-detail-back hero-back">Heros</div>',
                 '{headerLabel}',
-                '<div class="sub" style="margin-top: 0;">{name} - {level} <tpl if="paragonLevel &gt; 0"><span class="paragonLevel">({paragonLevel})</span></tpl> - {class}</div>',
             '</div>'
         )
     }
