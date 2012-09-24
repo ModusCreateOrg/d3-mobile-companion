@@ -11,10 +11,17 @@
   padding: 4px 7px !important;  
 }
 
+.hero-name {
+  position: relative;
+  top: 3px;  
+}
+
 .levels {
   font-weight: 300;
   font-size: 18px;
   padding-left: 5px;
+  position: relative;
+  top: 3px;  
 }
 
 .class-icon {
@@ -386,8 +393,9 @@
       position: relative;
       margin: 5px;
       float: left;
-      width: 30%;
+      width: 33%;
       text-align: center;
+      padding-bottom: 15px;
       img {
         &.tapped {
           opacity: .55;
@@ -418,7 +426,7 @@
     .skill {
       margin: 5px;
       float: left;
-      width: 30%;
+      width: 29%;
       text-align: center;
       img {
         &.tapped {
