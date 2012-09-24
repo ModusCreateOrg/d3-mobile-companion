@@ -56,7 +56,7 @@ Ext.define('D3Mobile.controller.Hero', {
             hero  : me.checkPreviousHero(record.getData())
         });
         // since these are 'cards', we flip them around to see the details
-        heroesContainer.animateActiveItem(heroDetail, { type : 'flip' });
+        heroesContainer.animateActiveItem(heroDetail, { type : 'slide', direction: 'left' });
         Ext.Viewport.setMasked(false);
     },
     checkPreviousHero : function(recordData) {

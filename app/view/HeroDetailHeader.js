@@ -10,7 +10,7 @@ Ext.define('D3Mobile.view.HeroDetailHeader', {
     xtype  : 'herodetailheader',
     config : {
         docked   : 'top',
-        titleTpl : '<div class="header-title">{name} - {level} <tpl if="paragonLevel &gt; 0"><span class="paragonLevel">({paragonLevel})</span></tpl> - {class}</div>',
+        titleTpl : '<div class="header-title"><span class="class-icon {class}">{class}</span> {name} - {level} <tpl if="paragonLevel &gt; 0"><span class="paragonLevel">({paragonLevel})</span></tpl></div>',
         items    : [
             {
                 ui     : 'back',
