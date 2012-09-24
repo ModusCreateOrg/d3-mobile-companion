@@ -140,7 +140,10 @@ Ext.define('D3Mobile.controller.Hero', {
     showTooltip           : function (tooltipHtml) {
         Ext.Viewport.add({
             xtype : 'tooltip',
-            html  : tooltipHtml
+            html  : ''.concat(
+                '<div class="x-button">x</div>',
+                tooltipHtml
+            )
         }).show();
 
     }
