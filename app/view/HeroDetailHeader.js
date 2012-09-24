@@ -15,8 +15,6 @@ Ext.define('D3Mobile.view.HeroDetailHeader', {
             {
                 iconCls : 'd3-back',
                 iconMask: true,
-//                cls    : 'back-button',
-                text   : 'Heroes',
                 action : 'back',
                 align  : 'left',
                 ui     : 'plain'
