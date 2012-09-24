@@ -9277,22 +9277,20 @@ html, body {
 .hero-skills .actives {
   overflow: hidden;
   border-bottom: 1px solid #252018;
-  padding-bottom: 20px;
 }
-/* line 392, ../sass/_hero.scss */
+/* line 391, ../sass/_hero.scss */
 .hero-skills .actives .skill {
   position: relative;
   margin: 5px;
   float: left;
-  width: 33%;
+  width: 29%;
   text-align: center;
-  padding-bottom: 15px;
 }
-/* line 400, ../sass/_hero.scss */
+/* line 398, ../sass/_hero.scss */
 .hero-skills .actives .skill img.tapped {
   opacity: .55;
 }
-/* line 404, ../sass/_hero.scss */
+/* line 402, ../sass/_hero.scss */
 .hero-skills .actives .skill .number {
   z-index: 5;
   font-size: .65em;
@@ -9307,35 +9305,35 @@ html, body {
   left: 15px;
   top: -4px;
 }
-/* line 419, ../sass/_hero.scss */
+/* line 417, ../sass/_hero.scss */
 .hero-skills .actives .skill .name {
   font-size: .9em;
   color: #f3e6d0;
   font-weight: 600;
   line-height: 1.1;
 }
-/* line 420, ../sass/_hero.scss */
+/* line 418, ../sass/_hero.scss */
 .hero-skills .actives .skill .rune {
   font-size: .8em;
   color: #796d55;
 }
-/* line 423, ../sass/_hero.scss */
+/* line 421, ../sass/_hero.scss */
 .hero-skills .passives {
   overflow: hidden;
   margin-top: 10px;
 }
-/* line 426, ../sass/_hero.scss */
+/* line 424, ../sass/_hero.scss */
 .hero-skills .passives .skill {
   margin: 5px;
   float: left;
   width: 29%;
   text-align: center;
 }
-/* line 432, ../sass/_hero.scss */
+/* line 430, ../sass/_hero.scss */
 .hero-skills .passives .skill img.tapped {
   opacity: .55;
 }
-/* line 436, ../sass/_hero.scss */
+/* line 434, ../sass/_hero.scss */
 .hero-skills .passives .skill .name {
   font-size: .9em;
   color: #f3e6d0;

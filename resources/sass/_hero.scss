@@ -388,14 +388,12 @@
   .actives {
     overflow: hidden;
     border-bottom: 1px solid #252018;
-    padding-bottom: 20px;
     .skill {
       position: relative;
       margin: 5px;
       float: left;
-      width: 33%;
+      width: 29%;
       text-align: center;
-      padding-bottom: 15px;
       img {
         &.tapped {
           opacity: .55;
