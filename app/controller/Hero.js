@@ -85,8 +85,10 @@ Ext.define('D3Mobile.controller.Hero', {
         Ext.Viewport.setMasked(false);
     },
     onCloseHeroDetailTap  : function () {
-        var heroesContainer = this.getMain().getActiveItem().down('heroescontainer') || this.getHeroesContainer();
-        this.getMain().getTabBar().getActiveTab().setTitle('Heroes');
+        var mainPanel       = this.getMain(),
+            activeItem      = mainPanel.getActiveItem(),
+            heroesContainer = activeItem.down('heroescontainer') || this.getHeroesContainer();
+        mainPanel.getTabBar().getActiveTab().setTitle(activeItem.getTitle());
         heroesContainer.animateActiveItem(0, { type : 'slide', direction : 'right' });
         setTimeout(function () {
             heroesContainer.remove(heroesContainer.down('herodetail'), true);
