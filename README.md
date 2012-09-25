@@ -16,6 +16,11 @@ All information is obtained from the Diablo 3 API, which is publically available
 You must have the Sencha SDK tools installed.
 `sencha app build package`
 
+## Note
+For iPhone 5, we had to modify PhoneGap to support the new splash page.
+Follow this gist's instructions:
+https://gist.github.com/dfaa2de31410a1414e5c
+
 ## Authors
 - Stan Bershadskiy ([@stan229](http://twitter.com/stan229))
 - Dave Ackerman ([@dmackerman](http://twitter.com/dmackerman))
