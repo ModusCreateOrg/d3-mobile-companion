@@ -33,6 +33,7 @@ Ext.define('D3Mobile.controller.Hero', {
     },
     onCloseHeroTap : function(panel) {
         var parentContainer = panel.up('container');
+
         parentContainer.up('container').animateActiveItem(0, {type : 'slide', direction : 'down'});
         setTimeout(function() {
             parentContainer.destroy();
@@ -40,12 +41,14 @@ Ext.define('D3Mobile.controller.Hero', {
     },
     onHeroOverviewTap     : function (battleTag, heroId) {
         var me = this;
+
         Ext.ModelMgr.getModel('D3Mobile.model.Hero').load(heroId, {
             url     : 'http://us.battle.net/api/d3/profile/' + battleTag + '/hero/' + heroId,
             success : me.onHeroLoadSuccess,
             failure : me.onHeroLoadFailure,
             scope   : me
         });
+
         Ext.Viewport.setMasked({
             xtype : 'loadmask'
         });
@@ -55,12 +58,14 @@ Ext.define('D3Mobile.controller.Hero', {
             main            = this.getMain(),
             heroesContainer = main.getActiveItem().down('heroescontainer') || me.getHeroesContainer(),
             heroDetail;
+
         main.getTabBar().getActiveTab().setTitle(record.get('name'));
+
         heroDetail = heroesContainer.add({
             xtype : 'herodetail',
             hero  : me.checkPreviousHero(record.getData())
         });
-        // since these are 'cards', we flip them around to see the details
+
         heroesContainer.animateActiveItem(heroDetail, { type : 'slide', direction : 'left' });
         Ext.Viewport.setMasked(false);
     },
@@ -79,7 +84,9 @@ Ext.define('D3Mobile.controller.Hero', {
     calculateStatDeltas   : function(newRecord, oldRecord) {
         var deltas = newRecord.statDeltas = {},
             key;
+
         newRecord.statDeltas.lastUpdated = Ext.Date.format(Ext.Date.parse(oldRecord.lastUpdated, 'U'), 'n/j/Y \\a\\t h:i A');
+
         for(key in newRecord.stats) {
             deltas[key] = newRecord.stats[key] - oldRecord.stats[key];
         }
@@ -93,7 +100,9 @@ Ext.define('D3Mobile.controller.Hero', {
         var mainPanel       = this.getMain(),
             activeItem      = mainPanel.getActiveItem(),
             heroesContainer = activeItem.down('heroescontainer') || this.getHeroesContainer();
+
         mainPanel.getTabBar().getActiveTab().setTitle(activeItem.getTitle());
+
         heroesContainer.animateActiveItem(0, { type : 'slide', direction : 'right' });
         setTimeout(function () {
             heroesContainer.remove(heroesContainer.down('herodetail'), true);

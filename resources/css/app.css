@@ -8631,7 +8631,7 @@ html, body {
 /* line 18, ../sass/_login.scss */
 .login .login-container {
   color: #fefefe;
-  margin-top: 200px;
+  margin-top: 175px;
 }
 /* line 19, ../sass/_login.scss */
 .login .login-container .battle-tag-input {
@@ -8639,12 +8639,13 @@ html, body {
 }
 /* line 23, ../sass/_login.scss */
 .login .login-container h1 {
-  color: #eee;
-  font-size: 2.1em;
+  color: #EEE;
+  font-size: 1.9em;
   font-weight: 700;
   text-align: center;
+  line-height: 30px;
 }
-/* line 31, ../sass/_login.scss */
+/* line 32, ../sass/_login.scss */
 .login .login-container input {
   -webkit-border-radius: 5px;
   border-radius: 5px;
@@ -8659,25 +8660,25 @@ html, body {
   width: 100%;
   color: #333;
 }
-/* line 43, ../sass/_login.scss */
+/* line 44, ../sass/_login.scss */
 .login .login-container input.invalid {
   border: 3px solid #aa1711;
 }
-/* line 47, ../sass/_login.scss */
+/* line 48, ../sass/_login.scss */
 .login .login-container input[name=battleTag] {
   width: 45%;
   margin-right: 10px;
 }
-/* line 51, ../sass/_login.scss */
+/* line 52, ../sass/_login.scss */
 .login .login-container input[name=battleTagNum] {
   width: 25%;
 }
-/* line 55, ../sass/_login.scss */
+/* line 56, ../sass/_login.scss */
 .login .login-container ::-webkit-input-placeholder {
   text-align: center;
   font-weight: 600;
 }
-/* line 60, ../sass/_login.scss */
+/* line 61, ../sass/_login.scss */
 .login .login-container :-moz-placeholder {
   text-align: center;
   font-weight: 600;

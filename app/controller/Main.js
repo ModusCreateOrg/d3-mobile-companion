@@ -70,8 +70,10 @@ Ext.define('D3Mobile.controller.Main', {
                 record    = records[0],
                 battleTag = record.get('battleTag').replace('#', '-'),
                 login     = me.getLogin();
+
             me.loadLocalStorage(battleTag);
             login && login.destroy();
+
             Ext.Viewport.add({
                 xtype : 'main'
             });
@@ -109,6 +111,7 @@ Ext.define('D3Mobile.controller.Main', {
         Ext.Viewport.setMasked({
             xtype : 'loadmask'
         });
+
         Ext.Ajax.request({
             url      : 'http://us.battle.net/d3/en/status',
             callback : this.onLoadServerStatusCallback,

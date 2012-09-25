@@ -33,7 +33,6 @@ Ext.define('D3Mobile.controller.Friend', {
     },
     onFriendsButtonTap             : function (button) {
         var action     = button.config.action,
-            friends    = this.getFriends(),
             hasFriends = Ext.getStore("Friends").getCount() > 0;
         if (action == "add") {
             Ext.Viewport.add({
@@ -77,7 +76,7 @@ Ext.define('D3Mobile.controller.Friend', {
         }
     },
     loadFriend                     : function (battleTag) {
-        var friend = Ext.ModelMgr.getModel("D3Mobile.model.Account").load(null, {
+        Ext.ModelMgr.getModel("D3Mobile.model.Account").load(null, {
             url     : 'http://us.battle.net/api/d3/profile/' + battleTag + '/',
             success : this.onFriendAccountLoad,
             scope   : this
@@ -113,7 +112,6 @@ Ext.define('D3Mobile.controller.Friend', {
         } else if (list.getStatus() == "remove") {
             var battleTag           = localStorage.battleTag,
                 localStorageFriends = JSON.parse(localStorage.friends),
-                currentUserFriends  = localStorageFriends[battleTag],
                 friendsStore        = Ext.getStore("Friends");
 
             Ext.getStore("Friends").remove(record);
@@ -137,15 +135,16 @@ Ext.define('D3Mobile.controller.Friend', {
                 break;
             }
         }
+
         Ext.Array.erase(currentUserFriends, removeIndex, 1);
         localStorage.friends = JSON.stringify(localStorageFriends);
-
     },
     showFriendsHeroes              : function (record) {
         var friendsContainer = this.getFriendsContainer(),
             heroesContainer  = friendsContainer.add({
                 xtype : 'heroescontainer'
             });
+
         heroesContainer.down('heroes').buildCards(record.get('battleTag').replace("#", '-'), record.get('heroes'), true);
         friendsContainer.animateActiveItem(heroesContainer, { type : 'slide', direction : 'down'});
     }
