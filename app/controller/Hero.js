@@ -3,8 +3,8 @@ Ext.define('D3Mobile.controller.Hero', {
     config                : {
         views   : [
             'HeroDetail',
-            'Tooltip',
-            'ItemTooltip'
+            'tooltip.Tooltip',
+            'tooltip.Item'
         ],
         refs    : {
             main            : 'main',

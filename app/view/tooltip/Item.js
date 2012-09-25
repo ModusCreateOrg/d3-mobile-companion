@@ -5,8 +5,8 @@
  * Time: 12:44 PM
  * To change this template use File | Settings | File Templates.
  */
-Ext.define('D3Mobile.view.ItemTooltip', {
-    extend : 'D3Mobile.view.Tooltip',
+Ext.define('D3Mobile.view.tooltip.Item', {
+    extend : 'D3Mobile.view.tooltip.Tooltip',
     xtype  : 'itemtooltip',
     config : {
         tpl : ''.concat(
