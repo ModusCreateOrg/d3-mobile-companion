@@ -1,20 +1,20 @@
 Ext.define('D3Mobile.controller.Main', {
-    extend                    : 'Ext.app.Controller',
-    config                    : {
-        models  : [
+    extend                     : 'Ext.app.Controller',
+    config                     : {
+        models        : [
             'Account',
             'Hero'
         ],
-        stores  : [
+        stores        : [
             'CurrentUser',
             'Friends',
             'Heroes'
         ],
-        views   : [
+        views         : [
             'Main',
             'Login'
         ],
-        refs    : {
+        refs          : {
             login   : 'login',
             main    : 'main',
             heroes  : 'heroes',
@@ -22,19 +22,22 @@ Ext.define('D3Mobile.controller.Main', {
             news    : 'news',
             servers : 'servers'
         },
-        control : {
+        control       : {
+            'login'        : {
+                'about' : 'onAboutTap'
+            },
             'login button' : {
                 'tap' : 'onLoginTap'
             },
-            'main' : {
+            'main'         : {
                 activeitemchange : 'onMainActiveItemChange'
             }
         },
         previousPanel : null
     },
-    launch                    : function () {
+    launch                     : function () {
         var battleTag = localStorage.battleTag;
-        if(battleTag) {
+        if (battleTag) {
             Ext.Viewport.setMasked({
                 xtype : 'loadmask'
             });
@@ -46,7 +49,7 @@ Ext.define('D3Mobile.controller.Main', {
         }
 
     },
-    onLoginTap                : function () {
+    onLoginTap                 : function () {
         var validBattleTag = this.getLogin().isValid();
 
         if (validBattleTag) {
@@ -56,7 +59,7 @@ Ext.define('D3Mobile.controller.Main', {
             this.loadUser(validBattleTag);
         }
     },
-    loadUser                  : function (battleTag) {
+    loadUser                   : function (battleTag) {
         var me = this;
         Ext.getStore("CurrentUser").load({
             url      : 'http://us.battle.net/api/d3/profile/' + battleTag + '/',
@@ -64,7 +67,7 @@ Ext.define('D3Mobile.controller.Main', {
             scope    : me
         });
     },
-    onCurrentUserLoadCallback : function (records, operation, success) {
+    onCurrentUserLoadCallback  : function (records, operation, success) {
         if (records[0].get('heroes')) {
             var me        = this,
                 record    = records[0],
@@ -83,31 +86,33 @@ Ext.define('D3Mobile.controller.Main', {
         }
         Ext.Viewport.setMasked(false);
     },
-    loadLocalStorage              : function (battleTag) {
+    loadLocalStorage           : function (battleTag) {
         localStorage.battleTag = battleTag;
 
-        var localStorageFriends = (localStorage.friends) ? JSON.parse(localStorage.friends) :  this.initLocalStorageFriends(battleTag),
-            userFriends         = localStorageFriends[battleTag];
+        var localStorageFriends = (localStorage.friends) ? JSON.parse(localStorage.friends) : this.initLocalStorageFriends(battleTag),
+            userFriends = localStorageFriends[battleTag];
 
         if (userFriends.length > 0) {
             Ext.getStore("Friends").add(userFriends);
         }
     },
-    initLocalStorageFriends : function(battleTag) {
+    initLocalStorageFriends    : function (battleTag) {
         var friends = {};
+
         friends[battleTag] = [];
         localStorage.friends = JSON.stringify(friends);
         return friends;
     },
-    onMainActiveItemChange : function(main, newPanel, oldPanel) {
+    onMainActiveItemChange     : function (main, newPanel, oldPanel) {
         var action = newPanel.config.action;
-        if(action == "logOut") {
+
+        if (action == "logOut") {
             this.onLogOut(oldPanel);
-        } else if(action == "servers") {
+        } else if (action == "servers") {
             this.loadServerStatus();
         }
     },
-    loadServerStatus : function() {
+    loadServerStatus           : function () {
         Ext.Viewport.setMasked({
             xtype : 'loadmask'
         });
@@ -118,21 +123,52 @@ Ext.define('D3Mobile.controller.Main', {
             scope    : this
         });
     },
-    onLoadServerStatusCallback : function(request, success, response) {
+    onLoadServerStatusCallback : function (request, success, response) {
         Ext.Viewport.setMasked(false);
         this.getServers().setHtml(response.responseXML.getElementsByClassName("server-status")[0]);
     },
-    onLogOut : function(oldPanel) {
+    onLogOut                   : function (oldPanel) {
         this.setPreviousPanel(oldPanel);
         Ext.Msg.confirm('Log Out', 'Are you sure you want to log out?', this.onLogOutConfirm, this);
     },
-    onLogOutConfirm : function(button, value, scope) {
-        if(button == "yes" ) {
+    onLogOutConfirm            : function (button, value, scope) {
+        if (button == "yes") {
             localStorage.clear();
             window.location.reload();
-        } else if(button == "no") {
+        } else if (button == "no") {
             this.getMain().setActiveItem(this.getPreviousPanel());
         }
+    },
+    onAboutTap                 : function() {
+        var html = ''.concat(
+            '<div id="stage">',
+                '<p id="far-far-away">Diablo 3 Mobile Companion <br/><a href="http://www.moduscreate.com">By Modus Create</a></p>',
+                '<div id="crawl">',
+                    '<p class="episode">Modus<p>',
+                    '<p class="episode">Create<p>',
+                    '<p>&nbsp</p>',
+                    '<p>&nbsp</p>',
+                    '<p>&nbsp</p>',
+                    '<p>Don\'t </p>',
+                    '<p>Forget </p>',
+                    '<p>to be</p>',
+                    '<p>AWESOME</p>',
+                    '<p>&nbsp</p>',
+                    '<p>&nbsp</p>',
+                    '<p>&nbsp</p>',
+                    '<p>All Your</p>',
+                    '<p>Base</p>',
+                    '<p>Are Belong</p>',
+                    '<p>To Us</p>',
+                '</div>',
+            '</div>'
+        );
+        Ext.Viewport.add({
+            xtype  : 'tooltip',
+            html   : html,
+            width  : Ext.Viewport.windowWidth - 10,
+            height : Ext.Viewport.windowHeight - 10
+        }).show();
     }
 
 });

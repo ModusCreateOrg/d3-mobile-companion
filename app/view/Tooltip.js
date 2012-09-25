@@ -41,21 +41,16 @@ Ext.define('D3Mobile.view.Tooltip', {
     },
     onTap        : function (evtObj) {
         var closeButton = evtObj.getTarget(".close-button");
-        if (closeButton) {
-            this.fireEvent("close");
-        }
+        closeButton && this.fireEvent('close');
     },
     onTouchStart : function (evtObj) {
         var closeButton = evtObj.getTarget(".close-button");
-        if (closeButton) {
-            Ext.fly(closeButton).addCls('pressed');
-        }
+        closeButton && Ext.fly(closeButton).addCls('pressed');
+
     },
     onTouchEnd   : function (evtObj) {
         var closeButton = evtObj.getTarget(".close-button");
-        if (closeButton) {
-            Ext.fly(closeButton).removeCls('pressed');
-        }
+        closeButton && Ext.fly(closeButton).removeCls('pressed');
     },
     onHide       : function () {
         this.destroy();

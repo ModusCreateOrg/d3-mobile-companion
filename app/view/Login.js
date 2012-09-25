@@ -28,8 +28,29 @@ Ext.define('D3Mobile.view.Login', {
                 cls   : 'loginBtn',
                 ui    : 'loginButton',
                 text  : 'Log In'
+            },
+            {
+                xtype            : 'component',
+                styleHtmlContent : true,
+                html             : ''.concat(
+                    '<div class="footer">',
+                        '<div class="about-link">Built By Modus Create</div>',
+                        '<div class="non-trademark">Not an official Blizzard product!</div>',
+                    '</div>'
+                )
             }
         ]
+    },
+    initialize : function() {
+        var me = this;
+        me.element.on({
+            tap   : me.onTap,
+            scope : me
+        });
+    },
+    onTap      : function (evtObj) {
+        var aboutLink = evtObj.getTarget('.about-link');
+        aboutLink && this.fireEvent('about');
     },
     isValid    : function () {
         var element         = this.element,
