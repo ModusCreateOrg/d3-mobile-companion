@@ -11,26 +11,11 @@ Ext.define('D3Mobile.view.tooltip.About', {
     config : {
         html : ''.concat(
             '<div class="close-button">x</div>',
-            '<div class="stage">',
-                '<p class="far-far-away">Diablo 3 Mobile Companion <br/><a href="http://www.moduscreate.com">By Modus Create</a></p>',
-                '<div class="crawl">',
-                    '<p class="episode">Modus<p>',
-                    '<p class="episode">Create<p>',
-                    '<p>&nbsp</p>',
-                    '<p>&nbsp</p>',
-                    '<p>&nbsp</p>',
-                    '<p>Don\'t </p>',
-                    '<p>Forget </p>',
-                    '<p>to be</p>',
-                    '<p>AWESOME</p>',
-                    '<p>&nbsp</p>',
-                    '<p>&nbsp</p>',
-                    '<p>&nbsp</p>',
-                    '<p>All Your</p>',
-                    '<p>Base</p>',
-                    '<p>Are Belong</p>',
-                    '<p>To Us</p>',
-                '</div>',
+            '<div class="about-text">',
+                '<div class="logo"></div>',
+                '<p>We are a highly motivated, interdisciplinary team that believe in lean development, design strategy, and user experience to develop stunning applications with emerging technology.<p>',
+                '<p>Interested in a possible project?</p>',
+                '<p><a href="http://www.moduscreate.com">Visit our website and get in touch.</a></p>',
             '</div>'
         )
     }
