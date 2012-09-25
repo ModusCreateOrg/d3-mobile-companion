@@ -32,6 +32,9 @@ Ext.define('D3Mobile.controller.Main', {
             },
             'main'         : {
                 activeitemchange : 'onMainActiveItemChange'
+            },
+            'abouttooltip' : {
+                openAboutLink : 'onOpenAboutLink'
             }
         },
         previousPanel : null
@@ -140,12 +143,15 @@ Ext.define('D3Mobile.controller.Main', {
             this.getMain().setActiveItem(this.getPreviousPanel());
         }
     },
-    onAboutTap                 : function() {
+    onAboutTap                 : function () {
         Ext.Viewport.add({
-            xtype  : 'abouttooltip',
-            width  : Ext.Viewport.windowWidth - 30,
-            padding: '20 0 0 0'
+            xtype   : 'abouttooltip',
+            width   : Ext.Viewport.windowWidth - 30,
+            padding : '20 0 0 0'
         }).show();
+    },
+    onOpenAboutLink            : function (url) {
+        window.open(url);
     }
 
 });
