@@ -65,73 +65,71 @@
   }
 }
 
-.about-text {
-  .stage {
-    height: 900px;
-    width: 300px;
-    overflow: hidden;
-    margin: 0 auto;
-    -webkit-perspective: 500;
-    -webkit-perspective-origin: center 100px;
-  }
 
-  .far-far-away {
-    color: rgb(75, 213, 238);
-    font-family: "FranklinGothicBookRegular", sans-serif;
-    font-size: 48px;
-    line-height: 1.5;
-    position: absolute;
-    top: 50px;
-    left: 0px;
-    opacity: 0;
-    -webkit-animation: fade-in-out 3s linear;
-    -webkit-animation-iteration-count: 1;
-    -webkit-animation-delay: 2s;
-  }
+.stage {
+  height: 900px;
+  width: 300px;
+  overflow: hidden;
+  margin: 0 auto;
+  -webkit-perspective: 500;
+  -webkit-perspective-origin: center 100px;
+}
 
-  @-webkit-keyframes fade-in-out {
+.far-far-away {
+  color: rgb(75, 213, 238);
+  font-family: "FranklinGothicBookRegular", sans-serif;
+  font-size: 48px;
+  line-height: 1.5;
+  position: absolute;
+  top: 50px;
+  left: 0px;
+  opacity: 0;
+  -webkit-animation: fade-in-out 3s linear;
+  -webkit-animation-iteration-count: 1;
+  -webkit-animation-delay: 2s;
+}
+
+@-webkit-keyframes fade-in-out {
 		0% { opacity:0; }
 		16%   { opacity:1; }
 		84%   { opacity:1; }
 		100%   { opacity:0; }
-  }
-  @-webkit-keyframes logo {
+	}
+@-webkit-keyframes logo {
 		0% { -webkit-transform: translateZ(0); opacity:1;}
 		50% { -webkit-transform: translateZ(-50000px); opacity:1; }
 		60% { -webkit-transform: translateZ(-60000px); opacity:0; }
 		100%   { -webkit-transform: translateZ(-100000px); opacity:0;}
-  }
-  @-webkit-keyframes crawl {
+	}
+@-webkit-keyframes crawl {
 		0% { -webkit-transform:rotateX(80deg) translateZ(200px) translateY(1100px);opacity:1;}
 		40% { -webkit-transform:rotateX(80deg) translateZ(200px) translateY(-340px);opacity:1;}
 		80% { -webkit-transform:rotateX(80deg) translateZ(200px) translateY(-1780px);opacity:0;}
 		100% { -webkit-transform:rotateX(80deg) translateZ(200px) translateY(-2500px);opacity:0;}
-  }
+	}
 
-  .crawl {
-    color: rgb(252, 223, 43);
-    font-family: "FranklinGothicDemiRegular", sans-serif;
-    text-align: center;
-    font-size: 48px;
-    opacity: 0;
-    -webkit-animation: crawl 60s linear;
-    -webkit-animation-iteration-count: 10000;
-    -webkit-animation-delay: 6s;
-    -webkit-transform-style: preserve-3d;
-  }
-
-  .crawl p.title {
-    font-family: "FranklinGothicMediumCondRegul", sans-serif;
-    text-transform: uppercase;
-    font-size: 96px;
-    -webkit-transform: scaleX(0.6);
-  }
-
-  .crawl p {
-    white-space: pre;
-  }
+.crawl {
+  color: rgb(252, 223, 43);
+  font-family: "FranklinGothicDemiRegular", sans-serif;
+  text-align: center;
+  font-size: 48px;
+  opacity: 0;
+  -webkit-animation: crawl 60s linear;
+  -webkit-animation-iteration-count: 10000;
+  -webkit-animation-delay: 6s;
+  -webkit-transform-style: preserve-3d;
 }
 
+.crawl p.title {
+  font-family: "FranklinGothicMediumCondRegul", sans-serif;
+  text-transform: uppercase;
+  font-size: 96px;
+  -webkit-transform: scaleX(0.6);
+}
+
+.crawl p {
+  white-space: pre;
+}
 
 
 

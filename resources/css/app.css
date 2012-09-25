@@ -8684,85 +8684,8 @@ html, body {
   font-weight: 600;
 }
 
-/* line 68, ../sass/_login.scss */
-.about-text {
-  @-webkit-keyframes fade-in-out {
-    /* line 93, ../sass/_login.scss */
-    0% {
-      opacity: 0;
-    }
-
-    /* line 94, ../sass/_login.scss */
-    16% {
-      opacity: 1;
-    }
-
-    /* line 95, ../sass/_login.scss */
-    84% {
-      opacity: 1;
-    }
-
-    /* line 96, ../sass/_login.scss */
-    100% {
-      opacity: 0;
-    }
-}
-
-  @-webkit-keyframes logo {
-    /* line 99, ../sass/_login.scss */
-    0% {
-      -webkit-transform: translateZ(0);
-      opacity: 1;
-    }
-
-    /* line 100, ../sass/_login.scss */
-    50% {
-      -webkit-transform: translateZ(-50000px);
-      opacity: 1;
-    }
-
-    /* line 101, ../sass/_login.scss */
-    60% {
-      -webkit-transform: translateZ(-60000px);
-      opacity: 0;
-    }
-
-    /* line 102, ../sass/_login.scss */
-    100% {
-      -webkit-transform: translateZ(-100000px);
-      opacity: 0;
-    }
-}
-
-  @-webkit-keyframes crawl {
-    /* line 105, ../sass/_login.scss */
-    0% {
-      -webkit-transform: rotateX(80deg) translateZ(200px) translateY(1100px);
-      opacity: 1;
-    }
-
-    /* line 106, ../sass/_login.scss */
-    40% {
-      -webkit-transform: rotateX(80deg) translateZ(200px) translateY(-340px);
-      opacity: 1;
-    }
-
-    /* line 107, ../sass/_login.scss */
-    80% {
-      -webkit-transform: rotateX(80deg) translateZ(200px) translateY(-1780px);
-      opacity: 0;
-    }
-
-    /* line 108, ../sass/_login.scss */
-    100% {
-      -webkit-transform: rotateX(80deg) translateZ(200px) translateY(-2500px);
-      opacity: 0;
-    }
-}
-
-}
 /* line 69, ../sass/_login.scss */
-.about-text .stage {
+.stage {
   height: 900px;
   width: 300px;
   overflow: hidden;
@@ -8770,8 +8693,9 @@ html, body {
   -webkit-perspective: 500;
   -webkit-perspective-origin: center 100px;
 }
+
 /* line 78, ../sass/_login.scss */
-.about-text .far-far-away {
+.far-far-away {
   color: #4bd5ee;
   font-family: "FranklinGothicBookRegular", sans-serif;
   font-size: 48px;
@@ -8784,8 +8708,83 @@ html, body {
   -webkit-animation-iteration-count: 1;
   -webkit-animation-delay: 2s;
 }
+
+@-webkit-keyframes fade-in-out {
+  /* line 93, ../sass/_login.scss */
+  0% {
+    opacity: 0;
+  }
+
+  /* line 94, ../sass/_login.scss */
+  16% {
+    opacity: 1;
+  }
+
+  /* line 95, ../sass/_login.scss */
+  84% {
+    opacity: 1;
+  }
+
+  /* line 96, ../sass/_login.scss */
+  100% {
+    opacity: 0;
+  }
+}
+
+@-webkit-keyframes logo {
+  /* line 99, ../sass/_login.scss */
+  0% {
+    -webkit-transform: translateZ(0);
+    opacity: 1;
+  }
+
+  /* line 100, ../sass/_login.scss */
+  50% {
+    -webkit-transform: translateZ(-50000px);
+    opacity: 1;
+  }
+
+  /* line 101, ../sass/_login.scss */
+  60% {
+    -webkit-transform: translateZ(-60000px);
+    opacity: 0;
+  }
+
+  /* line 102, ../sass/_login.scss */
+  100% {
+    -webkit-transform: translateZ(-100000px);
+    opacity: 0;
+  }
+}
+
+@-webkit-keyframes crawl {
+  /* line 105, ../sass/_login.scss */
+  0% {
+    -webkit-transform: rotateX(80deg) translateZ(200px) translateY(1100px);
+    opacity: 1;
+  }
+
+  /* line 106, ../sass/_login.scss */
+  40% {
+    -webkit-transform: rotateX(80deg) translateZ(200px) translateY(-340px);
+    opacity: 1;
+  }
+
+  /* line 107, ../sass/_login.scss */
+  80% {
+    -webkit-transform: rotateX(80deg) translateZ(200px) translateY(-1780px);
+    opacity: 0;
+  }
+
+  /* line 108, ../sass/_login.scss */
+  100% {
+    -webkit-transform: rotateX(80deg) translateZ(200px) translateY(-2500px);
+    opacity: 0;
+  }
+}
+
 /* line 111, ../sass/_login.scss */
-.about-text .crawl {
+.crawl {
   color: #fcdf2b;
   font-family: "FranklinGothicDemiRegular", sans-serif;
   text-align: center;
@@ -8796,15 +8795,17 @@ html, body {
   -webkit-animation-delay: 6s;
   -webkit-transform-style: preserve-3d;
 }
+
 /* line 123, ../sass/_login.scss */
-.about-text .crawl p.title {
+.crawl p.title {
   font-family: "FranklinGothicMediumCondRegul", sans-serif;
   text-transform: uppercase;
   font-size: 96px;
   -webkit-transform: scaleX(0.6);
 }
+
 /* line 130, ../sass/_login.scss */
-.about-text .crawl p {
+.crawl p {
   white-space: pre;
 }
 
