@@ -21,13 +21,14 @@
     }
     // @include background(linear-gradient(left bottom, rgb(18, 17, 15), rgb(28, 24, 18)));
     h1 {
-      color: #eee;
-      font-size: 2.1em;
+      color: #EEE;
+      font-size: 1.9em;
       font-weight: 700;
       text-align: center;
+      line-height: 30px;
     }
     color: #fefefe;
-    margin-top: 200px;
+    margin-top: 175px;
     input {
       @include border-radius(5px);
       font-weight: 600;
