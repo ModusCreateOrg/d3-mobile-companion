@@ -1,3 +1,5 @@
+![Alt text](http://cdn2.gamefront.com/wp-content/uploads/2011/10/diablo3z.jpg?cda6c1)
+
 # D3 Mobile Companion
 This a Diablo 3 companion app which allows users to:
 - See their characters attributes, items, and skills.
