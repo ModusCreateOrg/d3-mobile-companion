@@ -34,7 +34,7 @@ Ext.define('D3Mobile.view.Login', {
                 styleHtmlContent : true,
                 html             : ''.concat(
                     '<div class="footer">',
-                        '<div class="about-link">Built By Modus Create</div>',
+                        '<div class="about-link">Built by Modus Create</div>',
                         '<div class="non-trademark">Not an official Blizzard product!</div>',
                     '</div>'
                 )

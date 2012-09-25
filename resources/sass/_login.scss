@@ -1,11 +1,23 @@
 .login {
   background-image: inline-image('login.jpg') !important;
   background-color: black !important;
-  background-size: contain;
+  background-size: 320px 480px;
   background-repeat: no-repeat;
-  background-position: center top;
   @media (device-height: 568px) and (-webkit-min-device-pixel-ratio: 2) {
       background-image: inline-image('login-iphone5.jpg') !important;
+  }
+
+  .footer {
+    text-align: center;
+    margin-top: 25px;    
+    .about-link {
+      font-weight: 600;
+      color: #ddebee;
+    }
+    .non-trademark {
+      color: #565D61;
+      font-style: italic;
+    }
   }
   
   .loginBtn {
