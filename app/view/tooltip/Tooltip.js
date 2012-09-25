@@ -1,4 +1,4 @@
-Ext.define('D3Mobile.view.Tooltip', {
+Ext.define('D3Mobile.view.tooltip.Tooltip', {
     extend       : 'Ext.Panel',
     xtype        : 'tooltip',
     config       : {

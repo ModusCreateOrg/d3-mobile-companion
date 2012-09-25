@@ -12,7 +12,8 @@ Ext.define('D3Mobile.controller.Main', {
         ],
         views         : [
             'Main',
-            'Login'
+            'Login',
+            'tooltip.About'
         ],
         refs          : {
             login   : 'login',
@@ -140,33 +141,8 @@ Ext.define('D3Mobile.controller.Main', {
         }
     },
     onAboutTap                 : function() {
-        var html = ''.concat(
-            '<div class="close-button">x</div>',
-            '<div class="stage">',
-                '<p class="far-far-away">Diablo 3 Mobile Companion <br/><a href="http://www.moduscreate.com">By Modus Create</a></p>',
-                '<div class="crawl">',
-                    '<p class="episode">Modus<p>',
-                    '<p class="episode">Create<p>',
-                    '<p>&nbsp</p>',
-                    '<p>&nbsp</p>',
-                    '<p>&nbsp</p>',
-                    '<p>Don\'t </p>',
-                    '<p>Forget </p>',
-                    '<p>to be</p>',
-                    '<p>AWESOME</p>',
-                    '<p>&nbsp</p>',
-                    '<p>&nbsp</p>',
-                    '<p>&nbsp</p>',
-                    '<p>All Your</p>',
-                    '<p>Base</p>',
-                    '<p>Are Belong</p>',
-                    '<p>To Us</p>',
-                '</div>',
-            '</div>'
-        );
         Ext.Viewport.add({
-            xtype  : 'tooltip',
-            html   : html,
+            xtype  : 'abouttooltip',
             width  : Ext.Viewport.windowWidth - 10,
             height : Ext.Viewport.windowHeight - 10
         }).show();
