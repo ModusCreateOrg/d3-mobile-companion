@@ -3,7 +3,7 @@
 <sub>*Source: gamefront.com*</sub>
 
 # D3 Mobile Companion
-This a Diablo 3 companion app which allows users to:
+This is a Diablo 3 companion app which allows users to:
 - See their characters attributes, items, and skills.
 - Check deltas on attribute changes from last login.
 - Add friends by BattleTag and view their characters.
@@ -27,7 +27,7 @@ Change directories to the project root directory and run:
 * Release an Android version. This should be trivial thanks to PhoneGap.
 * Implement some sort of manual Auction House stat comparison? Currently there is no Auction House API, so what we can do here is limited.
 * Hopefully add retina ready assets for iPhone 4+. Blizzard doesn't provide these for us, so this may never come.
-* Implement feedback from uers! I'm sure we've overlooked things while trying to make this as simple as possible.
+* Implement feedback from users! I'm sure we've overlooked things while trying to make this as simple as possible.
 
 ## Note
 For iPhone 5, we had to modify PhoneGap to support the new splash page.
