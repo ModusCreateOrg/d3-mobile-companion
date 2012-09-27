@@ -68,6 +68,202 @@
   background-position: -210px 0;
 }
 
+/* items */
+/* line 24, ../sass/_blizzardStyles.scss */
+.d3-icon-item {
+  border: 1px solid black;
+  background: no-repeat 50% 100%;
+  border-radius: 4px;
+  float: left;
+  margin-right: 15px;
+}
+
+/* line 25, ../sass/_blizzardStyles.scss */
+.d3-icon-item .icon-item-gradient {
+  display: block;
+  border-radius: 4px;
+  background-image: url("../images/item/icon-bgs/gradient.png");
+  /* fallback */
+  background-image: -webkit-linear-gradient(top, rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0));
+  background-image: -moz-linear-gradient(top, rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0));
+  background-image: -ms-linear-gradient(top, rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0));
+  background-image: -o-linear-gradient(top, rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0));
+  background-image: linear-gradient(top, rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0));
+}
+
+/* line 33, ../sass/_blizzardStyles.scss */
+.d3-icon-item .icon-item-inner {
+  display: block;
+  padding: 1px;
+  background: no-repeat center center;
+  font-size: 1px;
+  line-height: normal;
+  text-align: center;
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+/* line 36, ../sass/_blizzardStyles.scss */
+a:hover .d3-icon-item .icon-item-inner,
+.hover .d3-icon-item .icon-item-inner,
+.icon-active .d3-icon-item .icon-item-inner {
+  background-color: rgba(255, 255, 255, 0.05);
+}
+
+/* brighter */
+/* line 38, ../sass/_blizzardStyles.scss */
+.d3-icon-item-large .icon-item-default {
+  width: 64px;
+  height: 128px;
+}
+
+/* line 39, ../sass/_blizzardStyles.scss */
+.d3-icon-item-large .icon-item-square {
+  width: 64px;
+  height: 64px;
+}
+
+/* line 40, ../sass/_blizzardStyles.scss */
+.d3-icon-item-large .icon-item-big {
+  width: 82px;
+  height: 164px;
+}
+
+/* line 42, ../sass/_blizzardStyles.scss */
+.d3-icon-item-small .icon-item-default {
+  width: 32px;
+  height: 64px;
+}
+
+/* line 43, ../sass/_blizzardStyles.scss */
+.d3-icon-item-small .icon-item-square {
+  width: 32px;
+  height: 32px;
+}
+
+/* line 44, ../sass/_blizzardStyles.scss */
+.d3-icon-item-small .icon-item-big {
+  width: 41px;
+  height: 82px;
+}
+
+/* line 51, ../sass/_blizzardStyles.scss */
+.d3-icon-item-small,
+.d3-icon-item-small .icon-item-gradient,
+.d3-icon-item-small .icon-item-inner,
+.d3-icon-item-32,
+.d3-icon-item-32 .icon-item-gradient,
+.d3-icon-item-32 .icon-item-inner {
+  border-radius: 2px;
+}
+
+/* scale border radius accordingly */
+/* line 55, ../sass/_blizzardStyles.scss */
+.d3-icon-item-32 .icon-item-default,
+.d3-icon-item-32 .icon-item-square,
+.d3-icon-item-32 .icon-item-big {
+  width: 32px;
+  height: 32px;
+}
+
+/* line 59, ../sass/_blizzardStyles.scss */
+.d3-icon-item-64 .icon-item-default,
+.d3-icon-item-64 .icon-item-square,
+.d3-icon-item-64 .icon-item-big {
+  width: 64px;
+  height: 64px;
+}
+
+/* gray */
+/* line 62, ../sass/_blizzardStyles.scss */
+.d3-icon-item-gray {
+  border-color: #513f2e;
+  background-image: url("http://us.battle.net/d3/static/images/item/icon-bgs/brown.png");
+  background-color: #2a2017;
+}
+
+/* line 65, ../sass/_blizzardStyles.scss */
+a:hover .d3-icon-item-gray,
+.hover .d3-icon-item-gray,
+.icon-active .d3-icon-item-gray {
+  border-color: #7a5f45;
+}
+
+/* white */
+/* line 68, ../sass/_blizzardStyles.scss */
+.d3-icon-item-white {
+  border-color: #513f2e;
+  background-image: url("http://us.battle.net/d3/static/images/item/icon-bgs/brown.png");
+  background-color: #2a2017;
+}
+
+/* line 71, ../sass/_blizzardStyles.scss */
+a:hover .d3-icon-item-white,
+.hover .d3-icon-item-white,
+.icon-active .d3-icon-item-white {
+  border-color: #7a5f45;
+}
+
+/* blue */
+/* line 74, ../sass/_blizzardStyles.scss */
+.d3-icon-item-blue {
+  border-color: #6091a6;
+  background-image: url("http://us.battle.net/d3/static/images/item/icon-bgs/blue.png");
+  background-color: #232227;
+}
+
+/* line 77, ../sass/_blizzardStyles.scss */
+a:hover .d3-icon-item-blue,
+.hover .d3-icon-item-blue,
+.icon-active .d3-icon-item-blue {
+  border-color: #90c8d3;
+}
+
+/* yellow */
+/* line 80, ../sass/_blizzardStyles.scss */
+.d3-icon-item-yellow {
+  border-color: #9b8e3c;
+  background-image: url("http://us.battle.net/d3/static/images/item/icon-bgs/yellow.png");
+  background-color: #322914;
+}
+
+/* line 83, ../sass/_blizzardStyles.scss */
+a:hover .d3-icon-item-yellow,
+.hover .d3-icon-item-yellow,
+.icon-active .d3-icon-item-yellow {
+  border-color: #cdc75a;
+}
+
+/* orange */
+/* line 86, ../sass/_blizzardStyles.scss */
+.d3-icon-item-orange {
+  border-color: #b07b38;
+  background-image: url("http://us.battle.net/d3/static/images/item/icon-bgs/orange.png");
+  background-color: #332314;
+}
+
+/* line 89, ../sass/_blizzardStyles.scss */
+a:hover .d3-icon-item-orange,
+.hover .d3-icon-item-orange,
+.icon-active .d3-icon-item-orange {
+  border-color: #d8b954;
+}
+
+/* green */
+/* line 92, ../sass/_blizzardStyles.scss */
+.d3-icon-item-green {
+  border-color: #748e3d;
+  background-image: url("http://us.battle.net/d3/static/images/item/icon-bgs/green.png");
+  background-color: #262f14;
+}
+
+/* line 95, ../sass/_blizzardStyles.scss */
+a:hover .d3-icon-item-green,
+.hover .d3-icon-item-green,
+.icon-active .d3-icon-item-green {
+  border-color: #aec75c;
+}
+
 /* line 3, ../../sdk/resources/themes/stylesheets/sencha-touch/default/core/_reset.scss */
 body, div, dl, dt, dd, ul, ol, li, h1, h2, h3,
 h4, h5, h6, pre, code, form, fieldset, legend,
@@ -9870,7 +10066,16 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
   padding-top: 15px;
   font-size: 16px;
 }
-/* line 67, ../sass/_tooltip.scss */
+/* line 66, ../sass/_tooltip.scss */
+.skill-tooltip .d3-item-properties .item-effects {
+  clear: both;
+  margin-top: 50px;
+}
+/* line 69, ../sass/_tooltip.scss */
+.skill-tooltip .d3-item-properties .item-effects li {
+  font-size: 13px;
+}
+/* line 71, ../sass/_tooltip.scss */
 .skill-tooltip .d3-item-properties .full-socket {
   color: white;
   list-style: none;
@@ -9878,93 +10083,93 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
   position: relative;
   font-weight: 400;
 }
-/* line 73, ../sass/_tooltip.scss */
+/* line 77, ../sass/_tooltip.scss */
 .skill-tooltip .d3-item-properties .full-socket .socket-effect {
   top: -6px;
   position: relative;
   left: 3px;
 }
-/* line 78, ../sass/_tooltip.scss */
+/* line 82, ../sass/_tooltip.scss */
 .skill-tooltip .d3-item-properties .full-socket img {
   width: 24px;
 }
-/* line 80, ../sass/_tooltip.scss */
+/* line 84, ../sass/_tooltip.scss */
 .skill-tooltip .d3-item-properties .full-socket:first-child {
   margin-top: 15px;
 }
-/* line 83, ../sass/_tooltip.scss */
+/* line 87, ../sass/_tooltip.scss */
 .skill-tooltip .d3-item-properties .item-armor-weapon {
   color: #878b83;
 }
-/* line 85, ../sass/_tooltip.scss */
+/* line 89, ../sass/_tooltip.scss */
 .skill-tooltip .d3-item-properties .item-armor-weapon li {
   list-style: none;
 }
-/* line 87, ../sass/_tooltip.scss */
+/* line 91, ../sass/_tooltip.scss */
 .skill-tooltip .d3-item-properties .item-type {
   margin-bottom: 0;
 }
-/* line 89, ../sass/_tooltip.scss */
+/* line 93, ../sass/_tooltip.scss */
 .skill-tooltip .d3-item-properties .item-type li {
   list-style: none;
 }
-/* line 91, ../sass/_tooltip.scss */
+/* line 95, ../sass/_tooltip.scss */
 .skill-tooltip .d3-item-properties .item-extras {
   border-top: 1px solid #322A20;
   margin: 5px 0 0 0;
   padding: 5px 0 0 0;
 }
-/* line 95, ../sass/_tooltip.scss */
+/* line 99, ../sass/_tooltip.scss */
 .skill-tooltip .d3-item-properties .item-extras .value {
   color: white;
 }
-/* line 96, ../sass/_tooltip.scss */
+/* line 100, ../sass/_tooltip.scss */
 .skill-tooltip .d3-item-properties .item-extras .item-reqlevel {
   list-style: none;
   float: left;
 }
-/* line 100, ../sass/_tooltip.scss */
+/* line 104, ../sass/_tooltip.scss */
 .skill-tooltip .d3-item-properties .item-extras .item-ilvl {
   list-style: none;
   float: right;
   text-align: right;
 }
-/* line 107, ../sass/_tooltip.scss */
+/* line 111, ../sass/_tooltip.scss */
 .skill-tooltip .d3-item-properties .big {
   font-size: 3.2em;
   line-height: 1.1;
   color: white;
   list-style-type: none;
 }
-/* line 113, ../sass/_tooltip.scss */
+/* line 117, ../sass/_tooltip.scss */
 .skill-tooltip .d3-item-properties li p {
   margin: 0;
 }
-/* line 115, ../sass/_tooltip.scss */
+/* line 119, ../sass/_tooltip.scss */
 .skill-tooltip .d3-tooltip-rune {
   padding-top: 20px;
 }
-/* line 119, ../sass/_tooltip.scss */
+/* line 123, ../sass/_tooltip.scss */
 .skill-tooltip .description p {
   color: #c7b377;
 }
-/* line 120, ../sass/_tooltip.scss */
+/* line 124, ../sass/_tooltip.scss */
 .skill-tooltip .description .special {
   display: none;
 }
-/* line 121, ../sass/_tooltip.scss */
+/* line 125, ../sass/_tooltip.scss */
 .skill-tooltip .description .d3-color-green {
   font-weight: 600;
 }
-/* line 124, ../sass/_tooltip.scss */
+/* line 128, ../sass/_tooltip.scss */
 .skill-tooltip .description .special {
   color: #ad8332;
 }
-/* line 127, ../sass/_tooltip.scss */
+/* line 131, ../sass/_tooltip.scss */
 .skill-tooltip .description .subtle {
   color: #7b6d55;
 }
-/* line 129, ../sass/_tooltip.scss */
+/* line 133, ../sass/_tooltip.scss */
 .skill-tooltip .description .subtle em {
   font-style: normal;
   color: #ad835a;

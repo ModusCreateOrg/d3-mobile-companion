@@ -19,3 +19,77 @@
 .d3-icon-rune-medium .rune-d { background-position: -126px 0; }
 .d3-icon-rune-medium .rune-e { background-position: -168px 0; }
 .d3-icon-rune-medium .rune-none { background-position: -210px 0; }
+
+  /* items */
+  .d3-icon-item { border: 1px solid black; background: no-repeat 50% 100%; border-radius: 4px; float: left; margin-right: 15px; }
+  .d3-icon-item .icon-item-gradient { display: block; border-radius: 4px;
+    background-image: url("../images/item/icon-bgs/gradient.png"); /* fallback */
+    background-image: -webkit-linear-gradient(top, rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0));
+    background-image:    -moz-linear-gradient(top, rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0));
+    background-image:     -ms-linear-gradient(top, rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0));
+    background-image:      -o-linear-gradient(top, rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0));
+    background-image:         linear-gradient(top, rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0));
+  }
+  .d3-icon-item .icon-item-inner { display: block; padding: 1px; background: no-repeat center center; font-size: 1px; line-height: normal; text-align: center; border-radius: 4px; overflow: hidden; }
+  a:hover .d3-icon-item .icon-item-inner,
+  .hover .d3-icon-item .icon-item-inner,
+  .icon-active .d3-icon-item .icon-item-inner { background-color: rgba(255, 255, 255, 0.05); } /* brighter */
+
+  .d3-icon-item-large .icon-item-default { width: 64px; height: 128px; }
+  .d3-icon-item-large .icon-item-square  { width: 64px; height: 64px; }
+  .d3-icon-item-large .icon-item-big     { width: 82px; height: 164px; }
+
+  .d3-icon-item-small .icon-item-default { width: 32px; height: 64px; }
+  .d3-icon-item-small .icon-item-square  { width: 32px; height: 32px; }
+  .d3-icon-item-small .icon-item-big     { width: 41px; height: 82px; }
+
+  .d3-icon-item-small,
+  .d3-icon-item-small .icon-item-gradient,
+  .d3-icon-item-small .icon-item-inner,
+  .d3-icon-item-32,
+  .d3-icon-item-32 .icon-item-gradient,
+  .d3-icon-item-32 .icon-item-inner { border-radius: 2px; } /* scale border radius accordingly */
+
+  .d3-icon-item-32 .icon-item-default,
+  .d3-icon-item-32 .icon-item-square,
+  .d3-icon-item-32 .icon-item-big { width: 32px; height: 32px; }
+
+  .d3-icon-item-64 .icon-item-default,
+  .d3-icon-item-64 .icon-item-square,
+  .d3-icon-item-64 .icon-item-big { width: 64px; height: 64px; }
+
+    /* gray */
+    .d3-icon-item-gray { border-color: #513f2e; background-image: url("http://us.battle.net/d3/static/images/item/icon-bgs/brown.png"); background-color: #2a2017; }
+    a:hover .d3-icon-item-gray,
+    .hover .d3-icon-item-gray,
+    .icon-active .d3-icon-item-gray { border-color: #7a5f45; }
+
+    /* white */
+    .d3-icon-item-white { border-color: #513f2e; background-image: url("http://us.battle.net/d3/static/images/item/icon-bgs/brown.png"); background-color: #2a2017; }
+    a:hover .d3-icon-item-white,
+    .hover .d3-icon-item-white,
+    .icon-active .d3-icon-item-white { border-color: #7a5f45; }
+
+    /* blue */
+    .d3-icon-item-blue { border-color: #6091a6; background-image: url("http://us.battle.net/d3/static/images/item/icon-bgs/blue.png"); background-color: #232227; }
+    a:hover .d3-icon-item-blue,
+    .hover .d3-icon-item-blue,
+    .icon-active .d3-icon-item-blue { border-color: #90c8d3; }
+
+    /* yellow */
+    .d3-icon-item-yellow { border-color: #9b8e3c; background-image: url("http://us.battle.net/d3/static/images/item/icon-bgs/yellow.png"); background-color: #322914; }
+    a:hover .d3-icon-item-yellow,
+    .hover .d3-icon-item-yellow,
+    .icon-active .d3-icon-item-yellow { border-color: #cdc75a; }
+
+    /* orange */
+    .d3-icon-item-orange { border-color: #b07b38; background-image: url("http://us.battle.net/d3/static/images/item/icon-bgs/orange.png"); background-color: #332314; }
+    a:hover .d3-icon-item-orange,
+    .hover .d3-icon-item-orange,
+    .icon-active .d3-icon-item-orange { border-color: #d8b954; }
+
+    /* green */
+    .d3-icon-item-green { border-color: #748e3d; background-image: url("http://us.battle.net/d3/static/images/item/icon-bgs/green.png"); background-color: #262f14; }
+    a:hover .d3-icon-item-green,
+    .hover .d3-icon-item-green,
+    .icon-active .d3-icon-item-green { border-color: #aec75c; }

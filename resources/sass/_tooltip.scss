@@ -63,7 +63,11 @@
   }
 
   .d3-item-properties {
-
+    .item-effects {
+      clear: both;
+      margin-top: 50px;
+      li { font-size: 13px; }      
+    }
     .full-socket {
       color: white;
       list-style: none;
