@@ -201,11 +201,12 @@
 .hero-items {
   text-align: center;
   .items-container {
-    // background-image: inline-image('items-skeleton.png');
+    background-image: inline-image('items-skeleton.png');
     margin: 0px auto;
     width: 286px;
     height: 438px;
     position: relative;
+
     .item {
       @include border-radius(5px);
       position: absolute;
@@ -260,7 +261,7 @@
         left: 108px;
         width: 66px;
         height: 66px;
-        img {
+        .icon {
           top: -31px;
         }
       }      
@@ -269,7 +270,7 @@
         left: 26px;
         width: 66px;
         height: 88px;
-        img {
+        .icon {
           top: -20px;
         }
       }
@@ -278,7 +279,7 @@
         left: 192px;
         width: 55px;
         height: 56px;
-        img {
+        .icon {
           width: 52px;
           height: 52px;
           top: 1px;          
@@ -289,7 +290,7 @@
         left: 100px;
         width: 82px;
         height: 115px;
-        img {
+        .icon {
           top: -25px;          
         }
       }      
@@ -298,7 +299,7 @@
         left: 0px;
         width: 66px;
         height: 88px;
-        img {
+        .icon {
           top: -20px;
         }
       }
@@ -307,7 +308,7 @@
         left: 216px;
         width: 66px;
         height: 88px;
-        img {
+        .icon {
           top: -20px;
         }
       }      
@@ -316,7 +317,7 @@
         left: 12px;
         width: 42px;
         height: 42px;
-        img {
+        .icon {
           top: -12px;
           left: -12px;          
         }
@@ -326,7 +327,7 @@
         left: 100px;
         width: 82px;
         height: 34px;
-        img {
+        .icon {
           top: -15px;
         }
       }  
@@ -335,7 +336,7 @@
         left: 228px;
         width: 42px;
         height: 42px;
-        img {
+        .icon {
           top: -12px;
           left: -12px;          
         }
@@ -345,7 +346,7 @@
         left: 108px;
         width: 66px;
         height: 88px;
-        img {
+        .icon {
           top: -20px;
         }
       }  
@@ -354,7 +355,7 @@
         left: 108px;
         width: 66px;
         height: 89px;
-        img {
+        .icon {
           top: -20px;
         }        
       }     
@@ -373,6 +374,39 @@
           opacity: .5;
         }
       }
+
+      .sockets-wrapper {
+        width: 100%;
+        height: 100%;
+        display: block;
+        position: absolute;
+        top: 0;
+        left: 0;
+        opacity: 0.8;        
+        .sockets-align {
+          display: table-cell;
+          vertical-align: middle;
+          width: 66px;
+          height: 66px;
+          .socket {
+            display: inline-block;
+            vertical-align: middle;
+            width: 32px;
+            height: 32px;
+            background-image: inline-image('socket.png');
+            background-repeat: no-repeat;
+            text-align: center;
+            position: relative;
+            left: 1px;            
+            .gem {
+              margin: 6px auto 0;
+              width: 20px;
+              height: 20px;              
+            }
+          }
+        }
+      }
+
     }
 
   }
