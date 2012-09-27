@@ -20,7 +20,14 @@ Ext.define('D3Mobile.view.tooltip.Tooltip', {
             duration : 250,
             easing   : 'ease-out'
         },
-        hidden           : true
+        hidden           : true,
+        items            : [
+            {
+                xtype  : 'component',
+                docked : 'top',
+                html   : '<div class="close-button">x</div>'
+            }
+        ]
     },
     initialize   : function () {
         var me = this;

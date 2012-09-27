@@ -10,7 +10,6 @@ Ext.define('D3Mobile.view.tooltip.Item', {
     xtype  : 'itemtooltip',
     config : {
         tpl : ''.concat(
-            '<div class="close-button">x</div>',
             '<div class="tooltip-content">',
                 '<div class="d3-tooltip d3-tooltip-item">',
                     '<div class="tooltip-head tooltip-head-{displayColor}">',

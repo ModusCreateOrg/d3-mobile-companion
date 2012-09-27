@@ -203,10 +203,7 @@ Ext.define('D3Mobile.controller.Hero', {
     showTooltip           : function (tooltipHtml) {
         Ext.Viewport.add({
             xtype : 'tooltip',
-            html  : ''.concat(
-                '<div class="close-button">x</div>',
-                tooltipHtml
-            )
+            html  : tooltipHtml
         }).show();
     },
     onTooltipCloseTap : function() {

@@ -10,7 +10,6 @@ Ext.define('D3Mobile.view.tooltip.About', {
     xtype  : 'abouttooltip',
     config : {
         html : ''.concat(
-            '<div class="close-button">x</div>',
             '<div class="about-text">',
                 '<div class="logo"></div>',
                 '<p>We are a highly motivated, interdisciplinary team that believe in lean development, design strategy, and user experience to develop stunning applications with emerging technology.<p>',
