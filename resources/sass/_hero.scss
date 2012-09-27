@@ -458,6 +458,22 @@
       }
       .name { font-size: .9em; color: #f3e6d0; font-weight: 600; line-height: 1.1; }
       .rune { font-size: .8em; color: #796d55; line-height: 14px; }
+      .rune-icon {
+        background-image: inline-image('rune-icons.png');
+        background-repeat: no-repeat;
+        width: 42px; 
+        height: 42px;
+        display: inline-block;
+        position: absolute;
+        left: 51px;
+        top: 26px;
+          &.a { background-position: 0 0; }
+          &.b { background-position: -42px 0; }
+          &.c { background-position: -84px 0; }
+          &.d { background-position: -126px 0; }
+          &.e { background-position: -168px 0; }
+          &.none { background-position: -210px 0; }
+      }
     }
   }
   .passives {
