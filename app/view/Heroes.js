@@ -4,7 +4,7 @@ Ext.define('D3Mobile.view.Heroes', {
     config     : {
         title           : 'Heroes',
         cardTpl         : ''.concat(
-            '<div class="hero-overview hero-overview-{class}_{gender}" data-id="{id}" data-battletag="{battleTag}">',
+            '<div class="hero-overview hero-overview-{class}_{gender} animated fadeIn" data-id="{id}" data-battletag="{battleTag}">',
                 '<div class="hero-header">',
                     '<tpl if="showCloseButton">',
                         '<div class="hero-back hero-overview-back"></div>',

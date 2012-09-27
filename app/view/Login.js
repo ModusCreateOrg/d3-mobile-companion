@@ -11,7 +11,7 @@ Ext.define('D3Mobile.view.Login', {
                 xtype            : 'component',
                 styleHtmlContent : true,
                 html             : ''.concat(
-                    '<div class="login-container">',
+                    '<div class="login-container animated fadeIn">',
                         '<h1>Diablo 3 <br />Mobile Companion</h1>',
                         '<div class="d3-logo"></div>',
                         '<div class="battle-tag-input">',
@@ -25,7 +25,7 @@ Ext.define('D3Mobile.view.Login', {
             },
             {
                 xtype : 'button',
-                cls   : 'loginBtn',
+                cls   : 'loginBtn animated fadeIn',
                 ui    : 'loginButton',
                 text  : 'Log In'
             },
@@ -33,7 +33,7 @@ Ext.define('D3Mobile.view.Login', {
                 xtype            : 'component',
                 styleHtmlContent : true,
                 html             : ''.concat(
-                    '<div class="footer">',
+                    '<div class="footer animated fadeIn">',
                         '<div class="about-link">Built by Modus Create</div>',
                         '<div class="non-trademark">Not an official Blizzard product!</div>',
                     '</div>'
