@@ -543,7 +543,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
-				CODE_SIGN_IDENTITY = "iPhone Distribution: Modus Create, Inc.";
+				CODE_SIGN_IDENTITY = "iPhone Developer: Stanislav Bershadskiy (5QVA9R78S4)";
 				COPY_PHASE_STRIP = NO;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_OPTIMIZATION_LEVEL = 0;
@@ -553,7 +553,7 @@
 				INFOPLIST_FILE = "D3Mobile/D3Mobile-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
 				PRODUCT_NAME = D3Mobile;
-				PROVISIONING_PROFILE = "12E96855-F541-42D0-A6C0-4045060D8C5D";
+				PROVISIONING_PROFILE = "C4EA09BC-3346-4AFE-8183-785789ADE6E4";
 				TARGETED_DEVICE_FAMILY = 1;
 				VALID_ARCHS = armv7;
 			};

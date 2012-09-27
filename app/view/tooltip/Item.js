@@ -54,7 +54,7 @@ Ext.define('D3Mobile.view.tooltip.Item', {
                                     '<img class="gem" src="http://us.media.blizzard.com/d3/icons/items/small/{item.icon}.png" />',
                                     '<span class="socket-effect">{attributes[0]}</span>',
                                 '</li>',
-                            '</tpl>',
+                                '</tpl>',
                             '</ul>',
                             '<ul class="item-extras">',
                                 '<li class="item-reqlevel"><span class="d3-color-gold">Required Level: </span><span class="value">{requiredLevel}</span></li>',

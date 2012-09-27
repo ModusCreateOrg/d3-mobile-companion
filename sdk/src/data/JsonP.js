@@ -151,7 +151,8 @@ Ext.define('Ext.data.JsonP', {
             failure: options.failure,
             callback: options.callback,
             callbackKey: callbackKey,
-            callbackName: callbackName
+            callbackName: callbackName,
+            callbackExtras : options.callbackExtras
         };
 
         if (timeout > 0) {

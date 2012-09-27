@@ -61,13 +61,66 @@ Ext.define('D3Mobile.controller.Hero', {
 
         main.getTabBar().getActiveTab().setTitle(record.get('name'));
 
+        me.loadHeroSockets(record);
+//        heroDetail = heroesContainer.add({
+//            xtype : 'herodetail',
+//            hero  : me.checkPreviousHero(record.getData())
+//        });
+//
+//        heroesContainer.animateActiveItem(heroDetail, { type : 'slide', direction : 'left' });
+//        Ext.Viewport.setMasked(false);
+    },
+    loadHeroSockets : function(record) {
+        var me          = this,
+            items       = record.get('items'),
+            callback    = me.onGetItemSockets;
+        items.itemSocketCount = 0;
+        items.itemCheckCount  = 0;
+
+        items.head        && ++items.itemSocketCount && me.getItemInfo(items.head.tooltipParams,        callback, {item : items.head,        items : items, record : record});
+        items.torso       && ++items.itemSocketCount && me.getItemInfo(items.torso.tooltipParams,       callback, {item : items.torso,       items : items, record : record});
+        items.legs        && ++items.itemSocketCount && me.getItemInfo(items.legs.tooltipParams,        callback, {item : items.legs,        items : items, record : record});
+        items.mainHand    && ++items.itemSocketCount && me.getItemInfo(items.mainHand.tooltipParams,    callback, {item : items.mainHand,    items : items, record : record});
+        items.offHand     && ++items.itemSocketCount && me.getItemInfo(items.offHand.tooltipParams,     callback, {item : items.offHand,     items : items, record : record});
+        items.rightFinger && ++items.itemSocketCount && me.getItemInfo(items.rightFinger.tooltipParams, callback, {item : items.rightFinger, items : items, record : record});
+        items.leftFinger  && ++items.itemSocketCount && me.getItemInfo(items.leftFinger.tooltipParams,  callback, {item : items.leftFinger,  items : items, record : record});
+        items.neck        && ++items.itemSocketCount && me.getItemInfo(items.neck.tooltipParams,        callback, {item : items.neck,        items : items, record : record});
+    },
+    onGetItemSockets : function(success, itemInfo, e, request) {
+        if(success) {
+            var callbackExtras = request.callbackExtras,
+                items          = callbackExtras.items,
+                itemsLength    = items.itemSocketCount,
+                item           = callbackExtras.item,
+                record         = callbackExtras.record;
+
+            item.gems = itemInfo.gems;
+            items.itemCheckCount++;
+            if(itemsLength == items.itemCheckCount ) {
+                this.showHeroDetail(record);
+            }
+        }
+    },
+    showHeroDetail : function (record) {
+        var heroesContainer = this.getMain().getActiveItem().down('heroescontainer') || this.getHeroesContainer(),
+            heroDetail;
+
         heroDetail = heroesContainer.add({
             xtype : 'herodetail',
-            hero  : me.checkPreviousHero(record.getData())
+            hero  : this.checkPreviousHero(record.getData())
         });
 
         heroesContainer.animateActiveItem(heroDetail, { type : 'slide', direction : 'left' });
         Ext.Viewport.setMasked(false);
+    },
+    getItemInfo : function(tooltipUrl, callback, callbackExtras) {
+        var url = "http://us.battle.net/api/d3/data/" + tooltipUrl;
+        Ext.data.JsonP.request({
+            url            : url,
+            callback       : callback,
+            callbackExtras : callbackExtras,
+            scope          : this
+        });
     },
     checkPreviousHero : function(recordData) {
         var heroId           = recordData.id,
@@ -139,12 +192,7 @@ Ext.define('D3Mobile.controller.Hero', {
         this.showTooltip(request.callbackExtras.tooltipHtml + response.tooltipHtml);
     },
     onItemTap             : function (tooltipUrl) {
-        var url = "http://us.battle.net/api/d3/data/" + tooltipUrl;
-        Ext.data.JsonP.request({
-            url      : url,
-            callback : this.onItemTooltipSuccess,
-            scope    : this
-        });
+        this.getItemInfo(tooltipUrl, this.onItemTooltipSuccess);
     },
     onItemTooltipSuccess  : function (success, itemInfo) {
         Ext.Viewport.add({
