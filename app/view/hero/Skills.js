@@ -32,6 +32,7 @@ Ext.define('D3Mobile.view.hero.Skills', {
                                     '<div class="number">{[xindex-2]}</div>',
                                 '</tpl>',
                                 '<img alt="{skill.name}" src="http://us.media.blizzard.com/d3/icons/skills/64/{skill.icon}.png">',
+                                '<span class="rune-icon {rune.type}"></span>',
                                 '<div class="name">{skill.name}</div>',
                                 '<div class="rune">{rune.name}</div>',
                             '</div>',
