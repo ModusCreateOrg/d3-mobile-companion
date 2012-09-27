@@ -233,7 +233,7 @@
 .hero-items {
   text-align: center;
   .items-container {
-    background-image: inline-image('items-skeleton.png');
+    // background-image: inline-image('items-skeleton.png');
     margin: 0px auto;
     width: 286px;
     height: 438px;
@@ -322,6 +322,10 @@
         left: 100px;
         width: 82px;
         height: 115px;
+        .sockets-align {
+          width: 82px;
+          height: 115px;
+        }        
         .icon {
           top: -25px;          
         }
@@ -396,12 +400,20 @@
         left: 0px;
         width: 66px;
         height: 130px;
+        .sockets-align {
+          width: 66px;
+          height: 130px;
+        }       
       }  
       &.offHand {
         bottom: 5px;
         left: 216px;
         width: 66px;
         height: 130px;
+        .sockets-align {
+          width: 66px;
+          height: 130px;
+        }        
         &.repeat {
           opacity: .5;
         }
