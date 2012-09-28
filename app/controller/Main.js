@@ -40,12 +40,14 @@ Ext.define('D3Mobile.controller.Main', {
         previousPanel : null
     },
     launch                     : function () {
-        var battleTag = localStorage.battleTag;
+        var battleTag = localStorage.battleTag,
+            region    = localStorage.region;
+
         if (battleTag) {
             Ext.Viewport.setMasked({
                 xtype : 'loadmask'
             });
-            this.loadUser(battleTag);
+            this.loadUser(battleTag, region);
         } else {
             Ext.Viewport.add({
                 xtype : 'login'
@@ -54,19 +56,25 @@ Ext.define('D3Mobile.controller.Main', {
 
     },
     onLoginTap                 : function () {
-        var validBattleTag = this.getLogin().isValid();
+        var login          = this.getLogin(),
+            validBattleTag = login.isValid(),
+            region         = login.element.down('select').dom.value;
 
         if (validBattleTag) {
             Ext.Viewport.setMasked({
                 xtype : 'loadmask'
             });
-            this.loadUser(validBattleTag);
+            this.loadUser(validBattleTag, region);
         }
     },
-    loadUser                   : function (battleTag) {
+    loadUser                   : function (battleTag, region) {
         var me = this;
+
+        localStorage.region = me.getApplication().region = region;
+        console.log(localStorage.region);
+        console.log(me.getApplication().region);
         Ext.getStore("CurrentUser").load({
-            url      : 'http://us.battle.net/api/d3/profile/' + battleTag + '/',
+            url      : 'http://' + region + '.battle.net/api/d3/profile/' + battleTag + '/',
             callback : me.onCurrentUserLoadCallback,
             scope    : me
         });
@@ -77,7 +85,6 @@ Ext.define('D3Mobile.controller.Main', {
                 record    = records[0],
                 battleTag = record.get('battleTag').replace('#', '-'),
                 login     = me.getLogin();
-
             me.loadLocalStorage(battleTag);
             login && login.destroy();
 

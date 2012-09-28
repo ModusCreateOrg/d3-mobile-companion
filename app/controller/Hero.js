@@ -40,10 +40,11 @@ Ext.define('D3Mobile.controller.Hero', {
         }, 0);
     },
     onHeroOverviewTap     : function (battleTag, heroId) {
-        var me = this;
+        var me     = this,
+            region = me.getApplication().region;
 
         Ext.ModelMgr.getModel('D3Mobile.model.Hero').load(heroId, {
-            url     : 'http://us.battle.net/api/d3/profile/' + battleTag + '/hero/' + heroId,
+            url     : 'http://' + region + '.battle.net/api/d3/profile/' + battleTag + '/hero/' + heroId,
             success : me.onHeroLoadSuccess,
             failure : me.onHeroLoadFailure,
             scope   : me
@@ -114,7 +115,8 @@ Ext.define('D3Mobile.controller.Hero', {
         Ext.Viewport.setMasked(false);
     },
     getItemInfo : function(tooltipUrl, callback, callbackExtras) {
-        var url = "http://us.battle.net/api/d3/data/" + tooltipUrl;
+        var region = this.getApplication().region,
+            url    = "http://" + region + ".battle.net/api/d3/data/" + tooltipUrl;
         Ext.data.JsonP.request({
             url            : url,
             callback       : callback,
@@ -163,8 +165,9 @@ Ext.define('D3Mobile.controller.Hero', {
 
     },
     onSkillTap            : function (tooltipUrl, runeType) {
-        var me = this,
-            url = "http://us.battle.net/d3/en/tooltip/" + tooltipUrl + "?format=jsonp";
+        var me     = this,
+            region = me.getApplication().region,
+            url    = "http://" + region + ".battle.net/d3/en/tooltip/" + tooltipUrl + "?format=jsonp";
 
         D3Mobile.data.JsonP.request({
             url            : url,
@@ -175,8 +178,9 @@ Ext.define('D3Mobile.controller.Hero', {
     },
     onSkillTooltipSuccess : function (success, response, notSure, request) {
         if (request.callbackExtras) {
-            var me = this,
-                url = 'http://us.battle.net/d3/en/tooltip/rune/' + response.params.key + '/' + request.callbackExtras + '?format=jsonp';
+            var me     = this,
+                region = me.getApplication().region,
+                url    = 'http://' + region + '.battle.net/d3/en/tooltip/rune/' + response.params.key + '/' + request.callbackExtras + '?format=jsonp';
 
             D3Mobile.data.JsonP.request({
                 url            : url,

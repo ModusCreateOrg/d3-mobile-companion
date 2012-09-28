@@ -76,10 +76,13 @@ Ext.define('D3Mobile.controller.Friend', {
         }
     },
     loadFriend                     : function (battleTag) {
+        var me     = this,
+            region = this.getApplication().region;
+
         Ext.ModelMgr.getModel("D3Mobile.model.Account").load(null, {
-            url     : 'http://us.battle.net/api/d3/profile/' + battleTag + '/',
-            success : this.onFriendAccountLoad,
-            scope   : this
+            url     : 'http://' + region + '.battle.net/api/d3/profile/' + battleTag + '/',
+            success : me.onFriendAccountLoad,
+            scope   : me
         });
     },
     onFriendAccountLoad            : function (record) {

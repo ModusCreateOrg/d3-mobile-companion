@@ -42,7 +42,7 @@
     }
     color: #fefefe;
     margin-top: 175px;
-    input {
+    input, select {
       @include border-radius(5px);
       font-weight: 600;
       text-align: center;
@@ -64,6 +64,12 @@
       }   
       &[name=battleTagNum] {
         width: 25%;
+      }
+
+      &[name="region"] {
+        height: 34px;
+        background-color: white;
+        width: 73%;
       }
     }
     ::-webkit-input-placeholder {

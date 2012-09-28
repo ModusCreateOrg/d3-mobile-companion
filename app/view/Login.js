@@ -18,6 +18,14 @@ Ext.define('D3Mobile.view.Login', {
                             '<form>',
                                 '<input type="text" name="battleTag" placeholder="Battle Tag" autocorrect="off" autocapitalize="off" required />',
                                 '<input type="tel" name="battleTagNum" placeholder="####" autocorrect="off" autocapitalize="off" maxlength="4" required />',
+                                '<br/>',
+                                '<select name="region" required />',
+                                    '<option value="us" selected>Americas</option>',
+                                    '<option value="eu">Europe</option>',
+                                    '<option value="tw">Taiwan</option>',
+                                    '<option value="kr">Korea</option>',
+                                '</select>',
+
                             '</form>',
                         '</div>',
                     '</div>'

@@ -28,10 +28,11 @@ Ext.application({
         '1496x2048' : 'resources/startup/1496x2048.png'
     },
     childBrowser : null,
-    launch : function () {
+    region       : 'us',
+    launch       : function () {
         // Destroy the #appLoadingIndicator element
         Ext.fly('appLoadingIndicator').destroy();
-        if(window.ChildBrowser) {
+        if (window.ChildBrowser) {
             this.childBrowser = ChildBrowser.install();
         }
 
