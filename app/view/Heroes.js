@@ -16,6 +16,13 @@ Ext.define('D3Mobile.view.Heroes', {
                         '</tpl>',
                     '</div>',
                 '</div>',
+                '<tpl if="hardcore">',
+                    '<tpl if="dead">',
+                        '<div class="hero-header-hardcore flex1">Hardcore</div>',
+                    '<tpl else>',
+                        '<div class="hero-header-hardcore dead flex1">Hardcore</div>',
+                    '</tpl>',
+                '</tpl>',
             '</div>'
         )
     },

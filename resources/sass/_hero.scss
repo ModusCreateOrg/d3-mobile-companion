@@ -99,6 +99,7 @@
 .hero-header {
   display: -webkit-box;
   -webkit-box-pack: justify;
+  height: initial !important;
 }
 
 .hero-header-name {
@@ -119,6 +120,13 @@
   }
 }
 
+.hero-header-hardcore {
+  text-align: left;
+  font-size: 1.25em;
+  text-shadow: 0px 4px #1E1B16;
+  color: #790905;
+}
+
 .hero-detail-card > div {
   height: 100%
 }
@@ -136,7 +144,7 @@
   -webkit-mask-repeat: no-repeat;
   background-color: #f3e6d0;
   width: 25px;
-  height: 25px;
+  height: 25px !important;
 }
 .hero-detail-back {
   //-webkit-mask-image: theme_image($theme-name, "pictos/" + "delete_black2" + ".png");
