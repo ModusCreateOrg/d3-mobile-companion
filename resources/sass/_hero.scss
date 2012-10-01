@@ -453,6 +453,7 @@
       .mouse {
         background-image: inline-image('mouse-buttons.png');
         background-repeat: no-repeat;
+        z-index: 5;
         left: 4px;
         top: -3px;
         width: 15px;
