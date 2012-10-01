@@ -443,12 +443,28 @@
       margin: 5px;
       float: left;
       width: 29%;
-      min-height: 115px;
+      min-height: 125px;
       text-align: center;
       img {
         &.tapped {
           opacity: .55;
         }
+      }
+      .mouse {
+        background-image: inline-image('mouse-buttons.png');
+        background-repeat: no-repeat;
+        left: 4px;
+        top: -3px;
+        width: 15px;
+        height: 18px;
+        position: absolute;
+        text-indent: -999px;
+        &.left {
+          background-position: 0 0;
+        }
+        &.right {
+          background-position: -15px 0;
+        }        
       }
       .number { 
         z-index: 5;
