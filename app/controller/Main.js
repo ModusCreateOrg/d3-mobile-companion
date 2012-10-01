@@ -16,12 +16,13 @@ Ext.define('D3Mobile.controller.Main', {
             'tooltip.About'
         ],
         refs          : {
-            login   : 'login',
-            main    : 'main',
-            heroes  : 'heroes',
-            friends : 'friends',
-            news    : 'news',
-            servers : 'servers'
+            login           : 'login',
+            main            : 'main',
+            heroesContainer : 'heroescontainer',
+            heroes          : 'heroes',
+            friends         : 'friends',
+            news            : 'news',
+            servers         : 'servers'
         },
         control       : {
             'login'        : {
@@ -71,8 +72,7 @@ Ext.define('D3Mobile.controller.Main', {
         var me = this;
 
         localStorage.region = me.getApplication().region = region;
-        console.log(localStorage.region);
-        console.log(me.getApplication().region);
+
         Ext.getStore("CurrentUser").load({
             url      : 'http://' + region + '.battle.net/api/d3/profile/' + battleTag + '/',
             callback : me.onCurrentUserLoadCallback,
@@ -116,6 +116,31 @@ Ext.define('D3Mobile.controller.Main', {
         friends[battleTag] = [];
         localStorage.friends = JSON.stringify(friends);
         return friends;
+    },
+    updateUser                 : function() {
+        var me        = this,
+            battleTag = localStorage.battleTag,
+            region    = me.getApplication().region;
+
+        Ext.Viewport.setMasked({
+            xtype : 'loadmask'
+        });
+
+        Ext.getStore("CurrentUser").removeAll();
+
+        Ext.getStore("CurrentUser").load({
+            url      : 'http://' + region + '.battle.net/api/d3/profile/' + battleTag + '/',
+            callback : me.onUpdateUserCallback,
+            scope    : me
+        });
+
+    },
+    onUpdateUserCallback       : function(records, operation, success) {
+        var record    = records[0],
+            battleTag = record.get('battleTag').replace('#', '-');
+
+        this.getHeroesContainer().down('heroes').buildCards(battleTag, record.get('heroes'), false);
+        Ext.Viewport.setMasked(false);
     },
     onMainActiveItemChange     : function (main, newPanel, oldPanel) {
         var action = newPanel.config.action;

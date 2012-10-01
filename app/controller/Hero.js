@@ -63,13 +63,6 @@ Ext.define('D3Mobile.controller.Hero', {
         main.getTabBar().getActiveTab().setTitle(record.get('name'));
 
         me.loadHeroSockets(record);
-//        heroDetail = heroesContainer.add({
-//            xtype : 'herodetail',
-//            hero  : me.checkPreviousHero(record.getData())
-//        });
-//
-//        heroesContainer.animateActiveItem(heroDetail, { type : 'slide', direction : 'left' });
-//        Ext.Viewport.setMasked(false);
     },
     loadHeroSockets : function(record) {
         var me          = this,

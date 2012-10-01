@@ -30,11 +30,14 @@ Ext.application({
     childBrowser : null,
     region       : 'us',
     launch       : function () {
+        var me = this;
         // Destroy the #appLoadingIndicator element
         Ext.fly('appLoadingIndicator').destroy();
         if (window.ChildBrowser) {
-            this.childBrowser = ChildBrowser.install();
+            me.childBrowser = ChildBrowser.install();
         }
+        document.addEventListener('resume', Ext.bind(me.onResume, me), false);
+
 
     },
 
@@ -48,5 +51,8 @@ Ext.application({
                 }
             }
         );
+    },
+    onResume  : function () {
+        this.getController("Main").updateUser();
     }
 });
