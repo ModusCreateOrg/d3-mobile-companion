@@ -141,14 +141,81 @@ Ext.define('D3Mobile.controller.Friend', {
 
         Ext.Array.erase(currentUserFriends, removeIndex, 1);
         localStorage.friends = JSON.stringify(localStorageFriends);
+        return removeIndex;
     },
-    showFriendsHeroes              : function (record) {
-        var friendsContainer = this.getFriendsContainer(),
-            heroesContainer  = friendsContainer.add({
-                xtype : 'heroescontainer'
-            });
+    showFriendsHeroes              : function (record, activeIndex, heroId) {
+        var me     = this,
+            region = me.getApplication().region;
 
-        heroesContainer.down('heroes').buildCards(record.get('battleTag').replace("#", '-'), record.get('heroes'), true);
+        Ext.Viewport.setMasked({
+            xtype : 'loadmask'
+        });
+
+        Ext.ModelMgr.getModel("D3Mobile.model.Account").load(null, {
+            url            : 'http://' + region + '.battle.net/api/d3/profile/' + record.get('battleTag').replace("#", '-') + '/',
+            success        : me.onShowFriendsHeroesLoad,
+            scope          : me,
+            callbackExtras : (activeIndex) ? {
+                activeIndex : activeIndex,
+                heroId      : heroId
+            } : undefined
+        });
+
+    },
+    onShowFriendsHeroesLoad : function(record, operation) {
+        var friendsContainer  = this.getFriendsContainer(),
+            battleTag         = record.get('battleTag'),
+            heroes            = record.get('heroes'),
+            friendsStore      = Ext.getStore("Friends"),
+            friendStoreRecord = friendsStore.findRecord("battleTag", battleTag),
+            friendHeroes      = friendStoreRecord.get('heroes'),
+            callbackExtras    = operation.config.callbackExtras,
+            heroesContainer   = friendsContainer.add({
+                xtype : 'heroescontainer'
+            }),
+            heroesView        = heroesContainer.down('heroes'),
+            localStorageFriends,
+            currentUserFriends,
+            removeIndex;
+
+        if (JSON.stringify(friendHeroes).length != JSON.stringify(heroes).length) {
+            removeIndex = this.removeLocalStorageFriendRecord(friendStoreRecord);
+            friendStoreRecord.setData(record);
+            localStorageFriends = JSON.parse(localStorage.friends);
+            currentUserFriends  = localStorageFriends[battleTag];
+            Ext.Array.insert(currentUserFriends, removeIndex, record);
+            localStorage.friends = JSON.stringify(localStorageFriends);
+        }
+
+        Ext.Viewport.setMasked(false);
+
+        heroesView.buildCards(battleTag.replace("#", '-'), record.get('heroes'), true);
         friendsContainer.animateActiveItem(heroesContainer, { type : 'slide', direction : 'down'});
+        if (callbackExtras) {
+            heroesView.setActiveItem(callbackExtras.activeIndex);
+            callbackExtras.heroId && heroesView.fireEvent('heroOverviewTap', battleTag.replace("#", '-'), callbackExtras.heroId);
+        }
+    },
+    updateFriend : function() {
+        var me               = this,
+            friendsContainer = me.getFriendsContainer(),
+            heroesContainer  = friendsContainer.down('heroescontainer'),
+            heroes           = friendsContainer.down('heroes'),
+            hero             = friendsContainer.down('herodetail'),
+            battleTag        = heroes.getBattleTag(),
+            activeItem       = heroes.getActiveItem(),
+            activeIndex      = heroes.getActiveIndex(),
+            friendRecord     = Ext.getStore("Friends").findRecord("battleTag",battleTag.replace("-", "#"));
+
+        if(heroes) {
+            hero && hero.down('herodetailheader').down('button').fireEvent('tap');
+            setTimeout(function() {
+                friendsContainer.remove(heroesContainer, true);
+            }, 0);
+
+
+
+            me.showFriendsHeroes(friendRecord, activeIndex, (hero) ? activeItem.getData().id : null);
+        }
     }
 });

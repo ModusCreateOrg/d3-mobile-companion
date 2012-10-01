@@ -136,10 +136,20 @@ Ext.define('D3Mobile.controller.Main', {
 
     },
     onUpdateUserCallback       : function(records, operation, success) {
-        var record    = records[0],
-            battleTag = record.get('battleTag').replace('#', '-');
+        var record          = records[0],
+            battleTag       = record.get('battleTag').replace('#', '-'),
+            heroesContainer = this.getHeroesContainer(),
+            activeHero      = heroesContainer.down('herodetail'),
+            heroes          = heroesContainer.down('heroes'),
+            activeIndex     = heroes.getActiveIndex();
 
-        this.getHeroesContainer().down('heroes').buildCards(battleTag, record.get('heroes'), false);
+        heroes.buildCards(battleTag, record.get('heroes'), false);
+        heroes.setActiveItem(activeIndex);
+        if(activeHero) {
+            activeHero.down('herodetailheader').down('button').fireEvent('tap');
+            heroes.fireEvent('heroOverviewTap', battleTag, activeHero.getHero().id);
+        }
+
         Ext.Viewport.setMasked(false);
     },
     onMainActiveItemChange     : function (main, newPanel, oldPanel) {

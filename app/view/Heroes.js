@@ -3,6 +3,7 @@ Ext.define('D3Mobile.view.Heroes', {
     xtype      : 'heroes',
     config     : {
         title           : 'Heroes',
+        battleTag       : null,
         cardTpl         : ''.concat(
             '<div class="hero-overview hero-overview-{class}_{gender} animated fadeIn" data-id="{id}" data-battletag="{battleTag}">',
                 '<div class="hero-header">',
@@ -67,13 +68,17 @@ Ext.define('D3Mobile.view.Heroes', {
             heroesCount     = heroes.length,
             hero,
             i;
+
         me.removeAll(true);
+
         for (i = 0; i < heroesCount; i++) {
             hero = heroes[i];
             hero.battleTag = battleTag;
             hero.showCloseButton = showCloseButton;
             me.add(me.buildCard(hero));
         }
+
+        me.setBattleTag(battleTag);
         me.setActiveItem(0);
     },
     buildCard  : function (hero) {
