@@ -124,8 +124,12 @@
   text-align: left;
   font-size: 1.25em;
   text-shadow: 0px 4px #1E1B16;
-  color: #790905;
+  color: #fe0000;
+  &.dead {
+    text-align: right;
+  }
 }
+
 
 .hero-detail-card > div {
   height: 100%
