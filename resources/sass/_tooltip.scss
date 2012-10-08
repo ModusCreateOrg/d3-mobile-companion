@@ -1,4 +1,5 @@
 .close-button {
+  @include background-image(linear-gradient(top, rgb(50, 42, 32), rgb(37, 30, 23)));
   @include border-bottom-right-radius(5px);
   color: #E9E9E9;
   font-weight: 700;
@@ -7,7 +8,6 @@
   //top: -11px;
   font-size: 15px;
   z-index: 10000;
-  background: #322A20;
   padding: 5px 10px 6px 10px;
   &.pressed {
     background: #211c15;

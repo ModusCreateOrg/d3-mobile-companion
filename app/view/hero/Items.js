@@ -24,7 +24,6 @@ Ext.define('D3Mobile.view.hero.Items', {
                     '<tpl if="items.head">',
                         '<div class="item helm {items.head.displayColor}" data-tooltipparams="{items.head.tooltipParams}">',
                             '<img class="icon" alt="{items.head.name}" src="http://us.media.blizzard.com/d3/icons/items/large/{items.head.icon}.png" />',
-
                             '<span class="sockets-wrapper">',
                                 '<span class="sockets-align">',
                                     '<tpl for="items.head.gems">',

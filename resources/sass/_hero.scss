@@ -244,6 +244,15 @@
 
 .hero-items {
   text-align: center;
+
+  @media only screen and (max-width : 320px) and (max-height : 480px) {
+    -webkit-transform: scale(.8);
+    top: -46px;
+    position: relative;
+  }  
+
+
+
   .items-container {
     // background-image: inline-image('items-skeleton.png');
     margin: 0px auto;
@@ -261,42 +270,30 @@
 
       &.yellow { 
         border-color: #b1a73c; 
-        background-color: #322a0d;
-        @include background-image(linear-gradient(top, rgb(50, 42, 13), rgb(96, 80, 24)));        
+        @include background-image(inline-image('yellow.png'));
         &.tapped {
-          background-image: none;
           border-color: lighten(#b1a73c, 25);
-          background-color: lighten(#322a0d, 10);
         }
       }
       &.blue {
         border-color: #6ba9ba;
-        background-color: #131b27;
-        @include background-image(linear-gradient(top, rgb(19, 27, 39), rgb(39, 56, 80)));
+        @include background-image(inline-image('blue.png'));
         &.tapped {
-          background-image: none;
           border-color: lighten(#6ba9ba, 25);
-          background-color: lighten(#131b27, 10);
         }
       }
       &.orange {
         border-color: #c29337;
-        background-color: #39240f;
-        @include background-image(linear-gradient(top, rgb(57, 36, 15), rgb(105, 66, 28)));
+        @include background-image(inline-image('orange.png'));
         &.tapped {
-          background-image: none;
           border-color: lighten(#c29337, 25);
-          background-color: lighten(#39240f, 10);
         }
        }
       &.green { 
         border-color: #87a73d; 
-        background-color: #20300d;
-        @include background-image(linear-gradient(top, rgb(32, 48, 13), rgb(63, 96, 25)));
+        @include background-image(inline-image('green.png'));
         &.tapped {
-          background-image: none;
           border-color: lighten(#87a73d, 25);
-          background-color: lighten(#20300d, 10);
         }
       }
 

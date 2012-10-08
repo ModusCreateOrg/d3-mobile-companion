@@ -19,7 +19,7 @@ Ext.define('D3Mobile.view.hero.Attributes', {
         header           : {},
         headerLabel      : 'Attributes',
         tpl              : ''.concat(
-            '<div class="hero-attributes">',
+            '<div class="hero-attributes animated fadeIn">',
                 '<tpl if="statDeltas.lastUpdated">',
                     '<div class="last-updated">',
                         'Stat changes since {statDeltas.lastUpdated}',
