@@ -320,6 +320,18 @@ Ext.define('D3Mobile.view.hero.Attributes', {
                                 '</tpl>',
                             '</div>',
                         '</div>',
+                        '<div class="stats-row">',
+                            '<div class="attribute-label">Thorns</div>',
+                            '<div class="attribute-value">{stats.thorns}',
+                                '<tpl if="statDeltas.thorns">',
+                                    '<tpl if="statDeltas.thorns &gt; 0">',
+                                        '<span class="change d3-color-green">+{statDeltas.thorns}</span>',
+                                    '<tpl else>',
+                                        '<span class="change d3-color-red">{statDeltas.thorns}</span>',
+                                    '</tpl>',
+                                '</tpl>',
+                            '</div>',
+                        '</div>',
                     '</div>',
 
                     // convert these to a %
