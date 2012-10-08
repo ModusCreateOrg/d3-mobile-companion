@@ -29,7 +29,15 @@ Ext.define('D3Mobile.controller.Hero', {
                 'close' : 'onTooltipCloseTap'
             }
 
-        }
+        },
+        possibleDamageTypes : [
+            'Holy',
+            'Lightning',
+            'Cold',
+            'Arcane',
+            'Fire',
+            'Poison'
+        ]
     },
     onCloseHeroTap : function(panel) {
         var parentContainer = panel.up('container');
@@ -65,20 +73,22 @@ Ext.define('D3Mobile.controller.Hero', {
         me.loadHeroSockets(record);
     },
     loadHeroSockets : function(record) {
-        var me          = this,
-            items       = record.get('items'),
-            callback    = me.onGetItemSockets;
+        var me             = this,
+            items          = record.get('items'),
+            callback       = me.onGetItemSockets,
+            weaponCallback = me.onGetWeaponSockets;
+
         items.itemSocketCount = 0;
         items.itemCheckCount  = 0;
 
-        items.head        && ++items.itemSocketCount && me.getItemInfo(items.head.tooltipParams,        callback, {item : items.head,        items : items, record : record});
-        items.torso       && ++items.itemSocketCount && me.getItemInfo(items.torso.tooltipParams,       callback, {item : items.torso,       items : items, record : record});
-        items.legs        && ++items.itemSocketCount && me.getItemInfo(items.legs.tooltipParams,        callback, {item : items.legs,        items : items, record : record});
-        items.mainHand    && ++items.itemSocketCount && me.getItemInfo(items.mainHand.tooltipParams,    callback, {item : items.mainHand,    items : items, record : record});
-        items.offHand     && ++items.itemSocketCount && me.getItemInfo(items.offHand.tooltipParams,     callback, {item : items.offHand,     items : items, record : record});
-        items.rightFinger && ++items.itemSocketCount && me.getItemInfo(items.rightFinger.tooltipParams, callback, {item : items.rightFinger, items : items, record : record});
-        items.leftFinger  && ++items.itemSocketCount && me.getItemInfo(items.leftFinger.tooltipParams,  callback, {item : items.leftFinger,  items : items, record : record});
-        items.neck        && ++items.itemSocketCount && me.getItemInfo(items.neck.tooltipParams,        callback, {item : items.neck,        items : items, record : record});
+        items.head        && ++items.itemSocketCount && me.getItemInfo(items.head.tooltipParams,        callback,       {item : items.head,        items : items, record : record});
+        items.torso       && ++items.itemSocketCount && me.getItemInfo(items.torso.tooltipParams,       callback,       {item : items.torso,       items : items, record : record});
+        items.legs        && ++items.itemSocketCount && me.getItemInfo(items.legs.tooltipParams,        callback,       {item : items.legs,        items : items, record : record});
+        items.mainHand    && ++items.itemSocketCount && me.getItemInfo(items.mainHand.tooltipParams,    weaponCallback, {item : items.mainHand,    items : items, record : record});
+        items.offHand     && ++items.itemSocketCount && me.getItemInfo(items.offHand.tooltipParams,     weaponCallback, {item : items.offHand,     items : items, record : record});
+        items.rightFinger && ++items.itemSocketCount && me.getItemInfo(items.rightFinger.tooltipParams, callback,       {item : items.rightFinger, items : items, record : record});
+        items.leftFinger  && ++items.itemSocketCount && me.getItemInfo(items.leftFinger.tooltipParams,  callback,       {item : items.leftFinger,  items : items, record : record});
+        items.neck        && ++items.itemSocketCount && me.getItemInfo(items.neck.tooltipParams,        callback,       {item : items.neck,        items : items, record : record});
     },
     onGetItemSockets : function(success, itemInfo, e, request) {
         if(success) {
@@ -87,13 +97,31 @@ Ext.define('D3Mobile.controller.Hero', {
                 itemsLength    = items.itemSocketCount,
                 item           = callbackExtras.item,
                 record         = callbackExtras.record;
-
             item.gems = itemInfo.gems;
             items.itemCheckCount++;
             if(itemsLength == items.itemCheckCount ) {
                 this.showHeroDetail(record);
             }
         }
+    },
+    onGetWeaponSockets : function(success, itemInfo, e, request) {
+        if(success) {
+            var attributes = itemInfo.attributesRaw,
+                key,
+                elementalDamage,
+                elementalIndex;
+            for (key in attributes) {
+                if (key.indexOf("#") != -1) {
+                    elementalDamage = key.split("#")[1];
+                    elementalIndex  = Ext.Array.indexOf(this.getPossibleDamageTypes(), elementalDamage);
+                    if (elementalIndex > -1) {
+                        request.callbackExtras.item.elementalDamage = elementalDamage.toLowerCase();
+                        break;
+                    }
+                }
+            }
+        }
+        this.onGetItemSockets(success, itemInfo, e, request);
     },
     showHeroDetail : function (record) {
         var heroesContainer = this.getMain().getActiveItem().down('heroescontainer') || this.getHeroesContainer(),

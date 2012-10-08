@@ -195,6 +195,12 @@ Ext.define('D3Mobile.view.hero.Items', {
 
                         '</div>',
                     '</tpl>',
+                    '<tpl if="items.mainHand.elementalDamage">',
+                        '<div class="weapon-flourish main-hand-flourish elemental-{items.mainHand.elementalDamage}"></div>',
+                    '</tpl>',
+                    '<tpl if="items.offHand.elementalDamage">',
+                        '<div class="weapon-flourish off-hand-flourish elemental-{items.offHand.elementalDamage}"></div>',
+                    '</tpl>',
                 '</div>',
             '</div>'
         )
