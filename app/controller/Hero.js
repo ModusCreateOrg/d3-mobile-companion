@@ -111,7 +111,7 @@ Ext.define('D3Mobile.controller.Hero', {
                 elementalDamage,
                 elementalIndex;
             for (key in attributes) {
-                if (key.indexOf("#") != -1) {
+                if (key.indexOf("Damage_Weapon_Min#") != -1) {
                     elementalDamage = key.split("#")[1];
                     elementalIndex  = Ext.Array.indexOf(this.getPossibleDamageTypes(), elementalDamage);
                     if (elementalIndex > -1) {
