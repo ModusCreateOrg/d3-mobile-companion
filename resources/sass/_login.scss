@@ -3,6 +3,11 @@
   background-color: black !important;
   background-size: 320px 480px;
   background-repeat: no-repeat;
+  // adjust logo placement for iPhone 4/s
+  @media only screen and (max-width : 320px) and (max-height : 480px) {
+    background-position: 0px -22px;
+  }
+  // use a new bg for the iPhone 5
   @media (device-height: 568px) and (-webkit-min-device-pixel-ratio: 2) {
       background-image: inline-image('login-iphone5.jpg') !important;
       background-size: 320px 568px;
