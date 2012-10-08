@@ -253,10 +253,11 @@
 
   // flourish
   .weapon-flourish {
-  width: 128px;
-  height: 166px;
-  background-repeat: no-repeat;
-  position: absolute;
+    width: 128px;
+    height: 166px;
+    background-repeat: no-repeat;
+    position: absolute;
+    z-index: 1;
     &.main-hand-flourish {
       top: 283px;
       left: -21px;
@@ -289,6 +290,7 @@
       width: 20px;
       height: 20px;
       border: 1px solid white;
+      z-index: 2;
       img { position: relative; }
 
       &.yellow { 
