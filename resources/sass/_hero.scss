@@ -472,6 +472,9 @@
   .actives {
     overflow: hidden;
     border-bottom: 1px solid #252018;
+    @media only screen and (max-width : 320px) and (max-height : 480px) {
+      border: none;
+    }  
     .skill {
       position: relative;
       margin: 5px;
@@ -538,6 +541,9 @@
   .passives {
     overflow: hidden;
     margin-top: 10px;
+    @media only screen and (max-width : 320px) and (max-height : 480px) {
+      margin-top: -19px;
+    }      
     .skill {
       margin: 5px;
       float: left;
