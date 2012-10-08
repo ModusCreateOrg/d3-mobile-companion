@@ -158,13 +158,24 @@ Ext.define('D3Mobile.controller.Hero', {
 
     },
     calculateStatDeltas   : function(newRecord, oldRecord) {
-        var deltas = newRecord.statDeltas = {},
+        var deltas   = newRecord.statDeltas = {},
+            newStats = newRecord.stats,
+            oldStats = oldRecord.stats,
             key;
 
         newRecord.statDeltas.lastUpdated = Ext.Date.format(Ext.Date.parse(oldRecord.lastUpdated, 'U'), 'n/j/Y \\a\\t h:i A');
 
-        for(key in newRecord.stats) {
-            deltas[key] = newRecord.stats[key] - oldRecord.stats[key];
+        for (key in newStats) {
+            deltas[key] = newStats[key] - oldStats[key];
+            if (key == 'blockAmountMin') {
+                var newBlockAvg = ((newStats.blockAmountMax - newStats.blockAmountMin) / 2).toFixed(0),
+                    oldBlockAvg = ((oldStats.blockAmountMax - oldStats.blockAmountMin) / 2).toFixed(0),
+                    coefficient = (newBlockAvg > oldBlockAvg) ? 1 : -1;
+
+                deltas.blockAmountAvg = coefficient * newBlockAvg;
+
+
+            }
         }
         return newRecord;
     },

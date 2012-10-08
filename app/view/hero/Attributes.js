@@ -244,6 +244,18 @@ Ext.define('D3Mobile.view.hero.Attributes', {
                                 '</tpl>',
                             '</div>',
                         '</div>',
+                        '<div class="stats-row">',
+                            '<div class="attribute-label">Block Amount</div>',
+                            '<div class="attribute-value">{stats.blockAmountMin} - {stats.blockAmountMax}',
+                                '<tpl if="statDeltas.blockAmountMin || statDeltas.blockAmountMax">',
+                                    '<tpl if="statDeltas.blockAmountAvg &gt; 0">',
+                                        '<span class="change d3-color-green">+{statDeltas.blockAmountAvg}</span>',
+                                    '<tpl else>',
+                                        '<span class="change d3-color-red">{statDeltas.blockAmountAvg}</span>',
+                                    '</tpl>',
+                                '</tpl>',
+                            '</div>',
+                        '</div>',
                     '</div>',
 
                     // highlight the biggest resist
