@@ -62,11 +62,21 @@
     }      
   }
 
+.d3-item-properties .item-effects li {
+
+}
+
   .d3-item-properties {
     .item-effects {
       clear: both;
       margin-top: 50px;
-      li { font-size: 13px; }      
+      li { 
+        font-size: 13px; 
+        padding-left: 16px;
+        background: url("../images/bullet.gif") 2px 5px no-repeat;
+        list-style: none;
+        margin-left: -25px;
+      }      
     }
     .full-socket {
       color: white;
@@ -74,12 +84,16 @@
       margin-left: -25px;
       position: relative;      
       font-weight: 400;
+      list-style: none;
+      &:first-child {
+        margin-top: 2px;
+      }
       .socket-effect {
         top: -6px;
         position: relative;
         left: 3px;        
       }
-      img { width: 24px; }
+      img { width: 20px; }
     }
     .full-socket:first-child {
       margin-top: 15px;
