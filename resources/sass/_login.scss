@@ -8,6 +8,17 @@
       background-size: 320px 568px;
   }
 
+  .x-innerhtml { padding: 0; }
+  .form { margin-top: -45px; }
+
+  .d3-logo {
+    background-image: inline-image('d3-logo.png');
+    background-repeat: no-repeat;
+    background-size: 320px 213px;
+    width: 320px;
+    height: 213px;
+  }
+
   .footer {
     text-align: center;
     margin-top: 25px;    
@@ -22,26 +33,26 @@
   }
   
   .loginBtn {
-    width: 67%;
-    margin: 0px auto;
-    padding: 12px;
-    font-size: 1.2em;
-    text-transform: uppercase;      
+    width: 73%;
+    margin: 4px auto;
+    padding: 8px;
+    font-size: .8em;
+    text-transform: uppercase;
   }  
   .login-container {
+    color: #fefefe;
     .battle-tag-input {
       text-align: center;
     }
     // @include background(linear-gradient(left bottom, rgb(18, 17, 15), rgb(28, 24, 18)));
     h1 {
       color: #EEE;
-      font-size: 1.9em;
-      font-weight: 700;
+      font-size: 1.8em;
+      font-weight: 800;
       text-align: center;
-      line-height: 30px;
+      line-height: 15px;
+      text-shadow: 0px 4px rgba(0, 0, 0, .5);
     }
-    color: #fefefe;
-    margin-top: 175px;
     input, select {
       @include border-radius(5px);
       font-weight: 600;
@@ -55,7 +66,9 @@
       width:100%;
       color: #333;
       &.invalid {
-        border: 3px solid #aa1711;
+        @include background-image(linear-gradient(top, rgb(130, 15, 6), rgb(104, 17, 7)));
+        border: 1px solid #9c0d01;
+        color: #eee;
       }
 
       &[name=battleTag] {

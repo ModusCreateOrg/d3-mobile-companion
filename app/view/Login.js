@@ -12,8 +12,9 @@ Ext.define('D3Mobile.view.Login', {
                 styleHtmlContent : true,
                 html             : ''.concat(
                     '<div class="login-container animated fadeIn">',
-                        '<h1>Diablo 3 <br />Mobile Companion</h1>',
                         '<div class="d3-logo"></div>',
+                        '<div class="form">',
+                        '<h1>Mobile Companion</h1>',
                         '<div class="battle-tag-input">',
                             '<form>',
                                 '<input type="text" name="battleTag" placeholder="Battle Tag" autocorrect="off" autocapitalize="off" required />',
@@ -28,6 +29,7 @@ Ext.define('D3Mobile.view.Login', {
 
                             '</form>',
                         '</div>',
+                        '</div>', // end .form
                     '</div>'
                 )
             },
