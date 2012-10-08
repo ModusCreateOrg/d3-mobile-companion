@@ -251,6 +251,29 @@
     position: relative;
   }  
 
+  // flourish
+  .weapon-flourish {
+  width: 128px;
+  height: 166px;
+  background-repeat: no-repeat;
+  position: absolute;
+    &.main-hand-flourish {
+      top: 283px;
+      left: -21px;
+    }
+    &.off-hand-flourish {
+      top: 283px;
+      left: 175px;
+      -webkit-transform: rotate(180deg);
+    }    
+    &.elemental-lightning { background-image: inline-image('flourish/lightning.png'); }
+    &.elemental-cold { background-image: inline-image('flourish/cold.png'); }
+    &.elemental-poison { background-image: inline-image('flourish/poison.png'); }
+    &.elemental-holy { background-image: inline-image('flourish/holy.png'); }
+    &.elemental-fire { background-image: inline-image('flourish/fire.png'); }
+    &.elemental-arcane { background-image: inline-image('flourish/arcane.png'); }
+  }
+
 
 
   .items-container {
@@ -366,6 +389,10 @@
           top: -12px;
           left: -12px;          
         }
+        .sockets-align {
+          width: 66px;
+          height: 44px;
+        }
       }
       &.belt {
         top: 214px;
@@ -381,6 +408,10 @@
         left: 228px;
         width: 42px;
         height: 42px;
+        .sockets-align {
+          width: 66px;
+          height: 44px;
+        }        
         .icon {
           top: -12px;
           left: -12px;          
