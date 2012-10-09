@@ -35,7 +35,8 @@
         android:theme="@style/AppTheme" >
         <activity
             android:name=".MainActivity"
-            android:label="Mobile Companion" >
+            android:label="Mobile Companion" 
+            android:configChanges="keyboardHidden|orientation|screenSize" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
