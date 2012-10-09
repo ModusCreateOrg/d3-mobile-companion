@@ -11,10 +11,6 @@ Ext.define('D3Mobile.view.hero.Skills', {
     requires : ['D3Mobile.view.hero.Header'],
     config   : {
         cls              : 'hero-detail-card',
-        scrollable       : {
-            direction     : 'vertical',
-            directionLock : true
-        },
         styleHtmlContent : true,
         header           : {},
         headerLabel      : 'Skills',
