@@ -82,6 +82,7 @@ Ext.define('D3Mobile.controller.Friend', {
         Ext.ModelMgr.getModel("D3Mobile.model.Account").load(null, {
             url     : 'http://' + region + '.battle.net/api/d3/profile/' + battleTag + '/',
             success : me.onFriendAccountLoad,
+            failure : me.onShowFriendsHeroesFailure,
             scope   : me
         });
     },
@@ -154,6 +155,7 @@ Ext.define('D3Mobile.controller.Friend', {
         Ext.ModelMgr.getModel("D3Mobile.model.Account").load(null, {
             url            : 'http://' + region + '.battle.net/api/d3/profile/' + record.get('battleTag').replace("#", '-') + '/',
             success        : me.onShowFriendsHeroesLoad,
+            failure        : me.onShowFriendsHeroesFailure,
             scope          : me,
             callbackExtras : (activeIndex) ? {
                 activeIndex : activeIndex,
@@ -195,6 +197,11 @@ Ext.define('D3Mobile.controller.Friend', {
             heroesView.setActiveItem(callbackExtras.activeIndex);
             callbackExtras.heroId && heroesView.fireEvent('heroOverviewTap', battleTag.replace("#", '-'), callbackExtras.heroId);
         }
+    },
+    onShowFriendsHeroesFailure : function() {
+        Ext.Msg.alert("Error Occured", "Error loading friend", function() {
+            Ext.Viewport.setMasked(false);
+        });
     },
     updateFriend : function() {
         var me               = this,
