@@ -314,13 +314,27 @@
           border-color: lighten(#c29337, 25);
         }
        }
-      &.green { 
+      &.green {
         border-color: #87a73d; 
         @include background-image(inline-image('green.png'));
         &.tapped {
           border-color: lighten(#87a73d, 25);
         }
       }
+      &.grey {
+        border-color: #513f2e;
+        @include background-image(inline-image('brown.png'));
+        &.tapped {
+          border-color: lighten(#513f2e, 25);
+        }
+      }
+      &.white {
+        border-color: #513f2e;
+        @include background-image(inline-image('brown.png'));
+        &.tapped {
+          border-color: lighten(#513f2e, 25);
+        }
+      }            
 
       &.helm {
         top: 25px;
