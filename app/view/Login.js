@@ -5,7 +5,6 @@ Ext.define('D3Mobile.view.Login', {
     config     : {
         fullscreen : true,
         cls        : 'login',
-        padding    : 10,
         items      : [
             {
                 xtype            : 'component',
