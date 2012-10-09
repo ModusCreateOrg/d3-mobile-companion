@@ -53,3 +53,17 @@ Command-line arguments:  -os macosx -ws cocoa -arch x86_64 -keyring /Users/stan2
 
 !ENTRY com.android.ide.eclipse.adt 1 0 2012-10-09 11:47:07.451
 !MESSAGE No valid Android XML Editor Delegate found for file /D3Mobile/assets/www/config.xml [Res null, type null]
+
+!ENTRY com.android.ide.eclipse.adt 4 0 2012-10-09 13:15:32.397
+!MESSAGE Could not read jar file contents from /D3Mobile/libs/cordova-2.0.0.jar
+!STACK 0
+java.io.FileNotFoundException: /D3Mobile/libs/cordova-2.0.0.jar (No such file or directory)
+	at java.io.FileInputStream.open(Native Method)
+	at java.io.FileInputStream.<init>(FileInputStream.java:120)
+	at com.android.tools.lint.client.api.LintDriver.findClasses(LintDriver.java:1142)
+	at com.android.tools.lint.client.api.LintDriver.checkClasses(LintDriver.java:932)
+	at com.android.tools.lint.client.api.LintDriver.runFileDetectors(LintDriver.java:785)
+	at com.android.tools.lint.client.api.LintDriver.checkProject(LintDriver.java:661)
+	at com.android.tools.lint.client.api.LintDriver.analyze(LintDriver.java:288)
+	at com.android.ide.eclipse.adt.internal.lint.LintJob.run(LintJob.java:151)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
