@@ -50,3 +50,6 @@ Command-line arguments:  -os macosx -ws cocoa -arch x86_64 -keyring /Users/stan2
 
 !ENTRY org.eclipse.ui 2 2 2012-10-09 11:19:27.136
 !MESSAGE Invalid property category path: ValidationPropertiesPage (bundle: org.eclipse.wst.xml.ui, propertyPage: org.eclipse.wst.xml.ui.propertyPage.project.validation)
+
+!ENTRY com.android.ide.eclipse.adt 1 0 2012-10-09 11:47:07.451
+!MESSAGE No valid Android XML Editor Delegate found for file /D3Mobile/assets/www/config.xml [Res null, type null]
