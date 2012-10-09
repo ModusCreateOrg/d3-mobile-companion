@@ -55,6 +55,6 @@ Ext.define('D3Mobile.controller.News', {
         }, 0);
     },
     onArticleDetailSourceTap : function(url) {
-        window.open(url);
+        window.openURL(url);
     }
 });

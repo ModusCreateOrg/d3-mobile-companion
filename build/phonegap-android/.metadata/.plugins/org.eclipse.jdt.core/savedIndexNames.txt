@@ -1,0 +1,5 @@
+INDEX VERSION 1.126+/Users/stan229/Workspaces/d3-android/build/phonegap-android/.metadata/.plugins/org.eclipse.jdt.core
+975481904.index
+2641107501.index
+351099220.index
+2739100256.index

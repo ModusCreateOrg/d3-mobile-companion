@@ -174,7 +174,9 @@ Ext.define('D3Mobile.controller.Main', {
     },
     onLoadServerStatusCallback : function (request, success, response) {
         Ext.Viewport.setMasked(false);
-        this.getServers().setHtml(response.responseXML.getElementsByClassName("server-status")[0]);
+        var node = response.responseXML.getElementsByClassName("server-status")[0];
+        this.getApplication().parseLinks(node);
+        this.getServers().setHtml(node);
     },
     onLogOut                   : function (oldPanel) {
         this.setPreviousPanel(oldPanel);

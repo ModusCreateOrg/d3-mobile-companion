@@ -36,7 +36,7 @@
             "path" : "cordova-2.0.0.js"
         },
         {
-            "path" : "ChildBrowser.js"
+            "path" : "childbrowser.js"
         },
         {
             "path": "sdk/sencha-touch.js"
@@ -119,7 +119,7 @@
     "buildPaths": {
         "testing": "build/testing",
         "production": "build/production",
-        "package": "build/phonegap/www",
+        "package": "build/phonegap-android/D3Mobile/assets/www",
         "native": "build/native"
     },
 

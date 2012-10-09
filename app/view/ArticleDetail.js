@@ -42,6 +42,7 @@ Ext.define('D3Mobile.view.ArticleDetail', {
         if(artlcleRaw.getElementsByTagName("iframe").length > 0) {
             node.getElementsByTagName("iframe")[0].width = "280";
         }
+        D3Mobile.app.parseLinks(node);
 
         contentDom.appendChild(node);
         sourceDom.dataset.url = linkHref;
