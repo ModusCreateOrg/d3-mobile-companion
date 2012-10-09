@@ -85,9 +85,6 @@
       position: relative;      
       font-weight: 400;
       list-style: none;
-      &:first-child {
-        margin-top: 2px;
-      }
       .socket-effect {
         top: -6px;
         position: relative;
@@ -108,8 +105,8 @@
     }
     .item-extras {
       border-top: 1px solid #322A20;
-      margin: 5px 0 0 0;
-      padding: 5px 0 0 0;      
+      margin: 5px 0 20px 0;
+      padding: 10px 0 0 0;      
       .value { color: white; }
       .item-reqlevel {
         list-style: none;
