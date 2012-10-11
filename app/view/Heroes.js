@@ -99,13 +99,12 @@ Ext.define('D3Mobile.view.Heroes', {
         };
     },
     buildFriendsBar : function(battleTag) {
-        console.log('hello');
         return {
             xtype  : 'component',
             docked : 'top',
             tpl    : '<div class="animated fadeIn friends-bar"><span class="bnet-icon"></span>{battleTag} <a href="#">Compare</a></div>',
             data   : {
-                battleTag : battleTag
+                battleTag : battleTag.replace("-","#")
             }
         };
     }
