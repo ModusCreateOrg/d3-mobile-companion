@@ -8,7 +8,7 @@ Ext.define('D3Mobile.view.Heroes', {
             '<div class="hero-overview hero-overview-{class}_{gender} animated fadeIn" data-id="{id}" data-battletag="{battleTag}">',
                 '<div class="hero-header">',
                     '<tpl if="showCloseButton">',
-                        '<div class="friends-bar">viewing friends hero</div>',
+                        '<div class="friends-bar">Viewing {battleTag}</div>',
                     '</tpl>',
                     '<tpl if="showCloseButton">',
                         '<div class="hero-back hero-overview-back"></div>',
