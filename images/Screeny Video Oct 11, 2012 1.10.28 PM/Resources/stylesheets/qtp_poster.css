@@ -1,0 +1,120 @@
+.QTP {
+	display: inline-block;
+	*display:inline; *zoom:1; *padding-bottom: 28px;
+}
+
+.QTP .playContainer {
+  position: absolute;
+  top: 50%;
+  left: 0; right: 0;
+  text-align: center;
+  z-index: 1;
+}
+
+.QTP .playButton {
+  background-color: rgb(20,20,20);
+  cursor: pointer;
+  font-weight: bold;
+  font-size: 1.25em;
+  opacity: .8;
+  filter: alpha(opacity=80);
+  -moz-border-radius: 1em;
+  -webkit-border-radius: 1em;
+/*  zoom: 100%; */
+  padding: .5em 1em;
+  color: white;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.QTP_Poster 
+{
+	background: transparent;
+	padding: 2px;
+	position: relative;
+	left: 0px;
+	height: 28px;
+	*position: absolute; *bottom: 0; *right: 0;
+}
+.QTP_Poster button
+{
+	cursor: pointer;
+	cursor: hand;
+	border: 0px solid transparent;
+	background-color: transparent;	
+	padding: 0px;
+	margin: 0px;
+}
+
+.QTP_Poster .Buttons
+{
+	margin:auto;
+	padding:0px;
+	display: inline-block;
+	position: absolute;
+	left: 0; bottom: 0;
+}
+
+/* Fix button focus rects in Firefox */
+.QTP_Poster button::-moz-focus-inner
+{
+	border: 0px solid transparent;
+}
+
+.QTP_Poster .Beginning, .QTP_Poster .Rewind, .QTP_Poster .Forward, .QTP_Poster .End, .QTP_Poster .Volume, .QTP_Poster .Time
+{
+	width:0;
+	height:0;
+	display: none;
+}
+
+.QTP_Poster .Play, .QTP_Poster .Pause
+{
+	width:25px;
+	height:25px;
+}
+
+.QTP_Poster .Play { background-image: url(../images/ProPlay.png); }
+.QTP_Poster .Pause { background-image: url(../images/ProPause.png); }
+
+.QTP_Poster .Timeline {
+	position: absolute;
+	display: block;
+	left: 30px;
+	right: 0px;
+	top: 8px;
+	width: auto;
+	background-color: transparent;
+	padding: 0;
+	height: 16px;
+}
+.QTP_Poster .Timeline .Left
+{
+	position: absolute;
+	top: 7px;
+	left: 4px;
+	height: 9px;
+	background-color: black;
+	margin-right: 4px;
+}
+.QTP_Poster .Timeline .Knob 
+{ 
+	background-image: url(../images/ProKnob.png); 
+	position: relative;
+	width: 11px;
+	height: 16px;
+	margin: 0;
+	padding: 0px;
+	display: block;
+}
+.QTP_Poster .Timeline .Loaded
+{
+	position: absolute;
+	top: 7px;
+	height: 9px;
+	left: 0;
+	right: 4px;
+	margin-left: 4px; 
+	margin-right: 4px;
+	background: transparent url(../images/ProTimeline.png) repeat-x bottom;
+}
