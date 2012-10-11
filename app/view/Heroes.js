@@ -7,9 +7,9 @@ Ext.define('D3Mobile.view.Heroes', {
         cardTpl         : ''.concat(
             '<div class="hero-overview hero-overview-{class}_{gender} animated fadeIn" data-id="{id}" data-battletag="{battleTag}">',
                 '<div class="hero-header">',
-                    '<tpl if="showCloseButton">',
-                        '<div class="animated fadeIn friends-bar"><span class="bnet-icon"></span>{battleTag} <a href="#">Compare</a></div>',
-                    '</tpl>',
+//                    '<tpl if="showCloseButton">',
+//                        '<div class="animated fadeIn friends-bar"><span class="bnet-icon"></span>{battleTag} <a href="#">Compare</a></div>',
+//                    '</tpl>',
                     '<tpl if="showCloseButton">',
                         '<div class="hero-back hero-overview-back"></div>',
                     '</tpl>',
@@ -74,6 +74,9 @@ Ext.define('D3Mobile.view.Heroes', {
             i;
 
         me.removeAll(true);
+        if(showCloseButton) {
+            me.add(me.buildFriendsBar(battleTag));
+        }
 
         for (i = 0; i < heroesCount; i++) {
             hero = heroes[i];
@@ -84,6 +87,7 @@ Ext.define('D3Mobile.view.Heroes', {
 
         me.setBattleTag(battleTag);
         me.setActiveItem(0);
+
     },
     buildCard  : function (hero) {
         return {
@@ -92,6 +96,18 @@ Ext.define('D3Mobile.view.Heroes', {
             data             : hero,
             tpl              : this.getCardTpl(),
             styleHtmlContent : true
+        };
+    },
+    buildFriendsBar : function(battleTag) {
+        console.log('hello');
+        return {
+            xtype  : 'component',
+            cls    : 'friends-bar',
+            docked : 'top',
+            tpl    : '<div class="animated fadeIn friends-bar"><span class="bnet-icon"></span>{battleTag} <a href="#">Compare</a></div>',
+            data   : {
+                battleTag : battleTag
+            }
         };
     }
 });
