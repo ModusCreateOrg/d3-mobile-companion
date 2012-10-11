@@ -102,7 +102,6 @@ Ext.define('D3Mobile.view.Heroes', {
         console.log('hello');
         return {
             xtype  : 'component',
-            cls    : 'friends-bar',
             docked : 'top',
             tpl    : '<div class="animated fadeIn friends-bar"><span class="bnet-icon"></span>{battleTag} <a href="#">Compare</a></div>',
             data   : {
