@@ -42,7 +42,7 @@ Ext.define('D3Mobile.controller.Main', {
     },
     launch                     : function () {
         var battleTag = localStorage.battleTag,
-            region    = localStorage.region;
+            region    = localStorage.region ? localStorage.region : this.getApplication().region;
 
         if (battleTag) {
             Ext.Viewport.setMasked({
@@ -118,17 +118,18 @@ Ext.define('D3Mobile.controller.Main', {
         return friends;
     },
     updateUser                 : function() {
-        var me        = this,
-            battleTag = localStorage.battleTag,
-            region    = me.getApplication().region;
+        var me               = this,
+            battleTag        = localStorage.battleTag,
+            region           = me.getApplication().region,
+            currentUserStore = Ext.getStore("CurrentUser");
 
         Ext.Viewport.setMasked({
             xtype : 'loadmask'
         });
 
-        Ext.getStore("CurrentUser").removeAll();
+        currentUserStore.removeAll();
 
-        Ext.getStore("CurrentUser").load({
+        currentUserStore.load({
             url      : 'http://' + region + '.battle.net/api/d3/profile/' + battleTag + '/',
             callback : me.onUpdateUserCallback,
             scope    : me

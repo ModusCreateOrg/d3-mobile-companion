@@ -71,6 +71,9 @@ Ext.define('D3Mobile.view.Heroes', {
             i;
 
         me.removeAll(true);
+        if(showCloseButton) {
+            me.add(me.buildFriendsBar(battleTag));
+        }
 
         for (i = 0; i < heroesCount; i++) {
             hero = heroes[i];
@@ -81,6 +84,7 @@ Ext.define('D3Mobile.view.Heroes', {
 
         me.setBattleTag(battleTag);
         me.setActiveItem(0);
+
     },
     buildCard  : function (hero) {
         return {
@@ -89,6 +93,16 @@ Ext.define('D3Mobile.view.Heroes', {
             data             : hero,
             tpl              : this.getCardTpl(),
             styleHtmlContent : true
+        };
+    },
+    buildFriendsBar : function(battleTag) {
+        return {
+            xtype  : 'component',
+            docked : 'top',
+            tpl    : '<div class="animated fadeIn friends-bar"><span class="bnet-icon"></span>{battleTag}</div>',
+            data   : {
+                battleTag : battleTag.replace("-","#")
+            }
         };
     }
 });

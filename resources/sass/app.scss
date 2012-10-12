@@ -120,6 +120,10 @@ html, body {
   font-family: $sansSerif;
 }
 
+.x-mask {
+  @include transition(all .3s ease);
+}
+
 .x-carousel-indicator {
   background: rgba(0, 0, 0, .25);
 }
@@ -161,13 +165,15 @@ html, body {
 .navBar {
   .x-tabbar {
     background-image: inline-image('nav-bg.png');
+    @include transition(all .2s ease);
   }
   .x-button-label {
     font-size: 11px !important;
   }
   .x-tab-active {
     .x-button-label {
-      color: #f3e6ac;
+      @include transition(all .2s ease);
+      color: #fefefe;
     }
     .x-button-icon {
       background-image: -webkit-gradient(linear, left top, left bottom, from(rgb(223, 198, 106)), to(rgb(196, 121, 20))) !important;

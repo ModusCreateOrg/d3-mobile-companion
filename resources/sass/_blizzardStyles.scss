@@ -35,7 +35,7 @@
   .hover .d3-icon-item .icon-item-inner,
   .icon-active .d3-icon-item .icon-item-inner { background-color: rgba(255, 255, 255, 0.05); } /* brighter */
 
-  .d3-icon-item-large .icon-item-default { width: 64px; height: 128px; }
+  .d3-icon-item-large .icon-item-default { width: 85px; height: 128px; }
   .d3-icon-item-large .icon-item-square  { width: 64px; height: 64px; }
   .d3-icon-item-large .icon-item-big     { width: 82px; height: 164px; }
 
@@ -58,38 +58,38 @@
   .d3-icon-item-64 .icon-item-square,
   .d3-icon-item-64 .icon-item-big { width: 64px; height: 64px; }
 
-    /* gray */
-    .d3-icon-item-gray { border-color: #513f2e; background-image: url("http://us.battle.net/d3/static/images/item/icon-bgs/brown.png"); background-color: #2a2017; }
-    a:hover .d3-icon-item-gray,
-    .hover .d3-icon-item-gray,
-    .icon-active .d3-icon-item-gray { border-color: #7a5f45; }
+  /* gray */
+  .d3-icon-item-gray { border-color: #513f2e; background-image: url("http://us.battle.net/d3/static/images/item/icon-bgs/brown.png"); background-color: #2a2017; }
+  a:hover .d3-icon-item-gray,
+  .hover .d3-icon-item-gray,
+  .icon-active .d3-icon-item-gray { border-color: #7a5f45; }
 
-    /* white */
-    .d3-icon-item-white { border-color: #513f2e; background-image: url("http://us.battle.net/d3/static/images/item/icon-bgs/brown.png"); background-color: #2a2017; }
-    a:hover .d3-icon-item-white,
-    .hover .d3-icon-item-white,
-    .icon-active .d3-icon-item-white { border-color: #7a5f45; }
+  /* white */
+  .d3-icon-item-white { border-color: #513f2e; background-image: url("http://us.battle.net/d3/static/images/item/icon-bgs/brown.png"); background-color: #2a2017; }
+  a:hover .d3-icon-item-white,
+  .hover .d3-icon-item-white,
+  .icon-active .d3-icon-item-white { border-color: #7a5f45; }
 
-    /* blue */
-    .d3-icon-item-blue { border-color: #6091a6; background-image: url("http://us.battle.net/d3/static/images/item/icon-bgs/blue.png"); background-color: #232227; }
-    a:hover .d3-icon-item-blue,
-    .hover .d3-icon-item-blue,
-    .icon-active .d3-icon-item-blue { border-color: #90c8d3; }
+  /* blue */
+  .d3-icon-item-blue { border-color: #6091a6; background-image: url("http://us.battle.net/d3/static/images/item/icon-bgs/blue.png"); background-color: #232227; }
+  a:hover .d3-icon-item-blue,
+  .hover .d3-icon-item-blue,
+  .icon-active .d3-icon-item-blue { border-color: #90c8d3; }
 
-    /* yellow */
-    .d3-icon-item-yellow { border-color: #9b8e3c; background-image: url("http://us.battle.net/d3/static/images/item/icon-bgs/yellow.png"); background-color: #322914; }
-    a:hover .d3-icon-item-yellow,
-    .hover .d3-icon-item-yellow,
-    .icon-active .d3-icon-item-yellow { border-color: #cdc75a; }
+  /* yellow */
+  .d3-icon-item-yellow { border-color: #9b8e3c; background-image: url("http://us.battle.net/d3/static/images/item/icon-bgs/yellow.png"); background-color: #322914; }
+  a:hover .d3-icon-item-yellow,
+  .hover .d3-icon-item-yellow,
+  .icon-active .d3-icon-item-yellow { border-color: #cdc75a; }
 
-    /* orange */
-    .d3-icon-item-orange { border-color: #b07b38; background-image: url("http://us.battle.net/d3/static/images/item/icon-bgs/orange.png"); background-color: #332314; }
-    a:hover .d3-icon-item-orange,
-    .hover .d3-icon-item-orange,
-    .icon-active .d3-icon-item-orange { border-color: #d8b954; }
+  /* orange */
+  .d3-icon-item-orange { border-color: #b07b38; background-image: url("http://us.battle.net/d3/static/images/item/icon-bgs/orange.png"); background-color: #332314; }
+  a:hover .d3-icon-item-orange,
+  .hover .d3-icon-item-orange,
+  .icon-active .d3-icon-item-orange { border-color: #d8b954; }
 
-    /* green */
-    .d3-icon-item-green { border-color: #748e3d; background-image: url("http://us.battle.net/d3/static/images/item/icon-bgs/green.png"); background-color: #262f14; }
-    a:hover .d3-icon-item-green,
-    .hover .d3-icon-item-green,
-    .icon-active .d3-icon-item-green { border-color: #aec75c; }
+  /* green */
+  .d3-icon-item-green { border-color: #748e3d; background-image: url("http://us.battle.net/d3/static/images/item/icon-bgs/green.png"); background-color: #262f14; }
+  a:hover .d3-icon-item-green,
+  .hover .d3-icon-item-green,
+  .icon-active .d3-icon-item-green { border-color: #aec75c; }
