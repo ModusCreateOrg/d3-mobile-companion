@@ -7,9 +7,6 @@ Ext.define('D3Mobile.view.Heroes', {
         cardTpl         : ''.concat(
             '<div class="hero-overview hero-overview-{class}_{gender} animated fadeIn" data-id="{id}" data-battletag="{battleTag}">',
                 '<div class="hero-header">',
-//                    '<tpl if="showCloseButton">',
-//                        '<div class="animated fadeIn friends-bar"><span class="bnet-icon"></span>{battleTag} <a href="#">Compare</a></div>',
-//                    '</tpl>',
                     '<tpl if="showCloseButton">',
                         '<div class="hero-back hero-overview-back"></div>',
                     '</tpl>',
@@ -102,7 +99,7 @@ Ext.define('D3Mobile.view.Heroes', {
         return {
             xtype  : 'component',
             docked : 'top',
-            tpl    : '<div class="animated fadeIn friends-bar"><span class="bnet-icon"></span>{battleTag} <a href="#">Compare</a></div>',
+            tpl    : '<div class="animated fadeIn friends-bar"><span class="bnet-icon"></span>{battleTag}</div>',
             data   : {
                 battleTag : battleTag.replace("-","#")
             }

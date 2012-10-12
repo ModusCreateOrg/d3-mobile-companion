@@ -2,17 +2,14 @@ Ext.define('D3Mobile.view.ArticleDetail', {
     extend     : 'Ext.Container',
     xtype      : 'articledetail',
     config     : {
-        scrollable : {
+        scrollable    : {
             direction : 'vertical'
         },
-        tpl        : ''.concat(
+        articleHeader : {},
+        articleDetail : {},
+        detailTpl     : ''.concat(
             '<div class="article-detail">',
                 '<div class="inner">',
-                    '<div class="article-header">',
-                        '<div class="hero-detail-back hero-back"></div>',
-                        '<div class="article-header-title">{title}</div>',
-                        '<div class="article-header-pub">{[Ext.Date.format(values.published,"F d, Y g:i A")]}</div>',
-                    '</div>',
                     '<div class="article-content" data-articleid="{id}"></div>',
                     '<div class="article-footer">',
                         '<div class="article-source-btn" data-url="">SOURCE</div>',
@@ -23,12 +20,42 @@ Ext.define('D3Mobile.view.ArticleDetail', {
     },
     initialize : function () {
         var me = this;
+
+        me.add(me.getArticleHeader());
+        me.add(me.getArticleDetail());
+
         me.callParent();
         me.loadArticleContent();
+
         me.element.on({
             tap   : me.onTap,
             scope : me
         });
+    },
+    applyArticleHeader : function(cfg, inst) {
+        return {
+            xtype  : 'component',
+            docked : 'top',
+            tpl    : ''.concat(
+                '<div class="article-detail">',
+                    '<div class="inner">',
+                        '<div class="article-header">',
+                            '<div class="hero-detail-back hero-back"></div>',
+                            '<div class="article-header-title">{title}</div>',
+                            '<div class="article-header-pub">{[Ext.Date.format(values.published,"F d, Y g:i A")]}</div>',
+                        '</div>',
+                    '</div>',
+                '</div>'
+            ),
+            data   : this.getData()
+        };
+    },
+    applyArticleDetail : function(cfg, inst) {
+        return {
+            xtype : 'component',
+            tpl   : this.getDetailTpl(),
+            data  : this.getData()
+        };
     },
     loadArticleContent : function() {
         var el         = this.element,
