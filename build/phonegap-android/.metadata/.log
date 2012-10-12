@@ -81,3 +81,6 @@ java.io.FileNotFoundException: /D3Mobile/libs/cordova-2.0.0.jar (No such file or
 	at com.android.tools.lint.client.api.LintDriver.analyze(LintDriver.java:288)
 	at com.android.ide.eclipse.adt.internal.lint.LintJob.run(LintJob.java:151)
 	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
+
+!ENTRY com.android.ide.eclipse.adt 1 0 2012-10-09 13:46:29.085
+!MESSAGE No valid Android XML Editor Delegate found for file /D3Mobile/assets/www/config.xml [Res null, type null]
