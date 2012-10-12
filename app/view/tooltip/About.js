@@ -28,9 +28,10 @@ Ext.define('D3Mobile.view.tooltip.About', {
     },
     onTap : function(evtObj) {
         var href        = evtObj.getTarget('.link'),
-            closeButton = evtObj.getTarget(".close-button") ;
+            closeButton = evtObj.getTarget(".close-button"),
+            url         = href && href.dataset ? href.dataset.url : href.getAttribute("data-url");
 
-        href && this.fireEvent('openAboutLink', href.dataset.url);
+        href && this.fireEvent('openAboutLink', url);
         closeButton && this.fireEvent('close');
     }
 });

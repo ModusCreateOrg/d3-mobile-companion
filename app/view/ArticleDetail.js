@@ -61,7 +61,8 @@ Ext.define('D3Mobile.view.ArticleDetail', {
         var el         = this.element,
             contentDom = el.down('.article-content').dom,
             sourceDom  = el.down('.article-source-btn').dom,
-            article    = Ext.getStore("Articles").findRecord('id',contentDom.dataset.articleid),
+            articleId  = contentDom.dataset ? contentDom.dataset.articleId : contentDom.getAttribute('data-articleid'),
+            article    = Ext.getStore("Articles").findRecord('id',articleId),
             artlcleRaw = article.raw,
             node       = artlcleRaw.getElementsByTagName("content")[0].cloneNode(true),
             linkHref   = artlcleRaw.getElementsByTagName("link")[0].getAttribute("href");
@@ -72,16 +73,22 @@ Ext.define('D3Mobile.view.ArticleDetail', {
         D3Mobile.app.parseLinks(node);
 
         contentDom.appendChild(node);
-        sourceDom.dataset.url = linkHref;
+        if(sourceDom.dataset) {
+            sourceDom.dataset.url = linkHref;
+        } else {
+            sourceDom.setAttribute("data-url", linkHref);
+        }
+
     },
     onTap      : function (evtObj) {
         var backButton   = evtObj.getTarget('.hero-back'),
-            sourceButton = evtObj.getTarget('.article-source-btn');
+            sourceButton = evtObj.getTarget('.article-source-btn'),
+            sourceUrl    = sourceButton.dataset ? sourceButton.dataset.url : sourceButton.getAttribute("data-url");
 
         if (backButton) {
             this.fireEvent('close');
         } else if(sourceButton) {
-            this.fireEvent('openURL', sourceButton.dataset.url);
+            this.fireEvent('openURL', sourceUrl);
         }
     }
 });

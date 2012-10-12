@@ -38,15 +38,18 @@ Ext.define('D3Mobile.view.HeroDetail', {
 
 
     onTap : function (evtObj) {
-        var backButton = evtObj.getTarget('.hero-detail-back'),
-            skill = evtObj.getTarget('.skill'),
-            item = evtObj.getTarget('.item');
+        var backButton    = evtObj.getTarget('.hero-detail-back'),
+            skill         = evtObj.getTarget('.skill'),
+            item          = evtObj.getTarget('.item'),
+            tooltipUrl    = skill.dataset ? skill.dataset.tooltipurl   : skill.getAttribute("data-tooltipurl"),
+            runeType      = skill.dataset ? skill.dataset.runetype     : skill.getAttribute("data-runetype"),
+            tooltipParams = item.dataset  ? item.dataset.tooltipparams : item.getAttribute("data-tooltipparams");
         if (backButton) {
             this.fireEvent('close');
         } else if (skill) {
-            this.fireEvent('skillTap', skill.dataset.tooltipurl, skill.dataset.runetype);
+            this.fireEvent('skillTap', tooltipUrl, runeType);
         } else if (item) {
-            this.fireEvent('itemTap', item.dataset.tooltipparams);
+            this.fireEvent('itemTap', tooltipParams);
         }
     },
 

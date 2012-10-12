@@ -41,13 +41,16 @@ Ext.define('D3Mobile.view.Heroes', {
 
     },
     onHeroTap  : function(evtObj) {
-        var me      = this,
-            dataset = evtObj.delegatedTarget.dataset;
+        var me        = this,
+            target    = evtObj.delegatedTarget,
+            dataset   = target.dataset,
+            battleTag = dataset ? dataset.battletag : target.getAttribute("data-battletag"),
+            heroId    = dataset ? dataset.id        : target.getAttribute("data-id");
 
         if(evtObj.getTarget('.hero-back')) {
             me.fireEvent('close', me);
         } else {
-            me.fireEvent('heroOverviewTap', dataset.battletag, dataset.id);
+            me.fireEvent('heroOverviewTap', battleTag, heroId);
         }
 
     },
