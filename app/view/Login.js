@@ -44,7 +44,7 @@ Ext.define('D3Mobile.view.Login', {
                 html             : ''.concat(
                     '<div class="footer animated fadeIn">',
                         '<div class="about-link">Built by Modus Create</div>',
-                        '<div class="non-trademark">Not an official Blizzard product!</div>',
+                        '<div class="non-trademark">Diablo III is a registered trademark of Blizzard Entertainment, Inc. This application is in no way affiliated or endorsed by Blizzard Entertainment®.</div>',
                     '</div>'
                 )
             }
