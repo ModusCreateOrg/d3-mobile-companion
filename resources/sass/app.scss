@@ -186,7 +186,9 @@ html, body {
 /* more options */
 .more-options {
   text-align: center;
-  margin-top: 40%;
+  .more-options-inner {
+    margin-top: 40%;
+  }
   .options-button {
     display: inline-block;
     margin-bottom: 10px;
