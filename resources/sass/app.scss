@@ -183,6 +183,30 @@ html, body {
   }
 }
 
+/* more options */
+.more-options {
+  text-align: center;
+  margin-top: 40%;
+  .options-button {
+    display: inline-block;
+    margin-bottom: 10px;
+    text-indent: -9999px;
+    background-size: 204px 59px;
+    background-repeat: no-repeat;
+    width: 204px;
+    height: 59px;
+    &.pressed {
+      opacity: .75;
+    }
+    &.legal {
+      background-image: inline-image('legal-button.png');
+    }
+    &.logout {
+      background-image: inline-image('logout-button.png');
+    }
+  }
+}
+
 // overall body background for pages
 .x-container {
   background-color: #1c1812;
