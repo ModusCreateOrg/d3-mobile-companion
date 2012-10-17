@@ -53,7 +53,11 @@ Ext.application({
         );
     },
     onResume  : function () {
-        this.getController("Main").updateUser();
-        Ext.Viewport.down('main').getActiveItem().isXType('friendscontainer') && this.getController("Friend").updateFriend();
+        if(Ext.ComponentQuery.query('login').length == 0) {
+            Ext.getStore("Articles").load();
+            this.getController("Main").updateUser();
+            Ext.Viewport.down('main').getActiveItem().isXType('friendscontainer') && this.getController("Friend").updateFriend();
+        }
+
     }
 });
