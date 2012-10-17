@@ -27,9 +27,8 @@ Ext.define('D3Mobile.view.Legal', {
                 xtype : 'component',
                 html  : ''.concat(
                     '<div class="legal-text">',
-                        'hello world',
-                        'blah blah',
-                        'hello',
+                        '<p>All images in the application come from the Diablo 3 public API.</p>',
+                        '<p>Hero images on the character selection sheet are property of d3wiki.com</p>',
                     '</div>'
                 )
             }
