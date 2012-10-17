@@ -209,6 +209,23 @@ html, body {
   }
 }
 
+.legal-text {
+  padding: 20px;
+  text-align: left;
+  width: 320px;
+  word-wrap: break-word;  
+  p {
+    color: #D4B473;
+    margin-bottom: 15px;
+    font-size: 14px;
+    line-height: 20px;
+    a {
+      font-weight: 600;
+      color: #FFEAD4;
+    }
+  }
+}
+
 // overall body background for pages
 .x-container {
   background-color: #1c1812;

@@ -27,8 +27,12 @@ Ext.define('D3Mobile.view.Legal', {
                 xtype : 'component',
                 html  : ''.concat(
                     '<div class="legal-text">',
+                        '<p>Diablo III is a registered trademark of Blizzard Entertainment, Inc. This application is in no way affiliated or endorsed by Blizzard Entertainment®. All content is based on the official API. You can find API related source code here for your own use:</p>',
+                        '<p><a href="https://github.com/Blizzard/d3-api-docs">https://github.com/Blizzard/d3-api-docs</a></p>',
                         '<p>All images in the application come from the Diablo 3 public API.</p>',
-                        '<p>Hero images on the character selection sheet are property of d3wiki.com</p>',
+                        '<p>Hero images on the character selection sheet are property of <a href="http://www.diablowiki.com/">diablowiki.com</a></p>',
+                        '<p>All content exposed on diablowiki is available under the <a href="http://creativecommons.org/licenses/by-nc-sa/3.0/">Attribution-NonCommercial-ShareAlike 3.0 Unported (CC BY-NC-SA 3.0)</a></p>',
+                        '<p><a href="http://www.diablowiki.com/Diablo_Wiki:Copyrights">http://www.diablowiki.com/Diablo_Wiki:Copyrights</a></p>',
                     '</div>'
                 )
             }
