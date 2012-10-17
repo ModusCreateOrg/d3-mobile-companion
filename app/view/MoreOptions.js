@@ -14,9 +14,9 @@ Ext.define('D3Mobile.view.MoreOptions', {
             {
                 xtype : 'component',
                 html  : ''.concat(
-                    '<div class="more-options-inner">',
-                        '<div class="options-button logout">Log Out</div>',
+                    '<div class="more-options-inner animated fadeIn">',
                         '<div class="options-button legal">Legal</div>',
+                        '<div class="options-button logout">Log Out</div>',
                     '</div>'
                 )
             }
