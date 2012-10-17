@@ -5,7 +5,8 @@ Ext.define('D3Mobile.view.Main', {
         'D3Mobile.view.HeroesContainer',
         'D3Mobile.view.FriendsContainer',
         'D3Mobile.view.NewsContainer',
-        'D3Mobile.view.Servers'
+        'D3Mobile.view.Servers',
+        'D3Mobile.view.MoreOptions'
     ],
     config   : {
         fullscreen     : true,
@@ -38,10 +39,9 @@ Ext.define('D3Mobile.view.Main', {
                 action  : 'servers'
             },
             {
-                iconCls : 'd3-logout',
-                xtype   : 'component',
-                title   : 'Log Out',
-                action  : 'logOut'
+                iconCls : 'more',
+                xtype   : 'moreoptions',
+                title   : 'More'
             }
         ]
 

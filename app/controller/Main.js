@@ -13,7 +13,8 @@ Ext.define('D3Mobile.controller.Main', {
         views         : [
             'Main',
             'Login',
-            'tooltip.About'
+            'tooltip.About',
+            'Legal'
         ],
         refs          : {
             login           : 'login',
@@ -22,7 +23,9 @@ Ext.define('D3Mobile.controller.Main', {
             heroes          : 'heroes',
             friends         : 'friends',
             news            : 'news',
-            servers         : 'servers'
+            servers         : 'servers',
+            moreOptions     : 'moreoptions',
+            legal           : 'legal'
         },
         control       : {
             'login'        : {
@@ -36,6 +39,13 @@ Ext.define('D3Mobile.controller.Main', {
             },
             'abouttooltip' : {
                 openAboutLink : 'onOpenAboutLink'
+            },
+            'moreoptions'  : {
+                logout : 'onLogOutTap',
+                legal  : 'onLegalTap'
+            },
+            'legal'        : {
+                close  : 'onLegalClose'
             }
         },
         previousPanel : null
@@ -155,10 +165,9 @@ Ext.define('D3Mobile.controller.Main', {
     },
     onMainActiveItemChange     : function (main, newPanel, oldPanel) {
         var action = newPanel.config.action;
+        this.setPreviousPanel(oldPanel);
 
-        if (action == "logOut") {
-            this.onLogOut(oldPanel);
-        } else if (action == "servers") {
+        if (action == "servers") {
             this.loadServerStatus();
         }
     },
@@ -177,8 +186,7 @@ Ext.define('D3Mobile.controller.Main', {
         Ext.Viewport.setMasked(false);
         this.getServers().setHtml(response.responseXML.getElementsByClassName("server-status")[0]);
     },
-    onLogOut                   : function (oldPanel) {
-        this.setPreviousPanel(oldPanel);
+    onLogOutTap                : function () {
         Ext.Msg.confirm('Log Out', 'Are you sure you want to log out?', this.onLogOutConfirm, this);
     },
     onLogOutConfirm            : function (button, value, scope) {
@@ -198,6 +206,21 @@ Ext.define('D3Mobile.controller.Main', {
     },
     onOpenAboutLink            : function (url) {
         window.open(url);
+    },
+    onLegalTap                 : function() {
+        var moreOptions = this.getMoreOptions(),
+            legal       = moreOptions.add({
+                xtype : 'legal'
+            });
+
+        moreOptions.setActiveItem(legal);
+    },
+    onLegalClose               : function() {
+        var legal       = this.getLegal(),
+            moreOptions = this.getMoreOptions();
+
+        legal.destroy();
     }
+
 
 });
