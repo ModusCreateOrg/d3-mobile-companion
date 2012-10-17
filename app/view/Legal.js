@@ -7,6 +7,9 @@
 Ext.define('D3Mobile.view.Legal', {
     extend     : 'Ext.Container',
     xtype      : 'legal',
+    requires   : [
+        'Ext.TitleBar'
+    ],
     config     : {
         cls        : 'legal',
         scrollable : {
@@ -14,14 +17,19 @@ Ext.define('D3Mobile.view.Legal', {
         },
         items      : [
             {
-                xtype  : 'component',
+                xtype  : 'titlebar',
                 docked : 'top',
-                html   : ''.concat(
-                    '<div class="legal-header">',
-                        '<div class="hero-back close"></div>',
-                        '<div class="legal-header">LEGAL</div>',
-                    '</div>'
-                )
+                title  : 'Legal',
+                items  : [
+                    {
+                        iconCls  : 'd3-back',
+                        iconMask : true,
+                        action   : 'back',
+                        align    : 'left',
+                        ui       : 'plain'
+                    }
+
+                ]
             },
             {
                 xtype : 'component',
@@ -39,17 +47,5 @@ Ext.define('D3Mobile.view.Legal', {
             }
         ]
 
-    },
-    initialize : function () {
-        var me = this;
-        me.element.on({
-            tap   : me.onTap,
-            scope : me
-        });
-    },
-    onTap      : function (evtObj) {
-        var isClose = evtObj.getTarget(".close");
-
-        isClose && this.fireEvent('close');
     }
 });

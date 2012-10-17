@@ -44,8 +44,8 @@ Ext.define('D3Mobile.controller.Main', {
                 logout : 'onLogOutTap',
                 legal  : 'onLegalTap'
             },
-            'legal'        : {
-                close  : 'onLegalClose'
+            'legal button'        : {
+                tap  : 'onLegalClose'
             }
         },
         previousPanel : null
