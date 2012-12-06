@@ -24,7 +24,6 @@ Change directories to the project root directory and run:
 `sencha app build package`
 
 ## Planned Features
-* Release an Android version. This should be trivial thanks to PhoneGap.
 * Implement some sort of manual Auction House stat comparison? Currently there is no Auction House API, so what we can do here is limited.
 * Hopefully add retina ready assets for iPhone 4+. Blizzard doesn't provide these for us, so this may never come.
 * Implement feedback from users! I'm sure we've overlooked things while trying to make this as simple as possible.
