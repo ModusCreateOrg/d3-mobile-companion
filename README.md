@@ -37,3 +37,8 @@ https://gist.github.com/dfaa2de31410a1414e5c
 ## Authors
 - Stan Bershadskiy ([@stan229](http://twitter.com/stan229))
 - Dave Ackerman ([@dmackerman](http://twitter.com/dmackerman))
+
+# License
+Licensed under the MIT License.
+
+See license.txt for more information
