@@ -1,3 +1,7 @@
+// Copyright (c) 2012 Modus Create, Inc.
+// This file is licensed under the terms of the MIT license.
+// See the file license.txt for more details.
+
 .close-button {
   @include background-image(linear-gradient(top, rgb(50, 42, 32), rgb(37, 30, 23)));
   @include border-bottom-right-radius(5px);
