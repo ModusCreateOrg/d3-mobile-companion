@@ -7,8 +7,9 @@ Ext.define('D3Mobile.view.Heroes', {
     xtype      : 'heroes',
     config     : {
         title           : 'Heroes',
+        battleTag       : null,
         cardTpl         : ''.concat(
-            '<div class="hero-overview hero-overview-{class}_{gender}" data-id="{id}" data-battletag="{battleTag}">',
+            '<div class="hero-overview hero-overview-{class}_{gender} animated fadeIn" data-id="{id}" data-battletag="{battleTag}">',
                 '<div class="hero-header">',
                     '<tpl if="showCloseButton">',
                         '<div class="hero-back hero-overview-back"></div>',
@@ -20,6 +21,14 @@ Ext.define('D3Mobile.view.Heroes', {
                         '</tpl>',
                     '</div>',
                 '</div>',
+                '<tpl if="hardcore">',
+                    '<div class="hero-header">',
+                        '<div class="hero-header-hardcore flex1">Hardcore</div>',
+                        '<tpl if="dead">',
+                            '<div class="hero-header-hardcore dead flex1">Dead</div>',
+                        '</tpl>',
+                    '</div>',
+                '</tpl>',
             '</div>'
         )
     },
@@ -36,13 +45,16 @@ Ext.define('D3Mobile.view.Heroes', {
 
     },
     onHeroTap  : function(evtObj) {
-        var me      = this,
-            dataset = evtObj.delegatedTarget.dataset;
+        var me        = this,
+            target    = evtObj.delegatedTarget,
+            dataset   = target.dataset,
+            battleTag = dataset ? dataset.battletag : target.getAttribute("data-battletag"),
+            heroId    = dataset ? dataset.id        : target.getAttribute("data-id");
 
         if(evtObj.getTarget('.hero-back')) {
             me.fireEvent('close', me);
         } else {
-            me.fireEvent('heroOverviewTap', dataset.battletag, dataset.id);
+            me.fireEvent('heroOverviewTap', battleTag, heroId);
         }
 
     },
@@ -64,14 +76,22 @@ Ext.define('D3Mobile.view.Heroes', {
             heroesCount     = heroes.length,
             hero,
             i;
+
         me.removeAll(true);
+        if(showCloseButton) {
+            me.add(me.buildFriendsBar(battleTag));
+        }
+
         for (i = 0; i < heroesCount; i++) {
             hero = heroes[i];
             hero.battleTag = battleTag;
             hero.showCloseButton = showCloseButton;
             me.add(me.buildCard(hero));
         }
+
+        me.setBattleTag(battleTag);
         me.setActiveItem(0);
+
     },
     buildCard  : function (hero) {
         return {
@@ -80,6 +100,16 @@ Ext.define('D3Mobile.view.Heroes', {
             data             : hero,
             tpl              : this.getCardTpl(),
             styleHtmlContent : true
+        };
+    },
+    buildFriendsBar : function(battleTag) {
+        return {
+            xtype  : 'component',
+            docked : 'top',
+            tpl    : '<div class="animated fadeIn friends-bar"><span class="bnet-icon"></span>{battleTag}</div>',
+            data   : {
+                battleTag : battleTag.replace("-","#")
+            }
         };
     }
 });

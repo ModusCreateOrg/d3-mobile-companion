@@ -9,31 +9,61 @@ Ext.define('D3Mobile.view.Login', {
     config     : {
         fullscreen : true,
         cls        : 'login',
-        padding    : 10,
         items      : [
             {
                 xtype            : 'component',
                 styleHtmlContent : true,
                 html             : ''.concat(
-                    '<div class="login-container">',
-                        '<h1>Mobile Companion</h1>',
+                    '<div class="login-container animated fadeIn">',
                         '<div class="d3-logo"></div>',
+                        '<div class="form">',
+                        '<h1>Mobile Companion</h1>',
                         '<div class="battle-tag-input">',
                             '<form>',
                                 '<input type="text" name="battleTag" placeholder="Battle Tag" autocorrect="off" autocapitalize="off" required />',
                                 '<input type="tel" name="battleTagNum" placeholder="####" autocorrect="off" autocapitalize="off" maxlength="4" required />',
+                                '<br/>',
+                                '<select name="region" required />',
+                                    '<option value="us" selected>Americas</option>',
+                                    '<option value="eu">Europe</option>',
+                                    '<option value="tw">Taiwan</option>',
+                                    '<option value="kr">Korea</option>',
+                                '</select>',
+
                             '</form>',
                         '</div>',
+                        '</div>', // end .form
                     '</div>'
                 )
             },
             {
                 xtype : 'button',
-                cls   : 'loginBtn',
+                cls   : 'loginBtn animated fadeIn',
                 ui    : 'loginButton',
                 text  : 'Log In'
+            },
+            {
+                xtype            : 'component',
+                styleHtmlContent : true,
+                html             : ''.concat(
+                    '<div class="footer animated fadeIn">',
+                        '<div class="about-link">Built by Modus Create</div>',
+                        '<div class="non-trademark">Not an official Blizzard product!</div>',
+                    '</div>'
+                )
             }
         ]
+    },
+    initialize : function() {
+        var me = this;
+        me.element.on({
+            tap   : me.onTap,
+            scope : me
+        });
+    },
+    onTap      : function (evtObj) {
+        var aboutLink = evtObj.getTarget('.about-link');
+        aboutLink && this.fireEvent('about');
     },
     isValid    : function () {
         var element         = this.element,

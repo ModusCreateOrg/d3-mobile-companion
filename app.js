@@ -32,16 +32,19 @@ Ext.application({
         '1496x2048' : 'resources/startup/1496x2048.png'
     },
     childBrowser : null,
-    launch : function () {
+    region       : 'us',
+    launch       : function () {
+        var me = this;
         // Destroy the #appLoadingIndicator element
         Ext.fly('appLoadingIndicator').destroy();
-        if(window.ChildBrowser) {
-            this.childBrowser = ChildBrowser.install();
+        if (window.plugins.childBrowser) {
+            window.openURL = me.openURL;
         }
+        document.addEventListener('resume', Ext.bind(me.onResume, me), false);
+
 
     },
-
-    onUpdated : function () {
+    onUpdated    : function () {
         Ext.Msg.confirm(
             "Application Update",
             "This application has just successfully been updated to the latest version. Reload now?",
@@ -51,5 +54,23 @@ Ext.application({
                 }
             }
         );
+    },
+    openURL      : function (url) {
+        window.plugins.childBrowser.showWebPage(url);
+    },
+    onResume     : function () {
+        this.getController("Main").updateUser();
+        Ext.Viewport.down('main').getActiveItem().isXType('friendscontainer') && this.getController("Friend").updateFriend();
+    },
+    parseLinks : function(node) {
+        var links       = node.getElementsByTagName("a"),
+            linksLength = links.length,
+            link,
+            i;
+
+        for(i = 0; i < linksLength; i++) {
+            link      = links[i];
+            link.href = "javascript: openURL('" + link.href + "');";
+        }
     }
 });

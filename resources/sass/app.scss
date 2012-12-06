@@ -5,13 +5,7 @@
 $page-bg-color: #1a1914;
 $sansSerif: 'Lato', sans-serif;
 
-.d3-color-yellow { color: #f8de07 !important; }
-.d3-color-red { color: #b7070d !important; }
-.d3-color-blue { color: #6969ff !important; }
-.d3-color-orange { color: #bf642f !important; }
-.d3-color-green { color: #01d701 !important; }
-.d3-color-gold { color: #c0b377 !important; }
-
+@import 'blizzardStyles';
 @import 'sencha-touch/default/all';
 
 // You may remove any of the following modules that you
@@ -39,6 +33,68 @@ $sansSerif: 'Lato', sans-serif;
 @include pictos-iconmask(user_add);
 @include pictos-iconmask(user_remove2);
 
+/*
+Animate.css - http://daneden.me/animate
+LICENSED UNDER THE  MIT LICENSE (MIT)
+
+Copyright (c) 2012 Dan Eden
+
+Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+*/
+
+.animated {
+  -webkit-animation-fill-mode: both;
+  -moz-animation-fill-mode: both;
+  -ms-animation-fill-mode: both;
+  -o-animation-fill-mode: both;
+  animation-fill-mode: both;
+  -webkit-animation-duration: 1s;
+  -moz-animation-duration: 1s;
+  -ms-animation-duration: 1s;
+  -o-animation-duration: 1s;
+  animation-duration: 1s;
+}
+
+.animated.hinge {
+  -webkit-animation-duration: 2s;
+  -moz-animation-duration: 2s;
+  -ms-animation-duration: 2s;
+  -o-animation-duration: 2s;
+  animation-duration: 2s;
+}
+
+@-webkit-keyframes fadeIn {
+  0% {opacity: 0;}  
+  100% {opacity: 1;}
+}
+
+@-moz-keyframes fadeIn {
+  0% {opacity: 0;}  
+  100% {opacity: 1;}
+}
+
+@-o-keyframes fadeIn {
+  0% {opacity: 0;}  
+  100% {opacity: 1;}
+}
+
+@keyframes fadeIn {
+  0% {opacity: 0;}  
+  100% {opacity: 1;}
+}
+
+.fadeIn {
+  -webkit-animation-name: fadeIn;
+  -moz-animation-name: fadeIn;
+  -o-animation-name: fadeIn;
+  animation-name: fadeIn;
+}
+
+
 @import 'login';
 @import 'hero';
 @import 'friends';
@@ -59,12 +115,17 @@ $sansSerif: 'Lato', sans-serif;
 @include modus-pictos-iconmask(d3-servers);
 @include modus-pictos-iconmask(d3-logout);
 @include modus-pictos-iconmask(d3-friends);
+@include modus-pictos-iconmask(d3-back);
 
 
 
 html, body {
   height: 100%;
   font-family: $sansSerif;
+}
+
+.x-mask {
+  @include transition(all .3s ease);
 }
 
 .x-carousel-indicator {
@@ -76,6 +137,22 @@ html, body {
 
 .x-html {
   padding: .3em 1.2em; 
+}
+
+.x-msgbox-dark {
+  background: none !important;
+  .x-toolbar {
+    background: none !important;
+    .x-innerhtml {
+      color: #f0e3cd;  
+    }
+  }
+  .x-body {
+    padding-bottom: 15px;
+    background: none !important;
+    color: #a9986d;
+    font-size: 16px;    
+  }
 }
 
 .x-title .x-innerhtml {
@@ -92,13 +169,15 @@ html, body {
 .navBar {
   .x-tabbar {
     background-image: inline-image('nav-bg.png');
+    @include transition(all .2s ease);
   }
   .x-button-label {
     font-size: 11px !important;
   }
   .x-tab-active {
     .x-button-label {
-      color: #f3e6ac;
+      @include transition(all .2s ease);
+      color: #fefefe;
     }
     .x-button-icon {
       background-image: -webkit-gradient(linear, left top, left bottom, from(rgb(223, 198, 106)), to(rgb(196, 121, 20))) !important;

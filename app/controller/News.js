@@ -29,7 +29,7 @@ Ext.define('D3Mobile.controller.News', {
             articleDetail : 'articledetail'
         },
         control : {
-            'news' : {
+            'news'          : {
                 itemtap : 'onNewsItemTap'
             },
             'articledetail' : {
@@ -46,17 +46,19 @@ Ext.define('D3Mobile.controller.News', {
                 record : record,
                 data   : record.getData()
             });
+
         newsContainer.animateActiveItem(articleDetail, { type: 'slide', direction: 'down' });
     },
     onArticleDetailCloseTap : function() {
         var newsContainer = this.getNewsContainer(),
             articleDetail = this.getArticleDetail();
+
         newsContainer.animateActiveItem(0, { type: 'slide', direction: 'down' });
         setTimeout(function() {
             newsContainer.remove(articleDetail, true);
         }, 0);
     },
     onArticleDetailSourceTap : function(url) {
-        window.open(url);
+        window.openURL(url);
     }
 });

@@ -5,30 +5,64 @@
 .login {
   background-image: inline-image('login.jpg') !important;
   background-color: black !important;
-  background-size: contain;
+  background-size: 320px 480px;
   background-repeat: no-repeat;
-  background-position: center top;
+  // adjust logo placement for iPhone 4/s
+  @media only screen and (max-width : 320px) and (max-height : 480px) {
+    background-position: 0px -22px;
+  }
+  // use a new bg for the iPhone 5
+  @media (device-height: 568px) and (-webkit-min-device-pixel-ratio: 2) {
+      background-image: inline-image('login-iphone5.jpg') !important;
+      background-size: 320px 568px;
+  }
+
+  .x-innerhtml { padding: 0; }
+  .form { margin-top: -45px; }
+
+  .d3-logo {
+    background-image: inline-image('d3-logo.png');
+    background-repeat: no-repeat;
+    background-size: 320px 213px;
+    width: 320px;
+    height: 200px;
+  }
+
+  .footer {
+    text-align: center;
+    margin-top: 25px;    
+    .about-link {
+      font-weight: 600;
+      color: #ddebee;
+    }
+    .non-trademark {
+      color: #565D61;
+      font-style: italic;
+    }
+  }
+  
   .loginBtn {
-    width: 67%;
-    margin: 0px auto;
-    padding: 12px;
-    font-size: 1.2em;
-    text-transform: uppercase;      
+    width: 73%;
+    margin: 4px auto;
+    padding: 8px;
+    font-size: .8em;
+    text-transform: uppercase;
   }  
   .login-container {
+    color: #fefefe;
     .battle-tag-input {
       text-align: center;
     }
     // @include background(linear-gradient(left bottom, rgb(18, 17, 15), rgb(28, 24, 18)));
     h1 {
-      color: #eee;
-      font-size: 2.1em;
-      font-weight: 700;
+      color: #EEE;
+      font-size: 1.8em;
+      font-weight: 800;
       text-align: center;
+      line-height: 15px;
+      text-shadow: 0px 4px rgba(0, 0, 0, .5);
     }
-    color: #fefefe;
-    margin-top: 200px;
-    input {
+    input, select {
       @include border-radius(5px);
       font-weight: 600;
       text-align: center;
@@ -41,7 +75,9 @@
       width:100%;
       color: #333;
       &.invalid {
-        border: 3px solid #aa1711;
+        @include background-image(linear-gradient(top, rgb(130, 15, 6), rgb(104, 17, 7)));
+        border: 1px solid #9c0d01;
+        color: #eee;
       }
 
       &[name=battleTag] {
@@ -50,6 +86,12 @@
       }   
       &[name=battleTagNum] {
         width: 25%;
+      }
+
+      &[name="region"] {
+        height: 34px;
+        background-color: white;
+        width: 73%;
       }
     }
     ::-webkit-input-placeholder {
@@ -63,3 +105,25 @@
     }    
   }
 }
+
+.about-text {
+  .logo {
+    background-image: inline-image('modus-about.png');
+    background-repeat: no-repeat;
+    background-size: 260px 32px;
+    width: 260px;
+    height: 32px;
+    margin: 0px auto;
+    margin-bottom: 20px;
+  }
+  p {
+    color: #B19B74;
+    font-size: 16px;
+  }
+  a {
+    color: #29929B;
+    font-weight: 600;
+    text-decoration: none;
+  }
+}
+

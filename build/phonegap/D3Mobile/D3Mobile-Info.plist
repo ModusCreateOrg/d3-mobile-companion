@@ -36,14 +36,14 @@
 	<key>CFBundleSignature</key>
 	<string>????</string>
 	<key>CFBundleVersion</key>
-	<string>1.0</string>
+	<string>1.1</string>
 	<key>LSApplicationCategoryType</key>
+	<string></string>
+	<key>CFBundleShortVersionString</key>
 	<string></string>
 	<key>LSRequiresIPhoneOS</key>
 	<true/>
 	<key>NSMainNibFile</key>
-	<string></string>
-	<key>NSMainNibFile~ipad</key>
 	<string></string>
 	<key>UIPrerenderedIcon</key>
 	<true/>
@@ -58,9 +58,9 @@
 			<key>TintColor</key>
 			<dict>
 				<key>Blue</key>
-				<real>0.16830519642566316</real>
+				<real>0.1683051964256632</real>
 				<key>Green</key>
-				<real>0.21061198122130753</real>
+				<real>0.2106119812213075</real>
 				<key>Red</key>
 				<real>0.3203125</real>
 			</dict>

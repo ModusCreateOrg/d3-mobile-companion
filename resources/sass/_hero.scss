@@ -7,6 +7,53 @@
   color: #5789ff;
 }
 
+.back-button {
+  background-image: -webkit-linear-gradient(top, #4B4B4B, #422B1B) !important;
+  border: radius;
+  height: 20px !important;
+  border-color: #2B1503 !important;
+  padding: 4px 7px !important;  
+}
+
+.hero-name {
+  position: relative;
+  top: 3px;  
+}
+
+.levels {
+  font-weight: 300;
+  font-size: 18px;
+  padding-left: 5px;
+  position: relative;
+  top: 3px;  
+}
+
+.class-icon {
+  background-image: inline-image('hero-nav-portraits.jpg');
+  background-size: 83px 165px;
+  width: 41px;
+  height: 33px;
+  display: inline-block;
+  text-indent: -9999px;
+  vertical-align: middle;
+  border-radius: 10px;  
+  &.barbarian_0 { background-position: 0px 0px; }
+  &.barbarian_1 { background-position: 41px 0; }
+
+  &.demon-hunter_0 { background-position: 0px -33px; }
+  &.demon-hunter_1 { background-position: 41px -33px; }
+
+  &.witch-doctor_0 { background-position: 0px -99px; }
+  &.witch-doctor_1 { background-position: 41px -99px; }  
+
+  &.monk_0 { background-position: 0px -66px; }
+  &.monk_1 { background-position: 41px -66px; }    
+
+  &.wizard_0 { background-position: 0 -132px; }
+  &.wizard_1 { background-position: 41px -132px; }  
+
+}
+
 .header {
   text-transform: uppercase;
   color: #f3e6d0;
@@ -24,9 +71,9 @@
   }
 }
 
-.x-scroll-view .x-innerhtml {
-  padding-bottom: 63px;
-}
+//.x-scroll-view .x-innerhtml {
+  //padding-bottom: 63px;
+//}
 
 /* main hero */
 .heroes-container > div {
@@ -49,15 +96,23 @@
     background-size: 80%;
   }
   &.tapped {
-    opacity: .75;
-    position: relative;
-    top: 2px;
+    opacity: .65;
+  }
+}
+
+// add some padding for the friends bar
+
+
+.friends-container {
+  .hero-overview {
+    //padding-top: 30px;
   }
 }
 
 .hero-header {
   display: -webkit-box;
   -webkit-box-pack: justify;
+  height: initial !important;
 }
 
 .hero-header-name {
@@ -65,18 +120,66 @@
   font-size: 1.65em;
   text-shadow: 0px 4px #1E1B16;
   font-weight: 800;
-  color: #eee;
+  color: #FFEAD4;
 }
 
 .hero-header-level {
   text-align: right;
   font-size: 1.65em;
-  color: #eee;
+  color: #d4b473;
   .hero-header-paragon_level {
     color: #5789ff;
     padding-left: 5px;
   }
 }
+
+.friends-bar {
+  background-color: #543e32;
+  @include background-image(linear-gradient(top, rgb(84, 62, 50), rgb(54, 38, 31)));
+  color: #D4B473;
+  display: block;
+  padding: 4px 18px;
+  font-size: 11px;
+  text-shadow: 0px 1px #332923;
+  width: 103%;
+  position: relative;
+  left: -10px;
+  top: 0px;
+  height: 30px !important;
+  margin-bottom: 10px;
+  box-shadow: 0px 2px 10px rgba(0, 0, 0, .25);
+  border-top: 1px solid #423127;
+  border-bottom: 1px solid #332923;
+  .bnet-icon {
+    background-image: inline-image('bnet-icon.png');
+    background-size: 22px 22px;
+    width: 22px;
+    height: 22px;
+    display: inline-block;
+    margin-right: 5px;
+    vertical-align: middle;
+  }
+  a {
+    float: right;
+    font-weight: bold;
+    text-decoration: none;
+    background: #34261F;
+    padding: 1px 10px;
+    color: white;
+    border-radius: 10px;
+  }
+}
+
+.hero-header-hardcore {
+  text-align: left;
+  font-size: 1.25em;
+  text-shadow: 0px 4px #1E1B16;
+  color: #fe0000;
+  &.dead {
+    text-align: right;
+  }
+}
+
 
 .hero-detail-card > div {
   height: 100%
@@ -95,7 +198,7 @@
   -webkit-mask-repeat: no-repeat;
   background-color: #f3e6d0;
   width: 25px;
-  height: 25px;
+  height: 25px !important;
 }
 .hero-detail-back {
   //-webkit-mask-image: theme_image($theme-name, "pictos/" + "delete_black2" + ".png");
@@ -157,69 +260,138 @@
 }
 
 /* items */
+.sockets-wrapper {
+  width: 100%;
+  height: 100%;
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0.8;        
+  .sockets-align {
+    display: table-cell;
+    vertical-align: middle;
+    width: 66px;
+    height: 66px;
+    .socket {
+      display: inline-block;
+      vertical-align: middle;
+      width: 32px;
+      height: 32px;
+      background-image: inline-image('socket.png');
+      background-repeat: no-repeat;
+      text-align: center;
+      position: relative;
+      left: 1px;            
+      .gem {
+        margin: 6px auto 0;
+        width: 20px;
+        height: 20px;              
+      }
+    }
+  }
+}
+
 .hero-items {
   text-align: center;
+
+  @media only screen and (max-width : 320px) and (max-height : 480px) {
+    -webkit-transform: scale(.8);
+    top: -46px;
+    position: relative;
+  }  
+
+  // flourish
+  .weapon-flourish {
+    width: 128px;
+    height: 166px;
+    background-repeat: no-repeat;
+    position: absolute;
+    z-index: 1;
+    &.main-hand-flourish {
+      top: 283px;
+      left: -21px;
+    }
+    &.off-hand-flourish {
+      top: 283px;
+      left: 175px;
+      -webkit-transform: rotate(180deg);
+    }    
+    &.elemental-lightning { background-image: inline-image('flourish/lightning.png'); }
+    &.elemental-cold { background-image: inline-image('flourish/cold.png'); }
+    &.elemental-poison { background-image: inline-image('flourish/poison.png'); }
+    &.elemental-holy { background-image: inline-image('flourish/holy.png'); }
+    &.elemental-fire { background-image: inline-image('flourish/fire.png'); }
+    &.elemental-arcane { background-image: inline-image('flourish/arcane.png'); }
+  }
+
+
+
   .items-container {
     // background-image: inline-image('items-skeleton.png');
     margin: 0px auto;
     width: 286px;
     height: 438px;
     position: relative;
+
     .item {
       @include border-radius(5px);
       position: absolute;
       width: 20px;
       height: 20px;
       border: 1px solid white;
+      z-index: 2;
       img { position: relative; }
 
       &.yellow { 
         border-color: #b1a73c; 
-        background-color: #322a0d;
-        @include background-image(linear-gradient(top, rgb(50, 42, 13), rgb(96, 80, 24)));        
+        @include background-image(inline-image('yellow.png'));
         &.tapped {
-          background-image: none;
           border-color: lighten(#b1a73c, 25);
-          background-color: lighten(#322a0d, 10);
         }
       }
       &.blue {
         border-color: #6ba9ba;
-        background-color: #131b27;
-        @include background-image(linear-gradient(top, rgb(19, 27, 39), rgb(39, 56, 80)));
+        @include background-image(inline-image('blue.png'));
         &.tapped {
-          background-image: none;
           border-color: lighten(#6ba9ba, 25);
-          background-color: lighten(#131b27, 10);
         }
       }
       &.orange {
         border-color: #c29337;
-        background-color: #39240f;
-        @include background-image(linear-gradient(top, rgb(57, 36, 15), rgb(105, 66, 28)));
+        @include background-image(inline-image('orange.png'));
         &.tapped {
-          background-image: none;
           border-color: lighten(#c29337, 25);
-          background-color: lighten(#39240f, 10);
         }
        }
-      &.green { 
+      &.green {
         border-color: #87a73d; 
-        background-color: #20300d;
-        @include background-image(linear-gradient(top, rgb(32, 48, 13), rgb(63, 96, 25)));
+        @include background-image(inline-image('green.png'));
         &.tapped {
-          background-image: none;
           border-color: lighten(#87a73d, 25);
-          background-color: lighten(#20300d, 10);
         }
       }
+      &.grey {
+        border-color: #513f2e;
+        @include background-image(inline-image('brown.png'));
+        &.tapped {
+          border-color: lighten(#513f2e, 25);
+        }
+      }
+      &.white {
+        border-color: #513f2e;
+        @include background-image(inline-image('brown.png'));
+        &.tapped {
+          border-color: lighten(#513f2e, 25);
+        }
+      }            
 
       &.helm {
         top: 25px;
         left: 108px;
         width: 66px;
         height: 66px;
-        img {
+        .icon {
           top: -31px;
         }
       }      
@@ -228,7 +400,7 @@
         left: 26px;
         width: 66px;
         height: 88px;
-        img {
+        .icon {
           top: -20px;
         }
       }
@@ -237,7 +409,7 @@
         left: 192px;
         width: 55px;
         height: 56px;
-        img {
+        .icon {
           width: 52px;
           height: 52px;
           top: 1px;          
@@ -248,7 +420,11 @@
         left: 100px;
         width: 82px;
         height: 115px;
-        img {
+        .sockets-align {
+          width: 82px;
+          height: 115px;
+        }        
+        .icon {
           top: -25px;          
         }
       }      
@@ -257,7 +433,7 @@
         left: 0px;
         width: 66px;
         height: 88px;
-        img {
+        .icon {
           top: -20px;
         }
       }
@@ -266,7 +442,7 @@
         left: 216px;
         width: 66px;
         height: 88px;
-        img {
+        .icon {
           top: -20px;
         }
       }      
@@ -275,9 +451,13 @@
         left: 12px;
         width: 42px;
         height: 42px;
-        img {
+        .icon {
           top: -12px;
           left: -12px;          
+        }
+        .sockets-align {
+          width: 66px;
+          height: 44px;
         }
       }
       &.belt {
@@ -285,7 +465,7 @@
         left: 100px;
         width: 82px;
         height: 34px;
-        img {
+        .icon {
           top: -15px;
         }
       }  
@@ -294,7 +474,11 @@
         left: 228px;
         width: 42px;
         height: 42px;
-        img {
+        .sockets-align {
+          width: 66px;
+          height: 44px;
+        }        
+        .icon {
           top: -12px;
           left: -12px;          
         }
@@ -304,7 +488,7 @@
         left: 108px;
         width: 66px;
         height: 88px;
-        img {
+        .icon {
           top: -20px;
         }
       }  
@@ -313,7 +497,7 @@
         left: 108px;
         width: 66px;
         height: 89px;
-        img {
+        .icon {
           top: -20px;
         }        
       }     
@@ -322,40 +506,69 @@
         left: 0px;
         width: 66px;
         height: 130px;
+        .sockets-align {
+          width: 66px;
+          height: 130px;
+        }       
       }  
       &.offHand {
         bottom: 5px;
         left: 216px;
         width: 66px;
         height: 130px;
+        .sockets-align {
+          width: 66px;
+          height: 130px;
+        }        
         &.repeat {
           opacity: .5;
         }
       }
     }
-
   }
 }
 
 /* skills */
 .hero-skills {
   .skills {
-    
+    @media only screen and (max-width : 320px) and (max-height : 480px) {
+      -webkit-transform: scale(.95);
+    }
   }
   .actives {
     overflow: hidden;
     border-bottom: 1px solid #252018;
-    padding-bottom: 20px;
+    @media only screen and (max-width : 320px) and (max-height : 480px) {
+      border: none;
+    }  
     .skill {
       position: relative;
       margin: 5px;
       float: left;
-      width: 30%;
+      width: 29%;
+      min-height: 125px;
       text-align: center;
       img {
         &.tapped {
           opacity: .55;
         }
+      }
+      .mouse {
+        background-image: inline-image('mouse-buttons.png');
+        background-repeat: no-repeat;
+        z-index: 5;
+        left: 4px;
+        top: -3px;
+        width: 15px;
+        height: 18px;
+        position: absolute;
+        text-indent: -999px;
+        &.left {
+          background-position: 0 0;
+        }
+        &.right {
+          background-position: -15px 0;
+        }        
       }
       .number { 
         z-index: 5;
@@ -368,21 +581,39 @@
         background: #2A130B;
         border: 1px solid #443523;
         padding: 0px 7px;
-        left: 15px;
-        top: -4px;
-        
-       }
+        left: 4px;
+        top: -3px;
+      }
       .name { font-size: .9em; color: #f3e6d0; font-weight: 600; line-height: 1.1; }
-      .rune { font-size: .8em; color: #796d55; }
+      .rune { font-size: .8em; color: #796d55; line-height: 14px; }
+      .rune-icon {
+        background-image: inline-image('rune-icons.png');
+        background-repeat: no-repeat;
+        width: 42px; 
+        height: 42px;
+        display: inline-block;
+        position: absolute;
+        left: 51px;
+        top: 26px;
+          &.a { background-position: 0 0; }
+          &.b { background-position: -42px 0; }
+          &.c { background-position: -84px 0; }
+          &.d { background-position: -126px 0; }
+          &.e { background-position: -168px 0; }
+          &.none { background-position: -210px 0; }
+      }
     }
   }
   .passives {
     overflow: hidden;
     margin-top: 10px;
+    @media only screen and (max-width : 320px) and (max-height : 480px) {
+      margin-top: -19px;
+    } 
     .skill {
       margin: 5px;
       float: left;
-      width: 30%;
+      width: 29%;
       text-align: center;
       img {
         &.tapped {

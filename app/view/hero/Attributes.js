@@ -23,7 +23,7 @@ Ext.define('D3Mobile.view.hero.Attributes', {
         header           : {},
         headerLabel      : 'Attributes',
         tpl              : ''.concat(
-            '<div class="hero-attributes">',
+            '<div class="hero-attributes animated fadeIn">',
                 '<tpl if="statDeltas.lastUpdated">',
                     '<div class="last-updated">',
                         'Stat changes since {statDeltas.lastUpdated}',
@@ -248,6 +248,18 @@ Ext.define('D3Mobile.view.hero.Attributes', {
                                 '</tpl>',
                             '</div>',
                         '</div>',
+                        '<div class="stats-row">',
+                            '<div class="attribute-label">Block Amount</div>',
+                            '<div class="attribute-value">{stats.blockAmountMin} - {stats.blockAmountMax}',
+                                '<tpl if="statDeltas.blockAmountMin || statDeltas.blockAmountMax">',
+                                    '<tpl if="statDeltas.blockAmountAvg &gt; 0">',
+                                        '<span class="change d3-color-green">+{statDeltas.blockAmountAvg}</span>',
+                                    '<tpl else>',
+                                        '<span class="change d3-color-red">{statDeltas.blockAmountAvg}</span>',
+                                    '</tpl>',
+                                '</tpl>',
+                            '</div>',
+                        '</div>',
                     '</div>',
 
                     // highlight the biggest resist
@@ -312,6 +324,18 @@ Ext.define('D3Mobile.view.hero.Attributes', {
                                 '</tpl>',
                             '</div>',
                         '</div>',
+                        '<div class="stats-row">',
+                            '<div class="attribute-label">Thorns</div>',
+                            '<div class="attribute-value">{stats.thorns}',
+                                '<tpl if="statDeltas.thorns">',
+                                    '<tpl if="statDeltas.thorns &gt; 0">',
+                                        '<span class="change d3-color-green">+{statDeltas.thorns}</span>',
+                                    '<tpl else>',
+                                        '<span class="change d3-color-red">{statDeltas.thorns}</span>',
+                                    '</tpl>',
+                                '</tpl>',
+                            '</div>',
+                        '</div>',
                     '</div>',
 
                     // convert these to a %
@@ -348,7 +372,7 @@ Ext.define('D3Mobile.view.hero.Attributes', {
     },
     initialize : function() {
         var me = this;
-        me.add(me.getHeader());
+//        me.add(me.getHeader());
         me.setData(me.getData());
         me.callParent();
     },

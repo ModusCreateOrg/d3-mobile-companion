@@ -2,6 +2,22 @@
 // This file is licensed under the terms of the MIT license.
 // See the file license.txt for more details.
 
+.close-button {
+  @include background-image(linear-gradient(top, rgb(50, 42, 32), rgb(37, 30, 23)));
+  @include border-bottom-right-radius(5px);
+  color: #E9E9E9;
+  font-weight: 700;
+  position: absolute;
+  left: -1px;
+  //top: -11px;
+  font-size: 15px;
+  z-index: 10000;
+  padding: 5px 10px 6px 10px;
+  &.pressed {
+    background: #211c15;
+  }
+}
+
 .skill-tooltip {
   min-height: 420px;
   width: 280px;
@@ -25,35 +41,61 @@
       color: #fefefe;
       text-align: center;
       text-transform: none;
-      font-size: 1.7em;
+      font-size: 1.5em;
       border-bottom: 3px double #322A20;
       padding-bottom: 10px;
       margin-bottom: 10px;
+      padding-left: 25px;
+      padding-right: 25px;      
+    }
+  }
+  .tooltip-body {
+    .d3-icon-skill {
+      float: left;
+      margin: 0px 15px 5px 0px;
+      background-repeat: no-repeat;      
     }
   }
   .tooltip-extension {
     .flavor {
       color: #A7835A;
       font-style: italic;
-      font-family: serif;
+      font-family: "Palatino Linotype";
       border-top: 1px solid #322A20;
-      padding-top: 15px;      
+      padding-top: 15px;
+      font-size: 16px;
     }      
   }
 
+.d3-item-properties .item-effects li {
+
+}
+
   .d3-item-properties {
+    .item-effects {
+      clear: both;
+      margin-top: 50px;
+      li { 
+        font-size: 13px; 
+        padding-left: 16px;
+        background: url("../images/bullet.gif") 2px 5px no-repeat;
+        list-style: none;
+        margin-left: -25px;
+      }      
+    }
     .full-socket {
       color: white;
       list-style: none;
       margin-left: -25px;
       position: relative;      
       font-weight: 400;
+      list-style: none;
       .socket-effect {
         top: -6px;
         position: relative;
         left: 3px;        
       }
-      img { width: 24px; }
+      img { width: 20px; }
     }
     .full-socket:first-child {
       margin-top: 15px;
@@ -68,8 +110,8 @@
     }
     .item-extras {
       border-top: 1px solid #322A20;
-      margin: 5px 0 0 0;
-      padding: 5px 0 0 0;      
+      margin: 5px 0 20px 0;
+      padding: 10px 0 0 0;      
       .value { color: white; }
       .item-reqlevel {
         list-style: none;
@@ -83,7 +125,7 @@
       }
     }
     .big {
-      font-size: 3.2em;
+      font-size: 2.8em;
       line-height: 1.1;
       color: white;
       list-style-type: none;
@@ -91,11 +133,11 @@
     li p { margin: 0; }
   }
   .d3-tooltip-rune {
-    border-top: 2px solid #322A20;
     padding-top: 20px;    
   }
   .description {
     p { color: #c7b377; }
+    .special { display: none; } // hide useless stat thing.
     .d3-color-green {
       font-weight: 600;
     }
