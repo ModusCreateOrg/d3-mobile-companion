@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>32054743-8D85-4ED3-A820-F033E8C7AB49</string>
+	<key>IDESourceControlProjectName</key>
+	<string>D3Mobile</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>B394913C-4E96-4032-B757-929D4248BC17</key>
+		<string>ssh://github.com/ModusCreateOrg/d3.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>build/phonegap/D3Mobile.xcodeproj/project.xcworkspace</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>B394913C-4E96-4032-B757-929D4248BC17</key>
+		<string>../../../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>ssh://github.com/ModusCreateOrg/d3.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>110</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>B394913C-4E96-4032-B757-929D4248BC17</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>B394913C-4E96-4032-B757-929D4248BC17</string>
+			<key>IDESourceControlWCCName</key>
+			<string>d3</string>
+		</dict>
+	</array>
+</dict>
+</plist>
